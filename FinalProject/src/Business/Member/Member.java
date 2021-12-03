@@ -85,7 +85,7 @@ public class Member {
         newWork.setFieldWorkerName(fieldWorker);
         newWork.setRequest(request);
         newWork.setCost(cost);
-        newWork.setDelAddress(deliveryAddress);
+        newWork.setServiceAddress(deliveryAddress);
         newWork.setMessage(instructions);
         newWork.setStatus("New Request");
         requestList.add(newWork);

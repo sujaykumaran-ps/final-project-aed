@@ -76,7 +76,7 @@ public class FieldWorker {
        newWork.setMemName(memName);
        newWork.setRequest(request);
        newWork.setCost(cost);
-       newWork.setFieldWorkerAddress(fieldWorkerAddress);
+       newWork.setServiceAddress(fieldWorkerAddress);
        newWork.setStatus("New Request");
        requestList.add(newWork);
     }

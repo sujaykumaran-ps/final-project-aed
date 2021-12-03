@@ -5,7 +5,7 @@
  */
 package Business.FieldWorker;
 
-import Business.Restaurant.Menu;
+import Business.SnowClearingOrg.Service;
 import Business.WorkQueue.WorkRequest;
 import java.util.ArrayList;
 
@@ -68,17 +68,17 @@ public class FieldWorker {
 
        
     
-    public void addRequest(String resName, String cusName, String delMan, ArrayList<Menu> Order, String cost, String deliveryAddress) {
-        WorkRequest newWork = new WorkRequest();
-        //order.setOrder_id(String.valueOf(id));
-        newWork.setCusName(cusName);
-        newWork.setResName(resName);
-        newWork.setDelName(delMan);
-        newWork.setOrder(Order);
-        newWork.setCost(cost);
-        newWork.setDelAddress(deliveryAddress);
-        newWork.setStatus("New Order");
-        requestList.add(newWork); 
+    public void addRequest(String snowOrgName, String memName, String fieldWorkerName, ArrayList<Service> request, String cost, String fieldWorkerAddress) {
+       WorkRequest newWork = new WorkRequest();
+     
+       newWork.setFieldWorkerName(fieldWorkerName);
+       newWork.setSnowOrgName(snowOrgName);
+       newWork.setMemName(memName);
+       newWork.setRequest(request);
+       newWork.setCost(cost);
+       newWork.setFieldWorkerAddress(fieldWorkerAddress);
+       newWork.setStatus("New Request");
+       requestList.add(newWork);
     }
     
     @Override

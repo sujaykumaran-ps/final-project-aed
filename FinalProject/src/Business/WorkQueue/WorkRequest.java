@@ -4,7 +4,7 @@
  */
 package Business.WorkQueue;
 
-import Business.Restaurant.Menu;
+import Business.SnowClearingOrg.Service;
 import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,8 +19,8 @@ public class WorkRequest {
     private String snowOrgName;
     private String memName;
     private String fieldWorkerName;
-    private String fieldWorkerAddress;
-    private ArrayList<Menu> request;
+    private String serviceAddress;
+    private ArrayList<Service> request;
     private String cost;
     private String status;
     private String message;
@@ -65,19 +65,23 @@ public class WorkRequest {
         this.fieldWorkerName = fieldWorkerName;
     }
 
-    public String getFieldWorkerAddress() {
-        return fieldWorkerAddress;
+    public String getServiceAddress() {
+        return serviceAddress;
     }
 
-    public void setFieldWorkerAddress(String fieldWorkerAddress) {
-        this.fieldWorkerAddress = fieldWorkerAddress;
+    public void setServiceAddress(String serviceAddress) {
+        this.serviceAddress = serviceAddress;
     }
 
-    public ArrayList<Menu> getRequest() {
+   
+
+    
+
+    public ArrayList<Service> getRequest() {
         return request;
     }
 
-    public void setRequest(ArrayList<Menu> request) {
+    public void setRequest(ArrayList<Service> request) {
         this.request = request;
     }
 

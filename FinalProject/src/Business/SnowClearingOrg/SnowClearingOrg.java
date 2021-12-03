@@ -103,7 +103,7 @@ public class SnowClearingOrg {
         serviceList.remove(dish);
     }
     
-public void newRequest(String snowOrgName, String memName, String fieldWorker, ArrayList<Service> request, String cost, String deliveryAddress, String instructions) {
+public void newRequest(String snowOrgName, String memName, String fieldWorker, ArrayList<Service> request, String cost, String serviceAddress, String instructions) {
 WorkRequest newWork = new WorkRequest();
 newWork.setRequestId(String.valueOf(id));
 newWork.setMemName(memName);
@@ -111,7 +111,7 @@ newWork.setSnowOrgName(snowOrgName);
 newWork.setFieldWorkerName(fieldWorker);
 newWork.setRequest(request);
 newWork.setCost(cost);
-newWork.setDelAddress(deliveryAddress);
+newWork.setServiceAddress(serviceAddress);
 newWork.setMessage(instructions);
 newWork.setStatus("New Request");
 requestList.add(newWork);

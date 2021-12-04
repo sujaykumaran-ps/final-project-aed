@@ -18,9 +18,9 @@ public class SnowClearingOrg {
     private ArrayList<Service> serviceList;
     private ArrayList<WorkRequest> requestList;
     private String snowOrgName;
-    private String snowOrgNameAddress;
-    private String snowOrgNamePhNum;
-    private String snowOrgNameEmail;
+    private String snowOrgAddress;
+    private String snowOrgPhNum;
+    private String snowOrgEmail;
     
     public SnowClearingOrg(String name) {
         this.userName = name;
@@ -69,28 +69,28 @@ public class SnowClearingOrg {
         this.snowOrgName = snowOrgName;
     }
 
-    public String getSnowOrgNameAddress() {
-        return snowOrgNameAddress;
+    public String getSnowOrgAddress() {
+        return snowOrgAddress;
     }
 
-    public void setSnowOrgNameAddress(String snowOrgNameAddress) {
-        this.snowOrgNameAddress = snowOrgNameAddress;
+    public void setSnowOrgAddress(String snowOrgAddress) {
+        this.snowOrgAddress = snowOrgAddress;
     }
 
-    public String getSnowOrgNamePhNum() {
-        return snowOrgNamePhNum;
+    public String getSnowOrgPhNum() {
+        return snowOrgPhNum;
     }
 
-    public void setSnowOrgNamePhNum(String snowOrgNamePhNum) {
-        this.snowOrgNamePhNum = snowOrgNamePhNum;
+    public void setSnowOrgPhNum(String snowOrgPhNum) {
+        this.snowOrgPhNum = snowOrgPhNum;
     }
 
-    public String getSnowOrgNameEmail() {
-        return snowOrgNameEmail;
+    public String getSnowOrgEmail() {
+        return snowOrgEmail;
     }
 
-    public void setSnowOrgNameEmail(String snowOrgNameEmail) {
-        this.snowOrgNameEmail = snowOrgNameEmail;
+    public void setSnowOrgEmail(String snowOrgEmail) {
+        this.snowOrgEmail = snowOrgEmail;
     }
     
     

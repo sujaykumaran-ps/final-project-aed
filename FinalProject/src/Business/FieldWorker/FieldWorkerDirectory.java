@@ -20,19 +20,19 @@ public class FieldWorkerDirectory {
         FieldWorkerList = new ArrayList<FieldWorker>();
     }
 
-    public ArrayList<FieldWorker> getDeliveryManList() {
+    public ArrayList<FieldWorker> getFieldWorkerList() {
         return FieldWorkerList;
     }
 
-    public void setDeliveryManList(ArrayList<FieldWorker> deliveryManList) {
+    public void setFieldWorkerList(ArrayList<FieldWorker> deliveryManList) {
         this.FieldWorkerList = deliveryManList;
     }
 
-    public FieldWorker getDeliveryMan() {
+    public FieldWorker getFieldWorker() {
         return FieldWorker;
     }
 
-    public void setDeliveryMan(FieldWorker deliveryMan) {
+    public void setFieldWorker(FieldWorker deliveryMan) {
         this.FieldWorker = FieldWorker;
     }
     
@@ -42,7 +42,7 @@ public class FieldWorkerDirectory {
         return FieldWorker;
     }
     
-    public void deleteDeliveryMan(String username){
+    public void deleteFieldWorker(String username){
          for(int i=0; i < FieldWorkerList.size(); i++){
             if(FieldWorkerList.get(i).getFieldWorkerName().equals(username)){
                 FieldWorkerList.remove(i);

@@ -8,19 +8,20 @@ import Business.EcoSystem;
 
 import Business.Organization;
 import Business.UserAccount.UserAccount;
-import userinterface.MemberRole.MemberAreaJPanel;
+import userinterface.SnowClearingOrgRole.AdminWorkAreaJPanel;
 import javax.swing.JPanel;
 
 /**
  *
  * @author raunak
  */
-public class Member extends Role{
+public class SnowClearingOrgRole extends Role{
 
-    
+    @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-        return new MemberAreaJPanel(userProcessContainer, account, business);
+        return new AdminWorkAreaJPanel(userProcessContainer, account, business);
     }
+
     
     
 }

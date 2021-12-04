@@ -77,7 +77,7 @@ public class Member {
         this.id = id;
     }
     
-    public void newRequest(String snowOrgName, String memName, String fieldWorker, ArrayList<Service> request, String cost, String deliveryAddress, String instructions) {
+    public void newRequest(String snowOrgName, String memName, String fieldWorker, ArrayList<Service> request, String cost, String serviceAddress, String instructions) {
         WorkRequest newWork = new WorkRequest();
         newWork.setRequestId(String.valueOf(id));
         newWork.setMemName(memName);
@@ -85,7 +85,7 @@ public class Member {
         newWork.setFieldWorkerName(fieldWorker);
         newWork.setRequest(request);
         newWork.setCost(cost);
-        newWork.setServiceAddress(deliveryAddress);
+        newWork.setServiceAddress(serviceAddress);
         newWork.setMessage(instructions);
         newWork.setStatus("New Request");
         requestList.add(newWork);

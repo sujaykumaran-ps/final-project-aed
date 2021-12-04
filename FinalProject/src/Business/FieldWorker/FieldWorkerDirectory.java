@@ -24,17 +24,20 @@ public class FieldWorkerDirectory {
         return FieldWorkerList;
     }
 
-    public void setFieldWorkerList(ArrayList<FieldWorker> deliveryManList) {
-        this.FieldWorkerList = deliveryManList;
+
+    public void setFieldWorkerList(ArrayList<FieldWorker> FieldWorkerList) {
+        this.FieldWorkerList = FieldWorkerList;
     }
 
     public FieldWorker getFieldWorker() {
         return FieldWorker;
     }
 
-    public void setFieldWorker(FieldWorker deliveryMan) {
+    public void setFieldWorker(FieldWorker FieldWorker) {
         this.FieldWorker = FieldWorker;
     }
+
+    
     
     public FieldWorker createFieldWorker(String name, String username){
         FieldWorker = new FieldWorker(name, username);

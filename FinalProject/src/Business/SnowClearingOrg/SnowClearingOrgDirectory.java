@@ -46,9 +46,9 @@ public class SnowClearingOrgDirectory {
     
     public void updateRestaurantInfo(SnowClearingOrg res, String name, String number, String address, String cuisine){
         res.setSnowOrgName(name);
-        res.setSnowOrgNameAddress(address);
-        res.setSnowOrgNamePhNum(number);
-        res.setSnowOrgNameEmail(cuisine);
+        res.setSnowOrgAddress(address);
+        res.setSnowOrgPhNum(number);
+        res.setSnowOrgEmail(cuisine);
     }
     
     public Service addMenuDishes(SnowClearingOrg res, String name, String desc, String amount){

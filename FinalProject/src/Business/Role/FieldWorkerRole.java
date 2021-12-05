@@ -8,17 +8,17 @@ package Business.Role;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import userinterface.DeliveryManRole.DeliveryManWorkAreaJPanel;
+import userinterface.FieldWorkerRole.FieldWorkerAreaJPanel;
 
 /**
  *
  * @author harold
  */
-public class FieldWorker extends Role {
+public class FieldWorkerRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-        return new DeliveryManWorkAreaJPanel(userProcessContainer,account,business);//To change body of generated methods, choose Tools | Templates.
+        return new FieldWorkerAreaJPanel(userProcessContainer,account,business);//To change body of generated methods, choose Tools | Templates.
     }
     
 }

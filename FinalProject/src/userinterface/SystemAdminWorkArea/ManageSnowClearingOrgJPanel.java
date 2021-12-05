@@ -6,8 +6,8 @@
 package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
-import Business.Restaurant.Restaurant;
-import Business.Role.AdminRole;
+import Business.SnowClearingOrg.SnowClearingOrg;
+import Business.Role.SnowClearingOrgRole;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -227,8 +227,8 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Username Already Exists ! Please enter a different Username !!!");
         }else{
             
-        UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, password, null, new AdminRole());
-        Restaurant res = system.getRestaurantDirectory().createRestaurantInfo(username);
+        UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, password, null, new SnowClearingOrgRole());
+        SnowClearingOrg org = system.getSnowClearingOrgDirectory().createRestaurantInfo(username);
         
         populateRestaurantTable();
         
@@ -313,7 +313,7 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
                 
                 UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
                 system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getRestaurantDirectory().deleteRestaurent(user.getUsername());
+                system.getSnowClearingOrgDirectory().deleteRestaurent(user.getUsername());
                 populateRestaurantTable();
             }
         }

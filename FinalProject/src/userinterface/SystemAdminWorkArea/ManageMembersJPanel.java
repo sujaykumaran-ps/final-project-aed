@@ -5,10 +5,10 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.Customer.Customer;
+import Business.Member.Member;
 import Business.EcoSystem;
 import Business.SnowClearingOrg.SnowClearingOrg;
-import Business.Role.AdminRole;
+import Business.Role.SnowClearingOrgRole;
 import Business.Role.MemberRole;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
@@ -230,7 +230,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         }else{
             
         UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, password, null, new MemberRole());
-        Customer cus = system.getMemberDirectory().createMember(username);
+        Member mem = system.getMemberDirectory().createMember(username);
         
         populateMembersTable();
         

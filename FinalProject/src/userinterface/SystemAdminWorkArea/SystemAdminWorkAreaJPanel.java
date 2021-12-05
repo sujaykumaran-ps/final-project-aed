@@ -238,11 +238,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             ArrayList<FieldWorker> fieldWorkerList = ecosystem.getFieldWorkerDirectory().getFieldWorkerList();
             root.insert(DeliveryMan, 2);
             DefaultMutableTreeNode FieldWorkerNode;
-            FieldWorker fieldWorkerNode;
+            FieldWorker fieldWorker;
 
             for(int i=0;i<fieldWorkerList.size();i++){
-                //fieldWorker = fieldWorkerList.get(i);
-                //FieldWorkerNode=new DefaultMutableTreeNode(fieldWorker.);
+                fieldWorker = fieldWorkerList.get(i);
+                FieldWorkerNode=new DefaultMutableTreeNode(fieldWorker.getFieldWorkerUsername());
                 DeliveryMan.insert(FieldWorkerNode, i);
             }
 

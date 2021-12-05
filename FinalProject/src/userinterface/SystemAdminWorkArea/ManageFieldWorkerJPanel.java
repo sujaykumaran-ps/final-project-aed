@@ -234,7 +234,7 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Username Already Exists ! Please enter a different Username !!!");
         }else{
             
-        UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, password, null, new DeliverManRole());
+        UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, password, null, new FieldWorkerRole());
         FieldWorker fieldWorker= system.getFieldWorkerDirectory().createFieldWorker(name, username);
         
         populateFieldWorkerTable();

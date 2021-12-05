@@ -235,15 +235,15 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 Members.insert(customerNode, i);
             }
 
-            ArrayList<FieldWorker> deliveryManList = ecosystem.getFieldWorkerDirectory().getDeliveryManList();
+            ArrayList<FieldWorker> fieldWorkerList = ecosystem.getFieldWorkerDirectory().getFieldWorkerList();
             root.insert(DeliveryMan, 2);
-            DefaultMutableTreeNode DeliveryManNode;
-            DeliveryMan deliveryMan;
+            DefaultMutableTreeNode FieldWorkerNode;
+            FieldWorker fieldWorkerNode;
 
-            for(int i=0;i<deliveryManList.size();i++){
-                deliveryMan=deliveryManList.get(i);
-                DeliveryManNode=new DefaultMutableTreeNode(deliveryMan.getDelUsername());
-                DeliveryMan.insert(DeliveryManNode, i);
+            for(int i=0;i<fieldWorkerList.size();i++){
+                //fieldWorker = fieldWorkerList.get(i);
+                //FieldWorkerNode=new DefaultMutableTreeNode(fieldWorker.);
+                DeliveryMan.insert(FieldWorkerNode, i);
             }
 
             model.reload();

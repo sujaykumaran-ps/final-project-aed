@@ -375,7 +375,7 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         
         for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
            
-            if ("Business.Role.AdminRole".equals(user.getRole().getClass().getName())) {
+            if ("Business.Role.SnowClearingOrgRole".equals(user.getRole().getClass().getName())) {
                 Object[] row = new Object[3]; 
                 row[0] = user.getName();
                 row[1] = user.getUsername();

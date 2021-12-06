@@ -70,19 +70,19 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JTextField" name="txtResName">
+    <Component class="javax.swing.JTextField" name="txtOrgName">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="490" y="350" width="144" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JButton" name="btnResBack">
+    <Component class="javax.swing.JButton" name="btnManageOrgBack">
       <Properties>
         <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnResBackActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageOrgBackActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -124,9 +124,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtOrgPassword">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtOrgPasswordActionPerformed"/>
-      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="ManageSnowClearingOrgJPanel_txtOrgPassword"/>
+      </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="490" y="420" width="144" height="-1"/>

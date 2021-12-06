@@ -84,18 +84,6 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         lblSnowClearingPhone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblSnowClearingPhone.setText("SnowClearing Phone Number :");
 
-        txtOrgName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtOrgNameActionPerformed(evt);
-            }
-        });
-
-        txtOrgAddress.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtOrgAddressActionPerformed(evt);
-            }
-        });
-
         txtOrgPhNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgPhNumActionPerformed(evt);
@@ -203,14 +191,6 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void txtOrgNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtOrgNameActionPerformed
-
-    private void txtOrgAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgAddressActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtOrgAddressActionPerformed
-
     private void txtOrgPhNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgPhNumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtOrgPhNumActionPerformed
@@ -224,7 +204,7 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         
         try {
              if(name==null || name.isEmpty()){
-                throw new NullPointerException("Restaurant Name Field cannot be Empty !!!");
+                throw new NullPointerException("SnowClearingOrg Name Field cannot be Empty !!!");
 
             }
         } catch(NullPointerException e){
@@ -244,12 +224,12 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
          try {
              
             if(number==null || number.isEmpty()){
-                throw new NullPointerException("Restaurant Phone Number Field cannot be Empty !!!");
+                throw new NullPointerException("SnowClearingOrg Phone Number Field cannot be Empty !!!");
             }else if(Pattern.matches("^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$", number) == false){
                 throw new Exception("Enter a Valid Phone number !!!");
             }     
         }  catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "Restaurant Phone Number Field cannot be Empty !!!");
+            JOptionPane.showMessageDialog(null, "SnowClearingOrg Phone Number Field cannot be Empty !!!");
             return;
         }catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Enter a Valid Phone number !!!");
@@ -258,17 +238,17 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
          
         try {
              if(type==null || type.isEmpty()){
-                throw new NullPointerException("Restaurant Cuisine Field cannot be Empty !!!");
+                throw new NullPointerException("SnowClearing Org Service Field cannot be Empty !!!");
 
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "Restaurant Cuisine Field cannot be Empty !!!");        
+            JOptionPane.showMessageDialog(null, "SnowClearing Org Service Field cannot be Empty !!!");        
             return;   
         }
         
         for(SnowClearingOrg org:system.getSnowClearingOrgDirectory().getSnowClearingOrgList()){
            if(org.getUserName().equals(account.getUsername())){
-                system.getSnowClearingOrgDirectory().updateRestaurantInfo(org, name, number, address, type);
+                system.getSnowClearingOrgDirectory().updateSnowClearingOrgInfo(org, name, number, address, type);
             }
         }
         

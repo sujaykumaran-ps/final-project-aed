@@ -71,9 +71,6 @@
       </SubComponents>
     </Container>
     <Component class="javax.swing.JTextField" name="txtFieldWorker">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFieldWorkerActionPerformed"/>
-      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="500" y="380" width="144" height="-1"/>
@@ -140,21 +137,18 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtFieldWorkerPassword">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFieldWorkerPasswordActionPerformed"/>
-      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="500" y="450" width="144" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JButton" name="btnViewDelivery">
+    <Component class="javax.swing.JButton" name="btnViewFW">
       <Properties>
         <Property name="text" type="java.lang.String" value="View"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewDeliveryActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewFWActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -162,12 +156,12 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JButton" name="btnDeleteDelivery">
+    <Component class="javax.swing.JButton" name="btnDeleteFW">
       <Properties>
         <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteDeliveryActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteFWActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -202,12 +196,12 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JButton" name="btnUpdate">
+    <Component class="javax.swing.JButton" name="btnUpdateFW">
       <Properties>
         <Property name="text" type="java.lang.String" value="Update"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateFWActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

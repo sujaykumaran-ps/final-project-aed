@@ -75,7 +75,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Restaurant Name", "Address", "Phone Number", "Cuisine"
+                "SnowClearingOrg Name", "Address", "Phone Number", "Service Offering"
             }
         ) {
             Class[] types = new Class [] {
@@ -95,7 +95,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblSnowClearingOrg);
 
-        btnOrderFood.setText("Order Food");
+        btnOrderFood.setText("Request Service");
         btnOrderFood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrderFoodActionPerformed(evt);
@@ -103,7 +103,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         });
 
         titleChoose.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleChoose.setText("Choose from your Favourite Restaurants Nearby !!!!");
+        titleChoose.setText("Choose from your SnowClearing Organizations Nearby :");
 
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -113,7 +113,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Order ID", "Restaurant Name", "Amount", "Status"
+                "Request ID", "SnowClearingOrg Name", "Type", "Status"
             }
         ) {
             Class[] types = new Class [] {
@@ -134,7 +134,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblRequests);
 
         titleOrders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleOrders.setText("Your Orders with us !");
+        titleOrders.setText("Your Requests with us :");
 
         btnRefresh.setText("Refresh Requests");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
@@ -156,19 +156,18 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                         .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(52, 52, 52)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(titleChoose)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(titleOrders)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(175, 175, 175)
-                                    .addComponent(btnRefresh)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnOrderFood)
-                                .addGap(167, 167, 167)))))
-                .addContainerGap(294, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(titleChoose)
+                            .addComponent(titleOrders)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(175, 175, 175)
+                                .addComponent(btnRefresh))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(253, 253, 253)
+                        .addComponent(btnOrderFood)))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,7 +206,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         else{
             SnowClearingOrg snowClearingOrg = (SnowClearingOrg)tblSnowClearingOrg.getValueAt(selectedRow, 0);
             SnowOrgServiceJPanel orgService = new SnowOrgServiceJPanel(userProcessContainer, account, system, snowClearingOrg);
-            userProcessContainer.add("Restaurant Menu", orgService);
+            userProcessContainer.add("SnowClearing Organization Service", orgService);
             CardLayout layout=(CardLayout)userProcessContainer.getLayout();
             layout.next(userProcessContainer);
         }

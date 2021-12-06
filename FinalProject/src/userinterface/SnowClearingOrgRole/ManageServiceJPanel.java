@@ -102,12 +102,6 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         lblServiceName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblServiceName.setText("Service Name :");
 
-        txtServiceName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtServiceNameActionPerformed(evt);
-            }
-        });
-
         lblDishAmount.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblDishAmount.setText("Amount :");
 
@@ -188,10 +182,6 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtServiceAmountActionPerformed
 
-    private void txtServiceNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtServiceNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtServiceNameActionPerformed
-
     private void txtServiceDescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtServiceDescActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtServiceDescActionPerformed
@@ -243,7 +233,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
 
         for(SnowClearingOrg org:system.getSnowClearingOrgDirectory().getSnowClearingOrgList()){
             if(org.getUserName().equals(ua.getUsername())){
-                service = system.getSnowClearingOrgDirectory().addMenuDishes(org, name, desc, amount);
+                service = system.getSnowClearingOrgDirectory().addServiceTypes(org, name, desc, amount);
             }
         }
 

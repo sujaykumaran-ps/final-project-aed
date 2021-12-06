@@ -40,8 +40,8 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
         titleResAdmin = new javax.swing.JLabel();
         btnOrgInfo = new javax.swing.JButton();
-        btnManageSeasons = new javax.swing.JButton();
         btnManageServices = new javax.swing.JButton();
+        btnManageRequests = new javax.swing.JButton();
         lblResNameTitle = new javax.swing.JLabel();
         lblResName = new javax.swing.JLabel();
 
@@ -60,21 +60,21 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 220, -1));
 
-        btnManageSeasons.setText("Manage Seasons");
-        btnManageSeasons.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageSeasonsActionPerformed(evt);
-            }
-        });
-        add(btnManageSeasons, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 160, -1));
-
         btnManageServices.setText("Manage Services");
         btnManageServices.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageServicesActionPerformed(evt);
             }
         });
-        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
+        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 160, -1));
+
+        btnManageRequests.setText("Manage Requests");
+        btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageRequestsActionPerformed(evt);
+            }
+        });
+        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
 
         lblResNameTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblResNameTitle.setText("Restaurant Name :");
@@ -92,23 +92,23 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnOrgInfoActionPerformed
 
-    private void btnManageSeasonsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageSeasonsActionPerformed
-        ManageServiceJPanel manageMenu = new ManageServiceJPanel(userProcessContainer, ua, system);
-        userProcessContainer.add("Manage Seasons",manageMenu);
-        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageSeasonsActionPerformed
-
     private void btnManageServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageServicesActionPerformed
-        ManageRequestsJPanel manageOrder = new ManageRequestsJPanel(userProcessContainer, ua, system);
-        userProcessContainer.add("Manage Orders", manageOrder);
+        ManageServiceJPanel manageServices = new ManageServiceJPanel(userProcessContainer, ua, system);
+        userProcessContainer.add("Manage Services",manageServices);
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageServicesActionPerformed
+
+    private void btnManageRequestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageRequestsActionPerformed
+        ManageRequestsJPanel manageRequest = new ManageRequestsJPanel(userProcessContainer, ua, system);
+        userProcessContainer.add("Manage Requests", manageRequest);
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnManageRequestsActionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnManageSeasons;
+    private javax.swing.JButton btnManageRequests;
     private javax.swing.JButton btnManageServices;
     private javax.swing.JButton btnOrgInfo;
     private javax.swing.JLabel lblResName;

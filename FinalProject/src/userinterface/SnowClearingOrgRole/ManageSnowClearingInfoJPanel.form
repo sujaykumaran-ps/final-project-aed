@@ -134,14 +134,8 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtOrgName">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtOrgNameActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtOrgAddress">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtOrgAddressActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtOrgPhNum">
       <Events>

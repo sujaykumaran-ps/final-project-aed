@@ -296,9 +296,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtInstructions">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtInstructionsActionPerformed"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -174,12 +174,6 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         lblInstructions.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblInstructions.setText("Special Instructions :");
 
-        txtInstructions.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtInstructionsActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -296,19 +290,19 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblCart.getSelectedRow();
         if(selectedRow < 0){
-            JOptionPane.showMessageDialog(null, "Please select a dish to Remove from Cart !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please select a service to Remove from Added Requests !!!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
             Service work = (Service)tblCart.getValueAt(selectedRow, 0);
             works.remove(work);
-            i = i - Integer.parseInt(work.getServicePrice());
+            i = i - Integer.parseInt(work.getServiceType());
             DefaultTableModel model = (DefaultTableModel) tblCart.getModel();
         model.setRowCount(0);
             Object[] row = new Object[3];
                 for(Service req:works){
                      row[0] = req;
                      row[1] = req.getServiceDescription();
-                     row[2] = req.getServicePrice();       
+                     row[2] = req.getServiceType();       
                      model.addRow(row);
                 }  
         }
@@ -321,10 +315,10 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         
         try {
              if(address==null || address.isEmpty()){
-                throw new NullPointerException("Please Enter Delivery Address !!!");    
+                throw new NullPointerException("Please Enter Service Address !!!");    
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "Please Enter Delivery Address !!!");           
+            JOptionPane.showMessageDialog(null, "Please Enter Service Address !!!");           
             return; 
         }
         
@@ -335,7 +329,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
             }
         }
         
-        JOptionPane.showMessageDialog(null,"Your Order is placed Successfully !!!", "Thank You", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Your Request is placed Successfully !!!", "Thank You", JOptionPane.PLAIN_MESSAGE);
         i = 0;
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -347,10 +341,6 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnPlaceRequestActionPerformed
 
-    private void txtInstructionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInstructionsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtInstructionsActionPerformed
-
     private void populateMenuTable() {
         DefaultTableModel model = (DefaultTableModel) tblMenu.getModel();
         model.setRowCount(0);
@@ -358,7 +348,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
             for(Service req:org.getServiceList()){
                  row[0] = req;
                  row[1] = req.getServiceDescription();
-                 row[2] = req.getServicePrice();
+                 row[2] = req.getServiceType();
                  model.addRow(row);
             }  
     }
@@ -392,10 +382,10 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         for(Service dish:works){
             row[0] = dish;
             row[1] = dish.getServiceDescription();
-            row[2] = dish.getServicePrice();
+            row[2] = dish.getServiceType();
             
             model.addRow(row);
         }  
-        i=i+Integer.parseInt(work.getServicePrice());
+        i=i+Integer.parseInt(work.getServiceType());
     }
 }

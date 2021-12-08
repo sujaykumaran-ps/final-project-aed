@@ -77,7 +77,7 @@ public class ViewRequestJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Service Name", "Description", "Amount"
+                "Service Name", "Description", "Type"
             }
         ) {
             Class[] types = new Class [] {
@@ -229,7 +229,7 @@ public class ViewRequestJPanel extends javax.swing.JPanel {
                 for(Service serv:request.getRequest()){
                      row[0] = serv;
                      row[1] = serv.getServiceDescription();
-                     row[2] = serv.getServicePrice();
+                     row[2] = serv.getServiceType();
                      model.addRow(row);
                 }
         txtIns.setText(request.getMessage());

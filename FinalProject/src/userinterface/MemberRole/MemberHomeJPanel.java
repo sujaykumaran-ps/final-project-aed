@@ -5,6 +5,11 @@
  */
 package userinterface.MemberRole;
 
+import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author nagashreeseshadri
@@ -14,10 +19,19 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
     /**
      * Creates new form MemberHomeJPanel
      */
-    public MemberHomeJPanel() {
-        initComponents();
-    }
+    private JPanel userProcessContainer;
+    EcoSystem system;
+    private UserAccount account;
 
+    
+    
+    public MemberHomeJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem system) {
+        initComponents();      
+        this.account = account;
+        this.userProcessContainer = userProcessContainer;
+        this.system = system;
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,10 +42,10 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         titleWelcome = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnSnowClearing = new javax.swing.JButton();
+        btnLeafClearing = new javax.swing.JButton();
+        btnDonate = new javax.swing.JButton();
+        btnSoupKitchen = new javax.swing.JButton();
         titleWelcome1 = new javax.swing.JLabel();
         titleWelcome2 = new javax.swing.JLabel();
         titleWelcome3 = new javax.swing.JLabel();
@@ -40,13 +54,18 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         titleWelcome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleWelcome.setText("Welcome Member");
 
-        jButton1.setText("Snow Clearing Org");
+        btnSnowClearing.setText("Snow Clearing Org");
+        btnSnowClearing.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSnowClearingActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Leaf Clearing Org");
+        btnLeafClearing.setText("Leaf Clearing Org");
 
-        jButton3.setText("Donate Funds");
+        btnDonate.setText("Donate Funds");
 
-        jButton4.setText("Soup Kitchen");
+        btnSoupKitchen.setText("Soup Kitchen");
 
         titleWelcome1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleWelcome1.setText("Choose what you would like to do!");
@@ -71,11 +90,11 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton2)
+                        .addComponent(btnLeafClearing)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(248, 248, 248)
-                                .addComponent(jButton1))
+                                .addComponent(btnSnowClearing))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(28, 28, 28)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -85,8 +104,8 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(246, 246, 246)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnSoupKitchen, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDonate, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -95,7 +114,7 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
                     .addContainerGap(418, Short.MAX_VALUE)))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton4});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDonate, btnLeafClearing, btnSnowClearing, btnSoupKitchen});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,15 +126,15 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
                 .addGap(33, 33, 33)
                 .addComponent(titleWelcome2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnSnowClearing)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(btnLeafClearing)
                 .addGap(57, 57, 57)
-                .addComponent(jButton3)
+                .addComponent(btnDonate)
                 .addGap(37, 37, 37)
                 .addComponent(titleWelcome3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
+                .addComponent(btnSoupKitchen)
                 .addContainerGap(134, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -125,12 +144,21 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSnowClearingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSnowClearingActionPerformed
+        // TODO add your handling code here:
+        
+        MemberAreaJPanel memJPanel = new MemberAreaJPanel(userProcessContainer, account, system);
+            userProcessContainer.add("SnowClearing Organization Service", memJPanel);
+            CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnSnowClearingActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnDonate;
+    private javax.swing.JButton btnLeafClearing;
+    private javax.swing.JButton btnSnowClearing;
+    private javax.swing.JButton btnSoupKitchen;
     private javax.swing.JLabel titleWelcome;
     private javax.swing.JLabel titleWelcome1;
     private javax.swing.JLabel titleWelcome2;

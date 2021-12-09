@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class FundRaising {
     private String userName;
     int id = 1;
+    private ArrayList<Funds> fundList;
     private ArrayList<WorkRequest> requestList;
     private String fundRaisingName;
     private String fundRaisingAddress;
@@ -81,6 +82,14 @@ public class FundRaising {
 
     public void setFundRaisingEmail(String fundRaisingEmail) {
         this.fundRaisingEmail = fundRaisingEmail;
+    }
+    
+     public void addFunds(Funds fund){
+        fundList.add(fund);
+    }
+    
+    public void removeFunds(Funds fund){
+        fundList.remove(fund);
     }
     
     

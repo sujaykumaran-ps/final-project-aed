@@ -30,8 +30,8 @@ public class SnowClearingOrgDirectory {
         this.snowClearingOrgList = snowClearingOrgList;
     }
     
-    public SnowClearingOrg createSnowClearingOrgInfo(String resName){
-        snowClearingOrg= new SnowClearingOrg(resName);
+    public SnowClearingOrg createSnowClearingOrgInfo(String orgName){
+        snowClearingOrg= new SnowClearingOrg(orgName);
         snowClearingOrgList.add(snowClearingOrg);
         return snowClearingOrg;
     }
@@ -51,14 +51,14 @@ public class SnowClearingOrgDirectory {
         org.setSnowOrgEmail(cuisine);
     }
     
-    public Service addServiceTypes(SnowClearingOrg res, String name, String desc, String amount){
-        service = new Service(name, desc, amount);
-        res.addServices(service);
+    public Service addServiceTypes(SnowClearingOrg org, String name, String desc, String type){
+        service = new Service(name, desc, type);
+        org.addServices(service);
         return service;
     }
     
-    public void DeleteServices(SnowClearingOrg res, Service dishes){
-        res.removeServices(dishes); 
+    public void DeleteServices(SnowClearingOrg res, Service service){
+        res.removeServices(service); 
     }
     
 }

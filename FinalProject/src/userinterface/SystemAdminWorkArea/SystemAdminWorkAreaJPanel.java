@@ -56,6 +56,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageSCOrg = new javax.swing.JButton();
         btnManageFieldWorkers = new javax.swing.JButton();
         titleManageUser = new javax.swing.JLabel();
+        btnManageFRENT = new javax.swing.JButton();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -99,7 +100,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnManageSCOrg.setText("Manage SnowClearingOrg");
+        btnManageSCOrg.setText("Manage SnowClearing Enterprise");
         btnManageSCOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageSCOrgActionPerformed(evt);
@@ -117,27 +118,38 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         titleManageUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageUser.setText("Manage User Accounts and Credentials");
 
+        btnManageFRENT.setText("Manage FundRaising Enterprises");
+        btnManageFRENT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageFRENTActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(titleManageUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblSelectedNode, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(titleManageUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblSelectedNode, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(542, 542, 542)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnManageFieldWorkers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnManageSCOrg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnManageMembers, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(550, 550, 550)
+                                .addComponent(btnManageFRENT)))
+                        .addGap(0, 432, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(542, 542, 542)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnManageFieldWorkers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageSCOrg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageMembers, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(489, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,7 +166,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnManageSCOrg)
                 .addGap(18, 18, 18)
                 .addComponent(btnManageFieldWorkers)
-                .addContainerGap(464, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(btnManageFRENT)
+                .addContainerGap(404, Short.MAX_VALUE))
         );
 
         jSplitPane.setRightComponent(jPanel2);
@@ -191,8 +205,18 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jTreeValueChanged
 
+    private void btnManageFRENTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFRENTActionPerformed
+        // TODO add your handling code here:
+        ManageFundRaisingJPanel manageFundRaisingJPanel=new ManageFundRaisingJPanel(userProcessContainer, ecosystem);
+        userProcessContainer.add("Manage FundRaising Enterprises",manageFundRaisingJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+        
+    }//GEN-LAST:event_btnManageFRENTActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnManageFRENT;
     private javax.swing.JButton btnManageFieldWorkers;
     private javax.swing.JButton btnManageMembers;
     private javax.swing.JButton btnManageSCOrg;

@@ -9,6 +9,8 @@ import Business.EcoSystem;
 import Business.FundRaising.FundRaising;
 import Business.Role.FundRaisingRole;
 import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import java.awt.Component;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -230,7 +232,13 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageFundBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFundBackActionPerformed
-        
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        SystemAdminWorkAreaJPanel sysAdmin = (SystemAdminWorkAreaJPanel) component;
+        sysAdmin.populateTree();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnManageFundBackActionPerformed
 
     private void btnSubmitFundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitFundActionPerformed

@@ -30,13 +30,13 @@ public class SnowClearingOrgDirectory {
         this.snowClearingOrgList = snowClearingOrgList;
     }
     
-    public SnowClearingOrg createRestaurantInfo(String resName){
+    public SnowClearingOrg createSnowClearingOrgInfo(String resName){
         snowClearingOrg= new SnowClearingOrg(resName);
         snowClearingOrgList.add(snowClearingOrg);
         return snowClearingOrg;
     }
     
-    public void deleteRestaurent(String username){
+    public void deleteSnowClearingOrg(String username){
         for(int i=0;i<snowClearingOrgList.size();i++){
             if(snowClearingOrgList.get(i).getUserName().equals(username)){
                 snowClearingOrgList.remove(i);
@@ -44,20 +44,20 @@ public class SnowClearingOrgDirectory {
         }
     }
     
-    public void updateRestaurantInfo(SnowClearingOrg res, String name, String number, String address, String cuisine){
+    public void updateSnowClearingOrgInfo(SnowClearingOrg res, String name, String number, String address, String cuisine){
         res.setSnowOrgName(name);
         res.setSnowOrgAddress(address);
         res.setSnowOrgPhNum(number);
         res.setSnowOrgEmail(cuisine);
     }
     
-    public Service addMenuDishes(SnowClearingOrg res, String name, String desc, String amount){
+    public Service addServiceTypes(SnowClearingOrg res, String name, String desc, String amount){
         service = new Service(name, desc, amount);
         res.addServices(service);
         return service;
     }
     
-    public void DeleteDishes(SnowClearingOrg res, Service dishes){
+    public void DeleteServices(SnowClearingOrg res, Service dishes){
         res.removeServices(dishes); 
     }
     

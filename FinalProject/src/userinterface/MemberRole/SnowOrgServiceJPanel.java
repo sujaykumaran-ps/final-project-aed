@@ -65,7 +65,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         btnRemove = new javax.swing.JButton();
-        btnPlaceOrder = new javax.swing.JButton();
+        btnPlaceRequest = new javax.swing.JButton();
         lblAddress = new javax.swing.JLabel();
         txtAddress = new javax.swing.JTextField();
         lblInstructions = new javax.swing.JLabel();
@@ -74,7 +74,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(252, 156, 52));
 
         titleOrder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleOrder.setText("Order from");
+        titleOrder.setText("Request from");
 
         titleResName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
@@ -86,7 +86,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Dish Name", "Description", "Amount"
+                "Service Name", "Descripion", "Type"
             }
         ) {
             Class[] types = new Class [] {
@@ -105,14 +105,11 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane2.setViewportView(tblMenu);
-        if (tblMenu.getColumnModel().getColumnCount() > 0) {
-            tblMenu.getColumnModel().getColumn(1).setHeaderValue("Descripion");
-        }
 
         lblMenu.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblMenu.setText("Menu");
+        lblMenu.setText("Service");
 
-        btnAdd.setText("Add to Cart");
+        btnAdd.setText("Add Request");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
@@ -127,7 +124,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Dish Name", "Description", "Amount"
+                "Service Name", "Description", "Type"
             }
         ) {
             Class[] types = new Class [] {
@@ -146,12 +143,9 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane3.setViewportView(tblCart);
-        if (tblCart.getColumnModel().getColumnCount() > 0) {
-            tblCart.getColumnModel().getColumn(1).setHeaderValue("Descripion");
-        }
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Cart");
+        jLabel1.setText("Service Summary");
 
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -160,17 +154,17 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnRemove.setText("Remove from Cart");
+        btnRemove.setText("Remove Request");
         btnRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemoveActionPerformed(evt);
             }
         });
 
-        btnPlaceOrder.setText("Place Order");
-        btnPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
+        btnPlaceRequest.setText("Place Request");
+        btnPlaceRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlaceOrderActionPerformed(evt);
+                btnPlaceRequestActionPerformed(evt);
             }
         });
 
@@ -179,12 +173,6 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
 
         lblInstructions.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblInstructions.setText("Special Instructions :");
-
-        txtInstructions.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtInstructionsActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -225,16 +213,17 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
                                     .addComponent(txtInstructions, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(205, 205, 205)
-                                        .addComponent(jLabel1))
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(51, 51, 51))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(360, 360, 360)
-                        .addComponent(btnPlaceOrder)))
+                        .addComponent(btnPlaceRequest)))
                 .addGap(61, 61, 61))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(348, 348, 348)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,7 +257,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
                         .addGap(10, 10, 10)
                         .addComponent(txtInstructions, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(btnPlaceOrder)
+                .addComponent(btnPlaceRequest)
                 .addContainerGap(37, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -301,35 +290,35 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblCart.getSelectedRow();
         if(selectedRow < 0){
-            JOptionPane.showMessageDialog(null, "Please select a dish to Remove from Cart !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please select a service to Remove from Added Requests !!!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
             Service work = (Service)tblCart.getValueAt(selectedRow, 0);
             works.remove(work);
-            i = i - Integer.parseInt(work.getServicePrice());
+            i = i - Integer.parseInt(work.getServiceType());
             DefaultTableModel model = (DefaultTableModel) tblCart.getModel();
         model.setRowCount(0);
             Object[] row = new Object[3];
                 for(Service req:works){
                      row[0] = req;
                      row[1] = req.getServiceDescription();
-                     row[2] = req.getServicePrice();       
+                     row[2] = req.getServiceType();       
                      model.addRow(row);
                 }  
         }
     }//GEN-LAST:event_btnRemoveActionPerformed
 
-    private void btnPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceOrderActionPerformed
+    private void btnPlaceRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceRequestActionPerformed
         // TODO add your handling code here:
         String address = txtAddress.getText();
         String ins = txtInstructions.getText();
         
         try {
              if(address==null || address.isEmpty()){
-                throw new NullPointerException("Please Enter Delivery Address !!!");    
+                throw new NullPointerException("Please Enter Service Address !!!");    
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "Please Enter Delivery Address !!!");           
+            JOptionPane.showMessageDialog(null, "Please Enter Service Address !!!");           
             return; 
         }
         
@@ -340,7 +329,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
             }
         }
         
-        JOptionPane.showMessageDialog(null,"Your Order is placed Successfully !!!", "Thank You", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Your Request is placed Successfully !!!", "Thank You", JOptionPane.PLAIN_MESSAGE);
         i = 0;
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -350,11 +339,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
         
-    }//GEN-LAST:event_btnPlaceOrderActionPerformed
-
-    private void txtInstructionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInstructionsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtInstructionsActionPerformed
+    }//GEN-LAST:event_btnPlaceRequestActionPerformed
 
     private void populateMenuTable() {
         DefaultTableModel model = (DefaultTableModel) tblMenu.getModel();
@@ -363,7 +348,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
             for(Service req:org.getServiceList()){
                  row[0] = req;
                  row[1] = req.getServiceDescription();
-                 row[2] = req.getServicePrice();
+                 row[2] = req.getServiceType();
                  model.addRow(row);
             }  
     }
@@ -371,7 +356,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnPlaceOrder;
+    private javax.swing.JButton btnPlaceRequest;
     private javax.swing.JButton btnRemove;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -397,10 +382,10 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         for(Service dish:works){
             row[0] = dish;
             row[1] = dish.getServiceDescription();
-            row[2] = dish.getServicePrice();
+            row[2] = dish.getServiceType();
             
             model.addRow(row);
         }  
-        i=i+Integer.parseInt(work.getServicePrice());
+        i=i+Integer.parseInt(work.getServiceType());
     }
 }

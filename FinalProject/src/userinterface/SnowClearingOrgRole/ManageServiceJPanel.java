@@ -47,27 +47,21 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblDishDesc = new javax.swing.JLabel();
-        txtServiceAmount = new javax.swing.JTextField();
+        lblServiceDesc = new javax.swing.JLabel();
+        txtServiceType = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblServices = new javax.swing.JTable();
         lblServiceName = new javax.swing.JLabel();
         txtServiceName = new javax.swing.JTextField();
-        lblDishAmount = new javax.swing.JLabel();
+        lblType = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         txtServiceDesc = new javax.swing.JTextField();
         btnAddService = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(252, 156, 52));
 
-        lblDishDesc.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblDishDesc.setText("Description :");
-
-        txtServiceAmount.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtServiceAmountActionPerformed(evt);
-            }
-        });
+        lblServiceDesc.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblServiceDesc.setText("Description :");
 
         tblServices.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -79,7 +73,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Service Name", "Description", "Rate"
+                "Service Name", "Description", "Type"
             }
         ) {
             Class[] types = new Class [] {
@@ -102,25 +96,13 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         lblServiceName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblServiceName.setText("Service Name :");
 
-        txtServiceName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtServiceNameActionPerformed(evt);
-            }
-        });
-
-        lblDishAmount.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblDishAmount.setText("Amount :");
+        lblType.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblType.setText("Type :");
 
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
-            }
-        });
-
-        txtServiceDesc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtServiceDescActionPerformed(evt);
             }
         });
 
@@ -145,14 +127,14 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(262, 262, 262)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblDishAmount)
-                            .addComponent(lblDishDesc)
+                            .addComponent(lblType)
+                            .addComponent(lblServiceDesc)
                             .addComponent(lblServiceName))
                         .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtServiceName)
                             .addComponent(txtServiceDesc)
-                            .addComponent(txtServiceAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtServiceType, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(71, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(377, 377, 377)
@@ -173,28 +155,16 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtServiceDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDishDesc))
+                    .addComponent(lblServiceDesc))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDishAmount)
-                    .addComponent(txtServiceAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblType)
+                    .addComponent(txtServiceType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAddService)
                 .addContainerGap(88, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtServiceAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtServiceAmountActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtServiceAmountActionPerformed
-
-    private void txtServiceNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtServiceNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtServiceNameActionPerformed
-
-    private void txtServiceDescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtServiceDescActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtServiceDescActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -207,7 +177,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         String name = txtServiceName.getText();
         String desc = txtServiceDesc.getText();
-        String amount = txtServiceAmount.getText();
+        String amount = txtServiceType.getText();
 
         try {
             if(name == null || name.isEmpty()){
@@ -229,27 +199,27 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
 
         try {
             if(amount==null || amount.isEmpty()){
-                throw new NullPointerException("Amount Field cannot be empty !!!");
+                throw new NullPointerException("Type Field cannot be empty !!!");
             }else if(Pattern.matches("^[0-9]{0,3}$", amount) == false){
-                throw new Exception("Invalid Amount !!!");
+                throw new Exception("Invalid Type !!!");
             }
         }  catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "Amount Field cannot be empty !!!");
+            JOptionPane.showMessageDialog(null, "Type Field cannot be empty !!!");
             return;
         }catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Invalid Amount !!!");
+            JOptionPane.showMessageDialog(null, "Invalid Type !!!");
             return;
         }
 
         for(SnowClearingOrg org:system.getSnowClearingOrgDirectory().getSnowClearingOrgList()){
             if(org.getUserName().equals(ua.getUsername())){
-                service = system.getSnowClearingOrgDirectory().addMenuDishes(org, name, desc, amount);
+                service = system.getSnowClearingOrgDirectory().addServiceTypes(org, name, desc, amount);
             }
         }
 
         txtServiceName.setText("");
         txtServiceDesc.setText("");
-        txtServiceAmount.setText("");
+        txtServiceType.setText("");
         populateTable();
 
     }//GEN-LAST:event_btnAddServiceActionPerformed
@@ -264,7 +234,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
                 Object[] row = new Object[3];
                 row[0] = service.getServiceName();
                 row[1] = service.getServiceDescription();
-                row[2] = service.getServicePrice();
+                row[2] = service.getServiceType();
                 model.addRow(row);
                } 
             } 
@@ -276,12 +246,12 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAddService;
     private javax.swing.JButton btnBack;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblDishAmount;
-    private javax.swing.JLabel lblDishDesc;
+    private javax.swing.JLabel lblServiceDesc;
     private javax.swing.JLabel lblServiceName;
+    private javax.swing.JLabel lblType;
     private javax.swing.JTable tblServices;
-    private javax.swing.JTextField txtServiceAmount;
     private javax.swing.JTextField txtServiceDesc;
     private javax.swing.JTextField txtServiceName;
+    private javax.swing.JTextField txtServiceType;
     // End of variables declaration//GEN-END:variables
 }

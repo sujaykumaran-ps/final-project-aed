@@ -213,7 +213,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             DefaultMutableTreeNode DeliveryMan = new DefaultMutableTreeNode("Field Worker");
             ArrayList<SnowClearingOrg> resList = ecosystem.getSnowClearingOrgDirectory().getSnowClearingOrgList();
             DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();
-             root.removeAllChildren();
+            root.removeAllChildren();
             root.insert(SnowClearingOrg, 0);
             DefaultMutableTreeNode restaurantNode;
             DefaultMutableTreeNode customerNode;

@@ -21,7 +21,7 @@ public class Member {
     private String memPhNum;
     int id = 1;
 
-    public Member(String cusUsername) {
+    public Member(String memUsername) {
         this.memUsername = memUsername;
         requestList = new ArrayList<WorkRequest>();
     }
@@ -77,7 +77,8 @@ public class Member {
         this.id = id;
     }
     
-    public void newRequest(String snowOrgName, String memName, String fieldWorker, ArrayList<Service> request, String cost, String serviceAddress, String instructions) {
+    public void newRequest(String snowOrgName, String memName, String fieldWorker, 
+            ArrayList<Service> request, String cost, String serviceAddress, String instructions) {
         WorkRequest newWork = new WorkRequest();
         newWork.setRequestId(String.valueOf(id));
         newWork.setMemName(memName);

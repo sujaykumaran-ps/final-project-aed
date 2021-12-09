@@ -11,12 +11,12 @@ package Business.SnowClearingOrg;
  */
 public class Service {
     private String serviceName;
-    private String servicePrice;
+    private String serviceType;
     private String serviceDescription;
 
-    public Service(String itemName, String itemDescription, String itemPrice) {
+    public Service(String itemName, String itemDescription, String itemType) {
         this.serviceName = itemName;
-        this.servicePrice = itemPrice;
+        this.serviceType = itemType;
         this.serviceDescription = itemDescription;
     }
 
@@ -28,12 +28,12 @@ public class Service {
         this.serviceName = serviceName;
     }
 
-    public String getServicePrice() {
-        return servicePrice;
+    public String getServiceType() {
+        return serviceType;
     }
 
-    public void setServicePrice(String servicePrice) {
-        this.servicePrice = servicePrice;
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
     }
 
     public String getServiceDescription() {

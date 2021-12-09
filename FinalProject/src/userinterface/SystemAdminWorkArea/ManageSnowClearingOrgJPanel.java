@@ -34,7 +34,7 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-        populateRestaurantTable();
+        populateSnowClearingOrgTable();
         btnUpdateOrg.setEnabled(false);
     }
 
@@ -49,8 +49,8 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tblSnowClearingOrg = new javax.swing.JTable();
-        txtResName = new javax.swing.JTextField();
-        btnResBack = new javax.swing.JButton();
+        txtOrgName = new javax.swing.JTextField();
+        btnManageOrgBack = new javax.swing.JButton();
         btnSubmitOrg = new javax.swing.JButton();
         lblResName = new javax.swing.JLabel();
         txtOrgUsername = new javax.swing.JTextField();
@@ -95,15 +95,15 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblSnowClearingOrg);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 496, 91));
-        add(txtResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 144, -1));
+        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 144, -1));
 
-        btnResBack.setText("<< Back");
-        btnResBack.addActionListener(new java.awt.event.ActionListener() {
+        btnManageOrgBack.setText("<< Back");
+        btnManageOrgBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResBackActionPerformed(evt);
+                btnManageOrgBackActionPerformed(evt);
             }
         });
-        add(btnResBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, -1, -1));
+        add(btnManageOrgBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, -1, -1));
 
         btnSubmitOrg.setText("Submit");
         btnSubmitOrg.addActionListener(new java.awt.event.ActionListener() {
@@ -117,12 +117,6 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         lblResName.setText("SnowClearingOrg Name:");
         add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
         add(txtOrgUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 144, -1));
-
-        txtOrgPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtOrgPasswordActionPerformed(evt);
-            }
-        });
         add(txtOrgPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 144, -1));
 
         lblResPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -171,7 +165,7 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         add(btnRefreshOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 160, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnResBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResBackActionPerformed
+    private void btnManageOrgBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrgBackActionPerformed
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -179,10 +173,10 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         sysAdmin.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnResBackActionPerformed
+    }//GEN-LAST:event_btnManageOrgBackActionPerformed
 
     private void btnSubmitOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitOrgActionPerformed
-        String name = txtResName.getText();
+        String name = txtOrgName.getText();
         String username = txtOrgUsername.getText();
         String password = txtOrgPassword.getText();
               
@@ -227,24 +221,24 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Username Already Exists ! Please enter a different Username !!!");
         }else{
             
-        UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, password, null, new SnowClearingOrgRole());
-        SnowClearingOrg org = system.getSnowClearingOrgDirectory().createRestaurantInfo(username);
+
+        UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, 
+                password, null, new SnowClearingOrgRole());
+        SnowClearingOrg org = system.getSnowClearingOrgDirectory().createSnowClearingOrgInfo(username);
+
         
-        populateRestaurantTable();
         
-        txtResName.setText("");
+        populateSnowClearingOrgTable();
+        
+        txtOrgName.setText("");
         txtOrgUsername.setText("");
         txtOrgPassword.setText("");
         }
     }//GEN-LAST:event_btnSubmitOrgActionPerformed
 
-    private void txtOrgPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtOrgPasswordActionPerformed
-
     private void btnUpdateOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateOrgActionPerformed
         // TODO add your handling code here:
-        String name = txtResName.getText();
+        String name = txtOrgName.getText();
         String username = txtOrgUsername.getText();
         String password = txtOrgPassword.getText();
         
@@ -286,12 +280,12 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         }
         
         system.getUserAccountDirectory().updateUserAccount(user, name, username, password);
-        populateRestaurantTable();
+        populateSnowClearingOrgTable();
         btnSubmitOrg.setEnabled(true);
         btnDeleteOrg.setEnabled(true);
         btnViewOrg.setEnabled(true);
         btnUpdateOrg.setEnabled(false);
-        txtResName.setText("");
+        txtOrgName.setText("");
         txtOrgUsername.setText("");
         txtOrgPassword.setText("");
     }//GEN-LAST:event_btnUpdateOrgActionPerformed
@@ -301,7 +295,7 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         int selectedRow = tblSnowClearingOrg.getSelectedRow();
         
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a Restaurant Detail to Delete !!!");
+            JOptionPane.showMessageDialog(this, "Please select a SnowClearingOrg Detail to Delete !!!");
             return;
         }
         else {
@@ -313,8 +307,10 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
                 
                 UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
                 system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getSnowClearingOrgDirectory().deleteRestaurent(user.getUsername());
-                populateRestaurantTable();
+
+                system.getSnowClearingOrgDirectory().deleteSnowClearingOrg(user.getUsername());
+                populateSnowClearingOrgTable();
+
             }
         }
     }//GEN-LAST:event_btnDeleteOrgActionPerformed
@@ -324,7 +320,7 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         int selectedRow = tblSnowClearingOrg.getSelectedRow();
         
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a Restaurant Detail to View !!!");
+            JOptionPane.showMessageDialog(this, "Please select a SnowClearingOrg Detail to View !!!");
             return;
         }
 
@@ -333,7 +329,7 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
             String pwd = (String) tblSnowClearingOrg.getValueAt(selectedRow, 2);
             user = system.getUserAccountDirectory().authenticateUser(username, pwd);
 
-            txtResName.setText(user.getName()+"");
+            txtOrgName.setText(user.getName()+"");
             txtOrgUsername.setText(user.getUsername()+"");
             txtOrgPassword.setText(user.getPassword()+"");
 
@@ -347,14 +343,14 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
 
     private void btnRefreshOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshOrgActionPerformed
         // TODO add your handling code here:
-        populateRestaurantTable();
+        populateSnowClearingOrgTable();
     }//GEN-LAST:event_btnRefreshOrgActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDeleteOrg;
+    private javax.swing.JButton btnManageOrgBack;
     private javax.swing.JButton btnRefreshOrg;
-    private javax.swing.JButton btnResBack;
     private javax.swing.JButton btnSubmitOrg;
     private javax.swing.JButton btnUpdateOrg;
     private javax.swing.JButton btnViewOrg;
@@ -364,17 +360,23 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblResUsername;
     private javax.swing.JTable tblSnowClearingOrg;
     private javax.swing.JLabel titleManageRestaurants;
+    private javax.swing.JTextField txtOrgName;
     private javax.swing.JPasswordField txtOrgPassword;
     private javax.swing.JTextField txtOrgUsername;
-    private javax.swing.JTextField txtResName;
     // End of variables declaration//GEN-END:variables
 
-    private void populateRestaurantTable() {
+    private void populateSnowClearingOrgTable() {
         DefaultTableModel model = (DefaultTableModel) tblSnowClearingOrg.getModel();
         model.setRowCount(0);
         
+        
+        
         for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
            
+
+            //System.out.println(user);
+            
+
             if ("Business.Role.SnowClearingOrgRole".equals(user.getRole().getClass().getName())) {
                 Object[] row = new Object[3]; 
                 row[0] = user.getName();

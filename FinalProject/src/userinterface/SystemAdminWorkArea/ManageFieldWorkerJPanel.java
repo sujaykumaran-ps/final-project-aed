@@ -36,7 +36,7 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.system = system;
         populateFieldWorkerTable();
-        btnUpdate.setEnabled(false);
+        btnUpdateFW.setEnabled(false);
     }
 
     /**
@@ -57,11 +57,11 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         txtFieldWorkerUsername = new javax.swing.JTextField();
         lblDelPassword = new javax.swing.JLabel();
         txtFieldWorkerPassword = new javax.swing.JPasswordField();
-        btnViewDelivery = new javax.swing.JButton();
-        btnDeleteDelivery = new javax.swing.JButton();
+        btnViewFW = new javax.swing.JButton();
+        btnDeleteFW = new javax.swing.JButton();
         lblDelUsername = new javax.swing.JLabel();
         titleManageDeliveryMan = new javax.swing.JLabel();
-        btnUpdate = new javax.swing.JButton();
+        btnUpdateFW = new javax.swing.JButton();
         btnRefreshFW = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(252, 156, 52));
@@ -96,12 +96,6 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblFieldWorker);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 496, 91));
-
-        txtFieldWorker.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFieldWorkerActionPerformed(evt);
-            }
-        });
         add(txtFieldWorker, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, 144, -1));
 
         btnFWBack.setText("<< Back");
@@ -128,29 +122,23 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         lblDelPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblDelPassword.setText("Password:");
         add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, -1, -1));
-
-        txtFieldWorkerPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFieldWorkerPasswordActionPerformed(evt);
-            }
-        });
         add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, 144, -1));
 
-        btnViewDelivery.setText("View");
-        btnViewDelivery.addActionListener(new java.awt.event.ActionListener() {
+        btnViewFW.setText("View");
+        btnViewFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewDeliveryActionPerformed(evt);
+                btnViewFWActionPerformed(evt);
             }
         });
-        add(btnViewDelivery, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 320, -1, -1));
+        add(btnViewFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 320, -1, -1));
 
-        btnDeleteDelivery.setText("Delete");
-        btnDeleteDelivery.addActionListener(new java.awt.event.ActionListener() {
+        btnDeleteFW.setText("Delete");
+        btnDeleteFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteDeliveryActionPerformed(evt);
+                btnDeleteFWActionPerformed(evt);
             }
         });
-        add(btnDeleteDelivery, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, -1, -1));
+        add(btnDeleteFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, -1, -1));
 
         lblDelUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblDelUsername.setText("Username:");
@@ -161,13 +149,13 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         titleManageDeliveryMan.setText("Manage FieldWorker ");
         add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 816, -1));
 
-        btnUpdate.setText("Update");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdateFW.setText("Update");
+        btnUpdateFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                btnUpdateFWActionPerformed(evt);
             }
         });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 490, -1, -1));
+        add(btnUpdateFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 490, -1, -1));
 
         btnRefreshFW.setText("Refresh Table");
         btnRefreshFW.addActionListener(new java.awt.event.ActionListener() {
@@ -195,15 +183,15 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
               
         try {
             if(name == null || name.isEmpty()){
-                throw new NullPointerException("Delivery Person Name Field Cannot be Empty !!!");   
+                throw new NullPointerException("Field Worker Name Field Cannot be Empty !!!");   
             }else if(Pattern.matches("^[A-Za-z ]+$", name) == false){
-                throw new Exception("Please Enter a valid Delivery Person Name !!!");    
+                throw new Exception("Please Enter a valid Field Worker Name !!!");    
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "Delivery Person Name Field Cannot be Empty !!!");
+            JOptionPane.showMessageDialog(null, "Field Worker Name Field Cannot be Empty !!!");
             return;
         } catch (Exception e){
-            JOptionPane.showMessageDialog(null, "Please Enter a valid Delivery Person Name !!!");
+            JOptionPane.showMessageDialog(null, "Please Enter a valid Field Worker Name !!!");
             return;
         }
         
@@ -245,16 +233,12 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnSubmitFWActionPerformed
 
-    private void txtFieldWorkerPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldWorkerPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtFieldWorkerPasswordActionPerformed
-
-    private void btnViewDeliveryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDeliveryActionPerformed
+    private void btnViewFWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewFWActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblFieldWorker.getSelectedRow();
         
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a Delivery Person Detail to View !!!");
+            JOptionPane.showMessageDialog(this, "Please select a Field Worker Detail to View !!!");
             return;
         }
 
@@ -270,12 +254,12 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         }
         
         btnSubmitFW.setEnabled(false);
-        btnDeleteDelivery.setEnabled(false);
-        btnViewDelivery.setEnabled(false);
-        btnUpdate.setEnabled(true);
-    }//GEN-LAST:event_btnViewDeliveryActionPerformed
+        btnDeleteFW.setEnabled(false);
+        btnViewFW.setEnabled(false);
+        btnUpdateFW.setEnabled(true);
+    }//GEN-LAST:event_btnViewFWActionPerformed
 
-    private void btnDeleteDeliveryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteDeliveryActionPerformed
+    private void btnDeleteFWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteFWActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblFieldWorker.getSelectedRow();
         
@@ -297,9 +281,9 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
                 populateFieldWorkerTable();
             }
         }
-    }//GEN-LAST:event_btnDeleteDeliveryActionPerformed
+    }//GEN-LAST:event_btnDeleteFWActionPerformed
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void btnUpdateFWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateFWActionPerformed
         // TODO add your handling code here:
         String name = txtFieldWorker.getText();
         String username = txtFieldWorkerUsername.getText();
@@ -345,22 +329,18 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         system.getUserAccountDirectory().updateUserAccount(user, name, username, password);
         populateFieldWorkerTable();
         btnSubmitFW.setEnabled(true);
-        btnDeleteDelivery.setEnabled(true);
-        btnViewDelivery.setEnabled(true);
-        btnUpdate.setEnabled(false);
+        btnDeleteFW.setEnabled(true);
+        btnViewFW.setEnabled(true);
+        btnUpdateFW.setEnabled(false);
         txtFieldWorker.setText("");
         txtFieldWorkerUsername.setText("");
         txtFieldWorkerPassword.setText("");
-    }//GEN-LAST:event_btnUpdateActionPerformed
+    }//GEN-LAST:event_btnUpdateFWActionPerformed
 
     private void btnRefreshFWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshFWActionPerformed
         // TODO add your handling code here:
         populateFieldWorkerTable();
     }//GEN-LAST:event_btnRefreshFWActionPerformed
-
-    private void txtFieldWorkerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldWorkerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtFieldWorkerActionPerformed
 
     private void populateFieldWorkerTable() {
         DefaultTableModel model = (DefaultTableModel) tblFieldWorker.getModel();
@@ -382,12 +362,12 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnDeleteDelivery;
+    private javax.swing.JButton btnDeleteFW;
     private javax.swing.JButton btnFWBack;
     private javax.swing.JButton btnRefreshFW;
     private javax.swing.JButton btnSubmitFW;
-    private javax.swing.JButton btnUpdate;
-    private javax.swing.JButton btnViewDelivery;
+    private javax.swing.JButton btnUpdateFW;
+    private javax.swing.JButton btnViewFW;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblDelPassword;
     private javax.swing.JLabel lblDelUsername;

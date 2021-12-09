@@ -44,11 +44,11 @@ public class SnowClearingOrgDirectory {
         }
     }
     
-    public void updateSnowClearingOrgInfo(SnowClearingOrg res, String name, String number, String address, String cuisine){
-        res.setSnowOrgName(name);
-        res.setSnowOrgAddress(address);
-        res.setSnowOrgPhNum(number);
-        res.setSnowOrgEmail(cuisine);
+    public void updateSnowClearingOrgInfo(SnowClearingOrg org, String name, String number, String address, String cuisine){
+        org.setSnowOrgName(name);
+        org.setSnowOrgAddress(address);
+        org.setSnowOrgPhNum(number);
+        org.setSnowOrgEmail(cuisine);
     }
     
     public Service addServiceTypes(SnowClearingOrg res, String name, String desc, String amount){

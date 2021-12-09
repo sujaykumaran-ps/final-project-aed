@@ -221,9 +221,12 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Username Already Exists ! Please enter a different Username !!!");
         }else{
             
+
         UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, 
                 password, null, new SnowClearingOrgRole());
         SnowClearingOrg org = system.getSnowClearingOrgDirectory().createSnowClearingOrgInfo(username);
+
+        
         
         populateSnowClearingOrgTable();
         
@@ -304,8 +307,10 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
                 
                 UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
                 system.getUserAccountDirectory().deleteUserAccount(user);
+
                 system.getSnowClearingOrgDirectory().deleteSnowClearingOrg(user.getUsername());
                 populateSnowClearingOrgTable();
+
             }
         }
     }//GEN-LAST:event_btnDeleteOrgActionPerformed
@@ -368,8 +373,10 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         
         for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
            
+
             //System.out.println(user);
             
+
             if ("Business.Role.SnowClearingOrgRole".equals(user.getRole().getClass().getName())) {
                 Object[] row = new Object[3]; 
                 row[0] = user.getName();

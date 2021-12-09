@@ -21,7 +21,7 @@ public class Member {
     private String memPhNum;
     int id = 1;
 
-    public Member(String cusUsername) {
+    public Member(String memUsername) {
         this.memUsername = memUsername;
         requestList = new ArrayList<WorkRequest>();
     }

@@ -63,8 +63,8 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         titleSnowClearingOrg = new javax.swing.JLabel();
-        lblType = new javax.swing.JLabel();
-        txtOrgType = new javax.swing.JTextField();
+        lblEmail = new javax.swing.JLabel();
+        txtOrgEmail = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(252, 156, 52));
 
@@ -108,12 +108,12 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         titleSnowClearingOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleSnowClearingOrg.setText("Manage SnowClearningOrg Info");
 
-        lblType.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblType.setText("Type :");
+        lblEmail.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblEmail.setText("Email:");
 
-        txtOrgType.addActionListener(new java.awt.event.ActionListener() {
+        txtOrgEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtOrgTypeActionPerformed(evt);
+                txtOrgEmailActionPerformed(evt);
             }
         });
 
@@ -140,13 +140,13 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
                                     .addComponent(lblSnowClearingPhone)
                                     .addComponent(lblSnowClearingAddress)
                                     .addComponent(lblSnowClearningName)
-                                    .addComponent(lblType))
+                                    .addComponent(lblEmail))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtOrgName)
                                     .addComponent(txtOrgAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                                     .addComponent(txtOrgPhNum, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(txtOrgType))))
+                                    .addComponent(txtOrgEmail))))
                         .addGap(0, 260, Short.MAX_VALUE))
                     .addComponent(titleSnowClearingOrg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -173,8 +173,8 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
                         .addComponent(lblSnowClearingPhone)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblType)
-                    .addComponent(txtOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblEmail)
+                    .addComponent(txtOrgEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
@@ -200,7 +200,7 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         String name = txtOrgName.getText();
         String address = txtOrgAddress.getText();
         String number = txtOrgPhNum.getText();
-       String type = txtOrgType.getText();
+       String email = txtOrgEmail.getText();
         
         try {
              if(name==null || name.isEmpty()){
@@ -237,18 +237,18 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         }
          
         try {
-             if(type==null || type.isEmpty()){
-                throw new NullPointerException("SnowClearing Org Service Field cannot be Empty !!!");
+             if(email==null || email.isEmpty()){
+                throw new NullPointerException("SnowClearing Org Email Field cannot be Empty !!!");
 
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "SnowClearing Org Service Field cannot be Empty !!!");        
+            JOptionPane.showMessageDialog(null, "SnowClearing Org Email Field cannot be Empty !!!");        
             return;   
         }
         
         for(SnowClearingOrg org:system.getSnowClearingOrgDirectory().getSnowClearingOrgList()){
            if(org.getUserName().equals(account.getUsername())){
-                system.getSnowClearingOrgDirectory().updateSnowClearingOrgInfo(org, name, number, address, type);
+                system.getSnowClearingOrgDirectory().updateSnowClearingOrgInfo(org, name, number, address, email);
             }
         }
         
@@ -270,24 +270,24 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         btnUpdate.setEnabled(false);
     }//GEN-LAST:event_btnUpdateActionPerformed
 
-    private void txtOrgTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgTypeActionPerformed
+    private void txtOrgEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtOrgTypeActionPerformed
+    }//GEN-LAST:event_txtOrgEmailActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblSnowClearingAddress;
     private javax.swing.JLabel lblSnowClearingPhone;
     private javax.swing.JLabel lblSnowClearningName;
-    private javax.swing.JLabel lblType;
     private javax.swing.JLabel titleSnowClearingOrg;
     private javax.swing.JTextField txtOrgAddress;
+    private javax.swing.JTextField txtOrgEmail;
     private javax.swing.JTextField txtOrgName;
     private javax.swing.JTextField txtOrgPhNum;
-    private javax.swing.JTextField txtOrgType;
     // End of variables declaration//GEN-END:variables
 
     private void populateFields() {

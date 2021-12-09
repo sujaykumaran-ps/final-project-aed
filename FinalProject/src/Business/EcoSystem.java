@@ -8,6 +8,7 @@ package Business;
 
 import Business.Member.MemberDirectory;
 import Business.FieldWorker.FieldWorkerDirectory;
+import Business.FundRaising.FundRaisingDirectory;
 import Business.SnowClearingOrg.SnowClearingOrgDirectory;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
@@ -23,9 +24,10 @@ public class EcoSystem extends Organization{
     private SnowClearingOrgDirectory snowClearingOrgDirectory;
     private MemberDirectory memberDirectory;
     private FieldWorkerDirectory fieldWorkerDirectory;
+    private FundRaisingDirectory fundRaisingDirectory;
     
-    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory) {
-
+    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory) {
+        this.fundRaisingDirectory = fundRaisingDirectory;
         this.snowClearingOrgDirectory = snowClearingOrgDirectory;
         this.memberDirectory = memberDirectory;
         this.fieldWorkerDirectory = fieldWorkerDirectory;
@@ -70,9 +72,23 @@ public class EcoSystem extends Organization{
         return fieldWorkerDirectory;
     }
 
-    public void setDeliveryManDirectory(FieldWorkerDirectory fieldWorkerDirectory) {
+    public void setFieldWorkerDirectory(FieldWorkerDirectory fieldWorkerDirectory) {
         this.fieldWorkerDirectory = fieldWorkerDirectory;
     }
+
+    public FundRaisingDirectory getFundRaisingDirectory() {
+        if(fundRaisingDirectory == null)
+        {
+            fundRaisingDirectory = new FundRaisingDirectory();
+        }
+        return fundRaisingDirectory;
+    }
+
+    public void setFundRaisingDirectory(FundRaisingDirectory fundRaisingDirectory) {
+        this.fundRaisingDirectory = fundRaisingDirectory;
+    }
+    
+    
     
     
     

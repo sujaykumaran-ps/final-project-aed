@@ -27,6 +27,7 @@ public abstract class Organization {
         SnowClearingOrg("SnowClearingOrg"),
         Member("Member"),
         FieldWorker("FieldWorker"),
+        FundRaising("FundRaising"),
         SysAdmin("Sysadmin");
         
         private String value;

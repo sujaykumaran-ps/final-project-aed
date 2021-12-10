@@ -31,6 +31,7 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
+        populateFundRaisingTable();
         
     }
 
@@ -45,12 +46,12 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tblFundRaisingEnt = new javax.swing.JTable();
-        txtOrgName = new javax.swing.JTextField();
+        txtFundRaisingName = new javax.swing.JTextField();
         btnManageFundBack = new javax.swing.JButton();
         btnSubmitFund = new javax.swing.JButton();
         lblResName = new javax.swing.JLabel();
-        txtOrgUsername = new javax.swing.JTextField();
-        txtOrgPassword = new javax.swing.JPasswordField();
+        txtFundRaisingUsername = new javax.swing.JTextField();
+        txtFundRaisingPassword = new javax.swing.JPasswordField();
         lblResPassword = new javax.swing.JLabel();
         btnUpdateFund = new javax.swing.JButton();
         btnDeleteEnt = new javax.swing.JButton();
@@ -162,17 +163,17 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
                         .addGap(182, 182, 182)
                         .addComponent(lblResName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtFundRaisingName, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(260, 260, 260)
                         .addComponent(lblResUsername)
                         .addGap(39, 39, 39)
-                        .addComponent(txtOrgUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtFundRaisingUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(260, 260, 260)
                         .addComponent(lblResPassword)
                         .addGap(41, 41, 41)
-                        .addComponent(txtOrgPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtFundRaisingPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(360, 360, 360)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,16 +207,16 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
                     .addComponent(btnDeleteEnt))
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFundRaisingName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblResName))
                 .addGap(4, 4, 4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblResUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtOrgUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFundRaisingUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblResPassword)
-                    .addComponent(txtOrgPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFundRaisingPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSubmitFund)
@@ -234,9 +235,9 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnManageFundBackActionPerformed
 
     private void btnSubmitFundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitFundActionPerformed
-        String name = txtOrgName.getText();
-        String username = txtOrgUsername.getText();
-        String password = txtOrgPassword.getText();
+        String name = txtFundRaisingName.getText();
+        String username = txtFundRaisingUsername.getText();
+        String password = txtFundRaisingPassword.getText();
 
         try {
             if(name == null || name.isEmpty()){
@@ -285,17 +286,17 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
 
             populateFundRaisingTable();
 
-            txtOrgName.setText("");
-            txtOrgUsername.setText("");
-            txtOrgPassword.setText("");
+            txtFundRaisingName.setText("");
+            txtFundRaisingUsername.setText("");
+            txtFundRaisingPassword.setText("");
         }
     }//GEN-LAST:event_btnSubmitFundActionPerformed
 
     private void btnUpdateFundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateFundActionPerformed
         // TODO add your handling code here:
-        String name = txtOrgName.getText();
-        String username = txtOrgUsername.getText();
-        String password = txtOrgPassword.getText();
+        String name = txtFundRaisingName.getText();
+        String username = txtFundRaisingUsername.getText();
+        String password = txtFundRaisingPassword.getText();
 
         try {
             if(name == null || name.isEmpty()){
@@ -340,9 +341,9 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
         btnDeleteEnt.setEnabled(true);
         btnViewFundEnt.setEnabled(true);
         btnUpdateFund.setEnabled(false);
-        txtOrgName.setText("");
-        txtOrgUsername.setText("");
-        txtOrgPassword.setText("");
+        txtFundRaisingName.setText("");
+        txtFundRaisingUsername.setText("");
+        txtFundRaisingPassword.setText("");
     }//GEN-LAST:event_btnUpdateFundActionPerformed
 
     private void btnDeleteEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteEntActionPerformed
@@ -350,7 +351,7 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
         int selectedRow = tblFundRaisingEnt.getSelectedRow();
 
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a SnowClearingOrg Detail to Delete !!!");
+            JOptionPane.showMessageDialog(this, "Please select a Fund Raising Detail to Delete !!!");
             return;
         }
         else {
@@ -363,7 +364,7 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
                 UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
                 system.getUserAccountDirectory().deleteUserAccount(user);
 
-                system.getSnowClearingOrgDirectory().deleteSnowClearingOrg(user.getUsername());
+                system.getFundRaisingDirectory().deleteFundRaising(user.getUsername());
                 populateFundRaisingTable();
 
             }
@@ -375,7 +376,7 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
         int selectedRow = tblFundRaisingEnt.getSelectedRow();
 
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a SnowClearingOrg Detail to View !!!");
+            JOptionPane.showMessageDialog(this, "Please select a Fund Raising Org Detail to View !!!");
             return;
         }
 
@@ -384,9 +385,9 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
             String pwd = (String) tblFundRaisingEnt.getValueAt(selectedRow, 2);
             user = system.getUserAccountDirectory().authenticateUser(username, pwd);
 
-            txtOrgName.setText(user.getName()+"");
-            txtOrgUsername.setText(user.getUsername()+"");
-            txtOrgPassword.setText(user.getPassword()+"");
+            txtFundRaisingName.setText(user.getName()+"");
+            txtFundRaisingUsername.setText(user.getUsername()+"");
+            txtFundRaisingPassword.setText(user.getPassword()+"");
 
         }
 
@@ -415,9 +416,9 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblResUsername;
     private javax.swing.JTable tblFundRaisingEnt;
     private javax.swing.JLabel titleManageRestaurants;
-    private javax.swing.JTextField txtOrgName;
-    private javax.swing.JPasswordField txtOrgPassword;
-    private javax.swing.JTextField txtOrgUsername;
+    private javax.swing.JTextField txtFundRaisingName;
+    private javax.swing.JPasswordField txtFundRaisingPassword;
+    private javax.swing.JTextField txtFundRaisingUsername;
     // End of variables declaration//GEN-END:variables
 
     private void populateFundRaisingTable() {

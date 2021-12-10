@@ -6,8 +6,7 @@ package userinterface.FundRaisingRole;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
-import javax.swing.JPanel;
-import userinterface.SnowClearingOrgRole.ManageSnowClearingInfoJPanel;
+import javax.swing.JPanel;;
 
 /**
  *
@@ -85,7 +84,10 @@ public class FundRaisingAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnFundEntInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFundEntInfoActionPerformed
         // TODO add your handling code here:
-        
+        ManageFundRaisingInfoJPanel manageFundRaisingInfo = new ManageFundRaisingInfoJPanel(userProcessContainer, ua, system);
+        userProcessContainer.add("Manage Fund Raising Organization Info",manageFundRaisingInfo);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnFundEntInfoActionPerformed
 
     private void btnManageCausesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCausesActionPerformed

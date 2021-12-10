@@ -36,7 +36,7 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         txtOrgName.setEnabled(false);
         txtOrgAddress.setEnabled(false);
         txtOrgPhNum.setEnabled(false);
-        //txtOrgType.setEnabled(false);
+        txtOrgEmail.setEnabled(false);
         btnSave.setEnabled(false);
         btnUpdate.setEnabled(true);
         
@@ -255,7 +255,7 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         txtOrgName.setEnabled(false);
         txtOrgAddress.setEnabled(false);
         txtOrgPhNum.setEnabled(false);
-        //txtOrgType.setEnabled(false);
+        txtOrgEmail.setEnabled(false);
         btnSave.setEnabled(false);
         btnUpdate.setEnabled(true);
     }//GEN-LAST:event_btnSaveActionPerformed
@@ -265,7 +265,7 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         txtOrgName.setEnabled(true);
         txtOrgAddress.setEnabled(true);
         txtOrgPhNum.setEnabled(true);
-       // txtOrgType.setEnabled(true);
+        txtOrgEmail.setEnabled(true);
         btnSave.setEnabled(true);
         btnUpdate.setEnabled(false);
     }//GEN-LAST:event_btnUpdateActionPerformed
@@ -296,7 +296,7 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
                txtOrgName.setText(org.getSnowOrgName());
                txtOrgAddress.setText(org.getSnowOrgAddress());
                txtOrgPhNum.setText(org.getSnowOrgPhNum());
-              // txtOrgType.setText(org.get);
+               txtOrgEmail.setText(org.getSnowOrgEmail());
             }
     }
 }

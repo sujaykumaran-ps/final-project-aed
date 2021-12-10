@@ -19,17 +19,17 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sujay
  */
-public class FieldWorkRequestJPanel extends javax.swing.JPanel {
+public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form FieldWorkRequestJPanel
+     * Creates new form LeafFieldWorkRequestJPanel
      */
     private JPanel userProcessContainer;
     private UserAccount account;
     WorkRequest request;
     EcoSystem system;
     
-    public FieldWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, WorkRequest request, EcoSystem system) {
+    public LeafFieldWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, WorkRequest request, EcoSystem system) {
         this.userProcessContainer = userProcessContainer;
         this.account = account;
         this.request = request;

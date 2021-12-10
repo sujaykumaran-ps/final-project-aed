@@ -76,10 +76,10 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
         });
 
         lblSnowClearningName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearningName.setText("LeafClearing Name :");
+        lblSnowClearningName.setText("LeafClearing Org Name :");
 
         lblSnowClearingAddress.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearingAddress.setText("LeafClearning Address :");
+        lblSnowClearingAddress.setText("LeafClearning Org Address :");
 
         lblSnowClearingPhone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblSnowClearingPhone.setText("LeafClearing Phone Number :");

@@ -159,10 +159,10 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
 
     private void btnLeafClearingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLeafClearingActionPerformed
         // TODO add your handling code here:
-            MemberAreaJPanel memJPanel = new MemberAreaJPanel(userProcessContainer, account, system);
-            userProcessContainer.add("LeafClearing Organization Service", memJPanel);
-            CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-            layout.next(userProcessContainer);
+        LeafOrgAreaJPanel leafmemJPanel = new LeafOrgAreaJPanel(userProcessContainer, account, system);
+        userProcessContainer.add("LeafClearing Organization Service", leafmemJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnLeafClearingActionPerformed
     private void btnDonateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonateActionPerformed
         FundDonationJPanel fundJPanel = new FundDonationJPanel(userProcessContainer, account, system);

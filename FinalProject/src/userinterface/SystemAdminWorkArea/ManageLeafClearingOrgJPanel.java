@@ -104,7 +104,7 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         });
 
         lblResName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lblResName.setText("SnowClearingOrg Name:");
+        lblResName.setText("Leaf Clearing Org Name:");
 
         lblResPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblResPassword.setText("Password:");
@@ -128,7 +128,7 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
 
         titleManageRestaurants.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageRestaurants.setText("Manage SnowClearingOrg");
+        titleManageRestaurants.setText("Manage LeafClearingOrg");
 
         btnViewOrg.setText("View");
         btnViewOrg.addActionListener(new java.awt.event.ActionListener() {
@@ -148,18 +148,22 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 816, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnRefreshOrg)
+                .addGap(75, 75, 75))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(318, 318, 318)
+                .addComponent(lblResName)
+                .addContainerGap(372, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 4, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(titleManageRestaurants, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(130, 130, 130)
                             .addComponent(btnManageOrgBack))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(640, 640, 640)
-                            .addComponent(btnRefreshOrg))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(250, 250, 250)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -169,9 +173,7 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
                             .addGap(5, 5, 5)
                             .addComponent(btnDeleteOrg))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(350, 350, 350)
-                            .addComponent(lblResName)
-                            .addGap(4, 4, 4)
+                            .addGap(488, 488, 488)
                             .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(390, 390, 390)
@@ -190,29 +192,30 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
                                     .addGap(80, 80, 80)
                                     .addComponent(btnSubmitOrg))
                                 .addComponent(btnUpdateOrg))))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 4, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 479, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(btnRefreshOrg)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                .addComponent(lblResName)
+                .addGap(133, 133, 133))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 25, Short.MAX_VALUE)
                     .addComponent(titleManageRestaurants)
                     .addGap(68, 68, 68)
                     .addComponent(btnManageOrgBack)
-                    .addGap(21, 21, 21)
-                    .addComponent(btnRefreshOrg)
-                    .addGap(1, 1, 1)
+                    .addGap(45, 45, 45)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(19, 19, 19)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(btnViewOrg)
                         .addComponent(btnDeleteOrg))
                     .addGap(21, 21, 21)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblResName)
-                        .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(4, 4, 4)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(lblResUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -225,7 +228,7 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(btnSubmitOrg)
                         .addComponent(btnUpdateOrg))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 26, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
  private void populateLeafClearingOrgTable() {
@@ -378,7 +381,7 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         int selectedRow = tblLeafClearingOrg.getSelectedRow();
 
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a SnowClearingOrg Detail to Delete !!!");
+            JOptionPane.showMessageDialog(this, "Please select a LeafClearingOrg Detail to Delete !!!");
             return;
         }
         else {
@@ -403,7 +406,7 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         int selectedRow = tblLeafClearingOrg.getSelectedRow();
 
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a SnowClearingOrg Detail to View !!!");
+            JOptionPane.showMessageDialog(this, "Please select a LeafClearingOrg Detail to View !!!");
             return;
         }
 

@@ -20,10 +20,10 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sujay
  */
-public class ManageServiceJPanel extends javax.swing.JPanel {
+public class ManageLeafServiceJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageServiceJPanel
+     * Creates new form ManageLeafServiceJPanel
      */
     
     EcoSystem system;
@@ -31,7 +31,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     UserAccount ua;
     
-    public ManageServiceJPanel(JPanel userProcessContainer, UserAccount ua, EcoSystem system) {
+    public ManageLeafServiceJPanel(JPanel userProcessContainer, UserAccount ua, EcoSystem system) {
         initComponents();
         this.ua = ua;
         this.system = system;

@@ -13,7 +13,7 @@ import userinterface.LeafClearingOrgRole.ManageLeafClearingInfoJPanel;
  *
  * @author  raunak
  */
-public class AdminWorkAreaJPanel extends javax.swing.JPanel {
+public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
     
     JPanel userProcessContainer;
     EcoSystem system;
@@ -21,7 +21,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     
     /** Creates new form AdminWorkAreaJPanel
      * @param userProcessContainer */
-    public AdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount ua, EcoSystem system) {
+    public LeafAdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount ua, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ua = ua;
@@ -77,11 +77,11 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
 
         lblResNameTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblResNameTitle.setText("Leaf Clearing Ord Name :");
-        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 230, 30));
+        lblResNameTitle.setText("Leaf Clearing Org Name :");
+        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 240, 30));
 
         lblResName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 170, 30));
+        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 170, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgInfoActionPerformed
@@ -93,14 +93,14 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnOrgInfoActionPerformed
 
     private void btnManageServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageServicesActionPerformed
-        ManageServiceJPanel manageServices = new ManageServiceJPanel(userProcessContainer, ua, system);
+        ManageLeafServiceJPanel manageServices = new ManageLeafServiceJPanel(userProcessContainer, ua, system);
         userProcessContainer.add("Manage Services",manageServices);
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageServicesActionPerformed
 
     private void btnManageRequestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageRequestsActionPerformed
-        ManageRequestsJPanel manageRequest = new ManageRequestsJPanel(userProcessContainer, ua, system);
+        ManageLeafRequestsJPanel manageRequest = new ManageLeafRequestsJPanel(userProcessContainer, ua, system);
         userProcessContainer.add("Manage Requests", manageRequest);
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);

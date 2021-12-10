@@ -19,16 +19,16 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sujay
  */
-public class ManageRequestsJPanel extends javax.swing.JPanel {
+public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageRequestsJPanel
+     * Creates new form ManageLeafRequestsJPanel
      */
     EcoSystem system;
     JPanel userProcessContainer;
     UserAccount account;
     
-    public ManageRequestsJPanel(JPanel userProcessContainer,UserAccount account, EcoSystem system) {
+    public ManageLeafRequestsJPanel(JPanel userProcessContainer,UserAccount account, EcoSystem system) {
         initComponents();
         this.account=account;
         this.system=system;
@@ -185,7 +185,7 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
             if(request.getStatus().equals("In Progress") || request.getStatus().equals("Completed")){
                 JOptionPane.showMessageDialog(null, "Request Completed or In Progress !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }else{
-                ViewRequestJPanel viewRequest=new ViewRequestJPanel(userProcessContainer, account, request, system);
+                ViewLeafRequestJPanel viewRequest=new ViewLeafRequestJPanel(userProcessContainer, account, request, system);
                 userProcessContainer.add("View Request", viewRequest);
                 CardLayout layout=(CardLayout)userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
@@ -207,7 +207,7 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null,"Request Cancelled !!! Cannot Assign.", "Warning", JOptionPane.WARNING_MESSAGE);
             }
             else{
-                FieldWorkRequestJPanel assignDelivery = new FieldWorkRequestJPanel(userProcessContainer, account, request, system);
+                LeafFieldWorkRequestJPanel assignDelivery = new LeafFieldWorkRequestJPanel(userProcessContainer, account, request, system);
                 userProcessContainer.add("Assign Field Worker", assignDelivery);
                 CardLayout layout=(CardLayout)userProcessContainer.getLayout();
                 layout.next(userProcessContainer);

@@ -19,16 +19,16 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sujay
  */
-public class ViewRequestJPanel extends javax.swing.JPanel {
+public class ViewLeafRequestJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewRequestJPanel
+     * Creates new form ViewLeafRequestJPanel
      */
     private JPanel userProcessContainer;
     private UserAccount account;
     WorkRequest request;
     EcoSystem system;
-    public ViewRequestJPanel(JPanel userProcessContainer, UserAccount account, WorkRequest request, EcoSystem system) {
+    public ViewLeafRequestJPanel(JPanel userProcessContainer, UserAccount account, WorkRequest request, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

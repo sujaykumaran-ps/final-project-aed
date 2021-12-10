@@ -52,7 +52,7 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         lblName = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblLeafClearingOrg = new javax.swing.JTable();
-        btnOrderFood = new javax.swing.JButton();
+        btnRequest = new javax.swing.JButton();
         titleChoose = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblRequests = new javax.swing.JTable();
@@ -78,7 +78,7 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "LeafClearingOrg Name", "Address", "Phone Number", "Service Offering"
+                "LeafClearingOrg Name", "Address", "Phone Number", "Email"
             }
         ) {
             Class[] types = new Class [] {
@@ -98,10 +98,10 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblLeafClearingOrg);
 
-        btnOrderFood.setText("Request Service");
-        btnOrderFood.addActionListener(new java.awt.event.ActionListener() {
+        btnRequest.setText("Request Service");
+        btnRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOrderFoodActionPerformed(evt);
+                btnRequestActionPerformed(evt);
             }
         });
 
@@ -162,7 +162,7 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(253, 253, 253)
-                        .addComponent(btnOrderFood)))
+                        .addComponent(btnRequest)))
                 .addContainerGap(76, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -177,7 +177,7 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnOrderFood)
+                .addComponent(btnRequest)
                 .addGap(21, 21, 21)
                 .addComponent(titleOrders)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -193,7 +193,7 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         populateLeafRequestsTable();
     }//GEN-LAST:event_btnRefreshActionPerformed
 
-    private void btnOrderFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderFoodActionPerformed
+    private void btnRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblLeafClearingOrg.getSelectedRow();
         if(selectedRow<0){
@@ -202,11 +202,11 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         else{
             LeafClearingOrg leafClearingOrg = (LeafClearingOrg)tblLeafClearingOrg.getValueAt(selectedRow, 0);
             LeafOrgServiceJPanel orgService = new LeafOrgServiceJPanel(userProcessContainer, account, system, leafClearingOrg);
-            userProcessContainer.add("SnowClearing Organization Service", orgService);
+            userProcessContainer.add("LeafClearing Organization Service", orgService);
             CardLayout layout=(CardLayout)userProcessContainer.getLayout();
             layout.next(userProcessContainer);
         }
-    }//GEN-LAST:event_btnOrderFoodActionPerformed
+    }//GEN-LAST:event_btnRequestActionPerformed
 
 private void populateLeafOrgTable() {
         
@@ -243,8 +243,8 @@ private void populateLeafOrgTable() {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnOrderFood;
     private javax.swing.JButton btnRefresh;
+    private javax.swing.JButton btnRequest;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblName;

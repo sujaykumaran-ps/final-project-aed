@@ -18,6 +18,7 @@ public abstract class Role {
     
     public enum RoleType{
         SnowClearingOrg("SnowClearingOrg"),
+        LeafClearingOrg("LeafClearingOrg"),
         FundRaising("FundRaising"),
         Member("Member"),
         FieldWorker("FieldWorker"),

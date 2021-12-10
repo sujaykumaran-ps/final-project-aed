@@ -24,11 +24,11 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                      <Component id="jButton2" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnLeafClearing" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="248" max="-2" attributes="0"/>
-                              <Component id="jButton1" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnSnowClearing" linkSize="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
@@ -43,8 +43,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="246" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jButton4" linkSize="1" min="-2" pref="187" max="-2" attributes="0"/>
-                          <Component id="jButton3" linkSize="1" min="-2" pref="187" max="-2" attributes="0"/>
+                          <Component id="btnSoupKitchen" linkSize="1" min="-2" pref="187" max="-2" attributes="0"/>
+                          <Component id="btnDonate" linkSize="1" min="-2" pref="187" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -69,15 +69,15 @@
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Component id="titleWelcome2" min="-2" pref="30" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <Component id="btnSnowClearing" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+              <Component id="btnLeafClearing" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+              <Component id="btnDonate" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Component id="titleWelcome3" min="-2" pref="30" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+              <Component id="btnSoupKitchen" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="134" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -99,22 +99,25 @@
         <Property name="text" type="java.lang.String" value="Welcome Member"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btnSnowClearing">
       <Properties>
         <Property name="text" type="java.lang.String" value="Snow Clearing Org"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSnowClearingActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btnLeafClearing">
       <Properties>
         <Property name="text" type="java.lang.String" value="Leaf Clearing Org"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="btnDonate">
       <Properties>
         <Property name="text" type="java.lang.String" value="Donate Funds"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="btnSoupKitchen">
       <Properties>
         <Property name="text" type="java.lang.String" value="Soup Kitchen"/>
       </Properties>

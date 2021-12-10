@@ -169,7 +169,7 @@
               <Table columnCount="4" rowCount="4">
                 <Column editable="false" title="Request ID" type="java.lang.String"/>
                 <Column editable="false" title="SnowClearingOrg Name" type="java.lang.String"/>
-                <Column editable="true" title="Type" type="java.lang.String"/>
+                <Column editable="true" title="Address" type="java.lang.String"/>
                 <Column editable="false" title="Status" type="java.lang.String"/>
               </Table>
             </Property>

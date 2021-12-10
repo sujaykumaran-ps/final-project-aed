@@ -75,7 +75,7 @@ public class FieldWorker {
        newWork.setSnowOrgName(snowOrgName);
        newWork.setMemName(memName);
        newWork.setRequest(request);
-       newWork.setCost(cost);
+       newWork.setType(cost);
        newWork.setServiceAddress(fieldWorkerAddress);
        newWork.setStatus("New Request");
        requestList.add(newWork);

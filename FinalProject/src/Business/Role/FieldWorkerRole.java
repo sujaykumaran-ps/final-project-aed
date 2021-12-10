@@ -7,6 +7,7 @@ package Business.Role;
 
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.WorkRequest;
 import javax.swing.JPanel;
 import userinterface.FieldWorkerRole.FieldWorkerAreaJPanel;
 
@@ -18,7 +19,7 @@ public class FieldWorkerRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-        return new FieldWorkerAreaJPanel(userProcessContainer,account,business);//To change body of generated methods, choose Tools | Templates.
+        return new FieldWorkerAreaJPanel(userProcessContainer, account, business);//To change body of generated methods, choose Tools | Templates.
     }
     
 }

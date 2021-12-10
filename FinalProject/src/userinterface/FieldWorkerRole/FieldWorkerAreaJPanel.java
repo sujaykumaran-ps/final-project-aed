@@ -46,15 +46,14 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
             if(fieldWorker.getFieldWorkerUsername().equals(userAccount.getUsername())){
                     
                 for(WorkRequest request : fieldWorker.getRequestList()){
-                Object[] row = new Object[7];
+                Object[] row = new Object[6];
                 
                 row[0] = request;
                 row[1] = request.getSnowOrgName();
                 row[2] = request.getMemName();
                 row[3] = request.getServiceAddress();
-                row[4] = request.getCost();
-                row[5] = request.getStatus();
-                row[6] = request.getMessage();
+                row[4] = request.getStatus();
+                row[5] = request.getMessage();
                 model.addRow(row);     
                 }
             } 
@@ -132,19 +131,18 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(titleAssignedRequests, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(284, 284, 284)
-                        .addComponent(btnRefresh)
-                        .addGap(42, 42, 42)
-                        .addComponent(btnProcess)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(284, 284, 284)
+                                .addComponent(btnRefresh)
+                                .addGap(42, 42, 42)
+                                .addComponent(btnProcess))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 719, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 78, Short.MAX_VALUE))
+                    .addComponent(titleAssignedRequests, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 719, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,7 +155,7 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRefresh)
                     .addComponent(btnProcess))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(189, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -174,10 +172,10 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
         }
         WorkRequest order = (WorkRequest)tblRequestDetails.getValueAt(selectedRow, 0); 
         
-        if(order.getStatus().equals("Delivered")){
+        if(order.getStatus().equals("Completed")){
             JOptionPane.showMessageDialog(null,"Order Already Delivered", "Warning", JOptionPane.WARNING_MESSAGE);
-        }else if(order.getStatus().equals("New Order") || order.getStatus().equals("Assigned for Delivery")){
-            JOptionPane.showMessageDialog(null,"Order is not yet Ready", "Warning", JOptionPane.WARNING_MESSAGE);
+        }else if(order.getStatus().equals("New Request") || order.getStatus().equals("Assigned for Delivery")){
+            JOptionPane.showMessageDialog(null,"Request is not yet Processed", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
         ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, order,business);

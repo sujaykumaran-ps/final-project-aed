@@ -157,13 +157,13 @@ public class FieldWorkRequestJPanel extends javax.swing.JPanel {
             
             FieldWorker fieldWorker  = (FieldWorker)FieldWorkerJTable.getValueAt(selectedRow, 0);   
             fieldWorker.getRequestList().add(request);
-            request.setStatus("Assigned for Request");
+            request.setStatus("Assigned Field Worker");
             
             for(Member member:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(member.getMemUsername())){
                 for(WorkRequest request : member.getRequestList()){
                     if(request.getStatus().equals("New Request")){
-                        request.setStatus("Assigned for Request");
+                        request.setStatus("Assigned Field Worker");
                     }
                 }
             }

@@ -8,7 +8,7 @@ import Business.EcoSystem;
 
 import Business.Organization;
 import Business.UserAccount.UserAccount;
-import userinterface.MemberRole.MemberAreaJPanel;
+import userinterface.MemberRole.MemberHomeJPanel;
 import javax.swing.JPanel;
 
 /**
@@ -19,7 +19,7 @@ public class MemberRole extends Role{
 
     
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-        return new MemberAreaJPanel(userProcessContainer, account, business);
+        return new MemberHomeJPanel(userProcessContainer, account, business);
     }
     
     

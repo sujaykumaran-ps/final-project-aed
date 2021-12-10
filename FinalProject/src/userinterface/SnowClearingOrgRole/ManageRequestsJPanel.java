@@ -46,7 +46,7 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnBack = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        titleManageRequest = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRequests = new javax.swing.JTable();
         btnRefresh = new javax.swing.JButton();
@@ -62,26 +62,26 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Manage Requests");
+        titleManageRequest.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleManageRequest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleManageRequest.setText("Manage Requests");
 
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Request ID", "Member Name", " Request Address", "Amount", "Status"
+                "Request ID", "Member Name", " Request Address", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -123,7 +123,7 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(titleManageRequest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -149,7 +149,7 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
                 .addGap(28, 28, 28)
                 .addComponent(btnBack)
                 .addGap(37, 37, 37)
-                .addComponent(jLabel1)
+                .addComponent(titleManageRequest)
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -178,12 +178,12 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblRequests.getSelectedRow();
         if(selectedRow<0){
-            JOptionPane.showMessageDialog(null,"Please select a row from the table to view details","Warning",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please select a row from the table to view details", "Warning",JOptionPane.WARNING_MESSAGE);
         }
         else{
             WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);  
-            if(request.getStatus().equals("Request being processed") || request.getStatus().equals("Delivered")){
-                JOptionPane.showMessageDialog(null, "Request Completed Already !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            if(request.getStatus().equals("In Progress") || request.getStatus().equals("Completed")){
+                JOptionPane.showMessageDialog(null, "Request Completed or In Progress !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }else{
                 ViewRequestJPanel viewRequest=new ViewRequestJPanel(userProcessContainer, account, request, system);
                 userProcessContainer.add("View Request", viewRequest);
@@ -201,14 +201,14 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
         }
         else{
             WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);
-            if(request.getStatus().equals("Request being processed, agent on the way") || request.getStatus().equals("Service Completed")){
+            if(request.getStatus().equals("Assigned Field Worker") || request.getStatus().equals("Completed") || request.getStatus().equals("In Progress")){
                 JOptionPane.showMessageDialog(null,"Already Assigned for Request !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }else if(request.getStatus().equals("Request Cancelled")){
                 JOptionPane.showMessageDialog(null,"Request Cancelled !!! Cannot Assign.", "Warning", JOptionPane.WARNING_MESSAGE);
             }
             else{
                 FieldWorkRequestJPanel assignDelivery = new FieldWorkRequestJPanel(userProcessContainer, account, request, system);
-                userProcessContainer.add("Assigned for Request", assignDelivery);
+                userProcessContainer.add("Assign Field Worker", assignDelivery);
                 CardLayout layout=(CardLayout)userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             }
@@ -221,9 +221,9 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnView;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblRequests;
+    private javax.swing.JLabel titleManageRequest;
     // End of variables declaration//GEN-END:variables
 
     private void populateRequestsTable() {
@@ -231,14 +231,12 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
         model.setRowCount(0);               
         for (SnowClearingOrg org:system.getSnowClearingOrgDirectory().getSnowClearingOrgList()) {          
             if (org.getUserName().equals(account.getUsername())) {
-                //System.out.println(restro.getOrderList());
                for(WorkRequest service:org.getRequestList()){
-                Object[] row = new Object[5];
+                Object[] row = new Object[4];
                 row[0] = service;
                 row[1] = service.getMemName();
                 row[2] = service.getServiceAddress();
-                row[3] = service.getCost();
-                row[4] = service.getStatus();
+                row[3] = service.getStatus();
                 model.addRow(row);
                }                
             }            

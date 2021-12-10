@@ -146,7 +146,7 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         titleManageRestaurants.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageRestaurants.setText("Manage SnowClearingOrg");
-        add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 25, 816, -1));
+        add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 816, -1));
 
         btnViewOrg.setText("View");
         btnViewOrg.addActionListener(new java.awt.event.ActionListener() {

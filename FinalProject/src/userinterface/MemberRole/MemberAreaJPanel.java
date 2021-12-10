@@ -113,7 +113,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Request ID", "SnowClearingOrg Name", "Type", "Status"
+                "Request ID", "SnowClearingOrg Name", "Address", "Status"
             }
         ) {
             Class[] types = new Class [] {
@@ -252,7 +252,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                 Object[] row = new Object[4];
                 row[0] = service;
                 row[1] = service.getSnowOrgName();
-                row[2] = service.getCost();
+                row[2] = service.getServiceAddress();
                 row[3] = service.getStatus();
                 model.addRow(row);
                }            

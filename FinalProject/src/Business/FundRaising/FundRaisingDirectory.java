@@ -49,7 +49,7 @@ public class FundRaisingDirectory {
         fundRaise.setFundRaisingEmail(cuisine);
     }
     
-    public Funds addFundsTypes(FundRaising fundRaise, String name, String desc, String type, String amount){
+    public Funds addFundsTypes(FundRaising fundRaise, String name, String desc, String type, int amount){
         funds = new Funds(name, desc, type, amount);
         fundRaise.addFunds(funds);
         return funds;

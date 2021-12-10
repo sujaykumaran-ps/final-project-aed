@@ -6,8 +6,7 @@ package userinterface.FundRaisingRole;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
-import javax.swing.JPanel;
-import userinterface.SnowClearingOrgRole.ManageSnowClearingInfoJPanel;
+import javax.swing.JPanel;;
 
 /**
  *
@@ -38,9 +37,9 @@ public class FundRaisingAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         titleResAdmin = new javax.swing.JLabel();
-        btnOrgInfo = new javax.swing.JButton();
-        btnManageServices = new javax.swing.JButton();
-        btnManageRequests = new javax.swing.JButton();
+        btnFundEntInfo = new javax.swing.JButton();
+        btnManageCauses = new javax.swing.JButton();
+        btnCheckStatus = new javax.swing.JButton();
         lblResNameTitle = new javax.swing.JLabel();
         lblResName = new javax.swing.JLabel();
 
@@ -51,56 +50,65 @@ public class FundRaisingAdminWorkAreaJPanel extends javax.swing.JPanel {
         titleResAdmin.setText("SnowClearingOrg Admin");
         add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, -1, -1));
 
-        btnOrgInfo.setText("Manage SnowClearingOrg Info");
-        btnOrgInfo.addActionListener(new java.awt.event.ActionListener() {
+        btnFundEntInfo.setText("Manage Fund Raising Enterprise Info");
+        btnFundEntInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOrgInfoActionPerformed(evt);
+                btnFundEntInfoActionPerformed(evt);
             }
         });
-        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 220, -1));
+        add(btnFundEntInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 220, -1));
 
-        btnManageServices.setText("Manage Services");
-        btnManageServices.addActionListener(new java.awt.event.ActionListener() {
+        btnManageCauses.setText("Manage Fund Raising Causes");
+        btnManageCauses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageServicesActionPerformed(evt);
+                btnManageCausesActionPerformed(evt);
             }
         });
-        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 160, -1));
+        add(btnManageCauses, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 180, -1));
 
-        btnManageRequests.setText("Manage Requests");
-        btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
+        btnCheckStatus.setText("Check Funds Status");
+        btnCheckStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageRequestsActionPerformed(evt);
+                btnCheckStatusActionPerformed(evt);
             }
         });
-        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
+        add(btnCheckStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
 
-        lblResNameTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblResNameTitle.setText("Restaurant Name :");
-        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 190, 30));
+        lblResNameTitle.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblResNameTitle.setText("Fund Raising Enterprise Name :");
+        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 270, 30));
 
         lblResName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 170, 30));
+        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 170, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnOrgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgInfoActionPerformed
+    private void btnFundEntInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFundEntInfoActionPerformed
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_btnOrgInfoActionPerformed
+        ManageFundRaisingInfoJPanel manageFundRaisingInfo = new ManageFundRaisingInfoJPanel(userProcessContainer, ua, system);
+        userProcessContainer.add("Manage Fund Raising Organization Info",manageFundRaisingInfo);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnFundEntInfoActionPerformed
 
-    private void btnManageServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageServicesActionPerformed
-       
-    }//GEN-LAST:event_btnManageServicesActionPerformed
+    private void btnManageCausesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCausesActionPerformed
+        FundRaisingCausesJPanel manageCauses = new FundRaisingCausesJPanel(userProcessContainer, ua, system);
+        userProcessContainer.add("Manage Causes",manageCauses);
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnManageCausesActionPerformed
 
-    private void btnManageRequestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageRequestsActionPerformed
-        
-    }//GEN-LAST:event_btnManageRequestsActionPerformed
+    private void btnCheckStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckStatusActionPerformed
+        FundsStatusJPanel fundsStatus = new FundsStatusJPanel(userProcessContainer, ua, system);
+        userProcessContainer.add("Funds Status",fundsStatus);
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnCheckStatusActionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnManageRequests;
-    private javax.swing.JButton btnManageServices;
-    private javax.swing.JButton btnOrgInfo;
+    private javax.swing.JButton btnCheckStatus;
+    private javax.swing.JButton btnFundEntInfo;
+    private javax.swing.JButton btnManageCauses;
     private javax.swing.JLabel lblResName;
     private javax.swing.JLabel lblResNameTitle;
     private javax.swing.JLabel titleResAdmin;

@@ -14,7 +14,9 @@ import userinterface.FundRaisingRole.FundRaisingAdminWorkAreaJPanel;
  *
  * @author mohitdaswani
  */
-public class FundRaisingRole {
+public class FundRaisingRole extends Role {
+    
+    @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
         return new FundRaisingAdminWorkAreaJPanel(userProcessContainer, account, business);
     }

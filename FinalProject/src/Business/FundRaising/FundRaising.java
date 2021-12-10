@@ -25,7 +25,7 @@ public class FundRaising {
     
     public FundRaising(String name) {
         this.userName = name;
-        requestList = new ArrayList<WorkRequest>();
+        fundList = new ArrayList<Funds>();
     }
 
     public String getUserName() {
@@ -50,6 +50,14 @@ public class FundRaising {
 
     public void setRequestList(ArrayList<WorkRequest> requestList) {
         this.requestList = requestList;
+    }
+
+    public ArrayList<Funds> getFundList() {
+        return fundList;
+    }
+
+    public void setFundList(ArrayList<Funds> fundList) {
+        this.fundList = fundList;
     }
 
     public String getFundRaisingName() {

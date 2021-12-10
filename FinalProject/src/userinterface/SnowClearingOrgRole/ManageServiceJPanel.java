@@ -177,7 +177,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         String name = txtServiceName.getText();
         String desc = txtServiceDesc.getText();
-        String amount = txtServiceType.getText();
+        String type = txtServiceType.getText();
 
         try {
             if(name == null || name.isEmpty()){
@@ -198,10 +198,8 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         }
 
         try {
-            if(amount==null || amount.isEmpty()){
+            if(type==null || type.isEmpty()){
                 throw new NullPointerException("Type Field cannot be empty !!!");
-            }else if(Pattern.matches("^[0-9]{0,3}$", amount) == false){
-                throw new Exception("Invalid Type !!!");
             }
         }  catch(NullPointerException e){
             JOptionPane.showMessageDialog(null, "Type Field cannot be empty !!!");
@@ -213,7 +211,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
 
         for(SnowClearingOrg org:system.getSnowClearingOrgDirectory().getSnowClearingOrgList()){
             if(org.getUserName().equals(ua.getUsername())){
-                service = system.getSnowClearingOrgDirectory().addServiceTypes(org, name, desc, amount);
+                service = system.getSnowClearingOrgDirectory().addServiceTypes(org, name, desc, type);
             }
         }
 

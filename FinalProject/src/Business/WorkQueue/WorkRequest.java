@@ -21,7 +21,7 @@ public class WorkRequest {
     private String fieldWorkerName;
     private String serviceAddress;
     private ArrayList<Service> request;
-    private String cost;
+    private String type;
     private String status;
     private String message;
     private UserAccount sender;
@@ -73,9 +73,6 @@ public class WorkRequest {
         this.serviceAddress = serviceAddress;
     }
 
-   
-
-    
 
     public ArrayList<Service> getRequest() {
         return request;
@@ -85,12 +82,12 @@ public class WorkRequest {
         this.request = request;
     }
 
-    public String getCost() {
-        return cost;
+    public String getType() {
+        return type;
     }
 
-    public void setCost(String cost) {
-        this.cost = cost;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getStatus() {

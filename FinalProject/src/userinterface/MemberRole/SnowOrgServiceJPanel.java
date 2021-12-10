@@ -30,7 +30,6 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
     SnowClearingOrg org;
     EcoSystem system;
     ArrayList<Service> works = new ArrayList<Service>();
-    int i = 0;
     /**
      * Creates new form RequestLabTestJPanel
      */
@@ -277,12 +276,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         }
         else{
             Service work = (Service)tblMenu.getValueAt(selectedRow, 0); 
-            String quantity = JOptionPane.showInputDialog("Enter Quantity :");
-            int q = Integer.parseInt(quantity);
-            for(int i = 1; i <= q; i++){
-               populateCartTable(work);  
-            }
-                    
+            populateCartTable(work);          
         }
     }//GEN-LAST:event_btnAddActionPerformed
 
@@ -295,7 +289,6 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         else{
             Service work = (Service)tblCart.getValueAt(selectedRow, 0);
             works.remove(work);
-            i = i - Integer.parseInt(work.getServiceType());
             DefaultTableModel model = (DefaultTableModel) tblCart.getModel();
         model.setRowCount(0);
             Object[] row = new Object[3];
@@ -322,15 +315,14 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
             return; 
         }
         
-        org.newRequest(org.getSnowOrgName(), account.getUsername(), null, works, String.valueOf(i) , address, ins);
+        org.newRequest(org.getSnowOrgName(), account.getUsername(), null, works , address, ins);
         for(Member mem:system.getMemberDirectory().getMemberList()){
             if(account.getUsername().equals(mem.getMemUsername())){
-                mem.newRequest(org.getSnowOrgName(), account.getUsername(), null, works, String.valueOf(i) , address, ins);
+                mem.newRequest(org.getSnowOrgName(), account.getUsername(), null, works , address, ins);
             }
         }
         
         JOptionPane.showMessageDialog(null,"Your Request is placed Successfully !!!", "Thank You", JOptionPane.PLAIN_MESSAGE);
-        i = 0;
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -386,6 +378,5 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
             
             model.addRow(row);
         }  
-        i=i+Integer.parseInt(work.getServiceType());
     }
 }

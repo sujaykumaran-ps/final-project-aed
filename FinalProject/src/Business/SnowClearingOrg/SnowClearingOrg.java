@@ -105,20 +105,19 @@ public class SnowClearingOrg {
         serviceList.remove(dish);
     }
     
-public void newRequest(String snowOrgName, String memName, String fieldWorker, ArrayList<Service> request, String cost, String serviceAddress, String instructions) {
-WorkRequest newWork = new WorkRequest();
-newWork.setRequestId(String.valueOf(id));
-newWork.setMemName(memName);
-newWork.setSnowOrgName(snowOrgName);
-newWork.setFieldWorkerName(fieldWorker);
-newWork.setRequest(request);
-newWork.setCost(cost);
-newWork.setServiceAddress(serviceAddress);
-newWork.setMessage(instructions);
-newWork.setStatus("New Request");
-requestList.add(newWork);
-id++;
-}
+    public void newRequest(String snowOrgName, String memName, String fieldWorker, ArrayList<Service> request, String serviceAddress, String instructions) {
+        WorkRequest newWork = new WorkRequest();
+        newWork.setRequestId(String.valueOf(id));
+        newWork.setMemName(memName);
+        newWork.setSnowOrgName(snowOrgName);
+        newWork.setFieldWorkerName(fieldWorker);
+        newWork.setRequest(request);
+        newWork.setServiceAddress(serviceAddress);
+        newWork.setMessage(instructions);
+        newWork.setStatus("New Request");
+        requestList.add(newWork);
+        id++;
+    }
     @Override
     public String toString() {
         return snowOrgName;

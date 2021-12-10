@@ -91,11 +91,17 @@ public class FundRaisingAdminWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnFundEntInfoActionPerformed
 
     private void btnManageCausesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCausesActionPerformed
-       
+        FundRaisingCausesJPanel manageCauses = new FundRaisingCausesJPanel(userProcessContainer, ua, system);
+        userProcessContainer.add("Manage Causes",manageCauses);
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageCausesActionPerformed
 
     private void btnCheckStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckStatusActionPerformed
-        
+        FundsStatusJPanel fundsStatus = new FundsStatusJPanel(userProcessContainer, ua, system);
+        userProcessContainer.add("Funds Status",fundsStatus);
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnCheckStatusActionPerformed
     
     

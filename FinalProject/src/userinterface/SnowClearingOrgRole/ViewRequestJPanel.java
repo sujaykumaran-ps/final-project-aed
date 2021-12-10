@@ -202,9 +202,9 @@ public class ViewRequestJPanel extends javax.swing.JPanel {
             request.setStatus("Request Cancelled");
             for(Member mem:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(mem.getMemUsername())){
-                for(WorkRequest order : mem.getRequestList()){
-                    if(request.getStatus().equals("New Request")) {
-                        request.setStatus("Request Cancelled");
+                for(WorkRequest req : mem.getRequestList()){
+                    if(req.getStatus().equals("New Request")) {
+                        req.setStatus("Request Cancelled");
                     }   
                 }
             }

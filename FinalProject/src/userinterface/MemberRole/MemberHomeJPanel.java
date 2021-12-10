@@ -62,6 +62,11 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         });
 
         btnLeafClearing.setText("Leaf Clearing Org");
+        btnLeafClearing.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLeafClearingActionPerformed(evt);
+            }
+        });
 
         btnDonate.setText("Donate Funds");
         btnDonate.addActionListener(new java.awt.event.ActionListener() {
@@ -151,6 +156,14 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnSnowClearingActionPerformed
 
+
+    private void btnLeafClearingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLeafClearingActionPerformed
+        // TODO add your handling code here:
+            MemberAreaJPanel memJPanel = new MemberAreaJPanel(userProcessContainer, account, system);
+            userProcessContainer.add("LeafClearing Organization Service", memJPanel);
+            CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnLeafClearingActionPerformed
     private void btnDonateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonateActionPerformed
         FundDonationJPanel fundJPanel = new FundDonationJPanel(userProcessContainer, account, system);
         userProcessContainer.add("Fund Raising Organization", fundJPanel);

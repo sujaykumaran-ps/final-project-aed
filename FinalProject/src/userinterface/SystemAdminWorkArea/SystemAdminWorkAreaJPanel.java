@@ -11,6 +11,8 @@ import Business.EcoSystem;
 
 import Business.Organization;
 import Business.SnowClearingOrg.SnowClearingOrg;
+import Business.LeafClearingOrg.LeafClearingOrg;
+
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JPanel;
@@ -57,6 +59,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageFieldWorkers = new javax.swing.JButton();
         titleManageUser = new javax.swing.JLabel();
         btnManageFRENT = new javax.swing.JButton();
+        btnManageLCOrg1 = new javax.swing.JButton();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -125,6 +128,13 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnManageLCOrg1.setText("Manage LeafClearing Enterprise");
+        btnManageLCOrg1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageLCOrg1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -141,14 +151,14 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                                 .addComponent(lblSelectedNode, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(542, 542, 542)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnManageFieldWorkers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnManageSCOrg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnManageMembers, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(550, 550, 550)
-                                .addComponent(btnManageFRENT)))
-                        .addGap(0, 432, Short.MAX_VALUE)))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnManageFRENT)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(btnManageFieldWorkers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnManageSCOrg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnManageMembers, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnManageLCOrg1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                        .addGap(0, 439, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -164,11 +174,13 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnManageMembers)
                 .addGap(18, 18, 18)
                 .addComponent(btnManageSCOrg)
-                .addGap(18, 18, 18)
+                .addGap(13, 13, 13)
+                .addComponent(btnManageLCOrg1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnManageFieldWorkers)
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
                 .addComponent(btnManageFRENT)
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(381, Short.MAX_VALUE))
         );
 
         jSplitPane.setRightComponent(jPanel2);
@@ -214,10 +226,19 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnManageFRENTActionPerformed
 
+    private void btnManageLCOrg1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageLCOrg1ActionPerformed
+        // TODO add your handling code here:
+        ManageLeafClearingOrgJPanel manageLeafClearingOrgJPanel=new ManageLeafClearingOrgJPanel(userProcessContainer, ecosystem);
+        userProcessContainer.add("Manage LeafClearingOrg",manageLeafClearingOrgJPanel);
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnManageLCOrg1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnManageFRENT;
     private javax.swing.JButton btnManageFieldWorkers;
+    private javax.swing.JButton btnManageLCOrg1;
     private javax.swing.JButton btnManageMembers;
     private javax.swing.JButton btnManageSCOrg;
     private javax.swing.JLabel jLabel1;

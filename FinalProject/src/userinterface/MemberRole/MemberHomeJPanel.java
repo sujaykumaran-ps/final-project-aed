@@ -62,6 +62,11 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         });
 
         btnLeafClearing.setText("Leaf Clearing Org");
+        btnLeafClearing.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLeafClearingActionPerformed(evt);
+            }
+        });
 
         btnDonate.setText("Donate Funds");
 
@@ -152,6 +157,14 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
             CardLayout layout=(CardLayout)userProcessContainer.getLayout();
             layout.next(userProcessContainer);
     }//GEN-LAST:event_btnSnowClearingActionPerformed
+
+    private void btnLeafClearingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLeafClearingActionPerformed
+        // TODO add your handling code here:
+            MemberAreaJPanel memJPanel = new MemberAreaJPanel(userProcessContainer, account, system);
+            userProcessContainer.add("LeafClearing Organization Service", memJPanel);
+            CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnLeafClearingActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

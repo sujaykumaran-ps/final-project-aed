@@ -4,6 +4,7 @@
  */
 package Business.WorkQueue;
 
+import Business.LeafClearingOrg.LeafService;
 import Business.SnowClearingOrg.Service;
 import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
@@ -21,6 +22,16 @@ public class WorkRequest {
     private String fieldWorkerName;
     private String serviceAddress;
     private ArrayList<Service> request;
+    private ArrayList<LeafService> leafRequest;
+
+    public ArrayList<LeafService> getLeafRequest() {
+        return leafRequest;
+    }
+
+    public void setLeafRequest(ArrayList<LeafService> leafRequest) {
+        this.leafRequest = leafRequest;
+    }
+
     private String type;
     private String status;
     private String message;
@@ -28,6 +39,16 @@ public class WorkRequest {
     private UserAccount receiver;
     private Date requestDate;
     private Date resolveDate;
+    private String leafOrgName;
+
+    public String getLeafOrgName() {
+        return leafOrgName;
+    }
+
+    public void setLeafOrgName(String leafOrgName) {
+        this.leafOrgName = leafOrgName;
+    }
+
     
     public WorkRequest(){
         requestDate = new Date();

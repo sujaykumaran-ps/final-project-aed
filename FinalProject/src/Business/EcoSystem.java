@@ -10,6 +10,8 @@ import Business.Member.MemberDirectory;
 import Business.FieldWorker.FieldWorkerDirectory;
 import Business.FundRaising.FundRaisingDirectory;
 import Business.SnowClearingOrg.SnowClearingOrgDirectory;
+import Business.LeafClearingOrg.LeafClearingOrgDirectory;
+
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
 import java.util.ArrayList;
@@ -23,11 +25,15 @@ public class EcoSystem extends Organization{
     private static EcoSystem business;
     private SnowClearingOrgDirectory snowClearingOrgDirectory;
     private MemberDirectory memberDirectory;
+    private LeafClearingOrgDirectory leafClearingOrgDirectory;
+
     private FieldWorkerDirectory fieldWorkerDirectory;
     private FundRaisingDirectory fundRaisingDirectory;
     
-    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory) {
+    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory,LeafClearingOrgDirectory leafClearingOrgDirectory) {
         this.fundRaisingDirectory = fundRaisingDirectory;
+        this.leafClearingOrgDirectory = leafClearingOrgDirectory;
+
         this.snowClearingOrgDirectory = snowClearingOrgDirectory;
         this.memberDirectory = memberDirectory;
         this.fieldWorkerDirectory = fieldWorkerDirectory;
@@ -47,9 +53,18 @@ public class EcoSystem extends Organization{
         }
         return snowClearingOrgDirectory;
     }
-
+    public LeafClearingOrgDirectory getLeafClearingOrgDirectory() {
+        if(leafClearingOrgDirectory == null)
+        {
+            leafClearingOrgDirectory = new LeafClearingOrgDirectory();
+        }
+        return leafClearingOrgDirectory;
+    }
     public void setSnowClearingOrgDirectory(SnowClearingOrgDirectory snowClearingOrgDirectory) {
         this.snowClearingOrgDirectory = snowClearingOrgDirectory;
+    }
+    public void setLeafClearingOrgDirectory(LeafClearingOrgDirectory leafClearingOrgDirectory) {
+        this.leafClearingOrgDirectory = leafClearingOrgDirectory;
     }
 
     public MemberDirectory getMemberDirectory() {

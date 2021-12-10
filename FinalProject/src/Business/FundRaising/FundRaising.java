@@ -6,6 +6,7 @@
 package Business.FundRaising;
 
 
+import Business.WorkQueue.DonationRequest;
 import java.util.ArrayList;
 
 /**
@@ -16,6 +17,7 @@ public class FundRaising {
     private String userName;
     int id = 1;
     private ArrayList<Funds> fundList;
+    private ArrayList<DonationRequest> donationRequestList;
     private String fundRaisingName;
     private String fundRaisingAddress;
     private String fundRaisingPhNum;
@@ -24,6 +26,7 @@ public class FundRaising {
     public FundRaising(String name) {
         this.userName = name;
         fundList = new ArrayList<Funds>();
+        donationRequestList = new ArrayList<DonationRequest>();
     }
 
     public String getUserName() {
@@ -50,6 +53,16 @@ public class FundRaising {
     public void setFundList(ArrayList<Funds> fundList) {
         this.fundList = fundList;
     }
+
+    public ArrayList<DonationRequest> getDonationRequestList() {
+        return donationRequestList;
+    }
+
+    public void setDonationRequestList(ArrayList<DonationRequest> donationRequestList) {
+        this.donationRequestList = donationRequestList;
+    }
+    
+    
 
     public String getFundRaisingName() {
         return fundRaisingName;
@@ -90,6 +103,18 @@ public class FundRaising {
     public void removeFunds(Funds fund){
         fundList.remove(fund);
     }
+    
+    public void newRequest(String fundRaisingName, String memName, ArrayList<Funds> donation, String donorPhNum) {
+        DonationRequest newDonation = new DonationRequest();
+        newDonation.setDonationId(String.valueOf(id));
+        newDonation.setMemName(memName);
+        newDonation.setFundOrgName(fundRaisingName);
+        newDonation.setDonation(donation);
+        newDonation.setMemberPhNum(donorPhNum);
+        donationRequestList.add(newDonation);
+        id++;
+    }
+    
     @Override
     public String toString() {
         return fundRaisingName;

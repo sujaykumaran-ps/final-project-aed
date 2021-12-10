@@ -29,13 +29,13 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="388" max="-2" attributes="0"/>
-                      <Component id="lblMenu" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblServices" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                       <Component id="titleOrder" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="titleResName" min="-2" pref="331" max="-2" attributes="0"/>
+                      <Component id="titleOrgName" min="-2" pref="331" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
@@ -94,10 +94,10 @@
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="titleOrder" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="titleResName" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="titleOrgName" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="lblMenu" min="-2" max="-2" attributes="0"/>
+              <Component id="lblServices" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane2" min="-2" pref="91" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -138,7 +138,7 @@
         <Property name="text" type="java.lang.String" value="Request from"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="titleResName">
+    <Component class="javax.swing.JLabel" name="titleOrgName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="1"/>
@@ -152,7 +152,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tblMenu">
+        <Component class="javax.swing.JTable" name="tblServices">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="3" rowCount="4">
@@ -187,7 +187,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="lblMenu">
+    <Component class="javax.swing.JLabel" name="lblServices">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="1"/>

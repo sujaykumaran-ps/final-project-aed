@@ -42,11 +42,11 @@ public class FundRaisingDirectory {
         }
     }
     
-    public void updateFundRaisingInfo(FundRaising fundRaise, String name, String number, String address, String cuisine){
+    public void updateFundRaisingInfo(FundRaising fundRaise, String name, String number, String address, String email){
         fundRaise.setFundRaisingName(name);
         fundRaise.setFundRaisingAddress(address);
         fundRaise.setFundRaisingPhNum(number);
-        fundRaise.setFundRaisingEmail(cuisine);
+        fundRaise.setFundRaisingEmail(email);
     }
     
     public Funds addFundsTypes(FundRaising fundRaise, String name, String desc, String type, int amount){

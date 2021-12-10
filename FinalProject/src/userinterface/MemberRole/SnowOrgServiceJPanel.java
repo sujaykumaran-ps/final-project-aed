@@ -39,8 +39,8 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         this.org = org;
         this.system = system;
         this.account = account;
-        populateMenuTable();
-        titleResName.setText(org.getSnowOrgName());
+        populateServicesTable();
+        titleOrgName.setText(org.getSnowOrgName());
        
     }
 
@@ -54,10 +54,10 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         titleOrder = new javax.swing.JLabel();
-        titleResName = new javax.swing.JLabel();
+        titleOrgName = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblMenu = new javax.swing.JTable();
-        lblMenu = new javax.swing.JLabel();
+        tblServices = new javax.swing.JTable();
+        lblServices = new javax.swing.JLabel();
         btnAdd = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblCart = new javax.swing.JTable();
@@ -75,9 +75,9 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         titleOrder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleOrder.setText("Request from");
 
-        titleResName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleOrgName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
-        tblMenu.setModel(new javax.swing.table.DefaultTableModel(
+        tblServices.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -103,10 +103,10 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(tblMenu);
+        jScrollPane2.setViewportView(tblServices);
 
-        lblMenu.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblMenu.setText("Service");
+        lblServices.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblServices.setText("Service");
 
         btnAdd.setText("Add Request");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -184,12 +184,12 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
                         .addComponent(btnAdd))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(388, 388, 388)
-                        .addComponent(lblMenu))
+                        .addComponent(lblServices))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addComponent(titleOrder)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(titleResName, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(titleOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addComponent(btnBack))
@@ -232,9 +232,9 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(titleResName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(titleOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(lblMenu)
+                .addComponent(lblServices)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -270,12 +270,12 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblMenu.getSelectedRow();
+        int selectedRow = tblServices.getSelectedRow();
         if(selectedRow < 0){
-            JOptionPane.showMessageDialog(null, "Please Select an Item to Add !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please Select an Service to Add !!!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
-            Service work = (Service)tblMenu.getValueAt(selectedRow, 0); 
+            Service work = (Service)tblServices.getValueAt(selectedRow, 0); 
             populateCartTable(work);          
         }
     }//GEN-LAST:event_btnAddActionPerformed
@@ -333,8 +333,8 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnPlaceRequestActionPerformed
 
-    private void populateMenuTable() {
-        DefaultTableModel model = (DefaultTableModel) tblMenu.getModel();
+    private void populateServicesTable() {
+        DefaultTableModel model = (DefaultTableModel) tblServices.getModel();
         model.setRowCount(0);
             Object[] row = new Object[3];
             for(Service req:org.getServiceList()){
@@ -355,11 +355,11 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblInstructions;
-    private javax.swing.JLabel lblMenu;
+    private javax.swing.JLabel lblServices;
     private javax.swing.JTable tblCart;
-    private javax.swing.JTable tblMenu;
+    private javax.swing.JTable tblServices;
     private javax.swing.JLabel titleOrder;
-    private javax.swing.JLabel titleResName;
+    private javax.swing.JLabel titleOrgName;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtInstructions;
     // End of variables declaration//GEN-END:variables

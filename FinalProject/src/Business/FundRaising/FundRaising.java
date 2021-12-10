@@ -5,8 +5,7 @@
  */
 package Business.FundRaising;
 
-import Business.SnowClearingOrg.Service;
-import Business.WorkQueue.WorkRequest;
+
 import java.util.ArrayList;
 
 /**
@@ -17,7 +16,6 @@ public class FundRaising {
     private String userName;
     int id = 1;
     private ArrayList<Funds> fundList;
-    private ArrayList<WorkRequest> requestList;
     private String fundRaisingName;
     private String fundRaisingAddress;
     private String fundRaisingPhNum;
@@ -44,13 +42,6 @@ public class FundRaising {
         this.id = id;
     }
 
-    public ArrayList<WorkRequest> getRequestList() {
-        return requestList;
-    }
-
-    public void setRequestList(ArrayList<WorkRequest> requestList) {
-        this.requestList = requestList;
-    }
 
     public ArrayList<Funds> getFundList() {
         return fundList;
@@ -99,6 +90,9 @@ public class FundRaising {
     public void removeFunds(Funds fund){
         fundList.remove(fund);
     }
-    
+    @Override
+    public String toString() {
+        return fundRaisingName;
+    }
     
 }

@@ -213,10 +213,17 @@ public class FundRaisingCausesJPanel extends javax.swing.JPanel {
             if(amount==0){
                 throw new NullPointerException("Amount Field cannot be empty !!!");
             }
+//            else if(Pattern.matches("^[0-9]{0,6}$", amount) == false){
+//                throw new Exception("Invalid Amount !!!");
+//            }
         }  catch(NullPointerException e){
             JOptionPane.showMessageDialog(null, "Amount Field cannot be empty !!!");
             return;
         }
+//        catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, "Invalid Amount !!!");
+//            return;
+//        }
         
 
         for(FundRaising fundRaising:system.getFundRaisingDirectory().getFundRaisingList()){

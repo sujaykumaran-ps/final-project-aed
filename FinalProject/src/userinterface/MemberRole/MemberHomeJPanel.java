@@ -64,6 +64,11 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         btnLeafClearing.setText("Leaf Clearing Org");
 
         btnDonate.setText("Donate Funds");
+        btnDonate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDonateActionPerformed(evt);
+            }
+        });
 
         btnSoupKitchen.setText("Soup Kitchen");
 
@@ -84,7 +89,7 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(285, Short.MAX_VALUE)
+                .addContainerGap(309, Short.MAX_VALUE)
                 .addComponent(titleWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(280, 280, 280))
             .addGroup(layout.createSequentialGroup()
@@ -100,18 +105,14 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(titleWelcome2, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(titleWelcome1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(titleWelcome3, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(titleWelcome3, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(titleWelcome4, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(246, 246, 246)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnSoupKitchen, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnDonate, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(30, 30, 30)
-                    .addComponent(titleWelcome4, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(418, Short.MAX_VALUE)))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDonate, btnLeafClearing, btnSnowClearing, btnSoupKitchen});
@@ -129,18 +130,15 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
                 .addComponent(btnSnowClearing)
                 .addGap(18, 18, 18)
                 .addComponent(btnLeafClearing)
-                .addGap(57, 57, 57)
+                .addGap(28, 28, 28)
+                .addComponent(titleWelcome4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btnDonate)
-                .addGap(37, 37, 37)
+                .addGap(18, 18, 18)
                 .addComponent(titleWelcome3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSoupKitchen)
-                .addContainerGap(134, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(274, Short.MAX_VALUE)
-                    .addComponent(titleWelcome4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(273, 273, 273)))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -148,10 +146,17 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         MemberAreaJPanel memJPanel = new MemberAreaJPanel(userProcessContainer, account, system);
-            userProcessContainer.add("SnowClearing Organization Service", memJPanel);
-            CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-            layout.next(userProcessContainer);
+        userProcessContainer.add("SnowClearing Organization Service", memJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnSnowClearingActionPerformed
+
+    private void btnDonateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonateActionPerformed
+        FundDonationJPanel fundJPanel = new FundDonationJPanel(userProcessContainer, account, system);
+        userProcessContainer.add("Fund Raising Organization", fundJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnDonateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

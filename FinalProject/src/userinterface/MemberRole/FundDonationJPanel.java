@@ -1,15 +1,13 @@
 /*
- * To change this template, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package userinterface.MemberRole;
 
-import Business.Member.Member;
 import Business.EcoSystem;
-import Business.SnowClearingOrg.SnowClearingOrg;
-
+import Business.FundRaising.FundRaising;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -17,29 +15,25 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author raunak
+ * @author sujay
  */
-public class MemberAreaJPanel extends javax.swing.JPanel {
-
+public class FundDonationJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     EcoSystem system;
     private UserAccount account;
-    
     /**
-     * Creates new form DoctorWorkAreaJPanel
+     * Creates new form FundDonationJPanel
      */
-
-    
-    public MemberAreaJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem system) {
-        initComponents();      
+    public FundDonationJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem system) {
+        initComponents();
         this.account = account;
         this.userProcessContainer = userProcessContainer;
         this.system = system;
         lblName.setText(account.getName());
-        populateSnowOrgTable();
-        populateRequestsTable();  
+        populateFundOrgTable();
+        populateDonationTable();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,25 +43,18 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titleWelcome = new javax.swing.JLabel();
-        lblName = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblSnowClearingOrg = new javax.swing.JTable();
-        btnReqService = new javax.swing.JButton();
+        tblFundRaisingOrg = new javax.swing.JTable();
+        lblName = new javax.swing.JLabel();
+        titleWelcome = new javax.swing.JLabel();
         titleChoose = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblRequests = new javax.swing.JTable();
         titleOrders = new javax.swing.JLabel();
+        btnDonateFunds = new javax.swing.JButton();
         btnRefresh = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(252, 156, 52));
-
-        titleWelcome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleWelcome.setText("Welcome");
-
-        lblName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-
-        tblSnowClearingOrg.setModel(new javax.swing.table.DefaultTableModel(
+        tblFundRaisingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -75,7 +62,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "SnowClearingOrg Name", "Address", "Phone Number", "Email"
+                "Fund Raising Org Name", "Address", "Phone Number", "Email"
             }
         ) {
             Class[] types = new Class [] {
@@ -93,17 +80,15 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblSnowClearingOrg);
+        jScrollPane1.setViewportView(tblFundRaisingOrg);
 
-        btnReqService.setText("Request Service");
-        btnReqService.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReqServiceActionPerformed(evt);
-            }
-        });
+        lblName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+
+        titleWelcome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleWelcome.setText("Welcome");
 
         titleChoose.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleChoose.setText("Choose from your SnowClearing Organizations Nearby :");
+        titleChoose.setText("Choose the Organization you want to donate for :");
 
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -113,7 +98,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Request ID", "SnowClearingOrg Name", "Address", "Status"
+                "Donation ID", "Fund RaisingOrg Name", "Address", "Amount Donated"
             }
         ) {
             Class[] types = new Class [] {
@@ -134,9 +119,16 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblRequests);
 
         titleOrders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleOrders.setText("Your Requests with us :");
+        titleOrders.setText("Your Donations to us :");
 
-        btnRefresh.setText("Refresh Requests");
+        btnDonateFunds.setText("Donate Funds");
+        btnDonateFunds.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDonateFundsActionPerformed(evt);
+            }
+        });
+
+        btnRefresh.setText("Refresh Donations");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshActionPerformed(evt);
@@ -150,113 +142,96 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(titleWelcome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(titleChoose)
+                        .addGap(44, 44, 44)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(titleOrders)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(titleChoose)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(175, 175, 175)
-                                .addComponent(btnRefresh))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1)))
+                                .addComponent(titleWelcome)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(253, 253, 253)
-                        .addComponent(btnReqService)))
-                .addContainerGap(199, Short.MAX_VALUE))
+                        .addGap(346, 346, 346)
+                        .addComponent(btnDonateFunds))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(346, 346, 346)
+                        .addComponent(btnRefresh)))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(titleWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
-                .addComponent(titleChoose)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(titleChoose)
+                .addGap(35, 35, 35)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnReqService)
-                .addGap(21, 21, 21)
+                .addComponent(btnDonateFunds)
+                .addGap(18, 18, 18)
                 .addComponent(titleOrders)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(28, 28, 28)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(btnRefresh)
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
+    private void btnDonateFundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonateFundsActionPerformed
         // TODO add your handling code here:
-        populateRequestsTable();
-    }//GEN-LAST:event_btnRefreshActionPerformed
-
-    private void btnReqServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqServiceActionPerformed
-        // TODO add your handling code here:
-        int selectedRow = tblSnowClearingOrg.getSelectedRow();
+        int selectedRow = tblFundRaisingOrg.getSelectedRow();
         if(selectedRow<0){
-            JOptionPane.showMessageDialog(null,"Please select a row from the table to view details","Warning",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please select a row from the table to view details", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
-            SnowClearingOrg snowClearingOrg = (SnowClearingOrg)tblSnowClearingOrg.getValueAt(selectedRow, 0);
-            SnowOrgServiceJPanel orgService = new SnowOrgServiceJPanel(userProcessContainer, account, system, snowClearingOrg);
-            userProcessContainer.add("SnowClearing Organization Service", orgService);
+            FundRaising fundRaisingOrg = (FundRaising) tblFundRaisingOrg.getValueAt(selectedRow, 0);
+            DonationCausesJPanel donationCauses = new DonationCausesJPanel(userProcessContainer, account, system, fundRaisingOrg);
+            userProcessContainer.add("Fund Raising Organization Service", donationCauses);
             CardLayout layout=(CardLayout)userProcessContainer.getLayout();
             layout.next(userProcessContainer);
         }
-    }//GEN-LAST:event_btnReqServiceActionPerformed
+    }//GEN-LAST:event_btnDonateFundsActionPerformed
+
+    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
+        // TODO add your handling code here:
+        populateDonationTable();
+    }//GEN-LAST:event_btnRefreshActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDonateFunds;
     private javax.swing.JButton btnRefresh;
-    private javax.swing.JButton btnReqService;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblName;
+    private javax.swing.JTable tblFundRaisingOrg;
     private javax.swing.JTable tblRequests;
-    private javax.swing.JTable tblSnowClearingOrg;
     private javax.swing.JLabel titleChoose;
     private javax.swing.JLabel titleOrders;
     private javax.swing.JLabel titleWelcome;
     // End of variables declaration//GEN-END:variables
 
-    private void populateSnowOrgTable() {
-        
-        DefaultTableModel model = (DefaultTableModel) tblSnowClearingOrg.getModel();
+    private void populateFundOrgTable() {
+        DefaultTableModel model = (DefaultTableModel) tblFundRaisingOrg.getModel();
         model.setRowCount(0);
         
             Object[] row = new Object[4];    
-            for(SnowClearingOrg org:system.getSnowClearingOrgDirectory().getSnowClearingOrgList()){
+            for(FundRaising org:system.getFundRaisingDirectory().getFundRaisingList()){
                  row[0] = org;
-                 row[1] = org.getSnowOrgAddress();
-                 row[2] = org.getSnowOrgPhNum();
-                 row[3] = org.getSnowOrgEmail();
+                 row[1] = org.getFundRaisingAddress();
+                 row[2] = org.getFundRaisingPhNum();
+                 row[3] = org.getFundRaisingEmail();
                  model.addRow(row);
             }
-            
     }
 
-    public void populateRequestsTable() {
+    private void populateDonationTable() {
         
-        DefaultTableModel model = (DefaultTableModel) tblRequests.getModel();
-        model.setRowCount(0);
-
-          for (Member mem:system.getMemberDirectory().getMemberList()) {   
-            if (mem.getMemUsername().equals(account.getUsername())) {
-               for(WorkRequest service:mem.getRequestList()){
-                Object[] row = new Object[4];
-                row[0] = service;
-                row[1] = service.getSnowOrgName();
-                row[2] = service.getServiceAddress();
-                row[3] = service.getStatus();
-                model.addRow(row);
-               }            
-            }  
-        }
     }
 }

@@ -17,7 +17,7 @@ public class Funds {
     private int fundCollected = 0;
     private Boolean fundOpen = true;
     private String fundStatus = "Open";
-    private long totalFunds = 0;
+    private int totalFunds = 0;
     
     public Funds(String itemName, String itemDescription, String itemType, int itemAmount) {
         this.fundName = itemName;
@@ -66,7 +66,16 @@ public class Funds {
         this.fundCollected = fundCollected;
     }
 
+    public int getTotalFunds() {
+        return totalFunds;
+    }
+
+    public void setTotalFunds(int totalFunds) {
+        this.totalFunds = totalFunds;
+    }
+
     
+
 
     public Boolean getFundOpen() {
         return fundOpen;
@@ -84,15 +93,7 @@ public class Funds {
         this.fundStatus = fundStatus;
     }
 
-    public long getTotalFunds() {
-        return totalFunds;
-    }
-
-    public void setTotalFunds(long totalFunds) {
-        this.totalFunds = totalFunds;
-    }
-    
-    
+ 
     
     @Override
     public String toString() {

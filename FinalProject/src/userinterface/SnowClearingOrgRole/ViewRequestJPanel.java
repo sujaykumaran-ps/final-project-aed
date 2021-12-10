@@ -179,12 +179,12 @@ public class ViewRequestJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please Assign a Field Worker at first !!!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
-        request.setStatus("Request being processed");
+        request.setStatus("In Progress");
         for(Member mem:system.getMemberDirectory().getMemberList()){
-            if(mem.getMemName().equals(mem.getMemUsername())){
+            if(request.getMemName().equals(mem.getMemUsername())){
                 for(WorkRequest request : mem.getRequestList()){
-                    if(request.getStatus().equals("Assigned for Request")) {
-                        request.setStatus("Request being processed");
+                    if(request.getStatus().equals("Assigned Field Worker")) {
+                        request.setStatus("In Progress");
                     }
                     
                 }
@@ -205,8 +205,7 @@ public class ViewRequestJPanel extends javax.swing.JPanel {
                 for(WorkRequest order : mem.getRequestList()){
                     if(request.getStatus().equals("New Request")) {
                         request.setStatus("Request Cancelled");
-                    }
-                    
+                    }   
                 }
             }
         }

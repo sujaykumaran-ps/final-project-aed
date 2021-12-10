@@ -178,12 +178,12 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblRequests.getSelectedRow();
         if(selectedRow<0){
-            JOptionPane.showMessageDialog(null,"Please select a row from the table to view details","Warning",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please select a row from the table to view details", "Warning",JOptionPane.WARNING_MESSAGE);
         }
         else{
             WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);  
-            if(request.getStatus().equals("Request being processed") || request.getStatus().equals("Delivered")){
-                JOptionPane.showMessageDialog(null, "Request Completed Already !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            if(request.getStatus().equals("In Progress") || request.getStatus().equals("Completed")){
+                JOptionPane.showMessageDialog(null, "Request Completed or In Progress !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }else{
                 ViewRequestJPanel viewRequest=new ViewRequestJPanel(userProcessContainer, account, request, system);
                 userProcessContainer.add("View Request", viewRequest);
@@ -201,14 +201,14 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
         }
         else{
             WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);
-            if(request.getStatus().equals("Request being processed, agent on the way") || request.getStatus().equals("Service Completed")){
+            if(request.getStatus().equals("Assigned Field Worker") || request.getStatus().equals("Completed") || request.getStatus().equals("In Progress")){
                 JOptionPane.showMessageDialog(null,"Already Assigned for Request !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }else if(request.getStatus().equals("Request Cancelled")){
                 JOptionPane.showMessageDialog(null,"Request Cancelled !!! Cannot Assign.", "Warning", JOptionPane.WARNING_MESSAGE);
             }
             else{
                 FieldWorkRequestJPanel assignDelivery = new FieldWorkRequestJPanel(userProcessContainer, account, request, system);
-                userProcessContainer.add("Assigned for Request", assignDelivery);
+                userProcessContainer.add("Assign Field Worker", assignDelivery);
                 CardLayout layout=(CardLayout)userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             }

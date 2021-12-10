@@ -129,7 +129,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
          for(Member mem:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(mem.getMemUsername())){
                 for(WorkRequest request : mem.getRequestList()){
-                    if(request.getStatus().equals("Out for Delivery")) {
+                    if(request.getStatus().equals("In Progress")) {
                     request.setStatus(status);
                     }
                 }

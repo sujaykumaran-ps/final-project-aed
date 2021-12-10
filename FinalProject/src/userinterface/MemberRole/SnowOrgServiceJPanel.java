@@ -379,10 +379,10 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         works.add(work);
         
         Object[] row = new Object[3];
-        for(Service dish:works){
-            row[0] = dish;
-            row[1] = dish.getServiceDescription();
-            row[2] = dish.getServiceType();
+        for(Service req:works){
+            row[0] = req;
+            row[1] = req.getServiceDescription();
+            row[2] = req.getServiceType();
             
             model.addRow(row);
         }  

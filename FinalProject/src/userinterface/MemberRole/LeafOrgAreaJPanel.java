@@ -56,6 +56,8 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         titleOrders = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(900, 900));
+
         btnRefresh.setText("Refresh Requests");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,7 +163,7 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(btnBack)))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,7 +182,7 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(btnRefresh)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

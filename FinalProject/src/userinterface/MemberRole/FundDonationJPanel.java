@@ -55,6 +55,8 @@ public class FundDonationJPanel extends javax.swing.JPanel {
         btnRefresh = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(900, 900));
+
         tblFundRaisingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

@@ -67,6 +67,8 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
         lblAddress = new javax.swing.JLabel();
         txtPhNum = new javax.swing.JTextField();
 
+        setPreferredSize(new java.awt.Dimension(900, 900));
+
         titleOrder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleOrder.setText("Donation to");
 

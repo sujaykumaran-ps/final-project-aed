@@ -47,8 +47,8 @@ public class MainJFrame extends javax.swing.JFrame {
         passwordField = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        loginJLabel = new javax.swing.JLabel();
         logoutJButton = new javax.swing.JButton();
+        loginJLabel = new javax.swing.JLabel();
         container = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,7 +58,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(200, 778));
 
         loginJButton.setBackground(new java.awt.Color(133, 211, 255));
-        loginJButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
+        loginJButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         loginJButton.setText("LOGIN");
         loginJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,14 +66,14 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jLabel1.setText("User Name");
 
-        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jLabel2.setText("Password");
 
         logoutJButton.setBackground(new java.awt.Color(133, 211, 255));
-        logoutJButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
+        logoutJButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         logoutJButton.setText("LOGOUT");
         logoutJButton.setEnabled(false);
         logoutJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +127,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(loginJButton)
                 .addGap(18, 18, 18)
                 .addComponent(logoutJButton)
-                .addContainerGap(300, Short.MAX_VALUE))
+                .addContainerGap(283, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);

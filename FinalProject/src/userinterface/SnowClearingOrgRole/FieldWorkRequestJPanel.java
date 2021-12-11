@@ -163,7 +163,7 @@ public class FieldWorkRequestJPanel extends javax.swing.JPanel {
             for(Member member:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(member.getMemUsername())){
                 for(WorkRequest request : member.getRequestList()){
-                    if(request.getStatus().equals("New Request")){
+                    if(request.getStatus().equals("In Progress")){
                         request.setStatus("Assigned Field Worker");
                     }
                 }

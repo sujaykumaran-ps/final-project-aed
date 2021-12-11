@@ -103,8 +103,8 @@ public class FieldWorkerHomeJPanel extends javax.swing.JPanel {
 
     private void btnLeafClearanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLeafClearanceActionPerformed
         // TODO add your handling code here:
-        FieldWorkerAreaJPanel snowJPanel = new FieldWorkerAreaJPanel(userProcessContainer, account, system);
-        userProcessContainer.add("SnowClearing Request", snowJPanel);
+        FieldWorkerLeafAreaJPanel snowJPanel = new FieldWorkerLeafAreaJPanel(userProcessContainer, account, system);
+        userProcessContainer.add("Leaf Clearing Request", snowJPanel);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnLeafClearanceActionPerformed

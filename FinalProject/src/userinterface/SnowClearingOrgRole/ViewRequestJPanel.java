@@ -178,6 +178,12 @@ public class ViewRequestJPanel extends javax.swing.JPanel {
         if(request.getStatus().equals("In Progress")) {
             JOptionPane.showMessageDialog(null, "Already Accepted", "Warning", JOptionPane.WARNING_MESSAGE);
         }
+        else if(request.getStatus().equals("Assigned Field Worker")) {
+            JOptionPane.showMessageDialog(null, "Already Accepted", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else if(request.getStatus().equals("Request Cancelled")) {
+            JOptionPane.showMessageDialog(null, "Reqeust Cancelled Already", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
         else{
         request.setStatus("In Progress");
         for(Member mem:system.getMemberDirectory().getMemberList()){

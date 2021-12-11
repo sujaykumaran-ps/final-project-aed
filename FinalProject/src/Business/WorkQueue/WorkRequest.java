@@ -6,6 +6,7 @@ package Business.WorkQueue;
 
 import Business.LeafClearingOrg.LeafService;
 import Business.SnowClearingOrg.Service;
+import Business.SoupKitchenOrg.SoupKitchenService;
 import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,10 +20,29 @@ public class WorkRequest {
     private String requestId;
     private String snowOrgName;
     private String memName;
+    private String soupOrgName;
+
     private String fieldWorkerName;
     private String serviceAddress;
     private ArrayList<Service> request;
     private ArrayList<LeafService> leafRequest;
+    private ArrayList<SoupKitchenService> soupRequest;
+
+    public ArrayList<SoupKitchenService> getSoupRequest() {
+        return soupRequest;
+    }
+
+    public void setSoupRequest(ArrayList<SoupKitchenService> soupRequest) {
+        this.soupRequest = soupRequest;
+    }
+
+    public String getSoupOrgName() {
+        return soupOrgName;
+    }
+
+    public void setSoupOrgName(String soupOrgName) {
+        this.soupOrgName = soupOrgName;
+    }
 
     public ArrayList<LeafService> getLeafRequest() {
         return leafRequest;

@@ -11,6 +11,7 @@ import Business.FieldWorker.FieldWorkerDirectory;
 import Business.FundRaising.FundRaisingDirectory;
 import Business.SnowClearingOrg.SnowClearingOrgDirectory;
 import Business.LeafClearingOrg.LeafClearingOrgDirectory;
+import Business.EmergencyDistressOrg.EmergencyDistressOrgDirectory;
 
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
@@ -26,13 +27,15 @@ public class EcoSystem extends Organization{
     private SnowClearingOrgDirectory snowClearingOrgDirectory;
     private MemberDirectory memberDirectory;
     private LeafClearingOrgDirectory leafClearingOrgDirectory;
+    private EmergencyDistressOrgDirectory emergencyDistressOrgDirectory;
 
     private FieldWorkerDirectory fieldWorkerDirectory;
     private FundRaisingDirectory fundRaisingDirectory;
     
-    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory,LeafClearingOrgDirectory leafClearingOrgDirectory) {
+    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory,LeafClearingOrgDirectory leafClearingOrgDirectory, EmergencyDistressOrgDirectory emergencyDistressOrgDirectory) {
         this.fundRaisingDirectory = fundRaisingDirectory;
         this.leafClearingOrgDirectory = leafClearingOrgDirectory;
+        this.emergencyDistressOrgDirectory = emergencyDistressOrgDirectory;
 
         this.snowClearingOrgDirectory = snowClearingOrgDirectory;
         this.memberDirectory = memberDirectory;
@@ -65,6 +68,17 @@ public class EcoSystem extends Organization{
     }
     public void setLeafClearingOrgDirectory(LeafClearingOrgDirectory leafClearingOrgDirectory) {
         this.leafClearingOrgDirectory = leafClearingOrgDirectory;
+    }
+
+    public EmergencyDistressOrgDirectory getEmergencyDistressOrgDirectory() {
+        if(emergencyDistressOrgDirectory == null)
+        {
+            emergencyDistressOrgDirectory = new EmergencyDistressOrgDirectory();
+        }
+        return emergencyDistressOrgDirectory;    }
+
+    public void setEmergencyDistressOrgDirectory(EmergencyDistressOrgDirectory emergencyDistressOrgDirectory) {
+        this.emergencyDistressOrgDirectory = emergencyDistressOrgDirectory;
     }
 
     public MemberDirectory getMemberDirectory() {

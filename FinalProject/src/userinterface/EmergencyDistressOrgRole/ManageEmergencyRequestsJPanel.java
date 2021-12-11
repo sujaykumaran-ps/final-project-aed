@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.LeafClearingOrgRole;
+package userinterface.EmergencyDistressOrgRole;
 
 import Business.EcoSystem;
-import Business.LeafClearingOrg.LeafService;
-import Business.LeafClearingOrg.LeafClearingOrg;
+import Business.EmergencyDistressOrg.EmergencyService;
+import Business.EmergencyDistressOrg.EmergencyDistressOrg;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -17,20 +17,18 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author sujay
+ * @author mohitdaswani
  */
-public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
-
-    /**
-     * Creates new form ManageLeafRequestsJPanel
-     */
+public class ManageEmergencyRequestsJPanel extends javax.swing.JPanel {
     EcoSystem system;
     JPanel userProcessContainer;
     UserAccount account;
-    
-    public ManageLeafRequestsJPanel(JPanel userProcessContainer,UserAccount account, EcoSystem system) {
+    /**
+     * Creates new form ManageEmergancyRequestsJPanel
+     */
+    public ManageEmergencyRequestsJPanel(JPanel userProcessContainer,UserAccount account, EcoSystem system) {
         initComponents();
-        this.account=account;
+               this.account=account;
         this.system=system;
         this.userProcessContainer=userProcessContainer;
         populateRequestsTable();
@@ -45,7 +43,6 @@ public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSlider1 = new javax.swing.JSlider();
         btnBack = new javax.swing.JButton();
         titleManageRequest = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -53,8 +50,6 @@ public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
         btnRefresh = new javax.swing.JButton();
         btnAssign = new javax.swing.JButton();
         btnView = new javax.swing.JButton();
-
-        setBackground(new java.awt.Color(252, 156, 52));
 
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +142,7 @@ public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBack)
                 .addGap(37, 37, 37)
                 .addComponent(titleManageRequest)
@@ -174,25 +169,6 @@ public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
         populateRequestsTable();
     }//GEN-LAST:event_btnRefreshActionPerformed
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
-        // TODO add your handling code here:
-        int selectedRow = tblRequests.getSelectedRow();
-        if(selectedRow<0){
-            JOptionPane.showMessageDialog(null,"Please select a row from the table to view details", "Warning",JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);  
-            if(request.getStatus().equals("In Progress") || request.getStatus().equals("Completed")){
-                JOptionPane.showMessageDialog(null, "Request Completed or In Progress !!!", "Warning", JOptionPane.WARNING_MESSAGE);
-            }else{
-                ViewLeafRequestJPanel viewRequest=new ViewLeafRequestJPanel(userProcessContainer, account, request, system);
-                userProcessContainer.add("View Request", viewRequest);
-                CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-                layout.next(userProcessContainer);
-            }
-        }
-    }//GEN-LAST:event_btnViewActionPerformed
-
     private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblRequests.getSelectedRow();
@@ -207,7 +183,7 @@ public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null,"Request Cancelled !!! Cannot Assign.", "Warning", JOptionPane.WARNING_MESSAGE);
             }
             else{
-                LeafFieldWorkRequestJPanel assignDelivery = new LeafFieldWorkRequestJPanel(userProcessContainer, account, request, system);
+                EmergencyFieldWorkRequestJPanel assignDelivery = new EmergencyFieldWorkRequestJPanel(userProcessContainer, account, request, system);
                 userProcessContainer.add("Assign Field Worker", assignDelivery);
                 CardLayout layout=(CardLayout)userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
@@ -215,22 +191,29 @@ public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnAssignActionPerformed
 
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = tblRequests.getSelectedRow();
+        if(selectedRow<0){
+            JOptionPane.showMessageDialog(null,"Please select a row from the table to view details", "Warning",JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);
+            if(request.getStatus().equals("In Progress") || request.getStatus().equals("Completed")){
+                JOptionPane.showMessageDialog(null, "Request Completed or In Progress !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            }else{
+                ViewEmergencyRequestJPanel viewRequest=new ViewEmergencyRequestJPanel(userProcessContainer, account, request, system);
+                userProcessContainer.add("View Request", viewRequest);
+                CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+                layout.next(userProcessContainer);
+            }
+        }
+    }//GEN-LAST:event_btnViewActionPerformed
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnRefresh;
-    private javax.swing.JButton btnView;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JTable tblRequests;
-    private javax.swing.JLabel titleManageRequest;
-    // End of variables declaration//GEN-END:variables
-
-    private void populateRequestsTable() {
+private void populateRequestsTable() {
         DefaultTableModel model = (DefaultTableModel) tblRequests.getModel();        
         model.setRowCount(0);               
-        for (LeafClearingOrg org:system.getLeafClearingOrgDirectory().getLeafClearingOrgList()) {          
+        for (EmergencyDistressOrg org:system.getEmergencyDistressOrgDirectory().getEmergencyDistressOrgList()) {          
             if (org.getUserName().equals(account.getUsername())) {
                for(WorkRequest service:org.getRequestList()){
                 Object[] row = new Object[4];
@@ -243,4 +226,13 @@ public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
             }            
         }
     }
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAssign;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnRefresh;
+    private javax.swing.JButton btnView;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tblRequests;
+    private javax.swing.JLabel titleManageRequest;
+    // End of variables declaration//GEN-END:variables
 }

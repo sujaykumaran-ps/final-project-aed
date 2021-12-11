@@ -4,6 +4,7 @@
  */
 package Business.WorkQueue;
 
+import Business.EmergencyDistressOrg.EmergencyService;
 import Business.LeafClearingOrg.LeafService;
 import Business.SnowClearingOrg.Service;
 import Business.SoupKitchenOrg.SoupKitchenService;
@@ -21,12 +22,30 @@ public class WorkRequest {
     private String snowOrgName;
     private String memName;
     private String soupOrgName;
+    private String emergencyOrgName;
+
+    public String getEmergencyOrgName() {
+        return emergencyOrgName;
+    }
+
+    public void setEmergencyOrgName(String emergencyOrgName) {
+        this.emergencyOrgName = emergencyOrgName;
+    }
 
     private String fieldWorkerName;
     private String serviceAddress;
     private ArrayList<Service> request;
     private ArrayList<LeafService> leafRequest;
     private ArrayList<SoupKitchenService> soupRequest;
+    private ArrayList<EmergencyService> emergencyRequest;
+
+    public ArrayList<EmergencyService> getEmergencyRequest() {
+        return emergencyRequest;
+    }
+
+    public void setEmergencyRequest(ArrayList<EmergencyService> emergencyRequest) {
+        this.emergencyRequest = emergencyRequest;
+    }
 
     public ArrayList<SoupKitchenService> getSoupRequest() {
         return soupRequest;

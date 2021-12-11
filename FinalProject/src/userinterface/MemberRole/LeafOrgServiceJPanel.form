@@ -55,7 +55,7 @@
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="lblInstructions" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtInstructions" alignment="0" pref="163" max="32767" attributes="0"/>
+                                  <Component id="txtInstructions" alignment="0" pref="694" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -119,7 +119,7 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnPlaceRequest" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="38" max="32767" attributes="0"/>
+              <EmptySpace pref="219" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

@@ -11,9 +11,9 @@ import Business.FieldWorker.FieldWorkerDirectory;
 import Business.FundRaising.FundRaisingDirectory;
 import Business.SnowClearingOrg.SnowClearingOrgDirectory;
 import Business.LeafClearingOrg.LeafClearingOrgDirectory;
-
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
+import Business.SoupKitchenOrg.SoupKitchenOrgDirectory;
 import java.util.ArrayList;
 
 /**
@@ -26,14 +26,14 @@ public class EcoSystem extends Organization{
     private SnowClearingOrgDirectory snowClearingOrgDirectory;
     private MemberDirectory memberDirectory;
     private LeafClearingOrgDirectory leafClearingOrgDirectory;
-
+    private SoupKitchenOrgDirectory soupKitchenOrgDirectory;
     private FieldWorkerDirectory fieldWorkerDirectory;
     private FundRaisingDirectory fundRaisingDirectory;
     
-    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory,LeafClearingOrgDirectory leafClearingOrgDirectory) {
+    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory,LeafClearingOrgDirectory leafClearingOrgDirectory, SoupKitchenOrgDirectory soupKitchenOrgDirectory) {
         this.fundRaisingDirectory = fundRaisingDirectory;
         this.leafClearingOrgDirectory = leafClearingOrgDirectory;
-
+        this.soupKitchenOrgDirectory = soupKitchenOrgDirectory;
         this.snowClearingOrgDirectory = snowClearingOrgDirectory;
         this.memberDirectory = memberDirectory;
         this.fieldWorkerDirectory = fieldWorkerDirectory;
@@ -53,6 +53,7 @@ public class EcoSystem extends Organization{
         }
         return snowClearingOrgDirectory;
     }
+    
     public LeafClearingOrgDirectory getLeafClearingOrgDirectory() {
         if(leafClearingOrgDirectory == null)
         {
@@ -60,9 +61,11 @@ public class EcoSystem extends Organization{
         }
         return leafClearingOrgDirectory;
     }
+    
     public void setSnowClearingOrgDirectory(SnowClearingOrgDirectory snowClearingOrgDirectory) {
         this.snowClearingOrgDirectory = snowClearingOrgDirectory;
     }
+    
     public void setLeafClearingOrgDirectory(LeafClearingOrgDirectory leafClearingOrgDirectory) {
         this.leafClearingOrgDirectory = leafClearingOrgDirectory;
     }
@@ -97,14 +100,23 @@ public class EcoSystem extends Organization{
             fundRaisingDirectory = new FundRaisingDirectory();
         }
         return fundRaisingDirectory;
-    }
+    }  
 
     public void setFundRaisingDirectory(FundRaisingDirectory fundRaisingDirectory) {
         this.fundRaisingDirectory = fundRaisingDirectory;
     }
-    
-    
-    
+
+    public SoupKitchenOrgDirectory getSoupKitchenOrgDirectory() {
+        if(soupKitchenOrgDirectory == null)
+        {
+            soupKitchenOrgDirectory = new SoupKitchenOrgDirectory();
+        }
+        return soupKitchenOrgDirectory;
+    }
+
+    public void setSoupKitchenOrgDirectory(SoupKitchenOrgDirectory soupKitchenOrgDirectory) {
+        this.soupKitchenOrgDirectory = soupKitchenOrgDirectory;
+    }
     
     
     @Override

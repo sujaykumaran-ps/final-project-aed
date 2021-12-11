@@ -203,7 +203,7 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
                             .addComponent(lblAddress))
                         .addGap(18, 18, 18)
                         .addComponent(txtPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(212, Short.MAX_VALUE))
+                .addContainerGap(706, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,7 +232,7 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
                     .addComponent(txtPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPlaceDonation)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(230, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -289,13 +289,6 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
         
 
         JOptionPane.showMessageDialog(null,"Your Donation is placed Successfully !!!", "Thank You", JOptionPane.PLAIN_MESSAGE);
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
-        Component component = componentArray[componentArray.length - 1];
-        FundDonationJPanel comp = (FundDonationJPanel) component;
-        comp.populateDonationTable();
-        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
 
     }//GEN-LAST:event_btnPlaceDonationActionPerformed
 

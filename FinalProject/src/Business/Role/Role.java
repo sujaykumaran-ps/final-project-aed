@@ -20,6 +20,7 @@ public abstract class Role {
         SnowClearingOrg("SnowClearingOrg"),
         LeafClearingOrg("LeafClearingOrg"),
         FundRaising("FundRaising"),
+        SoupKitchenOrg("SoupKitchenOrg"),
         Member("Member"),
         FieldWorker("FieldWorker"),
         SysAdmin("Sysadmin");

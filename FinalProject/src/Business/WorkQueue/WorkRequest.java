@@ -19,38 +19,17 @@ public class WorkRequest {
     private String requestId;
     private String snowOrgName;
     private String memName;
-    private String soupOrgName;
-
     private String fieldWorkerName;
     private String serviceAddress;
     private ArrayList<Service> request;
-    
-
-    public String getSoupOrgName() {
-        return soupOrgName;
-    }
-
-    public void setSoupOrgName(String soupOrgName) {
-        this.soupOrgName = soupOrgName;
-    }
-
-
     private String type;
     private String status;
     private String message;
-    private UserAccount sender;
-    private UserAccount receiver;
     private Date requestDate;
     private Date resolveDate;
-    private String leafOrgName;
+    
 
-    public String getLeafOrgName() {
-        return leafOrgName;
-    }
 
-    public void setLeafOrgName(String leafOrgName) {
-        this.leafOrgName = leafOrgName;
-    }
 
     
     public WorkRequest(){
@@ -128,22 +107,6 @@ public class WorkRequest {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public UserAccount getSender() {
-        return sender;
-    }
-
-    public void setSender(UserAccount sender) {
-        this.sender = sender;
-    }
-
-    public UserAccount getReceiver() {
-        return receiver;
-    }
-
-    public void setReceiver(UserAccount receiver) {
-        this.receiver = receiver;
     }
 
     public Date getRequestDate() {

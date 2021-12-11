@@ -159,7 +159,7 @@ public class FundsStatusJPanel extends javax.swing.JPanel {
                 row[0] = fund.getFundName();
                 row[1] = fund.getFundType();
                 row[2] = fund.getFundAmount();
-                row[3] = fund.getFundCollected();
+                row[3] = fund.getFundPerCause();
                 row[4] = fund.getFundStatus();
                 model.addRow(row);
                } 

@@ -8,9 +8,12 @@ package userinterface.MemberRole;
 import Business.EcoSystem;
 import Business.FundRaising.FundRaising;
 import Business.FundRaising.Funds;
+import Business.Member.Member;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import java.awt.Component;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -26,6 +29,7 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
     EcoSystem system;
     ArrayList<Funds> causes = new ArrayList<Funds>();
     int donationAmt = 0;
+    int total = 0;
     /**
      * Creates new form DonationCausesJPanel
      */
@@ -59,6 +63,9 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
         tblDonation = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         btnPlaceDonation = new javax.swing.JButton();
+        btnRemove = new javax.swing.JButton();
+        lblAddress = new javax.swing.JLabel();
+        txtPhNum = new javax.swing.JTextField();
 
         titleOrder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleOrder.setText("Donation to");
@@ -148,6 +155,16 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnRemove.setText("Remove Request");
+        btnRemove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveActionPerformed(evt);
+            }
+        });
+
+        lblAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblAddress.setText("Member Phone Number :");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -177,9 +194,16 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
                         .addGap(305, 305, 305)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(354, 354, 354)
-                        .addComponent(btnPlaceDonation)))
-                .addContainerGap(175, Short.MAX_VALUE))
+                        .addGap(330, 330, 330)
+                        .addComponent(btnRemove))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(231, 231, 231)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnPlaceDonation)
+                            .addComponent(lblAddress))
+                        .addGap(18, 18, 18)
+                        .addComponent(txtPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(212, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,9 +224,15 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(23, 23, 23)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
+                .addComponent(btnRemove)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAddress)
+                    .addComponent(txtPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPlaceDonation)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -223,42 +253,74 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
             Funds donation = (Funds)tblCauses.getValueAt(selectedRow, 0); 
             String donationAmount = JOptionPane.showInputDialog("Enter Amount to Donate :");
             donationAmt = Integer.parseInt(donationAmount);
+            total = total+donationAmt;
             donation.setFundCollected(donationAmt);
+            donation.setFundPerCause(donationAmt);
             populateAddedDonationTable(donation);
         }
     }//GEN-LAST:event_btnDonateActionPerformed
 
     private void btnPlaceDonationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceDonationActionPerformed
         // TODO add your handling code here:
-//        String address = txtAddress.getText();
-//        String ins = txtInstructions.getText();
-//
-//        try {
-//            if(address==null || address.isEmpty()){
-//                throw new NullPointerException("Please Enter Service Address !!!");
-//            }
-//        } catch(NullPointerException e){
-//            JOptionPane.showMessageDialog(null, "Please Enter Service Address !!!");
-//            return;
-//        }
-//
-//        org.newRequest(org.getSnowOrgName(), account.getUsername(), null, works , address, ins);
-//        for(Member mem:system.getMemberDirectory().getMemberList()){
-//            if(account.getUsername().equals(mem.getMemUsername())){
-//                mem.newRequest(org.getSnowOrgName(), account.getUsername(), null, works , address, ins);
-//            }
-//        }
-//
-//        JOptionPane.showMessageDialog(null,"Your Request is placed Successfully !!!", "Thank You", JOptionPane.PLAIN_MESSAGE);
-//        userProcessContainer.remove(this);
-//        Component[] componentArray = userProcessContainer.getComponents();
-//        Component component = componentArray[componentArray.length - 1];
-//        MemberAreaJPanel comp = (MemberAreaJPanel) component;
-//        comp.populateRequestsTable();
-//        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
-//        layout.previous(userProcessContainer);
+       String donorPhNum = txtPhNum.getText();
+       try {
+
+            if(donorPhNum==null || donorPhNum.isEmpty()){
+                throw new NullPointerException("Fund Raising Org Phone Number Field cannot be Empty !!!");
+            }else if(Pattern.matches("^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$", donorPhNum) == false){
+                throw new Exception("Enter a Valid Phone number !!!");
+            }
+        }  catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "Member Phone Number Field cannot be Empty !!!");
+            return;
+        }catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Enter a Valid Phone number !!!");
+            return;
+        }
+        
+
+        org.newFundDonation(org.getFundRaisingName(), account.getUsername(), causes, donorPhNum, total);
+        for(Member mem:system.getMemberDirectory().getMemberList()){
+            if(account.getUsername().equals(mem.getMemUsername())){
+                mem.newFundDonation(org.getFundRaisingName(), account.getUsername(), causes, donorPhNum, total);
+            }
+        }
+        
+        
+
+        JOptionPane.showMessageDialog(null,"Your Donation is placed Successfully !!!", "Thank You", JOptionPane.PLAIN_MESSAGE);
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        FundDonationJPanel comp = (FundDonationJPanel) component;
+        comp.populateDonationTable();
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
 
     }//GEN-LAST:event_btnPlaceDonationActionPerformed
+
+    private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = tblDonation.getSelectedRow();
+        if(selectedRow < 0){
+            JOptionPane.showMessageDialog(null, "Please select a service to Remove from Added Requests !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            Funds donation = (Funds)tblDonation.getValueAt(selectedRow, 0);
+            causes.remove(donation);
+            DefaultTableModel model = (DefaultTableModel) tblDonation.getModel();
+            model.setRowCount(0);
+            Object[] row = new Object[5];
+            for(Funds don:causes){
+                row[0] = don;
+                row[1] = don.getFundDescription();
+                row[2] = don.getFundAmount();
+                row[3] = don.getFundType();
+                row[4] = don.getFundCollected();
+                model.addRow(row);
+            }
+        }
+    }//GEN-LAST:event_btnRemoveActionPerformed
 
     private void populateCausesTable() {
         DefaultTableModel model = (DefaultTableModel) tblCauses.getModel();
@@ -278,26 +340,34 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDonate;
     private javax.swing.JButton btnPlaceDonation;
+    private javax.swing.JButton btnRemove;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblCauses;
     private javax.swing.JTable tblCauses;
     private javax.swing.JTable tblDonation;
     private javax.swing.JLabel titleOrder;
     private javax.swing.JLabel titleOrgName;
+    private javax.swing.JTextField txtPhNum;
     // End of variables declaration//GEN-END:variables
 
     private void populateAddedDonationTable(Funds donation) {
        DefaultTableModel model = (DefaultTableModel) tblDonation.getModel();
         model.setRowCount(0);
+
+        causes.add(donation);
+        
         Object[] row = new Object[5];
-            row[0] = donation.getFundName();
-            row[1] = donation.getFundDescription();
-            row[2] = donation.getFundAmount();
-            row[3] = donation.getFundType();
-            row[4] = donationAmt;
+        for(Funds don:causes){
+            row[0] = don;
+            row[1] = don.getFundDescription();
+            row[2] = don.getFundAmount();
+            row[3] = don.getFundType();
+            row[4] = don.getFundCollected();
             model.addRow(row);
+        }
             
         
     }

@@ -15,9 +15,10 @@ public class Funds {
     private String fundDescription;
     private int fundAmount;
     private int fundCollected = 0;
+    private int fundPerCause = 0;
     private Boolean fundOpen = true;
     private String fundStatus = "Open";
-    private int totalFunds = 0;
+    private int totalOrgFunds = 0;
     
     public Funds(String itemName, String itemDescription, String itemType, int itemAmount) {
         this.fundName = itemName;
@@ -66,16 +67,13 @@ public class Funds {
         this.fundCollected = fundCollected;
     }
 
-    public int getTotalFunds() {
-        return totalFunds;
+    public int getTotalOrgFunds() {
+        return totalOrgFunds;
     }
 
-    public void setTotalFunds(int totalFunds) {
-        this.totalFunds = totalFunds;
+    public void setTotalOrgFunds(int totalOrgFunds) {
+        this.totalOrgFunds = totalOrgFunds;
     }
-
-    
-
 
     public Boolean getFundOpen() {
         return fundOpen;
@@ -93,7 +91,15 @@ public class Funds {
         this.fundStatus = fundStatus;
     }
 
- 
+    public int getFundPerCause() {
+        return fundPerCause;
+    }
+
+    public void setFundPerCause(int fundCollected) {
+        this.fundPerCause = fundPerCause + fundCollected;
+    }
+
+    
     
     @Override
     public String toString() {

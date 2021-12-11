@@ -104,13 +104,14 @@ public class FundRaising {
         fundList.remove(fund);
     }
     
-    public void newRequest(String fundRaisingName, String memName, ArrayList<Funds> donation, String donorPhNum) {
+    public void newFundDonation(String fundRaisingName, String memName, ArrayList<Funds> donation, String donorPhNum, int total) {
         DonationRequest newDonation = new DonationRequest();
         newDonation.setDonationId(String.valueOf(id));
         newDonation.setMemName(memName);
         newDonation.setFundOrgName(fundRaisingName);
         newDonation.setDonation(donation);
         newDonation.setMemberPhNum(donorPhNum);
+        newDonation.setTotalDonation(total);
         donationRequestList.add(newDonation);
         id++;
     }

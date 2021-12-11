@@ -3,39 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.LeafClearingOrgRole;
-
-import Business.Member.Member;
-import Business.FieldWorker.FieldWorker;
-import Business.EcoSystem;
-import Business.UserAccount.UserAccount;
-import Business.WorkQueue.LeafWorkRequest;
-import java.awt.CardLayout;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.table.DefaultTableModel;
+package userinterface.SoupKitchenOrgRole;
 
 /**
  *
- * @author sujay
+ * @author mohitdaswani
  */
-public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
+public class SoupFieldWorkRequestJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form LeafFieldWorkRequestJPanel
+     * Creates new form FieldWorkRequestJPanel
      */
-    private JPanel userProcessContainer;
-    private UserAccount account;
-    LeafWorkRequest request;
-    EcoSystem system;
-    
-    public LeafFieldWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, LeafWorkRequest request, EcoSystem system) {
-        this.userProcessContainer = userProcessContainer;
-        this.account = account;
-        this.request = request;
-        this.system = system;
+    public SoupFieldWorkRequestJPanel() {
         initComponents();
-        populateFieldWorkers();
     }
 
     /**
@@ -47,13 +27,14 @@ public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         btnBack = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         FieldWorkerJTable = new javax.swing.JTable();
         btnAssignRequest = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        jPanel1.setBackground(new java.awt.Color(252, 156, 52));
 
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -101,32 +82,32 @@ public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 807, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addComponent(btnBack)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(280, 280, 280)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(64, 64, 64))
                     .addComponent(btnAssignRequest, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(btnBack)
                 .addGap(39, 39, 39)
@@ -136,6 +117,27 @@ public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
                 .addGap(40, 40, 40)
                 .addComponent(btnAssignRequest)
                 .addContainerGap(270, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 819, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 616, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -154,25 +156,24 @@ public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
         }
         else
         {
-            
-            FieldWorker fieldWorker  = (FieldWorker)FieldWorkerJTable.getValueAt(selectedRow, 0);   
-            fieldWorker.getLeafRequestList().add(request);
-            fieldWorker.setAvailability(false);
+
+            FieldWorker fieldWorker  = (FieldWorker)FieldWorkerJTable.getValueAt(selectedRow, 0);
+            fieldWorker.getRequestList().add(request);
             request.setStatus("Assigned Field Worker");
-            
+
             for(Member member:system.getMemberDirectory().getMemberList()){
-            if(request.getMemName().equals(member.getMemUsername())){
-                for(LeafWorkRequest request : member.getLeafRequestList()){
-                    if(request.getStatus().equals("New Request")){
-                        request.setStatus("Assigned Field Worker");
+                if(request.getMemName().equals(member.getMemUsername())){
+                    for(WorkRequest request : member.getRequestList()){
+                        if(request.getStatus().equals("New Request")){
+                            request.setStatus("Assigned Field Worker");
+                        }
                     }
                 }
             }
-        }
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-            
+            userProcessContainer.remove(this);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.previous(userProcessContainer);
+
         }
     }//GEN-LAST:event_btnAssignRequestActionPerformed
 
@@ -182,18 +183,7 @@ public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAssignRequest;
     private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
-
-    private void populateFieldWorkers() {
-        DefaultTableModel model = (DefaultTableModel) FieldWorkerJTable.getModel();
-        model.setRowCount(0);
-        for(FieldWorker fieldWorker:system.getFieldWorkerDirectory().getFieldWorkerList()){
-            if(fieldWorker.getAvailability()==true){
-               Object[] row = new Object[1];           
-                row[0] = fieldWorker;
-                model.addRow(row);
-            }
-            }
-    }
 }

@@ -50,7 +50,7 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         titleResAdmin.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         titleResAdmin.setText("LeafClearingOrg Admin");
-        add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, -1, -1));
+        add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
 
         btnOrgInfo.setText("Manage SnowClearingOrg Info");
         btnOrgInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +58,7 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnOrgInfoActionPerformed(evt);
             }
         });
-        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 220, -1));
+        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, 220, -1));
 
         btnManageServices.setText("Manage Services");
         btnManageServices.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +66,7 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageServicesActionPerformed(evt);
             }
         });
-        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 160, -1));
+        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, 160, -1));
 
         btnManageRequests.setText("Manage Requests");
         btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
@@ -74,14 +74,14 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageRequestsActionPerformed(evt);
             }
         });
-        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
+        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, 160, -1));
 
         lblResNameTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblResNameTitle.setText("Leaf Clearing Org Name :");
-        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 240, 30));
+        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 240, 30));
 
         lblResName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 170, 30));
+        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 170, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgInfoActionPerformed

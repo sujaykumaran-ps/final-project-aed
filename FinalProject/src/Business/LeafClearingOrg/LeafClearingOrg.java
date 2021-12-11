@@ -5,6 +5,7 @@
  */
 package Business.LeafClearingOrg;
 
+import Business.WorkQueue.LeafWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.util.ArrayList;
 
@@ -16,7 +17,7 @@ public class LeafClearingOrg {
     private String userName;
     int id = 1;
     private ArrayList<LeafService> serviceList;
-    private ArrayList<WorkRequest> requestList;
+    private ArrayList<LeafWorkRequest> leafRequestList;
     private String leafOrgName;
     private String leafOrgAddress;
     private String leafOrgPhNum;
@@ -25,7 +26,7 @@ public class LeafClearingOrg {
     public LeafClearingOrg(String name) {
         this.userName = name;
         serviceList = new ArrayList<LeafService>();
-        requestList = new ArrayList<WorkRequest>();
+        leafRequestList = new ArrayList<LeafWorkRequest>();
     }
 
     public String getUserName() {
@@ -52,14 +53,14 @@ public class LeafClearingOrg {
         this.serviceList = serviceList;
     }
 
-
-    public ArrayList<WorkRequest> getRequestList() {
-        return requestList;
+    public ArrayList<LeafWorkRequest> getLeafRequestList() {
+        return leafRequestList;
     }
 
-    public void setRequestList(ArrayList<WorkRequest> requestList) {
-        this.requestList = requestList;
+    public void setLeafRequestList(ArrayList<LeafWorkRequest> leafRequestList) {
+        this.leafRequestList = leafRequestList;
     }
+
 
     public String getLeafOrgName() {
         return leafOrgName;
@@ -106,8 +107,8 @@ public class LeafClearingOrg {
     }
     
     public void newRequest(String leafOrgName, String memName, String fieldWorker, ArrayList<LeafService> request, String serviceAddress, String instructions) {
-        WorkRequest newWork = new WorkRequest();
-        newWork.setRequestId(String.valueOf(id));
+        LeafWorkRequest newWork = new LeafWorkRequest();
+        newWork.setLeafRequestId(String.valueOf(id));
         newWork.setMemName(memName);
         newWork.setLeafOrgName(leafOrgName);
         newWork.setFieldWorkerName(fieldWorker);
@@ -115,7 +116,7 @@ public class LeafClearingOrg {
         newWork.setServiceAddress(serviceAddress);
         newWork.setMessage(instructions);
         newWork.setStatus("New Request");
-        requestList.add(newWork);
+        leafRequestList.add(newWork);
         id++;
     }
     @Override

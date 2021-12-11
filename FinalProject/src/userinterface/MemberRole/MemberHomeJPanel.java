@@ -30,7 +30,7 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         this.account = account;
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-        
+        lblName.setText(account.getName());
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -50,9 +50,10 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         titleWelcome2 = new javax.swing.JLabel();
         titleWelcome3 = new javax.swing.JLabel();
         titleWelcome4 = new javax.swing.JLabel();
+        lblName = new javax.swing.JLabel();
 
         titleWelcome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleWelcome.setText("Welcome Member");
+        titleWelcome.setText("Welcome ");
 
         btnSnowClearing.setText("Snow Clearing Org");
         btnSnowClearing.addActionListener(new java.awt.event.ActionListener() {
@@ -89,14 +90,12 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         titleWelcome4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleWelcome4.setText("Pick your cause and donate funds:");
 
+        lblName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(309, Short.MAX_VALUE)
-                .addComponent(titleWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(280, 280, 280))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -116,8 +115,13 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
                         .addGap(246, 246, 246)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnSoupKitchen, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnDonate, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnDonate, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(206, 206, 206)
+                        .addComponent(titleWelcome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(212, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDonate, btnLeafClearing, btnSnowClearing, btnSoupKitchen});
@@ -125,9 +129,11 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(titleWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(titleWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(titleWelcome1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(titleWelcome2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -177,6 +183,7 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnLeafClearing;
     private javax.swing.JButton btnSnowClearing;
     private javax.swing.JButton btnSoupKitchen;
+    private javax.swing.JLabel lblName;
     private javax.swing.JLabel titleWelcome;
     private javax.swing.JLabel titleWelcome1;
     private javax.swing.JLabel titleWelcome2;

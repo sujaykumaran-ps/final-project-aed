@@ -16,108 +16,103 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="btnRefreshOrg" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="318" max="-2" attributes="0"/>
-              <Component id="lblResName" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="372" max="32767" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="titleManageRestaurants" min="-2" pref="816" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
-                          <Component id="btnManageOrgBack" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="250" pref="250" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="496" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="570" pref="570" max="-2" attributes="0"/>
-                          <Component id="btnViewOrg" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-                          <Component id="btnDeleteOrg" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="488" max="-2" attributes="0"/>
-                          <Component id="txtOrgName" min="-2" pref="144" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="390" pref="390" max="-2" attributes="0"/>
-                          <Component id="lblResUsername" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="39" pref="39" max="-2" attributes="0"/>
-                          <Component id="txtOrgUsername" min="-2" pref="144" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="390" pref="390" max="-2" attributes="0"/>
-                          <Component id="lblResPassword" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
-                          <Component id="txtOrgPassword" min="-2" pref="144" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="490" pref="490" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-                                  <Component id="btnSubmitOrg" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="btnUpdateOrg" min="-2" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="titleManageRestaurants" min="-2" pref="816" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
+                              <Component id="btnManageOrgBack" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="320" max="-2" attributes="0"/>
+                              <Component id="btnViewOrg" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
+                              <Component id="btnDeleteOrg" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="lblResPassword" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
+                              <Component id="txtOrgPassword" min="-2" pref="144" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
+                                      <Component id="btnSubmitOrg" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="btnUpdateOrg" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="btnRefreshOrg" min="-2" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="496" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="lblResName" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblResUsername" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="39" pref="39" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtOrgUsername" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
+                                  <Component id="txtOrgName" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
               </Group>
+              <EmptySpace pref="82" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+              <Component id="titleManageRestaurants" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="68" pref="68" max="-2" attributes="0"/>
+              <Component id="btnManageOrgBack" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
               <Component id="btnRefreshOrg" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="176" max="32767" attributes="0"/>
-              <Component id="lblResName" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="25" max="32767" attributes="0"/>
-                  <Component id="titleManageRestaurants" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="68" pref="68" max="-2" attributes="0"/>
-                  <Component id="btnManageOrgBack" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="91" max="-2" attributes="0"/>
-                  <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnViewOrg" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnDeleteOrg" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
-                  <Component id="txtOrgName" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblResUsername" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="txtOrgUsername" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblResPassword" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtOrgPassword" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnSubmitOrg" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnUpdateOrg" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="91" max="-2" attributes="0"/>
+              <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnViewOrg" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnDeleteOrg" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtOrgName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblResName" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblResUsername" min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="txtOrgUsername" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblResPassword" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtOrgPassword" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnSubmitOrg" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnUpdateOrg" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="193" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

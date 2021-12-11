@@ -9,7 +9,7 @@ import Business.Member.Member;
 import Business.FieldWorker.FieldWorker;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
+import Business.WorkQueue.LeafWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -26,10 +26,10 @@ public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
      */
     private JPanel userProcessContainer;
     private UserAccount account;
-    WorkRequest request;
+    LeafWorkRequest request;
     EcoSystem system;
     
-    public LeafFieldWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, WorkRequest request, EcoSystem system) {
+    public LeafFieldWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, LeafWorkRequest request, EcoSystem system) {
         this.userProcessContainer = userProcessContainer;
         this.account = account;
         this.request = request;
@@ -156,12 +156,13 @@ public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
         {
             
             FieldWorker fieldWorker  = (FieldWorker)FieldWorkerJTable.getValueAt(selectedRow, 0);   
-            fieldWorker.getRequestList().add(request);
+            fieldWorker.getLeafRequestList().add(request);
+            fieldWorker.setAvailability(false);
             request.setStatus("Assigned Field Worker");
             
             for(Member member:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(member.getMemUsername())){
-                for(WorkRequest request : member.getRequestList()){
+                for(LeafWorkRequest request : member.getLeafRequestList()){
                     if(request.getStatus().equals("New Request")){
                         request.setStatus("Assigned Field Worker");
                     }
@@ -187,11 +188,12 @@ public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
     private void populateFieldWorkers() {
         DefaultTableModel model = (DefaultTableModel) FieldWorkerJTable.getModel();
         model.setRowCount(0);
-        
         for(FieldWorker fieldWorker:system.getFieldWorkerDirectory().getFieldWorkerList()){
+            if(fieldWorker.getAvailability()==true){
                Object[] row = new Object[1];           
                 row[0] = fieldWorker;
                 model.addRow(row);
+            }
             }
     }
 }

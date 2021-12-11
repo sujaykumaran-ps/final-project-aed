@@ -35,7 +35,6 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         this.account = account;
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-        lblName.setText(account.getName());
         populateSnowOrgTable();
         populateRequestsTable();  
     }
@@ -49,8 +48,6 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titleWelcome = new javax.swing.JLabel();
-        lblName = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblSnowClearingOrg = new javax.swing.JTable();
         btnReqService = new javax.swing.JButton();
@@ -59,13 +56,9 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         tblRequests = new javax.swing.JTable();
         titleOrders = new javax.swing.JLabel();
         btnRefresh = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(252, 156, 52));
-
-        titleWelcome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleWelcome.setText("Welcome");
-
-        lblName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
         tblSnowClearingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -143,17 +136,19 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(titleWelcome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -166,17 +161,18 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(253, 253, 253)
-                        .addComponent(btnReqService)))
+                        .addComponent(btnReqService))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(btnBack)))
                 .addContainerGap(199, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(titleWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
+                .addGap(48, 48, 48)
+                .addComponent(btnBack)
+                .addGap(30, 30, 30)
                 .addComponent(titleChoose)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -212,17 +208,23 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnReqServiceActionPerformed
 
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnReqService;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lblName;
     private javax.swing.JTable tblRequests;
     private javax.swing.JTable tblSnowClearingOrg;
     private javax.swing.JLabel titleChoose;
     private javax.swing.JLabel titleOrders;
-    private javax.swing.JLabel titleWelcome;
     // End of variables declaration//GEN-END:variables
 
     private void populateSnowOrgTable() {

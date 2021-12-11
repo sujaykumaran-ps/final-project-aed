@@ -9,6 +9,7 @@ import Business.FundRaising.Funds;
 import Business.SnowClearingOrg.Service;
 import Business.LeafClearingOrg.LeafService;
 import Business.WorkQueue.DonationRequest;
+import Business.WorkQueue.LeafWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.util.ArrayList;
 
@@ -20,15 +21,19 @@ public class Member {
     private String memName;
     private String memUsername;
     private ArrayList<WorkRequest> requestList;
+    private ArrayList<LeafWorkRequest> leafRequestList;
     private ArrayList<DonationRequest> donationList;
     private String memAddress;
     private String memPhNum;
     int id = 1;
+    int leafid = 1;
+    int donationid = 1;
 
     public Member(String memUsername) {
         this.memUsername = memUsername;
         requestList = new ArrayList<WorkRequest>();
         donationList = new ArrayList<DonationRequest>();
+        leafRequestList = new ArrayList<LeafWorkRequest>();
     }
     
     
@@ -58,6 +63,15 @@ public class Member {
         this.requestList = requestList;
     }
 
+    public ArrayList<LeafWorkRequest> getLeafRequestList() {
+        return leafRequestList;
+    }
+
+    public void setLeafRequestList(ArrayList<LeafWorkRequest> leafRequestList) {
+        this.leafRequestList = leafRequestList;
+    }
+    
+    
     public ArrayList<DonationRequest> getDonationList() {
         return donationList;
     }
@@ -107,8 +121,8 @@ public class Member {
     }
     
     public void newLeafRequest(String leafOrgName, String memName, String fieldWorker, ArrayList<LeafService> request, String serviceAddress, String instructions) {
-        WorkRequest newWork = new WorkRequest();
-        newWork.setRequestId(String.valueOf(id));
+        LeafWorkRequest newWork = new LeafWorkRequest();
+        newWork.setLeafRequestId(String.valueOf(id));
         newWork.setMemName(memName);
         newWork.setLeafOrgName(leafOrgName);
         newWork.setFieldWorkerName(fieldWorker);
@@ -116,8 +130,8 @@ public class Member {
         newWork.setServiceAddress(serviceAddress);
         newWork.setMessage(instructions);
         newWork.setStatus("New Request");
-        requestList.add(newWork);
-        id++;
+        leafRequestList.add(newWork);
+        leafid++;
     }
     
     public void newFundDonation(String fundRaisingName, String memName, ArrayList<Funds> donation, String donorPhNum, int total) {
@@ -129,7 +143,7 @@ public class Member {
         newDonation.setMemberPhNum(donorPhNum);
         newDonation.setTotalDonation(total);
         donationList.add(newDonation);
-        id++;
+        donationid++;
     }
     
     @Override

@@ -157,6 +157,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
         container.removeAll();
         JPanel blankJP = new JPanel();
+        blankJP.setBackground(new java.awt.Color(252, 156, 52));
+        blankJP.setLayout(new java.awt.CardLayout());
         container.add("blank", blankJP);
         CardLayout crdLyt = (CardLayout) container.getLayout();
         crdLyt.next(container);

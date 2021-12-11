@@ -32,7 +32,6 @@ public class FundDonationJPanel extends javax.swing.JPanel {
         this.account = account;
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-        lblName.setText(account.getName());
         populateFundOrgTable();
         populateDonationTable();
     }
@@ -48,14 +47,13 @@ public class FundDonationJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tblFundRaisingOrg = new javax.swing.JTable();
-        lblName = new javax.swing.JLabel();
-        titleWelcome = new javax.swing.JLabel();
         titleChoose = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblRequests = new javax.swing.JTable();
         titleOrders = new javax.swing.JLabel();
         btnDonateFunds = new javax.swing.JButton();
         btnRefresh = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         tblFundRaisingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -84,11 +82,6 @@ public class FundDonationJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(tblFundRaisingOrg);
-
-        lblName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-
-        titleWelcome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleWelcome.setText("Welcome");
 
         titleChoose.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         titleChoose.setText("Choose the Organization you want to donate for :");
@@ -138,6 +131,13 @@ public class FundDonationJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -150,27 +150,24 @@ public class FundDonationJPanel extends javax.swing.JPanel {
                             .addComponent(titleOrders)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(titleChoose)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(titleWelcome)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(346, 346, 346)
                         .addComponent(btnDonateFunds))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(346, 346, 346)
-                        .addComponent(btnRefresh)))
+                        .addComponent(btnRefresh))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(btnBack)))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(titleWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
+                .addComponent(btnBack)
+                .addGap(33, 33, 33)
                 .addComponent(titleChoose)
                 .addGap(35, 35, 35)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -206,18 +203,24 @@ public class FundDonationJPanel extends javax.swing.JPanel {
         populateDonationTable();
     }//GEN-LAST:event_btnRefreshActionPerformed
 
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDonateFunds;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lblName;
     private javax.swing.JTable tblFundRaisingOrg;
     private javax.swing.JTable tblRequests;
     private javax.swing.JLabel titleChoose;
     private javax.swing.JLabel titleOrders;
-    private javax.swing.JLabel titleWelcome;
     // End of variables declaration//GEN-END:variables
 
     private void populateFundOrgTable() {

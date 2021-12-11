@@ -1,13 +1,14 @@
 /*
- * To change this template, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package userinterface.FieldWorkerRole;
 
-import Business.FieldWorker.FieldWorker;
 import Business.EcoSystem;
+import Business.FieldWorker.FieldWorker;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
+import Business.WorkQueue.LeafWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -15,49 +16,21 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author raunak
+ * @author sujay
  */
-public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
-
+public class FieldWorkerLeafAreaJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private EcoSystem business;
     private UserAccount userAccount;
-    
-    
     /**
-     * Creates new form LabAssistantWorkAreaJPanel
+     * Creates new form FieldWorkerLeafAreaJPanel
      */
-    public FieldWorkerAreaJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+    public FieldWorkerLeafAreaJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
         initComponents();
-        
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
         this.business = business;
-      
-        
-        populateTable();
-    }
-    
-    public void populateTable(){
-        DefaultTableModel model = (DefaultTableModel) tblRequestDetails.getModel();
-        model.setRowCount(0);
-        
-        for(FieldWorker fieldWorker : business.getFieldWorkerDirectory().getFieldWorkerList()){
-            if(fieldWorker.getFieldWorkerUsername().equals(userAccount.getUsername())){
-                    
-                for(WorkRequest request : fieldWorker.getRequestList()){
-                Object[] row = new Object[6];
-                
-                row[0] = request;
-                row[1] = request.getSnowOrgName();
-                row[2] = request.getMemName();
-                row[3] = request.getServiceAddress();
-                row[4] = request.getStatus();
-                row[5] = request.getMessage();
-                model.addRow(row);     
-                }
-            } 
-        }
+        populateLeafTable();
     }
 
     /**
@@ -69,13 +42,14 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRequestDetails = new javax.swing.JTable();
         titleAssignedRequests = new javax.swing.JLabel();
         btnRefresh = new javax.swing.JButton();
         btnProcess = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        jPanel1.setBackground(new java.awt.Color(252, 156, 52));
 
         tblRequestDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -108,7 +82,7 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
 
         titleAssignedRequests.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleAssignedRequests.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleAssignedRequests.setText("Snow Clearance Requests");
+        titleAssignedRequests.setText("Leaf Clearance Requests");
 
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
@@ -124,44 +98,65 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(284, 284, 284)
                                 .addComponent(btnRefresh)
                                 .addGap(42, 42, 42)
                                 .addComponent(btnProcess))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(48, 48, 48)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 719, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 78, Short.MAX_VALUE))
                     .addComponent(titleAssignedRequests, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(titleAssignedRequests)
                 .addGap(35, 35, 35)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRefresh)
                     .addComponent(btnProcess))
                 .addContainerGap(189, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 855, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 441, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
-        populateTable();
+        populateLeafTable();
     }//GEN-LAST:event_btnRefreshActionPerformed
 
     private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
@@ -170,26 +165,50 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
         if (selectedRow < 0){
             return;
         }
-        WorkRequest order = (WorkRequest)tblRequestDetails.getValueAt(selectedRow, 0); 
-        
-        if(order.getStatus().equals("Completed")){
-            JOptionPane.showMessageDialog(null,"Request Already Completed", "Warning", JOptionPane.WARNING_MESSAGE);
-        }else if(order.getStatus().equals("New Request") || order.getStatus().equals("In Progress")){
+        LeafWorkRequest request = (LeafWorkRequest)tblRequestDetails.getValueAt(selectedRow, 0);
+
+        if(request.getStatus().equals("Completed")){
+            JOptionPane.showMessageDialog(null,"Request already Completed", "Warning", JOptionPane.WARNING_MESSAGE);
+        }else if(request.getStatus().equals("New Request") || request.getStatus().equals("In Progress")){
             JOptionPane.showMessageDialog(null,"Request is not yet Assigned", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
-        ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, order,business, userAccount);
-        userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+            ProcessLeafWorkRequestJPanel processLeafWorkRequestJPanel = new ProcessLeafWorkRequestJPanel(userProcessContainer, request,business, userAccount);
+            userProcessContainer.add("processWorkRequestJPanel", processLeafWorkRequestJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
         }
     }//GEN-LAST:event_btnProcessActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnProcess;
     private javax.swing.JButton btnRefresh;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblRequestDetails;
     private javax.swing.JLabel titleAssignedRequests;
     // End of variables declaration//GEN-END:variables
+
+    private void populateLeafTable() {
+        DefaultTableModel model = (DefaultTableModel) tblRequestDetails.getModel();
+        model.setRowCount(0);
+        
+        for(FieldWorker fieldWorker : business.getFieldWorkerDirectory().getFieldWorkerList()){
+            if(fieldWorker.getFieldWorkerUsername().equals(userAccount.getUsername())){
+                    
+                for(LeafWorkRequest request : fieldWorker.getLeafRequestList()){
+                Object[] row = new Object[6];
+                
+                row[0] = request;
+                row[1] = request.getSnowOrgName();
+                row[2] = request.getMemName();
+                row[3] = request.getServiceAddress();
+                row[4] = request.getStatus();
+                row[5] = request.getMessage();
+                model.addRow(row);     
+                }
+            } 
+        }
+    }
 }

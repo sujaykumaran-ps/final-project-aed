@@ -72,23 +72,17 @@
         <Component class="javax.swing.JTable" name="tblRequestDetails">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="7" rowCount="5">
+              <Table columnCount="6" rowCount="5">
                 <Column editable="false" title="Request Id" type="java.lang.Object"/>
                 <Column editable="false" title="Org Name" type="java.lang.Object"/>
                 <Column editable="false" title="Member Name" type="java.lang.String"/>
                 <Column editable="false" title="Service Address" type="java.lang.String"/>
-                <Column editable="false" title="Amount" type="java.lang.String"/>
                 <Column editable="false" title="Status" type="java.lang.String"/>
                 <Column editable="false" title="Message" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
@@ -134,7 +128,7 @@
           <Font name="Tahoma" size="18" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Assigned Requests"/>
+        <Property name="text" type="java.lang.String" value="Snow Clearance Requests"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnRefresh">

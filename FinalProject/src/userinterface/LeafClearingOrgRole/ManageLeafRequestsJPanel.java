@@ -9,7 +9,7 @@ import Business.EcoSystem;
 import Business.LeafClearingOrg.LeafService;
 import Business.LeafClearingOrg.LeafClearingOrg;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
+import Business.WorkQueue.LeafWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -181,9 +181,15 @@ public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Please select a row from the table to view details", "Warning",JOptionPane.WARNING_MESSAGE);
         }
         else{
-            WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);  
-            if(request.getStatus().equals("In Progress") || request.getStatus().equals("Completed")){
-                JOptionPane.showMessageDialog(null, "Request Completed or In Progress !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            LeafWorkRequest request  = (LeafWorkRequest)tblRequests.getValueAt(selectedRow, 0);  
+            if(request.getStatus().equals("In Progress")){
+                JOptionPane.showMessageDialog(null, "Request Accepted Already !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Request Cancelled")){
+                JOptionPane.showMessageDialog(null,"Request Cancelled !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Completed")){
+                JOptionPane.showMessageDialog(null,"Request Completed Already !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
             }else{
                 ViewLeafRequestJPanel viewRequest=new ViewLeafRequestJPanel(userProcessContainer, account, request, system);
                 userProcessContainer.add("View Request", viewRequest);
@@ -200,11 +206,18 @@ public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please select a row from the table to view details", "Warning",JOptionPane.WARNING_MESSAGE);
         }
         else{
-            WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);
-            if(request.getStatus().equals("Assigned Field Worker") || request.getStatus().equals("Completed") || request.getStatus().equals("In Progress")){
-                JOptionPane.showMessageDialog(null,"Already Assigned for Request !!!", "Warning", JOptionPane.WARNING_MESSAGE);
-            }else if(request.getStatus().equals("Request Cancelled")){
+            LeafWorkRequest request  = (LeafWorkRequest)tblRequests.getValueAt(selectedRow, 0);
+            if(request.getStatus().equals("New Request")){
+                JOptionPane.showMessageDialog(null,"Accept the Request First", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Request Cancelled")){
                 JOptionPane.showMessageDialog(null,"Request Cancelled !!! Cannot Assign.", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Completed")){
+                JOptionPane.showMessageDialog(null,"Request Completed Already !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Assigned Field Worker")){
+                JOptionPane.showMessageDialog(null,"Already Assigned Field Worker !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }
             else{
                 LeafFieldWorkRequestJPanel assignDelivery = new LeafFieldWorkRequestJPanel(userProcessContainer, account, request, system);
@@ -231,7 +244,7 @@ public class ManageLeafRequestsJPanel extends javax.swing.JPanel {
         model.setRowCount(0);               
         for (LeafClearingOrg org:system.getLeafClearingOrgDirectory().getLeafClearingOrgList()) {          
             if (org.getUserName().equals(account.getUsername())) {
-               for(WorkRequest service:org.getRequestList()){
+               for(LeafWorkRequest service:org.getLeafRequestList()){
                 Object[] row = new Object[4];
                 row[0] = service;
                 row[1] = service.getMemName();

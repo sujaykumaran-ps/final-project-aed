@@ -34,7 +34,6 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
         this.userAccount = account;
         this.business = business;
       
-        
         populateTable();
     }
     
@@ -44,7 +43,7 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
         
         for(FieldWorker fieldWorker : business.getFieldWorkerDirectory().getFieldWorkerList()){
             if(fieldWorker.getFieldWorkerUsername().equals(userAccount.getUsername())){
-                    
+                
                 for(WorkRequest request : fieldWorker.getRequestList()){
                 Object[] row = new Object[6];
                 
@@ -74,26 +73,27 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
         titleAssignedRequests = new javax.swing.JLabel();
         btnRefresh = new javax.swing.JButton();
         btnProcess = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(252, 156, 52));
 
         tblRequestDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Request Id", "Org Name", "Member Name", "Service Address", "Amount", "Status", "Message"
+                "Request Id", "Org Name", "Member Name", "Service Address", "Status", "Message"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -108,7 +108,7 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
 
         titleAssignedRequests.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleAssignedRequests.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleAssignedRequests.setText("Assigned Requests");
+        titleAssignedRequests.setText("Snow Clearance Requests");
 
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
@@ -124,6 +124,13 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnBack.setText("<< ");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -131,31 +138,39 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(titleAssignedRequests, javax.swing.GroupLayout.DEFAULT_SIZE, 1340, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(284, 284, 284)
-                                .addComponent(btnRefresh)
-                                .addGap(42, 42, 42)
-                                .addComponent(btnProcess))
+                                .addGap(307, 307, 307)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 719, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(262, 262, 262)
+                                        .addComponent(btnRefresh)
+                                        .addGap(42, 42, 42)
+                                        .addComponent(btnProcess))))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 719, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 78, Short.MAX_VALUE))
-                    .addComponent(titleAssignedRequests, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(49, 49, 49)
+                                .addComponent(btnBack)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(titleAssignedRequests)
                 .addGap(35, 35, 35)
+                .addComponent(btnBack)
+                .addGap(60, 60, 60)
+                .addComponent(titleAssignedRequests)
+                .addGap(132, 132, 132)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRefresh)
                     .addComponent(btnProcess))
-                .addContainerGap(189, Short.MAX_VALUE))
+                .addContainerGap(355, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -173,19 +188,27 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
         WorkRequest order = (WorkRequest)tblRequestDetails.getValueAt(selectedRow, 0); 
         
         if(order.getStatus().equals("Completed")){
-            JOptionPane.showMessageDialog(null,"Order Already Delivered", "Warning", JOptionPane.WARNING_MESSAGE);
-        }else if(order.getStatus().equals("New Request") || order.getStatus().equals("Assigned for Delivery")){
-            JOptionPane.showMessageDialog(null,"Request is not yet Processed", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Request Already Completed", "Warning", JOptionPane.WARNING_MESSAGE);
+        }else if(order.getStatus().equals("New Request") || order.getStatus().equals("In Progress")){
+            JOptionPane.showMessageDialog(null,"Request is not yet Assigned", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
-        ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, order,business);
+        ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, order,business, userAccount);
         userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
         }
     }//GEN-LAST:event_btnProcessActionPerformed
 
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnProcess;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JScrollPane jScrollPane1;

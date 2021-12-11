@@ -9,7 +9,7 @@ import Business.Member.Member;
 import Business.EcoSystem;
 import Business.LeafClearingOrg.LeafService;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
+import Business.WorkQueue.LeafWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -26,9 +26,9 @@ public class ViewLeafRequestJPanel extends javax.swing.JPanel {
      */
     private JPanel userProcessContainer;
     private UserAccount account;
-    WorkRequest request;
+    LeafWorkRequest request;
     EcoSystem system;
-    public ViewLeafRequestJPanel(JPanel userProcessContainer, UserAccount account, WorkRequest request, EcoSystem system) {
+    public ViewLeafRequestJPanel(JPanel userProcessContainer, UserAccount account, LeafWorkRequest request, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;
@@ -97,7 +97,7 @@ public class ViewLeafRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRequestDetails);
 
-        btnReady.setText("Request Ready ");
+        btnReady.setText("Accept Request");
         btnReady.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReadyActionPerformed(evt);
@@ -175,15 +175,21 @@ public class ViewLeafRequestJPanel extends javax.swing.JPanel {
 
     private void btnReadyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadyActionPerformed
         // TODO add your handling code here:
-        if(request.getStatus().equals("New Request")) {
-            JOptionPane.showMessageDialog(null, "Please Assign a Field Worker at first !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+        if(request.getStatus().equals("In Progress")) {
+            JOptionPane.showMessageDialog(null, "Already Accepted !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else if(request.getStatus().equals("Assigned Field Worker")) {
+            JOptionPane.showMessageDialog(null, "Already Accepted", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else if(request.getStatus().equals("Request Cancelled")) {
+            JOptionPane.showMessageDialog(null, "Reqeust Cancelled Already", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
         request.setStatus("In Progress");
         for(Member mem:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(mem.getMemUsername())){
-                for(WorkRequest request : mem.getRequestList()){
-                    if(request.getStatus().equals("Assigned Field Worker")) {
+                for(LeafWorkRequest request : mem.getLeafRequestList()){
+                    if(request.getStatus().equals("New Request")) {
                         request.setStatus("In Progress");
                     }
                     
@@ -202,7 +208,7 @@ public class ViewLeafRequestJPanel extends javax.swing.JPanel {
             request.setStatus("Request Cancelled");
             for(Member mem:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(mem.getMemUsername())){
-                for(WorkRequest req : mem.getRequestList()){
+                for(LeafWorkRequest req : mem.getLeafRequestList()){
                     if(req.getStatus().equals("New Request")) {
                         req.setStatus("Request Cancelled");
                     }   

@@ -59,7 +59,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="178" max="32767" attributes="0"/>
+              <EmptySpace pref="622" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
@@ -68,9 +68,9 @@
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="272" max="32767" attributes="0"/>
                   <Component id="titleManageRestaurants" min="-2" pref="816" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="272" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -109,13 +109,13 @@
                   <Component id="btnSubmitFund" min="-2" max="-2" attributes="0"/>
                   <Component id="btnUpdateFund" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="157" max="32767" attributes="0"/>
+              <EmptySpace pref="295" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="103" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="151" max="32767" attributes="0"/>
                   <Component id="titleManageRestaurants" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="560" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="607" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>

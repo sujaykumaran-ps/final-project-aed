@@ -10,7 +10,7 @@ import Business.EcoSystem;
 import Business.LeafClearingOrg.LeafClearingOrg;
 
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
+import Business.WorkQueue.LeafWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -33,7 +33,6 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         this.account = account;
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-        lblName.setText(account.getName());
         populateLeafOrgTable();
         populateLeafRequestsTable(); 
     }
@@ -48,8 +47,6 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnRefresh = new javax.swing.JButton();
-        titleWelcome = new javax.swing.JLabel();
-        lblName = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblLeafClearingOrg = new javax.swing.JTable();
         btnRequest = new javax.swing.JButton();
@@ -57,6 +54,9 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblRequests = new javax.swing.JTable();
         titleOrders = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+
+        setPreferredSize(new java.awt.Dimension(900, 900));
 
         btnRefresh.setText("Refresh Requests");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
@@ -64,11 +64,6 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
                 btnRefreshActionPerformed(evt);
             }
         });
-
-        titleWelcome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleWelcome.setText("Welcome");
-
-        lblName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
         tblLeafClearingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -139,17 +134,19 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         titleOrders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         titleOrders.setText("Your Requests with us :");
 
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(titleWelcome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -162,17 +159,18 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(253, 253, 253)
-                        .addComponent(btnRequest)))
-                .addContainerGap(76, Short.MAX_VALUE))
+                        .addComponent(btnRequest))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(btnBack)))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(titleWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
+                .addGap(34, 34, 34)
+                .addComponent(btnBack)
+                .addGap(44, 44, 44)
                 .addComponent(titleChoose)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -184,7 +182,7 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(btnRefresh)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -207,6 +205,13 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
             layout.next(userProcessContainer);
         }
     }//GEN-LAST:event_btnRequestActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
 
 private void populateLeafOrgTable() {
         
@@ -231,7 +236,7 @@ private void populateLeafOrgTable() {
 
           for (Member mem:system.getMemberDirectory().getMemberList()) {   
             if (mem.getMemUsername().equals(account.getUsername())) {
-               for(WorkRequest service:mem.getRequestList()){
+               for(LeafWorkRequest service:mem.getLeafRequestList()){
                 Object[] row = new Object[4];
                 row[0] = service;
                 row[1] = service.getLeafOrgName();
@@ -243,15 +248,14 @@ private void populateLeafOrgTable() {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnRequest;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lblName;
     private javax.swing.JTable tblLeafClearingOrg;
     private javax.swing.JTable tblRequests;
     private javax.swing.JLabel titleChoose;
     private javax.swing.JLabel titleOrders;
-    private javax.swing.JLabel titleWelcome;
     // End of variables declaration//GEN-END:variables
 }

@@ -98,7 +98,10 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 496, 91));
         add(txtFieldWorker, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, 144, -1));
 
+        btnFWBack.setBackground(new java.awt.Color(133, 211, 255));
         btnFWBack.setText("<< Back");
+        btnFWBack.setMaximumSize(new java.awt.Dimension(147, 29));
+        btnFWBack.setMinimumSize(new java.awt.Dimension(147, 29));
         btnFWBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFWBackActionPerformed(evt);
@@ -158,12 +161,14 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         add(btnUpdateFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 490, -1, -1));
 
         btnRefreshFW.setText("Refresh Table");
+        btnRefreshFW.setMaximumSize(new java.awt.Dimension(147, 29));
+        btnRefreshFW.setMinimumSize(new java.awt.Dimension(147, 29));
         btnRefreshFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshFWActionPerformed(evt);
             }
         });
-        add(btnRefreshFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 170, -1, -1));
+        add(btnRefreshFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFWBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFWBackActionPerformed
@@ -171,7 +176,6 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
         SystemAdminWorkAreaJPanel sysAdmin = (SystemAdminWorkAreaJPanel) component;
-        sysAdmin.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnFWBackActionPerformed

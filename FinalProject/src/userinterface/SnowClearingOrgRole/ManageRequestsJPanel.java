@@ -182,9 +182,13 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
         }
         else{
             WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);  
-            if(request.getStatus().equals("In Progress") || request.getStatus().equals("Completed")){
-                JOptionPane.showMessageDialog(null, "Request Completed or In Progress !!!", "Warning", JOptionPane.WARNING_MESSAGE);
-            }else{
+            if(request.getStatus().equals("Request Cancelled")){
+                JOptionPane.showMessageDialog(null,"Request Cancelled !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Completed")){
+                JOptionPane.showMessageDialog(null,"Request Completed Already !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else{
                 ViewRequestJPanel viewRequest=new ViewRequestJPanel(userProcessContainer, account, request, system);
                 userProcessContainer.add("View Request", viewRequest);
                 CardLayout layout=(CardLayout)userProcessContainer.getLayout();
@@ -201,10 +205,17 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
         }
         else{
             WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);
-            if(request.getStatus().equals("Assigned Field Worker") || request.getStatus().equals("Completed") || request.getStatus().equals("In Progress")){
-                JOptionPane.showMessageDialog(null,"Already Assigned for Request !!!", "Warning", JOptionPane.WARNING_MESSAGE);
-            }else if(request.getStatus().equals("Request Cancelled")){
+            if(request.getStatus().equals("New Request")){
+                JOptionPane.showMessageDialog(null,"Accept the Request First", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Request Cancelled")){
                 JOptionPane.showMessageDialog(null,"Request Cancelled !!! Cannot Assign.", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Completed")){
+                JOptionPane.showMessageDialog(null,"Request Completed Already !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Assigned Field Worker")){
+                JOptionPane.showMessageDialog(null,"Already Assigned Field Worker !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }
             else{
                 FieldWorkRequestJPanel assignDelivery = new FieldWorkRequestJPanel(userProcessContainer, account, request, system);

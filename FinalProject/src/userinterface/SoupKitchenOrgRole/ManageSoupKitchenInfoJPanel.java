@@ -5,17 +5,39 @@
  */
 package userinterface.SoupKitchenOrgRole;
 
+import Business.EcoSystem;
+import Business.SoupKitchenOrg.SoupKitchenOrg;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 /**
  *
- * @author mohitdaswani
+ * @author sujay
  */
 public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ManageSoupKitchenInfoJPanel
      */
-    public ManageSoupKitchenInfoJPanel() {
+    EcoSystem system;
+    JPanel userProcessContainer;
+    UserAccount account;
+    public ManageSoupKitchenInfoJPanel(JPanel userProcessContainer,UserAccount account, EcoSystem system) {
         initComponents();
+        this.account=account;
+        this.system=system;
+        this.userProcessContainer=userProcessContainer;
+        
+        txtOrgName.setEnabled(false);
+        txtOrgAddress.setEnabled(false);
+        txtOrgPhNum.setEnabled(false);
+        btnSave.setEnabled(false);
+        btnUpdate.setEnabled(true);
+        
+        populateFields();
     }
 
     /**
@@ -27,25 +49,20 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnSave = new javax.swing.JButton();
+        titleSoupKitchenOrg = new javax.swing.JLabel();
         btnUpdate = new javax.swing.JButton();
-        titleSnowClearingOrg = new javax.swing.JLabel();
-        lblEmail = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
-        txtOrgEmail = new javax.swing.JTextField();
-        lblSnowClearningName = new javax.swing.JLabel();
-        lblSnowClearingAddress = new javax.swing.JLabel();
-        lblSnowClearingPhone = new javax.swing.JLabel();
-        txtOrgName = new javax.swing.JTextField();
-        txtOrgAddress = new javax.swing.JTextField();
+        btnSave = new javax.swing.JButton();
         txtOrgPhNum = new javax.swing.JTextField();
+        txtOrgAddress = new javax.swing.JTextField();
+        txtOrgName = new javax.swing.JTextField();
+        lblSoupKitchenPhone = new javax.swing.JLabel();
+        lblSoupKitchenAddress = new javax.swing.JLabel();
+        lblSoupKitchenName = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
 
-        btnSave.setText("Save");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
-            }
-        });
+        titleSoupKitchenOrg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleSoupKitchenOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleSoupKitchenOrg.setText("Manage Soup Kitchen Org Info");
 
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -54,12 +71,27 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
             }
         });
 
-        titleSnowClearingOrg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleSnowClearingOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleSnowClearingOrg.setText("Manage LeafClearningOrg Info");
+        btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
 
-        lblEmail.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblEmail.setText("Email:");
+        txtOrgPhNum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtOrgPhNumActionPerformed(evt);
+            }
+        });
+
+        lblSoupKitchenPhone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblSoupKitchenPhone.setText("SnowClearing Phone Number :");
+
+        lblSoupKitchenAddress.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblSoupKitchenAddress.setText("SnowClearning Address :");
+
+        lblSoupKitchenName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblSoupKitchenName.setText("SnowClearing Name :");
 
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -68,60 +100,38 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtOrgEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtOrgEmailActionPerformed(evt);
-            }
-        });
-
-        lblSnowClearningName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearningName.setText("LeafClearing Org Name :");
-
-        lblSnowClearingAddress.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearingAddress.setText("LeafClearning Org Address :");
-
-        lblSnowClearingPhone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearingPhone.setText("LeafClearing Phone Number :");
-
-        txtOrgPhNum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtOrgPhNumActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(280, 280, 280)
-                .addComponent(btnUpdate)
-                .addGap(18, 18, 18)
-                .addComponent(btnSave)
-                .addContainerGap(251, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(btnBack))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(155, 155, 155)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblSnowClearingPhone)
-                                    .addComponent(lblSnowClearingAddress)
-                                    .addComponent(lblSnowClearningName)
-                                    .addComponent(lblEmail))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtOrgName)
-                                    .addComponent(txtOrgAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(txtOrgPhNum, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(txtOrgEmail))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(titleSnowClearingOrg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(52, 52, 52)
+                        .addComponent(btnBack)
+                        .addGap(0, 1223, Short.MAX_VALUE))
+                    .addComponent(titleSoupKitchenOrg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(495, 495, 495)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(btnUpdate)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSave)
+                        .addContainerGap(598, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblSoupKitchenPhone)
+                            .addComponent(lblSoupKitchenAddress)
+                            .addComponent(lblSoupKitchenName))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtOrgName, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                            .addComponent(txtOrgAddress)
+                            .addComponent(txtOrgPhNum))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,106 +139,94 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
                 .addGap(47, 47, 47)
                 .addComponent(btnBack)
                 .addGap(43, 43, 43)
-                .addComponent(titleSnowClearingOrg)
-                .addGap(70, 70, 70)
+                .addComponent(titleSoupKitchenOrg)
+                .addGap(106, 106, 106)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtOrgPhNum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSnowClearningName)
+                            .addComponent(lblSoupKitchenName)
                             .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSnowClearingAddress)
+                            .addComponent(lblSoupKitchenAddress)
                             .addComponent(txtOrgAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(lblSnowClearingPhone)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEmail)
-                    .addComponent(txtOrgEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                        .addComponent(lblSoupKitchenPhone)))
+                .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
                     .addComponent(btnUpdate))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(364, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        // TODO add your handling code here:
-        String name = txtOrgName.getText();
-        String address = txtOrgAddress.getText();
-        String number = txtOrgPhNum.getText();
-        String email = txtOrgEmail.getText();
-
-        try {
-            if(name==null || name.isEmpty()){
-                throw new NullPointerException("LeafClearingOrg Name Field cannot be Empty !!!");
-
-            }
-        } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearing Organizations Name Field cannot be Empty !!!");
-            return;
-        }
-
-        try {
-            if(address==null || address.isEmpty()){
-                throw new NullPointerException("LeafClearing Organization Field cannot be Empty !!!");
-            }
-        } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearing Organization Field cannot be Empty !!!");
-            return;
-        }
-
-        try {
-
-            if(number==null || number.isEmpty()){
-                throw new NullPointerException("LeafClearingOrg Phone Number Field cannot be Empty !!!");
-            }else if(Pattern.matches("^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$", number) == false){
-                throw new Exception("Enter a Valid Phone number !!!");
-            }
-        }  catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearingOrg Phone Number Field cannot be Empty !!!");
-            return;
-        }catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Enter a Valid Phone number !!!");
-            return;
-        }
-
-        try {
-            if(email==null || email.isEmpty()){
-                throw new NullPointerException("LeafClearing Org Email Field cannot be Empty !!!");
-
-            }
-        } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearing Org Email Field cannot be Empty !!!");
-            return;
-        }
-
-        for(LeafClearingOrg org:system.getLeafClearingOrgDirectory().getLeafClearingOrgList()){
-            if(org.getUserName().equals(account.getUsername())){
-                system.getLeafClearingOrgDirectory().updateLeafClearingOrgInfo(org, name, number, address, email);
-            }
-        }
-
-        txtOrgName.setEnabled(false);
-        txtOrgAddress.setEnabled(false);
-        txtOrgPhNum.setEnabled(false);
-        txtOrgEmail.setEnabled(false);
-        btnSave.setEnabled(false);
-        btnUpdate.setEnabled(true);
-    }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
         txtOrgName.setEnabled(true);
         txtOrgAddress.setEnabled(true);
         txtOrgPhNum.setEnabled(true);
-        txtOrgEmail.setEnabled(true);
         btnSave.setEnabled(true);
         btnUpdate.setEnabled(false);
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+        String name = txtOrgName.getText();
+        String address = txtOrgAddress.getText();
+        String number = txtOrgPhNum.getText();
+
+        try {
+            if(name==null || name.isEmpty()){
+                throw new NullPointerException("SnowClearingOrg Name Field cannot be Empty !!!");
+
+            }
+        } catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "SnowClearing Organizations Name Field cannot be Empty !!!");
+            return;
+        }
+
+        try {
+            if(address==null || address.isEmpty()){
+                throw new NullPointerException("SnowClearing Organization Field cannot be Empty !!!");
+            }
+        } catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "SnowClearing Organization Field cannot be Empty !!!");
+            return;
+        }
+
+        try {
+
+            if(number==null || number.isEmpty()){
+                throw new NullPointerException("SnowClearingOrg Phone Number Field cannot be Empty !!!");
+            }else if(Pattern.matches("^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$", number) == false){
+                throw new Exception("Enter a Valid Phone number !!!");
+            }
+        }  catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "SnowClearingOrg Phone Number Field cannot be Empty !!!");
+            return;
+        }catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Enter a Valid Phone number !!!");
+            return;
+        }
+
+
+        for(SoupKitchenOrg org:system.getSoupKitchenOrgDirectory().getSoupKitchenList()){
+            if(org.getUserName().equals(account.getUsername())){
+                system.getSoupKitchenOrgDirectory().updateSoupInfo(org, name, number, address);
+            }
+        }
+
+        txtOrgName.setEnabled(false);
+        txtOrgAddress.setEnabled(false);
+        txtOrgPhNum.setEnabled(false);
+        btnSave.setEnabled(false);
+        btnUpdate.setEnabled(true);
+    }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void txtOrgPhNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgPhNumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtOrgPhNumActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -238,27 +236,27 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void txtOrgEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtOrgEmailActionPerformed
-
-    private void txtOrgPhNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgPhNumActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtOrgPhNumActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
-    private javax.swing.JLabel lblEmail;
-    private javax.swing.JLabel lblSnowClearingAddress;
-    private javax.swing.JLabel lblSnowClearingPhone;
-    private javax.swing.JLabel lblSnowClearningName;
-    private javax.swing.JLabel titleSnowClearingOrg;
+    private javax.swing.JLabel lblSoupKitchenAddress;
+    private javax.swing.JLabel lblSoupKitchenName;
+    private javax.swing.JLabel lblSoupKitchenPhone;
+    private javax.swing.JLabel titleSoupKitchenOrg;
     private javax.swing.JTextField txtOrgAddress;
-    private javax.swing.JTextField txtOrgEmail;
     private javax.swing.JTextField txtOrgName;
     private javax.swing.JTextField txtOrgPhNum;
     // End of variables declaration//GEN-END:variables
+
+    private void populateFields() {
+        for(SoupKitchenOrg org:system.getSoupKitchenOrgDirectory().getSoupKitchenList()){
+           if(org.getUserName().equals(account.getUsername())){
+               txtOrgName.setText(org.getSoupName());
+               txtOrgAddress.setText(org.getSoupLocation());
+               txtOrgPhNum.setText(org.getSoupPhNum());
+            }
+    }
+    }
 }

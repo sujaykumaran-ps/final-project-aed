@@ -20,8 +20,10 @@ public abstract class Role {
         SnowClearingOrg("SnowClearingOrg"),
         LeafClearingOrg("LeafClearingOrg"),
         FundRaising("FundRaising"),
+        SoupKitchenOrg("SoupKitchenOrg"),
         Member("Member"),
         FieldWorker("FieldWorker"),
+        DeliveryVolunteer("DeliveryVolunteer"),
         SysAdmin("Sysadmin");
         
         private String value;

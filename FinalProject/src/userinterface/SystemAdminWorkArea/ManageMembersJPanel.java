@@ -96,16 +96,16 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblMembers);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 496, 91));
-        add(txtMemName, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 144, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, 496, 91));
+        add(txtMemName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 400, 144, -1));
 
-        btnCusBack.setText("<< Back");
+        btnCusBack.setText("<< ");
         btnCusBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCusBackActionPerformed(evt);
             }
         });
-        add(btnCusBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
+        add(btnCusBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
         btnSubmitMember.setText("Submit");
         btnSubmitMember.addActionListener(new java.awt.event.ActionListener() {
@@ -113,23 +113,23 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
                 btnSubmitMemberActionPerformed(evt);
             }
         });
-        add(btnSubmitMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 490, -1, -1));
+        add(btnSubmitMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 520, -1, -1));
 
         lblCusName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblCusName.setText("Member Name:");
-        add(lblCusName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, -1, -1));
-        add(txtMemUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 144, -1));
+        add(lblCusName, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 400, -1, -1));
+        add(txtMemUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, 144, -1));
 
         lblCusPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblCusPassword.setText("Password:");
-        add(lblCusPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 440, -1, -1));
+        add(lblCusPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 470, -1, -1));
 
         txtMemPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMemPasswordActionPerformed(evt);
             }
         });
-        add(txtMemPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 440, 144, -1));
+        add(txtMemPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 470, 144, -1));
 
         btnViewMember.setText("View");
         btnViewMember.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +137,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
                 btnViewMemberActionPerformed(evt);
             }
         });
-        add(btnViewMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 310, -1, -1));
+        add(btnViewMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, -1, -1));
 
         btnDeleteMember.setText("Delete");
         btnDeleteMember.addActionListener(new java.awt.event.ActionListener() {
@@ -145,16 +145,16 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
                 btnDeleteMemberActionPerformed(evt);
             }
         });
-        add(btnDeleteMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 310, -1, -1));
+        add(btnDeleteMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 340, -1, -1));
 
         lblCusUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblCusUsername.setText("Username:");
-        add(lblCusUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 400, -1, 20));
+        add(lblCusUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, -1, 20));
 
         titleManageCustomers.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageCustomers.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageCustomers.setText("Manage Members");
-        add(titleManageCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 816, -1));
+        titleManageCustomers.setText("Member SignUp");
+        add(titleManageCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 1260, -1));
 
         btnUpdateMember.setText("Update");
         btnUpdateMember.addActionListener(new java.awt.event.ActionListener() {
@@ -162,7 +162,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
                 btnUpdateMemberActionPerformed(evt);
             }
         });
-        add(btnUpdateMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, -1, -1));
+        add(btnUpdateMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 520, -1, -1));
 
         btnRefreshMem.setText("Refresh Table");
         btnRefreshMem.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +170,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
                 btnRefreshMemActionPerformed(evt);
             }
         });
-        add(btnRefreshMem, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 170, -1, -1));
+        add(btnRefreshMem, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 200, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCusBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCusBackActionPerformed
@@ -178,7 +178,6 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
         SystemAdminWorkAreaJPanel sysAdmin = (SystemAdminWorkAreaJPanel) component;
-        sysAdmin.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnCusBackActionPerformed

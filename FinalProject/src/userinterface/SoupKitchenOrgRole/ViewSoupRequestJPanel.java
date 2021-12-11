@@ -5,17 +5,39 @@
  */
 package userinterface.SoupKitchenOrgRole;
 
+import Business.EcoSystem;
+import Business.Member.Member;
+import Business.SoupKitchenOrg.Meal;
+import Business.UserAccount.UserAccount;
+import Business.WorkQueue.SoupWorkRequest;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
- * @author mohitdaswani
+ * @author sujay
  */
 public class ViewSoupRequestJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ViewSoupRequestJPanel
      */
-    public ViewSoupRequestJPanel() {
+    
+    private JPanel userProcessContainer;
+    private UserAccount account;
+    SoupWorkRequest request;
+    EcoSystem system;
+    public ViewSoupRequestJPanel(JPanel userProcessContainer, UserAccount account, SoupWorkRequest request, EcoSystem system) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.account = account;
+        this.request = request;
+        this.system = system;
+        populateTable();
+        txtPer.setEnabled(false);
+        txtIns.setEnabled(false);
     }
 
     /**
@@ -27,30 +49,18 @@ public class ViewSoupRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        btnBack = new javax.swing.JButton();
-        titleOrderDetails = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblRequestDetails = new javax.swing.JTable();
-        btnReady = new javax.swing.JButton();
-        lblIns = new javax.swing.JLabel();
-        txtIns = new javax.swing.JTextField();
+        tblOrderDetails = new javax.swing.JTable();
+        titleOrderDetails = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
+        txtPer = new javax.swing.JTextField();
+        lblPer = new javax.swing.JLabel();
+        btnAccept = new javax.swing.JButton();
+        txtIns = new javax.swing.JTextField();
+        lblIns = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(252, 156, 52));
-
-        btnBack.setText("<< Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-
-        titleOrderDetails.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleOrderDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleOrderDetails.setText("Request Details");
-
-        tblRequestDetails.setModel(new javax.swing.table.DefaultTableModel(
+        tblOrderDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -58,7 +68,7 @@ public class ViewSoupRequestJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Service Name", "Description", "Type"
+                "Meal Name", "Description", "Beverage"
             }
         ) {
             Class[] types = new Class [] {
@@ -76,95 +86,98 @@ public class ViewSoupRequestJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblRequestDetails);
+        jScrollPane1.setViewportView(tblOrderDetails);
 
-        btnReady.setText("Request Ready ");
-        btnReady.addActionListener(new java.awt.event.ActionListener() {
+        titleOrderDetails.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleOrderDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleOrderDetails.setText("Request Details");
+
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReadyActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        lblIns.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblIns.setText("Special Instructions");
-
-        btnCancel.setText("Cancel Request");
+        btnCancel.setText("Cancel Order");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(titleOrderDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(btnBack))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(189, 189, 189)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(lblIns)
-                                        .addGap(31, 31, 31)
-                                        .addComponent(txtIns))
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 179, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(366, 366, 366)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnReady, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(btnBack)
-                .addGap(28, 28, 28)
-                .addComponent(titleOrderDetails)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblIns)
-                    .addComponent(txtIns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addComponent(btnReady)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnCancel)
-                .addContainerGap(139, Short.MAX_VALUE))
-        );
+        lblPer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblPer.setText("Person of Contact");
+
+        btnAccept.setText("Accept Soup Order");
+        btnAccept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAcceptActionPerformed(evt);
+            }
+        });
+
+        lblIns.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblIns.setText("Special Instructions");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 828, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(titleOrderDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(btnBack))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(411, 411, 411)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(lblPer)
+                                                .addGap(31, 31, 31)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(txtIns)
+                                                    .addComponent(txtPer))))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(177, 177, 177)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(btnAccept, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblIns)
+                                        .addGap(346, 346, 346)))))
+                        .addGap(0, 473, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 528, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(btnBack)
+                .addGap(28, 28, 28)
+                .addComponent(titleOrderDetails)
+                .addGap(92, 92, 92)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPer)
+                    .addComponent(txtPer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblIns)
+                    .addComponent(txtIns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addComponent(btnAccept)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnCancel)
+                .addContainerGap(342, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -175,36 +188,13 @@ public class ViewSoupRequestJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnReadyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadyActionPerformed
-        // TODO add your handling code here:
-        if(request.getStatus().equals("New Request")) {
-            JOptionPane.showMessageDialog(null, "Please Assign a Field Worker at first !!!", "Warning", JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            request.setStatus("In Progress");
-            for(Member mem:system.getMemberDirectory().getMemberList()){
-                if(request.getMemName().equals(mem.getMemUsername())){
-                    for(WorkRequest request : mem.getRequestList()){
-                        if(request.getStatus().equals("Assigned Field Worker")) {
-                            request.setStatus("In Progress");
-                        }
-
-                    }
-                }
-            }
-            userProcessContainer.remove(this);
-            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-            layout.previous(userProcessContainer);
-        }
-    }//GEN-LAST:event_btnReadyActionPerformed
-
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
         if(request.getStatus().equals("New Request")) {
             request.setStatus("Request Cancelled");
             for(Member mem:system.getMemberDirectory().getMemberList()){
                 if(request.getMemName().equals(mem.getMemUsername())){
-                    for(WorkRequest req : mem.getRequestList()){
+                    for(SoupWorkRequest req : mem.getSoupRequestList()){
                         if(req.getStatus().equals("New Request")) {
                             req.setStatus("Request Cancelled");
                         }
@@ -222,16 +212,61 @@ public class ViewSoupRequestJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnCancelActionPerformed
 
+    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
+        // TODO add your handling code here:
+        if(request.getStatus().equals("In Progress")) {
+            JOptionPane.showMessageDialog(null, "Already Accepted", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else if(request.getStatus().equals("Assigned Field Worker")) {
+            JOptionPane.showMessageDialog(null, "Already Accepted", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else if(request.getStatus().equals("Request Cancelled")) {
+            JOptionPane.showMessageDialog(null, "Reqeust Cancelled Already", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            request.setStatus("In Progress");
+            for(Member mem:system.getMemberDirectory().getMemberList()){
+                if(request.getMemName().equals(mem.getMemUsername())){
+                    for(SoupWorkRequest request : mem.getSoupRequestList()){
+                        if(request.getStatus().equals("New Request")) {
+                            request.setStatus("In Progress");
+                        }
+
+                    }
+                }
+            }
+            userProcessContainer.remove(this);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.previous(userProcessContainer);
+        }
+    }//GEN-LAST:event_btnAcceptActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAccept;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnReady;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblIns;
-    private javax.swing.JTable tblRequestDetails;
+    private javax.swing.JLabel lblPer;
+    private javax.swing.JTable tblOrderDetails;
     private javax.swing.JLabel titleOrderDetails;
     private javax.swing.JTextField txtIns;
+    private javax.swing.JTextField txtPer;
     // End of variables declaration//GEN-END:variables
+
+    private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) tblOrderDetails.getModel();
+        model.setRowCount(0);
+
+        Object[] row = new Object[3];
+                for(Meal meal:request.getMealRequest()){
+                     row[0] = meal;
+                     row[1] = meal.getMealDescription();
+                     row[2] = meal.getBeverage();
+                     model.addRow(row);
+                }
+        txtPer.setText(request.getPersonName());
+        txtIns.setText(request.getMessage());
+    }
 }

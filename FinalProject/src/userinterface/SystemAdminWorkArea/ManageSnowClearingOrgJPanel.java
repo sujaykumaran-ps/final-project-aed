@@ -114,8 +114,8 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         add(btnSubmitOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 470, -1, -1));
 
         lblResName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lblResName.setText("LeafClearingOrg Name:");
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
+        lblResName.setText("Snow ClearingOrg Name:");
+        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, -1, -1));
         add(txtOrgUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 144, -1));
         add(txtOrgPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 144, -1));
 
@@ -145,7 +145,7 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
 
         titleManageRestaurants.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageRestaurants.setText("Manage LeafClearingOrg");
+        titleManageRestaurants.setText("Manage Snow Clearing Org");
         add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 816, -1));
 
         btnViewOrg.setText("View");
@@ -170,7 +170,6 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
         SystemAdminWorkAreaJPanel sysAdmin = (SystemAdminWorkAreaJPanel) component;
-        sysAdmin.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnManageOrgBackActionPerformed

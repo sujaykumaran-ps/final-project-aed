@@ -157,12 +157,13 @@ public class FieldWorkRequestJPanel extends javax.swing.JPanel {
             
             FieldWorker fieldWorker  = (FieldWorker)FieldWorkerJTable.getValueAt(selectedRow, 0);   
             fieldWorker.getRequestList().add(request);
+            fieldWorker.setAvailability(false);
             request.setStatus("Assigned Field Worker");
             
             for(Member member:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(member.getMemUsername())){
                 for(WorkRequest request : member.getRequestList()){
-                    if(request.getStatus().equals("New Request")){
+                    if(request.getStatus().equals("In Progress")){
                         request.setStatus("Assigned Field Worker");
                     }
                 }
@@ -189,9 +190,11 @@ public class FieldWorkRequestJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         
         for(FieldWorker fieldWorker:system.getFieldWorkerDirectory().getFieldWorkerList()){
+            if(fieldWorker.getAvailability()==true){
                Object[] row = new Object[1];           
                 row[0] = fieldWorker;
                 model.addRow(row);
+            }
             }
     }
 }

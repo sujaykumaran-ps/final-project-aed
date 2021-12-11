@@ -6,6 +6,8 @@ package userinterface.FieldWorkerRole;
 
 import Business.Member.Member;
 import Business.EcoSystem;
+import Business.FieldWorker.FieldWorker;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -23,14 +25,16 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     WorkRequest request;
     EcoSystem system;
+    UserAccount account;
     /**
      * Creates new form ProcessWorkRequestJPanel
      */
-    public ProcessWorkRequestJPanel(JPanel userProcessContainer, WorkRequest request, EcoSystem system) {
+    public ProcessWorkRequestJPanel(JPanel userProcessContainer, WorkRequest request, EcoSystem system,UserAccount account) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.request = request;
         this.system=system;
+        this.account=account;
     }
 
     /**
@@ -77,10 +81,15 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
          for(Member mem:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(mem.getMemUsername())){
                 for(WorkRequest request : mem.getRequestList()){
-                    if(request.getStatus().equals("In Progress")) {
+                    if(request.getStatus().equals("Assigned Field Worker")) {
                     request.setStatus("Completed");
                     }
                 }
+            }
+        }
+        for(FieldWorker fieldWorker : system.getFieldWorkerDirectory().getFieldWorkerList()){
+            if(fieldWorker.getFieldWorkerUsername().equals(account.getUsername())){
+                fieldWorker.setAvailability(true);
             }
         }
         userProcessContainer.remove(this);

@@ -4,60 +4,58 @@
  * and open the template in the editor.
  */
 package Business.SoupKitchenOrg;
+
 import java.util.ArrayList;
 
 /**
  *
- * @author mohitdaswani
+ * @author sujay
  */
 public class SoupKitchenOrgDirectory {
+    private ArrayList<SoupKitchenOrg> soupKitchenList;
+    private SoupKitchenOrg soup;
+    private Meal mealOfTheDay;
     
-    private ArrayList<SoupKitchenOrg> soupKitchenOrgList;
-    private SoupKitchenOrg soupKitchenOrg;
-    private Service service;
-    
-
     public SoupKitchenOrgDirectory(){
-        this.snowClearingOrgList = new ArrayList<SoupKitchenOrg>();
+        this.soupKitchenList = new ArrayList<SoupKitchenOrg>();
     }
 
-    public ArrayList<SoupKitchenOrg> getSoupKitchenOrgList() {
-        return soupKitchenOrgList;
+    public ArrayList<SoupKitchenOrg> getSoupKitchenList() {
+        return soupKitchenList;
     }
 
-    public void setSoupKitchenOrgList(ArrayList<SoupKitchenOrg> soupKitchenOrgList) {
-        this.soupKitchenList = soupKitchenOrgList;
+    public void setSoupKitchenList(ArrayList<SoupKitchenOrg> soupKitchenList) {
+        this.soupKitchenList = soupKitchenList;
     }
     
-    public SoupKitchenOrg createSoupKitchenOrgInfo(String orgName){
-        soupKitchenOrg= new SoupKitchenOrg(orgName);
-       soupKitchenOrgList.add(soupKitchenOrg);
-        return soupKitchenOrg;
+    public SoupKitchenOrg createSoupInfo(String soupName){
+        soup = new SoupKitchenOrg(soupName);
+        soupKitchenList.add(soup);
+        return soup;
     }
     
-    public void deleteSoupKitchenOrg(String username){
-        for(int i=0;i<soupKitchenOrgList.size();i++){
-            if(soupKitchenOrgList.get(i).getUserName().equals(username)){
-                soupKitchenOrgList.remove(i);
+    public void deleteSoup(String username){
+        for(int i=0;i<soupKitchenList.size();i++){
+            if(soupKitchenList.get(i).getUserName().equals(username)){
+                soupKitchenList.remove(i);
             }
         }
     }
     
-    public void updateSnowClearingOrgInfo(SoupKitchenOrg org, String name, String number, String address, String cuisine){
-        org.setSoupOrgName(name);
-        org.setSoupOrgAddress(address);
-        org.setSoupOrgPhNum(number);
-        org.setSoupOrgEmail(cuisine);
+    public void updateSoupInfo(SoupKitchenOrg soup, String name, String number, String location){
+        soup.setSoupName(name);
+        soup.setSoupLocation(location);
+        soup.setSoupPhNum(number);
     }
     
-    public SoupKitchenService addServiceTypes(SoupKitchenOrg org, String name, String desc, String type){
-        service = new SoupKitchenService(name, desc, type);
-        org.addServices(service);
-        return service;
+    public Meal addSoupMeal(SoupKitchenOrg soup, String name, String desc, String beverage){
+        mealOfTheDay = new Meal(name, desc, beverage);
+        soup.addMeal(mealOfTheDay);
+        return mealOfTheDay;
     }
     
-    public void DeleteServices(SoupKitchenOrg res, SoupKitchenService service){
-        res.removeServices(service); 
+    public void DeleteSoupMeal(SoupKitchenOrg soup, Meal mealOfTheDay){
+        soup.removeMeal(mealOfTheDay); 
     }
     
 }

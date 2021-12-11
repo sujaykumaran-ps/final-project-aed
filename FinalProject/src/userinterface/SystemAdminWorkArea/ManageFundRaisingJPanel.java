@@ -183,16 +183,16 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
                                 .addGap(80, 80, 80)
                                 .addComponent(btnSubmitFund))
                             .addComponent(btnUpdateFund))))
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addContainerGap(622, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnRefreshEnt)
                 .addGap(151, 151, 151))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 50, Short.MAX_VALUE)
+                    .addGap(0, 272, Short.MAX_VALUE)
                     .addComponent(titleManageRestaurants, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 50, Short.MAX_VALUE)))
+                    .addGap(0, 272, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,12 +223,12 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSubmitFund)
                     .addComponent(btnUpdateFund))
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(295, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 103, Short.MAX_VALUE)
+                    .addGap(0, 151, Short.MAX_VALUE)
                     .addComponent(titleManageRestaurants)
-                    .addGap(0, 560, Short.MAX_VALUE)))
+                    .addGap(0, 607, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -237,7 +237,6 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
         SystemAdminWorkAreaJPanel sysAdmin = (SystemAdminWorkAreaJPanel) component;
-        sysAdmin.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnManageFundBackActionPerformed

@@ -5,7 +5,9 @@
  */
 package Business.FieldWorker;
 
+import Business.LeafClearingOrg.LeafService;
 import Business.SnowClearingOrg.Service;
+import Business.WorkQueue.LeafWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.util.ArrayList;
 
@@ -17,13 +19,16 @@ public class FieldWorker {
     private String fieldWorkerName;
     private String fieldWorkerUsername;
     private ArrayList<WorkRequest> requestList;
+    private ArrayList<LeafWorkRequest> leafRequestList;
     private String fieldWorkerAddress;
     private String fieldWorkerPhNum;
+    private Boolean availability = true;
     
     public FieldWorker(String name, String userName){
         this.fieldWorkerName = name;
         this.fieldWorkerUsername = userName;
         requestList = new ArrayList<WorkRequest>();
+        leafRequestList = new ArrayList<LeafWorkRequest>();
     }
 
     public String getFieldWorkerName() {
@@ -49,6 +54,8 @@ public class FieldWorker {
     public void setRequestList(ArrayList<WorkRequest> requestList) {
         this.requestList = requestList;
     }
+    
+    
 
     public String getFieldWorkerAddress() {
         return fieldWorkerAddress;
@@ -66,6 +73,22 @@ public class FieldWorker {
         this.fieldWorkerPhNum = fieldWorkerPhNum;
     }
 
+    public ArrayList<LeafWorkRequest> getLeafRequestList() {
+        return leafRequestList;
+    }
+
+    public void setLeafRequestList(ArrayList<LeafWorkRequest> leafRequestList) {
+        this.leafRequestList = leafRequestList;
+    }
+
+    public Boolean getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(Boolean availability) {
+        this.availability = availability;
+    }
+    
        
     
     public void addRequest(String snowOrgName, String memName, String fieldWorkerName, ArrayList<Service> request, String cost, String fieldWorkerAddress) {
@@ -79,6 +102,18 @@ public class FieldWorker {
        newWork.setServiceAddress(fieldWorkerAddress);
        newWork.setStatus("New Request");
        requestList.add(newWork);
+    }
+    
+    public void addLeafRequest(String leafOrgName, String memName, String fieldWorkerName, ArrayList<LeafService> request, String cost, String fieldWorkerAddress) {
+       LeafWorkRequest newWork = new LeafWorkRequest();
+       newWork.setFieldWorkerName(fieldWorkerName);
+       newWork.setSnowOrgName(leafOrgName);
+       newWork.setMemName(memName);
+       newWork.setLeafRequest(request);
+       newWork.setType(cost);
+       newWork.setServiceAddress(fieldWorkerAddress);
+       newWork.setStatus("New Request");
+       leafRequestList.add(newWork);
     }
     
     @Override

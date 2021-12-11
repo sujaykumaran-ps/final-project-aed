@@ -7,7 +7,10 @@ package Business;
 import Business.Employee.EmployeeDirectory;
 import Business.Role.Role;
 import Business.UserAccount.UserAccountDirectory;
+import Business.WorkQueue.DonationQueue;
+import Business.WorkQueue.LeafWorkQueue;
 import Business.WorkQueue.WorkQueue;
+import Business.WorkQueue.SoupWorkQueue;
 import java.util.ArrayList;
 
 /**
@@ -18,6 +21,9 @@ public abstract class Organization {
 
     private String name;
     private WorkQueue workQueue;
+    private SoupWorkQueue soupWorkQueue;
+    private LeafWorkQueue leafWorkQueue;
+    private DonationQueue donationQueue;
     private EmployeeDirectory employeeDirectory;
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
@@ -27,8 +33,10 @@ public abstract class Organization {
         SnowClearingOrg("SnowClearingOrg"),
         Member("Member"),
         FieldWorker("FieldWorker"),
+        DeliveryVolunteer("DeliveryVolunteer"),
         FundRaising("FundRaising"),
         LeafClearingOrg("LeafClearingOrg"),
+        SoupKitchenOrg("SoupKitchenOrg"),
         SysAdmin("Sysadmin");
         
         private String value;
@@ -43,6 +51,9 @@ public abstract class Organization {
     public Organization(String name) {
         this.name = name;
         workQueue = new WorkQueue();
+        soupWorkQueue = new SoupWorkQueue();
+        leafWorkQueue = new LeafWorkQueue();
+        donationQueue = new DonationQueue();
         employeeDirectory = new EmployeeDirectory();
         userAccountDirectory = new UserAccountDirectory();
         organizationID = counter;

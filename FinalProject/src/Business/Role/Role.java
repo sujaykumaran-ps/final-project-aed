@@ -23,6 +23,7 @@ public abstract class Role {
         SoupKitchenOrg("SoupKitchenOrg"),
         Member("Member"),
         FieldWorker("FieldWorker"),
+        DeliveryVolunteer("DeliveryVolunteer"),
         SysAdmin("Sysadmin");
         
         private String value;

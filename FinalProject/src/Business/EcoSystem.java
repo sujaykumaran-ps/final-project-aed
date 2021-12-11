@@ -6,6 +6,7 @@
 package Business;
 
 
+import Business.DeliveryVolunteer.DeliveryVolunteerDirectory;
 import Business.Member.MemberDirectory;
 import Business.FieldWorker.FieldWorkerDirectory;
 import Business.FundRaising.FundRaisingDirectory;
@@ -27,16 +28,18 @@ public class EcoSystem extends Organization{
     private MemberDirectory memberDirectory;
     private LeafClearingOrgDirectory leafClearingOrgDirectory;
     private SoupKitchenOrgDirectory soupKitchenOrgDirectory;
+    private DeliveryVolunteerDirectory deliveryVolunteerDirectory;
     private FieldWorkerDirectory fieldWorkerDirectory;
     private FundRaisingDirectory fundRaisingDirectory;
     
-    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory,LeafClearingOrgDirectory leafClearingOrgDirectory, SoupKitchenOrgDirectory soupKitchenOrgDirectory) {
+    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory,LeafClearingOrgDirectory leafClearingOrgDirectory, SoupKitchenOrgDirectory soupKitchenOrgDirectory, DeliveryVolunteerDirectory deliveryVolunteerDirectory) {
         this.fundRaisingDirectory = fundRaisingDirectory;
         this.leafClearingOrgDirectory = leafClearingOrgDirectory;
         this.soupKitchenOrgDirectory = soupKitchenOrgDirectory;
         this.snowClearingOrgDirectory = snowClearingOrgDirectory;
         this.memberDirectory = memberDirectory;
         this.fieldWorkerDirectory = fieldWorkerDirectory;
+        this.deliveryVolunteerDirectory = deliveryVolunteerDirectory;
     }
     
     public static EcoSystem getInstance(){
@@ -101,6 +104,20 @@ public class EcoSystem extends Organization{
         }
         return fundRaisingDirectory;
     }  
+
+    public DeliveryVolunteerDirectory getDeliveryVolunteerDirectory() {
+        if(deliveryVolunteerDirectory == null)
+        {
+            deliveryVolunteerDirectory = new DeliveryVolunteerDirectory();
+        }
+        return deliveryVolunteerDirectory;
+    }
+
+    public void setDeliveryVolunteerDirectory(DeliveryVolunteerDirectory deliveryVolunteerDirectory) {
+        this.deliveryVolunteerDirectory = deliveryVolunteerDirectory;
+    }
+    
+    
 
     public void setFundRaisingDirectory(FundRaisingDirectory fundRaisingDirectory) {
         this.fundRaisingDirectory = fundRaisingDirectory;

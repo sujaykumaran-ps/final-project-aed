@@ -5,6 +5,7 @@
  */
 package Business.DeliveryVolunteer;
 
+import Business.SoupKitchenOrg.Meal;
 import Business.WorkQueue.SoupWorkRequest;
 import java.util.ArrayList;
 
@@ -74,5 +75,21 @@ public class DeliveryVolunteer {
         this.availability = availability;
     }
     
+    public void newOrder(String soupName, String memName, String delMan, ArrayList<Meal> order, String deliveryAddress, String personName, String instructions) {
+        SoupWorkRequest newReq = new SoupWorkRequest();
+        newReq.setMemName(memName);
+        newReq.setSoupKitchenName(soupName);
+        newReq.setDelManName(delMan);
+        newReq.setMealRequest(order);
+        newReq.setServiceAddress(deliveryAddress);
+        newReq.setPersonName(personName);
+        newReq.setMessage(instructions);
+        newReq.setStatus("New Order");
+        soupRequestList.add(newReq);
+    }
     
+    @Override
+    public String toString() {
+        return volunteerName;
+    }
 }

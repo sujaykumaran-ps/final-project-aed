@@ -28,7 +28,7 @@ public class SoupKitchenAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.ua = ua;
         this.system = system;
       
-        lblResName.setText(ua.getName());
+        lblSoupName.setText(ua.getName());
     }
     
     /** This method is called from within the constructor to
@@ -44,14 +44,14 @@ public class SoupKitchenAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageServices = new javax.swing.JButton();
         btnManageRequests = new javax.swing.JButton();
         lblResNameTitle = new javax.swing.JLabel();
-        lblResName = new javax.swing.JLabel();
+        lblSoupName = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(252, 156, 52));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titleResAdmin.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        titleResAdmin.setText("SnowClearingOrg Admin");
-        add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, -1, -1));
+        titleResAdmin.setText("Soup Kitchen Org Admin");
+        add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, -1, -1));
 
         btnOrgInfo.setText("Manage SnowClearingOrg Info");
         btnOrgInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +59,7 @@ public class SoupKitchenAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnOrgInfoActionPerformed(evt);
             }
         });
-        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 220, -1));
+        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 220, -1));
 
         btnManageServices.setText("Manage Services");
         btnManageServices.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +67,7 @@ public class SoupKitchenAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageServicesActionPerformed(evt);
             }
         });
-        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 160, -1));
+        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 160, -1));
 
         btnManageRequests.setText("Manage Requests");
         btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
@@ -75,33 +75,33 @@ public class SoupKitchenAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageRequestsActionPerformed(evt);
             }
         });
-        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
+        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, 160, -1));
 
         lblResNameTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblResNameTitle.setText("Restaurant Name :");
-        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 190, 30));
+        lblResNameTitle.setText("Soup Kitchen Name :");
+        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 190, 30));
 
-        lblResName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 170, 30));
+        lblSoupName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
+        add(lblSoupName, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 170, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgInfoActionPerformed
         // TODO add your handling code here:
-        ManageSnowClearingInfoJPanel manageInfo = new ManageSnowClearingInfoJPanel(userProcessContainer, ua, system);
-        userProcessContainer.add("Manage Snow Clearning Organization Info",manageInfo);
+        ManageSoupKitchenInfoJPanel manageInfo = new ManageSoupKitchenInfoJPanel(userProcessContainer, ua, system);
+        userProcessContainer.add("Manage Soup kitchen Organization Info",manageInfo);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnOrgInfoActionPerformed
 
     private void btnManageServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageServicesActionPerformed
-        ManageServiceJPanel manageServices = new ManageServiceJPanel(userProcessContainer, ua, system);
+        ManageSoupKitchenServiceJPanel manageServices = new ManageSoupKitchenServiceJPanel(userProcessContainer, ua, system);
         userProcessContainer.add("Manage Services",manageServices);
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageServicesActionPerformed
 
     private void btnManageRequestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageRequestsActionPerformed
-        ManageRequestsJPanel manageRequest = new ManageRequestsJPanel(userProcessContainer, ua, system);
+        ManageSoupKitchenRequestsJPanel manageRequest = new ManageSoupKitchenRequestsJPanel(userProcessContainer, ua, system);
         userProcessContainer.add("Manage Requests", manageRequest);
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
@@ -112,8 +112,8 @@ public class SoupKitchenAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageRequests;
     private javax.swing.JButton btnManageServices;
     private javax.swing.JButton btnOrgInfo;
-    private javax.swing.JLabel lblResName;
     private javax.swing.JLabel lblResNameTitle;
+    private javax.swing.JLabel lblSoupName;
     private javax.swing.JLabel titleResAdmin;
     // End of variables declaration//GEN-END:variables
     

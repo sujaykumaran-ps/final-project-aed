@@ -79,6 +79,11 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         });
 
         btnSoupKitchen.setText("Soup Kitchen");
+        btnSoupKitchen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSoupKitchenActionPerformed(evt);
+            }
+        });
 
         titleWelcome1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleWelcome1.setText("Choose what you would like to do!");
@@ -178,6 +183,14 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnDonateActionPerformed
+
+    private void btnSoupKitchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSoupKitchenActionPerformed
+        // TODO add your handling code here:
+        SoupKitchenMemberAreaJPanel soupJPanel = new SoupKitchenMemberAreaJPanel(userProcessContainer, account, system);
+        userProcessContainer.add("Soup Kitchen Organization", soupJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnSoupKitchenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

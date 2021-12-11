@@ -5,10 +5,29 @@
  */
 package Business.Role;
 
+import Business.EcoSystem;
+import Business.Organization;
+import Business.UserAccount.UserAccount;
+import javax.swing.JPanel;
+import userinterface.SoupKitchenOrgRole.SoupKitchenAdminWorkAreaJPanel;
 /**
  *
  * @author sujay
  */
-public class SoupKitchenOrgRole {
+public class SoupKitchenOrgRole extends Role{
+    
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+        return new SoupKitchenAdminWorkAreaJPanel(userProcessContainer, account, business);
+    }
     
 }
+
+
+
+
+
+    
+
+    
+    

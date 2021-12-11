@@ -50,16 +50,20 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageMembers2 = new javax.swing.JButton();
         btnManageSCOrg2 = new javax.swing.JButton();
         btnManageFieldWorkers2 = new javax.swing.JButton();
+        btnManageSKENT4 = new javax.swing.JButton();
         titleManageUser2 = new javax.swing.JLabel();
-        btnManageFRENT2 = new javax.swing.JButton();
         btnManageLCOrg3 = new javax.swing.JButton();
+        btnManageFRENT = new javax.swing.JButton();
 
+        setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         setLayout(new java.awt.BorderLayout());
 
         jPanel4.setBackground(new java.awt.Color(252, 156, 52));
+        jPanel4.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        jPanel4.setPreferredSize(new java.awt.Dimension(1360, 780));
 
         btnManageMembers2.setBackground(new java.awt.Color(133, 211, 255));
-        btnManageMembers2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
+        btnManageMembers2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         btnManageMembers2.setText("Manage Members");
         btnManageMembers2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,7 +72,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnManageSCOrg2.setBackground(new java.awt.Color(133, 211, 255));
-        btnManageSCOrg2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
+        btnManageSCOrg2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         btnManageSCOrg2.setText("Manage SnowClearing Enterprise");
         btnManageSCOrg2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +81,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnManageFieldWorkers2.setBackground(new java.awt.Color(133, 211, 255));
-        btnManageFieldWorkers2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
+        btnManageFieldWorkers2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         btnManageFieldWorkers2.setText("Manage FieldWorker");
         btnManageFieldWorkers2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,25 +89,34 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        titleManageUser2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        titleManageUser2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageUser2.setText("Manage User Accounts and Credentials");
-
-        btnManageFRENT2.setBackground(new java.awt.Color(133, 211, 255));
-        btnManageFRENT2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
-        btnManageFRENT2.setText("Manage FundRaising Enterprises");
-        btnManageFRENT2.addActionListener(new java.awt.event.ActionListener() {
+        btnManageSKENT4.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageSKENT4.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnManageSKENT4.setText("Manage Soup Kitchen Enterprize");
+        btnManageSKENT4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageFRENTActionPerformed(evt);
+                btnManageSKENT4ActionPerformed(evt);
             }
         });
 
+        titleManageUser2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleManageUser2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleManageUser2.setText("Manage User Accounts and Credentials");
+
         btnManageLCOrg3.setBackground(new java.awt.Color(133, 211, 255));
-        btnManageLCOrg3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
+        btnManageLCOrg3.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         btnManageLCOrg3.setText("Manage LeafClearing Enterprise");
         btnManageLCOrg3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageLCOrg1ActionPerformed(evt);
+            }
+        });
+
+        btnManageFRENT.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageFRENT.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnManageFRENT.setText("Manage FundRaising Enterprises");
+        btnManageFRENT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageFRENTbtnManageFRENTActionPerformed(evt);
             }
         });
 
@@ -112,26 +125,28 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(titleManageUser2, javax.swing.GroupLayout.DEFAULT_SIZE, 1388, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(342, 342, 342)
                 .addComponent(btnManageMembers2)
                 .addGap(93, 93, 93)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnManageFRENT2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnManageSKENT4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnManageLCOrg3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageSCOrg2))
+                    .addComponent(btnManageSCOrg2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnManageFRENT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(59, 59, 59)
                 .addComponent(btnManageFieldWorkers2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(290, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(titleManageUser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(110, 110, 110)
+                .addGap(119, 119, 119)
                 .addComponent(titleManageUser2)
-                .addGap(91, 91, 91)
+                .addGap(140, 140, 140)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnManageFieldWorkers2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnManageMembers2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -139,8 +154,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addGap(11, 11, 11)
                 .addComponent(btnManageLCOrg3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnManageFRENT2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(353, Short.MAX_VALUE))
+                .addComponent(btnManageFRENT, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(btnManageSKENT4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(215, Short.MAX_VALUE))
         );
 
         add(jPanel4, java.awt.BorderLayout.CENTER);
@@ -153,14 +170,6 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageLCOrg1ActionPerformed
-
-    private void btnManageFRENTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFRENTActionPerformed
-        // TODO add your handling code here:
-        ManageFundRaisingJPanel manageFundRaisingJPanel=new ManageFundRaisingJPanel(userProcessContainer, ecosystem);
-        userProcessContainer.add("Manage FundRaising Enterprises",manageFundRaisingJPanel);
-        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageFRENTActionPerformed
 
     private void btnManageFieldWorkersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFieldWorkersActionPerformed
         ManageFieldWorkerJPanel manageFieldWorkerJPanel=new ManageFieldWorkerJPanel(userProcessContainer, ecosystem);
@@ -183,13 +192,31 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageMembersActionPerformed
 
+    private void btnManageFRENTbtnManageFRENTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFRENTbtnManageFRENTActionPerformed
+        // TODO add your handling code here:
+        ManageFundRaisingJPanel manageFundRaisingJPanel=new ManageFundRaisingJPanel(userProcessContainer, ecosystem);
+        userProcessContainer.add("Manage FundRaising Enterprise",manageFundRaisingJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+        
+    }//GEN-LAST:event_btnManageFRENTbtnManageFRENTActionPerformed
+
+    private void btnManageSKENT4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageSKENT4ActionPerformed
+        // TODO add your handling code here:
+        ManageSoupKitchenOrgJPanel manageSoupKitchenOrgJPanel=new ManageSoupKitchenOrgJPanel(userProcessContainer, ecosystem);
+        userProcessContainer.add("Manage Soup Kitchen Enterprise",manageSoupKitchenOrgJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnManageSKENT4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnManageFRENT2;
+    private javax.swing.JButton btnManageFRENT;
     private javax.swing.JButton btnManageFieldWorkers2;
     private javax.swing.JButton btnManageLCOrg3;
     private javax.swing.JButton btnManageMembers2;
     private javax.swing.JButton btnManageSCOrg2;
+    private javax.swing.JButton btnManageSKENT4;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel titleManageUser2;
     // End of variables declaration//GEN-END:variables

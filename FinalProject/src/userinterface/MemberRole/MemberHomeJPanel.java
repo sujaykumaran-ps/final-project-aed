@@ -52,6 +52,8 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         titleWelcome4 = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(900, 900));
+
         titleWelcome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleWelcome.setText("Welcome ");
 

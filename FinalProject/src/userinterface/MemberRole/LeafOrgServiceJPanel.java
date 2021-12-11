@@ -68,6 +68,8 @@ public class LeafOrgServiceJPanel extends javax.swing.JPanel {
         tblCart = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(900, 900));
+
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

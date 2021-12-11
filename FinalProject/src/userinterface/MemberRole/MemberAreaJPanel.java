@@ -59,6 +59,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(252, 156, 52));
+        setPreferredSize(new java.awt.Dimension(900, 900));
 
         tblSnowClearingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

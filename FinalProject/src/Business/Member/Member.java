@@ -5,8 +5,10 @@
  */
 package Business.Member;
 
+import Business.FundRaising.Funds;
 import Business.SnowClearingOrg.Service;
 import Business.LeafClearingOrg.LeafService;
+import Business.WorkQueue.DonationRequest;
 import Business.WorkQueue.WorkRequest;
 import java.util.ArrayList;
 
@@ -18,6 +20,7 @@ public class Member {
     private String memName;
     private String memUsername;
     private ArrayList<WorkRequest> requestList;
+    private ArrayList<DonationRequest> donationList;
     private String memAddress;
     private String memPhNum;
     int id = 1;
@@ -25,6 +28,7 @@ public class Member {
     public Member(String memUsername) {
         this.memUsername = memUsername;
         requestList = new ArrayList<WorkRequest>();
+        donationList = new ArrayList<DonationRequest>();
     }
     
     
@@ -53,6 +57,16 @@ public class Member {
     public void setRequestList(ArrayList<WorkRequest> requestList) {
         this.requestList = requestList;
     }
+
+    public ArrayList<DonationRequest> getDonationList() {
+        return donationList;
+    }
+
+    public void setDonationList(ArrayList<DonationRequest> donationList) {
+        this.donationList = donationList;
+    }
+    
+    
 
     public String getMemAddress() {
         return memAddress;
@@ -103,6 +117,18 @@ public class Member {
         newWork.setMessage(instructions);
         newWork.setStatus("New Request");
         requestList.add(newWork);
+        id++;
+    }
+    
+    public void newFundDonation(String fundRaisingName, String memName, ArrayList<Funds> donation, String donorPhNum, int total) {
+        DonationRequest newDonation = new DonationRequest();
+        newDonation.setDonationId(String.valueOf(id));
+        newDonation.setMemName(memName);
+        newDonation.setFundOrgName(fundRaisingName);
+        newDonation.setDonation(donation);
+        newDonation.setMemberPhNum(donorPhNum);
+        newDonation.setTotalDonation(total);
+        donationList.add(newDonation);
         id++;
     }
     

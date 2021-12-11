@@ -18,7 +18,7 @@ public class DonationRequest {
     private String memName;
     private String memberPhNum;
     private ArrayList<Funds> donation;
-    private int totalDonation;
+    private int totalDonation = 0;
 
     public String getDonationId() {
         return donationId;

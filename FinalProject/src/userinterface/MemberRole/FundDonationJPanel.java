@@ -7,7 +7,10 @@ package userinterface.MemberRole;
 
 import Business.EcoSystem;
 import Business.FundRaising.FundRaising;
+import Business.Member.Member;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.DonationRequest;
+import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -231,7 +234,21 @@ public class FundDonationJPanel extends javax.swing.JPanel {
             }
     }
 
-    private void populateDonationTable() {
-        
+    public void populateDonationTable() {
+        DefaultTableModel model = (DefaultTableModel) tblRequests.getModel();
+        model.setRowCount(0);
+
+          for (Member mem:system.getMemberDirectory().getMemberList()) {   
+            if (mem.getMemUsername().equals(account.getUsername())) {
+               for(DonationRequest donation:mem.getDonationList()){
+                Object[] row = new Object[4];
+                row[0] = donation;
+                row[1] = donation.getFundOrgName();
+                row[2] = donation.getMemberPhNum();
+                row[3] = donation.getTotalDonation();
+                model.addRow(row);
+               }            
+            }  
+        }
     }
 }

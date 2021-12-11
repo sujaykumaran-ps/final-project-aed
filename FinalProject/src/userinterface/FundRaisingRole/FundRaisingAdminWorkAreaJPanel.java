@@ -25,7 +25,8 @@ public class FundRaisingAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.ua = ua;
         this.system = system;
-      
+        
+        lblFundName.setText(ua.getName());
     }
     
     /** This method is called from within the constructor to
@@ -40,8 +41,8 @@ public class FundRaisingAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnFundEntInfo = new javax.swing.JButton();
         btnManageCauses = new javax.swing.JButton();
         btnCheckStatus = new javax.swing.JButton();
-        lblResNameTitle = new javax.swing.JLabel();
-        lblResName = new javax.swing.JLabel();
+        lblFundNameTitle = new javax.swing.JLabel();
+        lblFundName = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(252, 156, 52));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -74,12 +75,12 @@ public class FundRaisingAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnCheckStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
 
-        lblResNameTitle.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        lblResNameTitle.setText("Fund Raising Enterprise Name :");
-        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 270, 30));
+        lblFundNameTitle.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblFundNameTitle.setText("Fund Raising Enterprise Name :");
+        add(lblFundNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 270, 30));
 
-        lblResName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 170, 30));
+        lblFundName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
+        add(lblFundName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 170, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFundEntInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFundEntInfoActionPerformed
@@ -109,8 +110,8 @@ public class FundRaisingAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCheckStatus;
     private javax.swing.JButton btnFundEntInfo;
     private javax.swing.JButton btnManageCauses;
-    private javax.swing.JLabel lblResName;
-    private javax.swing.JLabel lblResNameTitle;
+    private javax.swing.JLabel lblFundName;
+    private javax.swing.JLabel lblFundNameTitle;
     private javax.swing.JLabel titleResAdmin;
     // End of variables declaration//GEN-END:variables
     

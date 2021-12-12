@@ -68,6 +68,10 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        userNameJTextField.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+
+        passwordField.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+
         jLabel1.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jLabel1.setText("User Name");
 
@@ -129,7 +133,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(loginJButton)
                 .addGap(18, 18, 18)
                 .addComponent(logoutJButton)
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(294, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);

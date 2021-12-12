@@ -53,127 +53,92 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         lblName = new javax.swing.JLabel();
         titleWelcome5 = new javax.swing.JLabel();
         btnAmbulance = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(900, 900));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        titleWelcome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleWelcome.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleWelcome.setText("Welcome ");
+        add(titleWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, 30));
 
-        btnSnowClearing.setText("Snow Clearing Org");
+        btnSnowClearing.setBackground(new java.awt.Color(133, 211, 255));
+        btnSnowClearing.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        btnSnowClearing.setText("Snow Clearance");
         btnSnowClearing.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSnowClearingActionPerformed(evt);
             }
         });
+        add(btnSnowClearing, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, 190, 40));
 
-        btnLeafClearing.setText("Leaf Clearing Org");
+        btnLeafClearing.setBackground(new java.awt.Color(133, 211, 255));
+        btnLeafClearing.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        btnLeafClearing.setText("Leaf Clearance");
         btnLeafClearing.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLeafClearingActionPerformed(evt);
             }
         });
+        add(btnLeafClearing, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 190, 40));
 
+        btnDonate.setBackground(new java.awt.Color(133, 211, 255));
+        btnDonate.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         btnDonate.setText("Donate Funds");
         btnDonate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDonateActionPerformed(evt);
             }
         });
+        add(btnDonate, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 410, 187, 40));
 
-        btnSoupKitchen.setText("Soup Kitchen");
+        btnSoupKitchen.setBackground(new java.awt.Color(133, 211, 255));
+        btnSoupKitchen.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        btnSoupKitchen.setText("Order from Soup Kitchen");
         btnSoupKitchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSoupKitchenActionPerformed(evt);
             }
         });
+        add(btnSoupKitchen, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 520, 187, 40));
 
-        titleWelcome1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleWelcome1.setText("Choose what you would like to do!");
+        titleWelcome1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        titleWelcome1.setText("Choose what you would like to do !");
+        add(titleWelcome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 169, 333, 30));
 
-        titleWelcome2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleWelcome2.setText("Create Requests for:");
+        titleWelcome2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        titleWelcome2.setText("Create Requests For");
+        add(titleWelcome2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 181, 30));
 
-        titleWelcome3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleWelcome3.setText("Order soup:");
+        titleWelcome3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        titleWelcome3.setText("Order Meal for People in Need");
+        add(titleWelcome3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, -1, 30));
 
-        titleWelcome4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleWelcome4.setText("Pick your cause and donate funds:");
+        titleWelcome4.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        titleWelcome4.setText("Pick your cause and donate funds");
+        add(titleWelcome4, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 372, 300, 30));
 
-        lblName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblName.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 290, 30));
 
-        titleWelcome5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleWelcome5.setText("Order soup:");
+        titleWelcome5.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        titleWelcome5.setText("PickUp Request incase of Emergency");
+        add(titleWelcome5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, -1, 30));
 
-        btnAmbulance.setText("Ambulance Service");
+        btnAmbulance.setBackground(new java.awt.Color(133, 211, 255));
+        btnAmbulance.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        btnAmbulance.setText("Emergency Service");
         btnAmbulance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAmbulanceActionPerformed(evt);
             }
         });
+        add(btnAmbulance, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 630, 190, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(323, 323, 323)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnLeafClearing)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(220, 220, 220)
-                                .addComponent(btnSnowClearing))
-                            .addComponent(titleWelcome2, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleWelcome1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleWelcome4, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleWelcome3)
-                            .addComponent(titleWelcome5)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(218, 218, 218)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnSoupKitchen, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnDonate, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAmbulance, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addComponent(titleWelcome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(472, Short.MAX_VALUE))
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDonate, btnLeafClearing, btnSnowClearing, btnSoupKitchen});
-
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(titleWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(titleWelcome1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(titleWelcome2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnSnowClearing)
-                .addGap(18, 18, 18)
-                .addComponent(btnLeafClearing)
-                .addGap(28, 28, 28)
-                .addComponent(titleWelcome4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnDonate)
-                .addGap(18, 18, 18)
-                .addComponent(titleWelcome3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnSoupKitchen)
-                .addGap(18, 18, 18)
-                .addComponent(titleWelcome5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(btnAmbulance)
-                .addContainerGap(149, Short.MAX_VALUE))
-        );
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/NGO Home.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 240, 440, 440));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSnowClearingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSnowClearingActionPerformed
@@ -223,6 +188,7 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnLeafClearing;
     private javax.swing.JButton btnSnowClearing;
     private javax.swing.JButton btnSoupKitchen;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel titleWelcome;
     private javax.swing.JLabel titleWelcome1;

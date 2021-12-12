@@ -57,10 +57,14 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         titleOrders = new javax.swing.JLabel();
         btnRefresh = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(900, 900));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblSnowClearingOrg.setBackground(new java.awt.Color(133, 211, 255));
         tblSnowClearingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -89,16 +93,22 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblSnowClearingOrg);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 142, 546, 93));
+
+        btnReqService.setBackground(new java.awt.Color(133, 211, 255));
         btnReqService.setText("Request Service");
         btnReqService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReqServiceActionPerformed(evt);
             }
         });
+        add(btnReqService, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 247, -1, -1));
 
         titleChoose.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         titleChoose.setText("Choose from your SnowClearing Organizations Nearby :");
+        add(titleChoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 107, -1, -1));
 
+        tblRequests.setBackground(new java.awt.Color(133, 211, 255));
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -127,66 +137,35 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblRequests);
 
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 326, 546, 90));
+
         titleOrders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         titleOrders.setText("Your Requests with us :");
+        add(titleOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 297, -1, -1));
 
+        btnRefresh.setBackground(new java.awt.Color(133, 211, 255));
         btnRefresh.setText("Refresh Requests");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshActionPerformed(evt);
             }
         });
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 442, -1, -1));
 
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 48, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(titleChoose)
-                            .addComponent(titleOrders)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(175, 175, 175)
-                                .addComponent(btnRefresh))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(253, 253, 253)
-                        .addComponent(btnReqService))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(btnBack)))
-                .addContainerGap(199, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(btnBack)
-                .addGap(30, 30, 30)
-                .addComponent(titleChoose)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnReqService)
-                .addGap(21, 21, 21)
-                .addComponent(titleOrders)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(btnRefresh)
-                .addContainerGap(91, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/snow.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 580, 250));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/snow.jpeg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 650, 490));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
@@ -220,6 +199,8 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnReqService;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblRequests;

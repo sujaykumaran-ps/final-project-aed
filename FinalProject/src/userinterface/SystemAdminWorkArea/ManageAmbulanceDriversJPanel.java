@@ -59,6 +59,9 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
         titleManageDeliveryMan = new javax.swing.JLabel();
         btnUpdateFW = new javax.swing.JButton();
         btnRefreshFW = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblFieldWorker.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -88,6 +91,9 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblFieldWorker);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 496, 91));
+        add(txtFieldWorker, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, 144, -1));
+
         btnFWBack.setBackground(new java.awt.Color(133, 211, 255));
         btnFWBack.setText("<< Back");
         btnFWBack.setMaximumSize(new java.awt.Dimension(147, 29));
@@ -97,48 +103,64 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
                 btnFWBackActionPerformed(evt);
             }
         });
+        add(btnFWBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 63, 120, -1));
 
+        btnSubmitFW.setBackground(new java.awt.Color(133, 211, 255));
         btnSubmitFW.setText("Submit");
         btnSubmitFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitFWActionPerformed(evt);
             }
         });
+        add(btnSubmitFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 530, 67, -1));
 
         lblFieldWorkerName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblFieldWorkerName.setText("Ambulance Driver Name:");
+        add(lblFieldWorkerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 410, -1, 20));
+        add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 440, 144, -1));
 
         lblDelPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblDelPassword.setText("Password:");
+        add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, 60, -1));
+        add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 144, -1));
 
+        btnViewFW.setBackground(new java.awt.Color(133, 211, 255));
         btnViewFW.setText("View");
         btnViewFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewFWActionPerformed(evt);
             }
         });
+        add(btnViewFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 340, -1, -1));
 
+        btnDeleteFW.setBackground(new java.awt.Color(133, 211, 255));
         btnDeleteFW.setText("Delete");
         btnDeleteFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteFWActionPerformed(evt);
             }
         });
+        add(btnDeleteFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 340, -1, -1));
 
         lblDelUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblDelUsername.setText("Username:");
+        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, 70, 20));
 
         titleManageDeliveryMan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageDeliveryMan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageDeliveryMan.setText("Ambulance Drivers SignUp");
+        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 83, 816, -1));
 
+        btnUpdateFW.setBackground(new java.awt.Color(133, 211, 255));
         btnUpdateFW.setText("Update");
         btnUpdateFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateFWActionPerformed(evt);
             }
         });
+        add(btnUpdateFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, -1, -1));
 
+        btnRefreshFW.setBackground(new java.awt.Color(133, 211, 255));
         btnRefreshFW.setText("Refresh Table");
         btnRefreshFW.setMaximumSize(new java.awt.Dimension(147, 29));
         btnRefreshFW.setMinimumSize(new java.awt.Dimension(147, 29));
@@ -147,89 +169,11 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
                 btnRefreshFWActionPerformed(evt);
             }
         });
+        add(btnRefreshFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 180, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addComponent(btnFWBack, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1199, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(titleManageDeliveryMan, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(650, 650, 650)
-                            .addComponent(btnRefreshFW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(250, 250, 250)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(580, 580, 580)
-                            .addComponent(btnViewFW)
-                            .addGap(35, 35, 35)
-                            .addComponent(btnDeleteFW))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(322, 322, 322)
-                            .addComponent(lblFieldWorkerName)
-                            .addGap(32, 32, 32)
-                            .addComponent(txtFieldWorker, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(400, 400, 400)
-                            .addComponent(lblDelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(31, 31, 31)
-                            .addComponent(txtFieldWorkerUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(400, 400, 400)
-                            .addComponent(lblDelPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(32, 32, 32)
-                            .addComponent(txtFieldWorkerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(490, 490, 490)
-                            .addComponent(btnUpdateFW)
-                            .addGap(13, 13, 13)
-                            .addComponent(btnSubmitFW, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(btnFWBack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(694, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(titleManageDeliveryMan)
-                    .addGap(78, 78, 78)
-                    .addComponent(btnRefreshFW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(27, 27, 27)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(19, 19, 19)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnViewFW)
-                        .addComponent(btnDeleteFW))
-                    .addGap(37, 37, 37)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblFieldWorkerName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtFieldWorker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(10, 10, 10)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblDelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtFieldWorkerUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(20, 20, 20)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblDelPassword)
-                        .addComponent(txtFieldWorkerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(20, 20, 20)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnUpdateFW)
-                        .addComponent(btnSubmitFW))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Ambulance-Loop-1.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 640));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFWBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFWBackActionPerformed
@@ -415,6 +359,7 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmitFW;
     private javax.swing.JButton btnUpdateFW;
     private javax.swing.JButton btnViewFW;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblDelPassword;
     private javax.swing.JLabel lblDelUsername;

@@ -60,6 +60,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         titleManageDeliveryMan = new javax.swing.JLabel();
         btnUpdateVol = new javax.swing.JButton();
         btnRefreshVol = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -93,8 +94,8 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblVolunteer);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 230, 496, 91));
-        add(txtVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 429, 144, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 496, 91));
+        add(txtVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 144, -1));
 
         btnVolBack.setBackground(new java.awt.Color(133, 211, 255));
         btnVolBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
@@ -108,6 +109,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         });
         add(btnVolBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 45, 75, -1));
 
+        btnSubmitVol.setBackground(new java.awt.Color(133, 211, 255));
         btnSubmitVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnSubmitVol.setText("Submit");
         btnSubmitVol.addActionListener(new java.awt.event.ActionListener() {
@@ -119,14 +121,15 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
 
         lblVolunteerName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblVolunteerName.setText("Volunteer Name:");
-        add(lblVolunteerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(587, 428, -1, 20));
-        add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 459, 144, -1));
+        add(lblVolunteerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, -1, 20));
+        add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 144, -1));
 
         lblDelPassword.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblDelPassword.setText("Password:");
-        add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 499, 58, -1));
-        add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 499, 144, -1));
+        add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 470, 70, -1));
+        add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 470, 144, -1));
 
+        btnViewVol.setBackground(new java.awt.Color(133, 211, 255));
         btnViewVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnViewVol.setText("View");
         btnViewVol.addActionListener(new java.awt.event.ActionListener() {
@@ -134,8 +137,9 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
                 btnViewVolActionPerformed(evt);
             }
         });
-        add(btnViewVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(812, 340, -1, -1));
+        add(btnViewVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 310, -1, -1));
 
+        btnDeleteVol.setBackground(new java.awt.Color(133, 211, 255));
         btnDeleteVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnDeleteVol.setText("Delete");
         btnDeleteVol.addActionListener(new java.awt.event.ActionListener() {
@@ -143,17 +147,18 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
                 btnDeleteVolActionPerformed(evt);
             }
         });
-        add(btnDeleteVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(904, 340, -1, -1));
+        add(btnDeleteVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 310, -1, -1));
 
         lblDelUsername.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblDelUsername.setText("Username:");
-        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 459, 59, 20));
+        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, 70, 20));
 
         titleManageDeliveryMan.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleManageDeliveryMan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageDeliveryMan.setText("Volunteers SignUp");
-        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 77, 1340, -1));
+        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 90, 990, -1));
 
+        btnUpdateVol.setBackground(new java.awt.Color(133, 211, 255));
         btnUpdateVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnUpdateVol.setText("Update");
         btnUpdateVol.addActionListener(new java.awt.event.ActionListener() {
@@ -163,6 +168,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         });
         add(btnUpdateVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 539, -1, -1));
 
+        btnRefreshVol.setBackground(new java.awt.Color(133, 211, 255));
         btnRefreshVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnRefreshVol.setText("Refresh Table");
         btnRefreshVol.setMaximumSize(new java.awt.Dimension(147, 29));
@@ -172,7 +178,11 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
                 btnRefreshVolActionPerformed(evt);
             }
         });
-        add(btnRefreshVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(868, 178, -1, -1));
+        add(btnRefreshVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 150, -1, -1));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/FoodDelivery.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 530));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVolBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolBackActionPerformed
@@ -358,6 +368,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnUpdateVol;
     private javax.swing.JButton btnViewVol;
     private javax.swing.JButton btnVolBack;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblDelPassword;
     private javax.swing.JLabel lblDelUsername;

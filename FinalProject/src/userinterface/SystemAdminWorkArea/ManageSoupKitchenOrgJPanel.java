@@ -61,10 +61,15 @@ public class ManageSoupKitchenOrgJPanel extends javax.swing.JPanel {
         titleManageRestaurants = new javax.swing.JLabel();
         btnViewSoupOrg = new javax.swing.JButton();
         btnRefreshOrg = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         setPreferredSize(new java.awt.Dimension(900, 900));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblSoupKitchenOrg.setAutoCreateRowSorter(true);
+        tblSoupKitchenOrg.setBackground(new java.awt.Color(133, 211, 255));
         tblSoupKitchenOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -93,146 +98,84 @@ public class ManageSoupKitchenOrgJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblSoupKitchenOrg);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, -1, 117));
+        add(txtSoupOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 450, 144, -1));
+
+        btnManageSoupOrgBack.setBackground(new java.awt.Color(133, 211, 255));
         btnManageSoupOrgBack.setText("<< Back");
         btnManageSoupOrgBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageSoupOrgBackActionPerformed(evt);
             }
         });
+        add(btnManageSoupOrgBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, 38));
 
+        btnSubmitSoupOrg.setBackground(new java.awt.Color(133, 211, 255));
         btnSubmitSoupOrg.setText("Submit");
         btnSubmitSoupOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitSoupOrgActionPerformed(evt);
             }
         });
+        add(btnSubmitSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 570, -1, 39));
 
         lblSoupKitchen.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblSoupKitchen.setText("Soup Kitchen Name:");
+        add(lblSoupKitchen, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 460, -1, -1));
+        add(txtSoupOrgUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 490, 144, -1));
+        add(txtSoupOrgPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 520, 144, -1));
 
         lblSoupPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblSoupPassword.setText("Password:");
+        add(lblSoupPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, -1, -1));
 
+        btnUpdateSoupOrg.setBackground(new java.awt.Color(133, 211, 255));
         btnUpdateSoupOrg.setText("Update");
         btnUpdateSoupOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateSoupOrgActionPerformed(evt);
             }
         });
+        add(btnUpdateSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 570, -1, 39));
 
+        btnDeleteSoupOrg.setBackground(new java.awt.Color(133, 211, 255));
         btnDeleteSoupOrg.setText("Delete");
         btnDeleteSoupOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteSoupOrgActionPerformed(evt);
             }
         });
+        add(btnDeleteSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 370, 92, 39));
 
         lblSoupUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblSoupUsername.setText("Username:");
+        add(lblSoupUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 490, -1, 20));
 
         titleManageRestaurants.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageRestaurants.setText("Manage Soup Kitchen Org");
+        add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 57, 816, -1));
 
+        btnViewSoupOrg.setBackground(new java.awt.Color(133, 211, 255));
         btnViewSoupOrg.setText("View");
         btnViewSoupOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewSoupOrgActionPerformed(evt);
             }
         });
+        add(btnViewSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 370, -1, 39));
 
+        btnRefreshOrg.setBackground(new java.awt.Color(133, 211, 255));
         btnRefreshOrg.setText("Refresh Table");
         btnRefreshOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshOrgActionPerformed(evt);
             }
         });
+        add(btnRefreshOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, -1, 38));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(btnManageSoupOrgBack)
-                        .addGap(295, 295, 295)
-                        .addComponent(btnRefreshOrg))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(166, 166, 166)
-                                .addComponent(btnUpdateSoupOrg)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSubmitSoupOrg))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGap(80, 80, 80)
-                                    .addComponent(txtSoupOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(180, 180, 180)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtSoupOrgUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtSoupOrgPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblSoupUsername)
-                                .addComponent(lblSoupKitchen)
-                                .addComponent(lblSoupPassword))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(titleManageRestaurants, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(420, 420, 420)
-                            .addComponent(btnViewSoupOrg)
-                            .addGap(44, 44, 44)
-                            .addComponent(btnDeleteSoupOrg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(177, 177, 177)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(78, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(titleManageRestaurants)
-                .addGap(95, 95, 95)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnManageSoupOrgBack, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(btnRefreshOrg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(16, 16, 16)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSoupKitchen)
-                            .addComponent(txtSoupOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(11, 11, 11)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtSoupOrgUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSoupUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtSoupOrgPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSoupPassword))
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnSubmitSoupOrg)
-                            .addComponent(btnUpdateSoupOrg)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnViewSoupOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnDeleteSoupOrg))))
-                .addContainerGap(280, Short.MAX_VALUE))
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnDeleteSoupOrg, btnSubmitSoupOrg, btnUpdateSoupOrg, btnViewSoupOrg});
-
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/istockphoto-487582458-170667a.jpeg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 490, 770));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageSoupOrgBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageSoupOrgBackActionPerformed
@@ -420,6 +363,7 @@ public class ManageSoupKitchenOrgJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmitSoupOrg;
     private javax.swing.JButton btnUpdateSoupOrg;
     private javax.swing.JButton btnViewSoupOrg;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblSoupKitchen;
     private javax.swing.JLabel lblSoupPassword;

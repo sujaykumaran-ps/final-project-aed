@@ -98,25 +98,25 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         lblSnowOrgName.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
         add(lblSnowOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 170, 160, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/tuxpi.com.1639261320.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tuxpi.com.1639261320.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setPreferredSize(new java.awt.Dimension(1360, 780));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1420, 220));
 
         lblImageIcon.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        lblImageIcon.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/Requests_adobespark.jpeg")); // NOI18N
+        lblImageIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Requests_adobespark.jpeg"))); // NOI18N
         lblImageIcon.setText("jLabel2");
         add(lblImageIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 290, 180));
 
-        lblImageIcon2.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/manage_services_adobespark.png")); // NOI18N
+        lblImageIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage_services_adobespark.png"))); // NOI18N
         lblImageIcon2.setText("jLabel2");
         add(lblImageIcon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 270, 230, 190));
 
-        lblImageIcon3.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/snowShovel.png")); // NOI18N
+        lblImageIcon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/snowShovel.png"))); // NOI18N
         lblImageIcon3.setText("jLabel2");
         add(lblImageIcon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 280, 230, 180));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/tuxpi.com.1639261320.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tuxpi.com.1639261320.jpg"))); // NOI18N
         jLabel3.setText("jLabel1");
         jLabel3.setPreferredSize(new java.awt.Dimension(1360, 780));
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 580, 1370, 220));

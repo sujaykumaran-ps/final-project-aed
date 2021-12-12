@@ -57,7 +57,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         txtServiceDesc = new javax.swing.JTextField();
         btnAddService = new javax.swing.JButton();
-        titleManageRequest = new javax.swing.JLabel();
+        titleManageService = new javax.swing.JLabel();
         lblImageIcon3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -127,9 +127,9 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
             }
         });
 
-        titleManageRequest.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        titleManageRequest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageRequest.setText("Manage Services");
+        titleManageService.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleManageService.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleManageService.setText("Manage Services");
 
         lblImageIcon3.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/snowShovel.png")); // NOI18N
         lblImageIcon3.setText("jLabel2");
@@ -146,7 +146,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(171, 171, 171)
-                        .addComponent(titleManageRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(titleManageService, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -173,7 +173,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
                         .addComponent(btnBack)
                         .addGap(83, 83, 83)
                         .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 907, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -181,7 +181,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(125, 125, 125)
-                .addComponent(titleManageRequest)
+                .addComponent(titleManageService)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -297,7 +297,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblServiceName;
     private javax.swing.JLabel lblType;
     private javax.swing.JTable tblServices;
-    private javax.swing.JLabel titleManageRequest;
+    private javax.swing.JLabel titleManageService;
     private javax.swing.JTextField txtServiceDesc;
     private javax.swing.JTextField txtServiceName;
     private javax.swing.JTextField txtServiceType;

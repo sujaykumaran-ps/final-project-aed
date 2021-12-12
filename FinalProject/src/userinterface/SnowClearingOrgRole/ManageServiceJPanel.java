@@ -57,11 +57,18 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         txtServiceDesc = new javax.swing.JTextField();
         btnAddService = new javax.swing.JButton();
+        titleManageRequest = new javax.swing.JLabel();
+        lblImageIcon3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1350, 780));
 
-        lblServiceDesc.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblServiceDesc.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
         lblServiceDesc.setText("Description :");
+
+        txtServiceType.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtServiceType.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         tblServices.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -93,10 +100,13 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblServices);
 
-        lblServiceName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblServiceName.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
         lblServiceName.setText("Service Name :");
 
-        lblType.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtServiceName.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtServiceName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblType.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
         lblType.setText("Type :");
 
         btnBack.setText("<< Back");
@@ -106,6 +116,10 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
             }
         });
 
+        txtServiceDesc.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtServiceDesc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnAddService.setBackground(new java.awt.Color(133, 211, 255));
         btnAddService.setText("Add Service");
         btnAddService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,57 +127,90 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
             }
         });
 
+        titleManageRequest.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleManageRequest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleManageRequest.setText("Manage Services");
+
+        lblImageIcon3.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/snowShovel.png")); // NOI18N
+        lblImageIcon3.setText("jLabel2");
+
+        jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/plow_ice.jpg")); // NOI18N
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBack)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
+                        .addGap(171, 171, 171)
+                        .addComponent(titleManageRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(262, 262, 262)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblType)
-                            .addComponent(lblServiceDesc)
-                            .addComponent(lblServiceName))
-                        .addGap(32, 32, 32)
+                        .addGap(123, 123, 123)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(lblServiceName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblType)
+                                    .addComponent(lblServiceDesc))
+                                .addGap(47, 47, 47)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtServiceName)
-                            .addComponent(txtServiceDesc)
-                            .addComponent(txtServiceType, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(71, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(377, 377, 377)
-                .addComponent(btnAddService)
-                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(txtServiceType)
+                            .addComponent(txtServiceDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addComponent(btnAddService))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(btnBack)
+                        .addGap(83, 83, 83)
+                        .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 907, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(btnBack)
+                .addGap(125, 125, 125)
+                .addComponent(titleManageRequest)
                 .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtServiceName, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblServiceName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblServiceDesc)
+                    .addComponent(txtServiceDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtServiceName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblServiceName))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtServiceDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblServiceDesc))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblType)
                     .addComponent(txtServiceType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnAddService)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addGap(45, 45, 45)
+                .addComponent(btnAddService, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtServiceDesc, txtServiceName, txtServiceType});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -243,11 +290,14 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddService;
     private javax.swing.JButton btnBack;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblImageIcon3;
     private javax.swing.JLabel lblServiceDesc;
     private javax.swing.JLabel lblServiceName;
     private javax.swing.JLabel lblType;
     private javax.swing.JTable tblServices;
+    private javax.swing.JLabel titleManageRequest;
     private javax.swing.JTextField txtServiceDesc;
     private javax.swing.JTextField txtServiceName;
     private javax.swing.JTextField txtServiceType;

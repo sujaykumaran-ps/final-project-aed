@@ -27,7 +27,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         this.ua = ua;
         this.system = system;
       
-        lblResName.setText(ua.getName());
+        lblSnowOrgName.setText(ua.getName());
     }
     
     /** This method is called from within the constructor to
@@ -42,46 +42,84 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         btnOrgInfo = new javax.swing.JButton();
         btnManageServices = new javax.swing.JButton();
         btnManageRequests = new javax.swing.JButton();
-        lblResNameTitle = new javax.swing.JLabel();
-        lblResName = new javax.swing.JLabel();
+        lblSnowOrgNameTitle = new javax.swing.JLabel();
+        lblSnowOrgName = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        lblImageIcon = new javax.swing.JLabel();
+        lblImageIcon2 = new javax.swing.JLabel();
+        lblImageIcon3 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        titleResAdmin.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        titleResAdmin.setText("SnowClearingOrg Admin");
-        add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, -1, -1));
+        titleResAdmin.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleResAdmin.setForeground(new java.awt.Color(0, 0, 153));
+        titleResAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleResAdmin.setText("SNOW CLEARING ORG ADMIN");
+        add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, -1, -1));
 
-        btnOrgInfo.setText("Manage SnowClearingOrg Info");
+        btnOrgInfo.setBackground(new java.awt.Color(133, 211, 255));
+        btnOrgInfo.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnOrgInfo.setText("Manage SnowClearing Enterprize Info");
         btnOrgInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrgInfoActionPerformed(evt);
             }
         });
-        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 220, -1));
+        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 480, 280, 50));
 
+        btnManageServices.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageServices.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         btnManageServices.setText("Manage Services");
         btnManageServices.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageServicesActionPerformed(evt);
             }
         });
-        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 160, -1));
+        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 480, 280, 50));
 
+        btnManageRequests.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageRequests.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         btnManageRequests.setText("Manage Requests");
         btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageRequestsActionPerformed(evt);
             }
         });
-        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
+        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 480, 280, 50));
 
-        lblResNameTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblResNameTitle.setText("Restaurant Name :");
-        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 190, 30));
+        lblSnowOrgNameTitle.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblSnowOrgNameTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSnowOrgNameTitle.setText("SNOW CLEARING ENTERPRIZE");
+        add(lblSnowOrgNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 360, 30));
 
-        lblResName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 170, 30));
+        lblSnowOrgName.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
+        add(lblSnowOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 170, 160, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/tuxpi.com.1639261320.jpg")); // NOI18N
+        jLabel1.setText("jLabel1");
+        jLabel1.setPreferredSize(new java.awt.Dimension(1360, 780));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1420, 220));
+
+        lblImageIcon.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        lblImageIcon.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/Requests_adobespark.jpeg")); // NOI18N
+        lblImageIcon.setText("jLabel2");
+        add(lblImageIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 290, 180));
+
+        lblImageIcon2.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/manage_services_adobespark.png")); // NOI18N
+        lblImageIcon2.setText("jLabel2");
+        add(lblImageIcon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 270, 230, 190));
+
+        lblImageIcon3.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/snowShovel.png")); // NOI18N
+        lblImageIcon3.setText("jLabel2");
+        add(lblImageIcon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 280, 230, 180));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/tuxpi.com.1639261320.jpg")); // NOI18N
+        jLabel3.setText("jLabel1");
+        jLabel3.setPreferredSize(new java.awt.Dimension(1360, 780));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 580, 1370, 220));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgInfoActionPerformed
@@ -111,8 +149,13 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageRequests;
     private javax.swing.JButton btnManageServices;
     private javax.swing.JButton btnOrgInfo;
-    private javax.swing.JLabel lblResName;
-    private javax.swing.JLabel lblResNameTitle;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblImageIcon;
+    private javax.swing.JLabel lblImageIcon2;
+    private javax.swing.JLabel lblImageIcon3;
+    private javax.swing.JLabel lblSnowOrgName;
+    private javax.swing.JLabel lblSnowOrgNameTitle;
     private javax.swing.JLabel titleResAdmin;
     // End of variables declaration//GEN-END:variables
     

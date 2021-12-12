@@ -131,11 +131,11 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         titleManageService.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageService.setText("Manage Services");
 
-        lblImageIcon3.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/snowShovel.png")); // NOI18N
+        lblImageIcon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/snowShovel.png"))); // NOI18N
         lblImageIcon3.setText("jLabel2");
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/plow_ice.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/plow_ice.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

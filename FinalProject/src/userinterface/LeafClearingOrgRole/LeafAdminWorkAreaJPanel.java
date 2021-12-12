@@ -40,8 +40,8 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         titleLeafClearingAdmin = new javax.swing.JLabel();
         btnOrgInfo = new javax.swing.JButton();
-        btnManageServices = new javax.swing.JButton();
         btnManageRequests = new javax.swing.JButton();
+        btnManageServices = new javax.swing.JButton();
         lblLeafClearingNameTitle = new javax.swing.JLabel();
         lblResName = new javax.swing.JLabel();
         lblImageIcon = new javax.swing.JLabel();
@@ -57,6 +57,7 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
         titleLeafClearingAdmin.setText("LEAF CLEARING ORG ADMIN");
         add(titleLeafClearingAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, -1, -1));
 
+        btnOrgInfo.setBackground(new java.awt.Color(255, 204, 102));
         btnOrgInfo.setText("Manage LeafClearingOrg Info");
         btnOrgInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +65,16 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 490, 220, 50));
+
+        btnManageRequests.setBackground(new java.awt.Color(255, 204, 102));
+        btnManageRequests.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnManageRequests.setText("Manage Requests");
+        btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageRequestsActionPerformed(evt);
+            }
+        });
+        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 220, 50));
 
         btnManageServices.setBackground(new java.awt.Color(255, 204, 102));
         btnManageServices.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
@@ -76,16 +87,6 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 500, 230, 40));
 
-        btnManageRequests.setBackground(new java.awt.Color(255, 204, 102));
-        btnManageRequests.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        btnManageRequests.setText("Manage Requests");
-        btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageRequestsActionPerformed(evt);
-            }
-        });
-        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 220, 50));
-
         lblLeafClearingNameTitle.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblLeafClearingNameTitle.setText("LEAF CLEARING ENTERPRIZE");
         add(lblLeafClearingNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 280, 30));
@@ -94,24 +95,24 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 250, 190, 30));
 
         lblImageIcon.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        lblImageIcon.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/Requests_adobespark.jpeg")); // NOI18N
+        lblImageIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Requests_adobespark.jpeg"))); // NOI18N
         lblImageIcon.setText("jLabel2");
         add(lblImageIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 290, 180));
 
-        lblImageIcon3.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/leafClearing_icon_adobespark.jpeg")); // NOI18N
+        lblImageIcon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/leafClearing_icon_adobespark.jpeg"))); // NOI18N
         lblImageIcon3.setText("jLabel2");
         add(lblImageIcon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 390, 180));
 
-        lblImageIcon2.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/manage_services_adobespark.png")); // NOI18N
+        lblImageIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage_services_adobespark.png"))); // NOI18N
         lblImageIcon2.setText("jLabel2");
         add(lblImageIcon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 280, 230, 190));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/fall_leaves.jpeg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fall_leaves.jpeg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setPreferredSize(new java.awt.Dimension(1360, 780));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 560, 1420, 220));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/fall_leaves.jpeg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fall_leaves.jpeg"))); // NOI18N
         jLabel2.setText("jLabel1");
         jLabel2.setPreferredSize(new java.awt.Dimension(1360, 780));
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 220));

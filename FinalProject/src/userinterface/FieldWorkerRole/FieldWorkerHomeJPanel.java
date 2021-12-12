@@ -43,54 +43,52 @@ public class FieldWorkerHomeJPanel extends javax.swing.JPanel {
         titleWelcome = new javax.swing.JLabel();
         btnSnowClearance = new javax.swing.JButton();
         btnLeafClearance = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        titleManageRestaurants = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblName.setBackground(new java.awt.Color(255, 255, 255));
         lblName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 80, 290, 30));
 
-        titleWelcome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleWelcome.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         titleWelcome.setText("Hello");
+        add(titleWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 60, 30));
 
+        btnSnowClearance.setBackground(new java.awt.Color(133, 211, 255));
+        btnSnowClearance.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnSnowClearance.setText("Snow Clearance Requests");
         btnSnowClearance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSnowClearanceActionPerformed(evt);
             }
         });
+        add(btnSnowClearance, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 342, 40));
 
+        btnLeafClearance.setBackground(new java.awt.Color(133, 211, 255));
+        btnLeafClearance.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnLeafClearance.setText("Leaf Clearance Requests");
         btnLeafClearance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLeafClearanceActionPerformed(evt);
             }
         });
+        add(btnLeafClearance, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 510, 342, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(171, 171, 171)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(titleWelcome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnSnowClearance, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLeafClearance, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(255, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(titleWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addComponent(btnSnowClearance)
-                .addGap(18, 18, 18)
-                .addComponent(btnLeafClearance)
-                .addContainerGap(291, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/leafBlowing.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 200, 420, 280));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/snow.jpg"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 580, 280));
+
+        titleManageRestaurants.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
+        titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleManageRestaurants.setText("Field Worker Home");
+        add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 816, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSnowClearanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSnowClearanceActionPerformed
@@ -113,7 +111,10 @@ public class FieldWorkerHomeJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLeafClearance;
     private javax.swing.JButton btnSnowClearance;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblName;
+    private javax.swing.JLabel titleManageRestaurants;
     private javax.swing.JLabel titleWelcome;
     // End of variables declaration//GEN-END:variables
 }

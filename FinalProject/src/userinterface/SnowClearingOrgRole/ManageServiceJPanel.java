@@ -109,6 +109,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         lblType.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
         lblType.setText("Type :");
 
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

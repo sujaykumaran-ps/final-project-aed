@@ -66,21 +66,30 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
         btnRemove = new javax.swing.JButton();
         lblAddress = new javax.swing.JLabel();
         txtPhNum = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(900, 900));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        titleOrder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleOrder.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         titleOrder.setText("Donation to");
+        add(titleOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, -1, 20));
 
-        titleOrgName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleOrgName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        add(titleOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 331, 20));
 
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 30, -1, -1));
 
+        tblCauses.setBackground(new java.awt.Color(133, 211, 255));
         tblCauses.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -109,16 +118,23 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblCauses);
 
-        lblCauses.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblCauses.setText("Causes");
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 524, 91));
 
+        lblCauses.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        lblCauses.setText("Causes");
+        add(lblCauses, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, -1, -1));
+
+        btnDonate.setBackground(new java.awt.Color(133, 211, 255));
+        btnDonate.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDonate.setText("Donate to Selected Cause");
         btnDonate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDonateActionPerformed(evt);
             }
         });
+        add(btnDonate, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, -1, -1));
 
+        tblDonation.setBackground(new java.awt.Color(133, 211, 255));
         tblDonation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -147,95 +163,39 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(tblDonation);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Service Summary");
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 524, 91));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel1.setText("Donation Summary");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 370, -1, -1));
+
+        btnPlaceDonation.setBackground(new java.awt.Color(133, 211, 255));
+        btnPlaceDonation.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPlaceDonation.setText("Donate");
         btnPlaceDonation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPlaceDonationActionPerformed(evt);
             }
         });
+        add(btnPlaceDonation, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 610, -1, -1));
 
+        btnRemove.setBackground(new java.awt.Color(133, 211, 255));
+        btnRemove.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRemove.setText("Remove Request");
         btnRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemoveActionPerformed(evt);
             }
         });
+        add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 530, -1, -1));
 
         lblAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblAddress.setText("Member Phone Number :");
+        add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 570, -1, -1));
+        add(txtPhNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 570, 201, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(titleOrder)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(titleOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(327, 327, 327)
-                        .addComponent(btnDonate))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(346, 346, 346)
-                        .addComponent(lblCauses))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(305, 305, 305)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(330, 330, 330)
-                        .addComponent(btnRemove))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(231, 231, 231)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnPlaceDonation)
-                            .addComponent(lblAddress))
-                        .addGap(18, 18, 18)
-                        .addComponent(txtPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(706, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(btnBack)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(titleOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(titleOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(lblCauses)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnDonate)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(23, 23, 23)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnRemove)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAddress)
-                    .addComponent(txtPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnPlaceDonation)
-                .addContainerGap(230, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Donation.png"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1350, 780));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -322,11 +282,13 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
             Object[] row = new Object[4];
             for(Funds donation:org.getFundList()){
+                if(donation.getFundOpen()==true){
                  row[0] = donation;
                  row[1] = donation.getFundDescription();
                  row[2] = donation.getFundAmount();
                  row[3] = donation.getFundType();
                  model.addRow(row);
+                }
             }
     }
 
@@ -337,6 +299,7 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnPlaceDonation;
     private javax.swing.JButton btnRemove;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblAddress;

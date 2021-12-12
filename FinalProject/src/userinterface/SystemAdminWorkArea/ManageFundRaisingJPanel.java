@@ -61,7 +61,13 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
         titleManageRestaurants = new javax.swing.JLabel();
         btnViewFundEnt = new javax.swing.JButton();
         btnRefreshEnt = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblFundRaisingEnt.setBackground(new java.awt.Color(133, 211, 255));
         tblFundRaisingEnt.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -90,146 +96,99 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblFundRaisingEnt);
 
-        btnManageFundBack.setText("<< Back");
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 496, 91));
+
+        txtFundRaisingName.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFundRaisingName, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 480, 144, -1));
+
+        btnManageFundBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageFundBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnManageFundBack.setText("<< ");
         btnManageFundBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageFundBackActionPerformed(evt);
             }
         });
+        add(btnManageFundBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 40, -1, -1));
 
+        btnSubmitFund.setBackground(new java.awt.Color(133, 211, 255));
+        btnSubmitFund.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSubmitFund.setText("Submit");
         btnSubmitFund.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitFundActionPerformed(evt);
             }
         });
+        add(btnSubmitFund, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 600, -1, -1));
 
-        lblResName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblResName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblResName.setText("FundRaising Enterprise Name:");
+        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, -1, -1));
 
-        lblResPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtFundRaisingUsername.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFundRaisingUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, 144, -1));
+
+        txtFundRaisingPassword.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFundRaisingPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 540, 144, -1));
+
+        lblResPassword.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblResPassword.setText("Password:");
+        add(lblResPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 550, -1, -1));
 
+        btnUpdateFund.setBackground(new java.awt.Color(133, 211, 255));
+        btnUpdateFund.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateFund.setText("Update");
         btnUpdateFund.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateFundActionPerformed(evt);
             }
         });
+        add(btnUpdateFund, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 600, -1, -1));
 
+        btnDeleteEnt.setBackground(new java.awt.Color(133, 211, 255));
+        btnDeleteEnt.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDeleteEnt.setText("Delete");
         btnDeleteEnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteEntActionPerformed(evt);
             }
         });
+        add(btnDeleteEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 410, -1, -1));
 
-        lblResUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblResUsername.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblResUsername.setText("Username:");
+        add(lblResUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 510, -1, 20));
 
-        titleManageRestaurants.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleManageRestaurants.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageRestaurants.setText("Manage FundRaising Enterprises");
+        titleManageRestaurants.setText("FundRaising Org SignUp");
+        add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 151, 816, -1));
 
+        btnViewFundEnt.setBackground(new java.awt.Color(133, 211, 255));
+        btnViewFundEnt.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnViewFundEnt.setText("View");
         btnViewFundEnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewFundEntActionPerformed(evt);
             }
         });
+        add(btnViewFundEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 410, -1, -1));
 
+        btnRefreshEnt.setBackground(new java.awt.Color(133, 211, 255));
+        btnRefreshEnt.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefreshEnt.setText("Refresh Table");
         btnRefreshEnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshEntActionPerformed(evt);
             }
         });
+        add(btnRefreshEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 260, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnManageFundBack)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(440, 440, 440)
-                        .addComponent(btnViewFundEnt)
-                        .addGap(5, 5, 5)
-                        .addComponent(btnDeleteEnt))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(182, 182, 182)
-                        .addComponent(lblResName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtFundRaisingName, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(lblResUsername)
-                        .addGap(39, 39, 39)
-                        .addComponent(txtFundRaisingUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(lblResPassword)
-                        .addGap(41, 41, 41)
-                        .addComponent(txtFundRaisingPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(360, 360, 360)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(80, 80, 80)
-                                .addComponent(btnSubmitFund))
-                            .addComponent(btnUpdateFund))))
-                .addContainerGap(622, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnRefreshEnt)
-                .addGap(151, 151, 151))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 272, Short.MAX_VALUE)
-                    .addComponent(titleManageRestaurants, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 272, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addComponent(btnManageFundBack)
-                .addGap(10, 10, 10)
-                .addComponent(btnRefreshEnt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnViewFundEnt)
-                    .addComponent(btnDeleteEnt))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtFundRaisingName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblResName))
-                .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblResUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFundRaisingUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblResPassword)
-                    .addComponent(txtFundRaisingPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSubmitFund)
-                    .addComponent(btnUpdateFund))
-                .addContainerGap(295, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 151, Short.MAX_VALUE)
-                    .addComponent(titleManageRestaurants)
-                    .addGap(0, 607, Short.MAX_VALUE)))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/donate-image.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 610, 310));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/donatehome.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, 710, 490));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageFundBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFundBackActionPerformed
@@ -417,6 +376,8 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmitFund;
     private javax.swing.JButton btnUpdateFund;
     private javax.swing.JButton btnViewFundEnt;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblResName;
     private javax.swing.JLabel lblResPassword;

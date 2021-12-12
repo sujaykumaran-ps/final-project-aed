@@ -57,17 +57,34 @@ public class FundRaisingCausesJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         txtFundType = new javax.swing.JTextField();
         lblFundType = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtFundDesc.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFundDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, 130, -1));
+
+        btnAddService.setBackground(new java.awt.Color(133, 211, 255));
+        btnAddService.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnAddService.setText("Add Fund Raising Event");
         btnAddService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddServiceActionPerformed(evt);
             }
         });
+        add(btnAddService, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 570, -1, -1));
 
-        lblFundDesc.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblFundDesc.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblFundDesc.setText("Description :");
+        add(lblFundDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 450, -1, -1));
 
+        txtFundsRequired.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFundsRequired, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 130, -1));
+
+        tblFunds.setBackground(new java.awt.Color(133, 211, 255));
         tblFunds.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -98,81 +115,50 @@ public class FundRaisingCausesJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblFunds);
 
-        lblFundName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 638, 107));
+
+        lblFundName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblFundName.setText("Fund Name :");
+        add(lblFundName, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 410, -1, -1));
 
-        lblFundsRequired.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtFundName.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        txtFundName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFundNameActionPerformed(evt);
+            }
+        });
+        add(txtFundName, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 410, 130, -1));
+
+        lblFundsRequired.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblFundsRequired.setText("Amount :");
+        add(lblFundsRequired, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 490, -1, -1));
 
-        btnBack.setText("<< Back");
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 35, -1, -1));
 
-        lblFundType.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtFundType.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFundType, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 520, 130, -1));
+
+        lblFundType.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblFundType.setText("Type :");
+        add(lblFundType, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBack)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(262, 262, 262)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblFundsRequired)
-                                    .addComponent(lblFundDesc)
-                                    .addComponent(lblFundName))
-                                .addGap(32, 32, 32)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtFundName)
-                                    .addComponent(txtFundDesc)
-                                    .addComponent(txtFundsRequired, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnAddService)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblFundType)
-                                    .addGap(32, 32, 32)
-                                    .addComponent(txtFundType, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(98, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(btnBack)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtFundName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblFundName))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtFundDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblFundDesc))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFundsRequired)
-                    .addComponent(txtFundsRequired, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFundType)
-                    .addComponent(txtFundType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnAddService)
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+        jLabel1.setText("Create a Cause");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/donate-image.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 650, 390));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/donatehome.jpg"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 310, 650, 430));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddServiceActionPerformed
@@ -246,6 +232,10 @@ public class FundRaisingCausesJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
+    private void txtFundNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFundNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFundNameActionPerformed
+
     private void populateCausesTable() {
         DefaultTableModel model = (DefaultTableModel) tblFunds.getModel();
         model.setRowCount(0);
@@ -268,6 +258,9 @@ public class FundRaisingCausesJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddService;
     private javax.swing.JButton btnBack;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblFundDesc;
     private javax.swing.JLabel lblFundName;

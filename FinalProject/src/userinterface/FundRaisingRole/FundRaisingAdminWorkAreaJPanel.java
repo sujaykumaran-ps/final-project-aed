@@ -43,44 +43,58 @@ public class FundRaisingAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnCheckStatus = new javax.swing.JButton();
         lblFundNameTitle = new javax.swing.JLabel();
         lblFundName = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        titleResAdmin.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        titleResAdmin.setText("SnowClearingOrg Admin");
-        add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, -1, -1));
+        titleResAdmin.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        titleResAdmin.setText("Fund Raising Org Admin");
+        add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, -1, -1));
 
+        btnFundEntInfo.setBackground(new java.awt.Color(133, 211, 255));
+        btnFundEntInfo.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnFundEntInfo.setText("Manage Fund Raising Enterprise Info");
         btnFundEntInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFundEntInfoActionPerformed(evt);
             }
         });
-        add(btnFundEntInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 220, -1));
+        add(btnFundEntInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 405, 250, 30));
 
+        btnManageCauses.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageCauses.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnManageCauses.setText("Manage Fund Raising Causes");
         btnManageCauses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageCausesActionPerformed(evt);
             }
         });
-        add(btnManageCauses, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 180, -1));
+        add(btnManageCauses, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 355, 250, 30));
 
+        btnCheckStatus.setBackground(new java.awt.Color(133, 211, 255));
+        btnCheckStatus.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnCheckStatus.setText("Check Funds Status");
         btnCheckStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCheckStatusActionPerformed(evt);
             }
         });
-        add(btnCheckStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
+        add(btnCheckStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 250, 30));
 
-        lblFundNameTitle.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        lblFundNameTitle.setText("Fund Raising Enterprise Name :");
-        add(lblFundNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 270, 30));
+        lblFundNameTitle.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        lblFundNameTitle.setText("Fund Raising Org Name :");
+        add(lblFundNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, 210, 30));
 
-        lblFundName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        add(lblFundName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 170, 30));
+        lblFundName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        add(lblFundName, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 160, 240, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/donate-image.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 470, 680));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/donatehome.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 100, 580, 510));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFundEntInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFundEntInfoActionPerformed
@@ -110,6 +124,8 @@ public class FundRaisingAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCheckStatus;
     private javax.swing.JButton btnFundEntInfo;
     private javax.swing.JButton btnManageCauses;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblFundName;
     private javax.swing.JLabel lblFundNameTitle;
     private javax.swing.JLabel titleResAdmin;

@@ -61,120 +61,90 @@ public class ManageFundRaisingInfoJPanel extends javax.swing.JPanel {
         lblFundRaisingName = new javax.swing.JLabel();
         lblFundRaisingAddress = new javax.swing.JLabel();
         lblFundRaisingPhone = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtFundRaisingName.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFundRaisingName, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 228, 130, -1));
+
+        txtFundRaisingAddress.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFundRaisingAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 268, 130, -1));
+
+        txtFundRaisingPhNum.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         txtFundRaisingPhNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFundRaisingPhNumActionPerformed(evt);
             }
         });
+        add(txtFundRaisingPhNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 302, 130, -1));
 
+        btnSave.setBackground(new java.awt.Color(133, 211, 255));
+        btnSave.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 387, -1, -1));
 
+        btnUpdate.setBackground(new java.awt.Color(133, 211, 255));
+        btnUpdate.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 387, -1, -1));
 
-        titleFundRaisingOrg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleFundRaisingOrg.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         titleFundRaisingOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleFundRaisingOrg.setText("Manage Fund Raising Org Info");
+        add(titleFundRaisingOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 115, 1300, -1));
 
-        lblFundRaisingEmail.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblFundRaisingEmail.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblFundRaisingEmail.setText("Email:");
+        add(lblFundRaisingEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(623, 338, -1, -1));
 
-        btnBack.setText("<< Back");
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnBack.setText("<<");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 47, -1, -1));
 
+        txtFundRaisingEmail.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         txtFundRaisingEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFundRaisingEmailActionPerformed(evt);
             }
         });
+        add(txtFundRaisingEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 335, 130, -1));
 
-        lblFundRaisingName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblFundRaisingName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblFundRaisingName.setText("Fund Raising Org Name :");
+        add(lblFundRaisingName, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 231, -1, -1));
 
-        lblFundRaisingAddress.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblFundRaisingAddress.setText("Fund Raising Org Address :");
+        lblFundRaisingAddress.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        lblFundRaisingAddress.setText("Location:");
+        add(lblFundRaisingAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 271, -1, -1));
 
-        lblFundRaisingPhone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblFundRaisingPhone.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblFundRaisingPhone.setText(" Phone Number :");
+        add(lblFundRaisingPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(562, 308, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(280, 280, 280)
-                .addComponent(btnUpdate)
-                .addGap(18, 18, 18)
-                .addComponent(btnSave)
-                .addContainerGap(341, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(btnBack))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(155, 155, 155)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblFundRaisingPhone)
-                                    .addComponent(lblFundRaisingAddress)
-                                    .addComponent(lblFundRaisingName)
-                                    .addComponent(lblFundRaisingEmail))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtFundRaisingName)
-                                    .addComponent(txtFundRaisingAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(txtFundRaisingPhNum, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(txtFundRaisingEmail))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(titleFundRaisingOrg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(btnBack)
-                .addGap(43, 43, 43)
-                .addComponent(titleFundRaisingOrg)
-                .addGap(70, 70, 70)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtFundRaisingPhNum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblFundRaisingName)
-                            .addComponent(txtFundRaisingName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblFundRaisingAddress)
-                            .addComponent(txtFundRaisingAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(lblFundRaisingPhone)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFundRaisingEmail)
-                    .addComponent(txtFundRaisingEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSave)
-                    .addComponent(btnUpdate))
-                .addContainerGap(148, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/donate-image.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 490, 500, 320));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/donatehome.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 640, 490));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtFundRaisingPhNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFundRaisingPhNumActionPerformed
@@ -273,6 +243,8 @@ public class ManageFundRaisingInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblFundRaisingAddress;
     private javax.swing.JLabel lblFundRaisingEmail;
     private javax.swing.JLabel lblFundRaisingName;

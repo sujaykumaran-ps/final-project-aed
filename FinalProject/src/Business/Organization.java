@@ -34,6 +34,7 @@ public abstract class Organization {
         Member("Member"),
         FieldWorker("FieldWorker"),
         DeliveryVolunteer("DeliveryVolunteer"),
+        EmergencyDistressOrg("EmergencyDistressOrg"),
         FundRaising("FundRaising"),
         LeafClearingOrg("LeafClearingOrg"),
         SoupKitchenOrg("SoupKitchenOrg"),

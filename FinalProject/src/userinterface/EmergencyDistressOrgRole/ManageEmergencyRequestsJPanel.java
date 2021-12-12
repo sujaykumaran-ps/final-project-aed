@@ -9,7 +9,7 @@ import Business.EcoSystem;
 import Business.EmergencyDistressOrg.EmergencyService;
 import Business.EmergencyDistressOrg.EmergencyDistressOrg;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
+import Business.WorkQueue.EmergencyWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -121,39 +121,40 @@ public class ManageEmergencyRequestsJPanel extends javax.swing.JPanel {
                         .addContainerGap()
                         .addComponent(titleManageRequest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(41, 41, 41)
-                                .addComponent(btnBack))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(220, 220, 220)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnRefresh)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(41, 41, 41)
+                        .addComponent(btnBack)
+                        .addGap(0, 1234, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(444, 444, 444)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnAssign, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnRefresh)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(224, 224, 224)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnAssign, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(356, 356, 356))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(118, 118, 118)
                 .addComponent(btnBack)
                 .addGap(37, 37, 37)
                 .addComponent(titleManageRequest)
-                .addGap(33, 33, 33)
+                .addGap(81, 81, 81)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRefresh)
                 .addGap(56, 56, 56)
                 .addComponent(btnAssign)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnView))
+                .addComponent(btnView)
+                .addContainerGap(265, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -176,7 +177,7 @@ public class ManageEmergencyRequestsJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please select a row from the table to view details", "Warning",JOptionPane.WARNING_MESSAGE);
         }
         else{
-            WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);
+            EmergencyWorkRequest request  = (EmergencyWorkRequest)tblRequests.getValueAt(selectedRow, 0);
             if(request.getStatus().equals("Assigned Field Worker") || request.getStatus().equals("Completed") || request.getStatus().equals("In Progress")){
                 JOptionPane.showMessageDialog(null,"Already Assigned for Request !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }else if(request.getStatus().equals("Request Cancelled")){
@@ -198,7 +199,7 @@ public class ManageEmergencyRequestsJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Please select a row from the table to view details", "Warning",JOptionPane.WARNING_MESSAGE);
         }
         else{
-            WorkRequest request  = (WorkRequest)tblRequests.getValueAt(selectedRow, 0);
+            EmergencyWorkRequest request  = (EmergencyWorkRequest)tblRequests.getValueAt(selectedRow, 0);
             if(request.getStatus().equals("In Progress") || request.getStatus().equals("Completed")){
                 JOptionPane.showMessageDialog(null, "Request Completed or In Progress !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }else{
@@ -215,11 +216,11 @@ private void populateRequestsTable() {
         model.setRowCount(0);               
         for (EmergencyDistressOrg org:system.getEmergencyDistressOrgDirectory().getEmergencyDistressOrgList()) {          
             if (org.getUserName().equals(account.getUsername())) {
-               for(WorkRequest service:org.getRequestList()){
+               for(EmergencyWorkRequest service:org.getRequestList()){
                 Object[] row = new Object[4];
                 row[0] = service;
                 row[1] = service.getMemName();
-                row[2] = service.getServiceAddress();
+                row[2] = service.getPickupAddress();
                 row[3] = service.getStatus();
                 model.addRow(row);
                }                

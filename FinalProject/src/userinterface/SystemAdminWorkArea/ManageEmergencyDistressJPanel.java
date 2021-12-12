@@ -5,9 +5,9 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.DeliveryVolunteer.DeliveryVolunteer;
 import Business.EcoSystem;
-import Business.Role.DeliveryVolunteerRole;
+import Business.EmergencyDistressOrg.EmergencyDistressOrg;
+import Business.Role.EmergencyDistressOrgRole;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -20,20 +20,20 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sujay
  */
-public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
+public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageDeliveryVolunteerJPanel
+     * Creates new form ManageEmergencyDistressJPanel
      */
     private JPanel userProcessContainer;
     private EcoSystem system;
     private UserAccount user;
-    public ManageDeliveryVolunteerJPanel(JPanel userProcessContainer,EcoSystem system) {
+    public ManageEmergencyDistressJPanel(JPanel userProcessContainer,EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-        populateVolunteerTable();
-        btnUpdateVol.setEnabled(false);
+        populateEmergencyOrgTable();
+        btnUpdateFW.setEnabled(false);
     }
 
     /**
@@ -46,22 +46,22 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblVolunteer = new javax.swing.JTable();
-        txtVolunteer = new javax.swing.JTextField();
-        btnVolBack = new javax.swing.JButton();
-        btnSubmitVol = new javax.swing.JButton();
-        lblVolunteerName = new javax.swing.JLabel();
+        tblFieldWorker = new javax.swing.JTable();
+        txtFieldWorker = new javax.swing.JTextField();
+        btnFWBack = new javax.swing.JButton();
+        btnSubmitFW = new javax.swing.JButton();
+        lblFieldWorkerName = new javax.swing.JLabel();
         txtFieldWorkerUsername = new javax.swing.JTextField();
         lblDelPassword = new javax.swing.JLabel();
         txtFieldWorkerPassword = new javax.swing.JPasswordField();
-        btnViewVol = new javax.swing.JButton();
-        btnDeleteVol = new javax.swing.JButton();
+        btnViewFW = new javax.swing.JButton();
+        btnDeleteFW = new javax.swing.JButton();
         lblDelUsername = new javax.swing.JLabel();
         titleManageDeliveryMan = new javax.swing.JLabel();
-        btnUpdateVol = new javax.swing.JButton();
-        btnRefreshVol = new javax.swing.JButton();
+        btnUpdateFW = new javax.swing.JButton();
+        btnRefreshFW = new javax.swing.JButton();
 
-        tblVolunteer.setModel(new javax.swing.table.DefaultTableModel(
+        tblFieldWorker.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -69,7 +69,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Volunteer Name", "Username", "Password"
+                "Emergency Org Name", "Username", "Password"
             }
         ) {
             Class[] types = new Class [] {
@@ -87,42 +87,42 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblVolunteer);
+        jScrollPane1.setViewportView(tblFieldWorker);
 
-        btnVolBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnVolBack.setText("<< ");
-        btnVolBack.setMaximumSize(new java.awt.Dimension(147, 29));
-        btnVolBack.setMinimumSize(new java.awt.Dimension(147, 29));
-        btnVolBack.addActionListener(new java.awt.event.ActionListener() {
+        btnFWBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnFWBack.setText("<< Back");
+        btnFWBack.setMaximumSize(new java.awt.Dimension(147, 29));
+        btnFWBack.setMinimumSize(new java.awt.Dimension(147, 29));
+        btnFWBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVolBackActionPerformed(evt);
+                btnFWBackActionPerformed(evt);
             }
         });
 
-        btnSubmitVol.setText("Submit");
-        btnSubmitVol.addActionListener(new java.awt.event.ActionListener() {
+        btnSubmitFW.setText("Submit");
+        btnSubmitFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitVolActionPerformed(evt);
+                btnSubmitFWActionPerformed(evt);
             }
         });
 
-        lblVolunteerName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lblVolunteerName.setText("Volunteer Name:");
+        lblFieldWorkerName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblFieldWorkerName.setText("Emergency Org Name:");
 
         lblDelPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblDelPassword.setText("Password:");
 
-        btnViewVol.setText("View");
-        btnViewVol.addActionListener(new java.awt.event.ActionListener() {
+        btnViewFW.setText("View");
+        btnViewFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewVolActionPerformed(evt);
+                btnViewFWActionPerformed(evt);
             }
         });
 
-        btnDeleteVol.setText("Delete");
-        btnDeleteVol.addActionListener(new java.awt.event.ActionListener() {
+        btnDeleteFW.setText("Delete");
+        btnDeleteFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteVolActionPerformed(evt);
+                btnDeleteFWActionPerformed(evt);
             }
         });
 
@@ -131,21 +131,21 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
 
         titleManageDeliveryMan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageDeliveryMan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageDeliveryMan.setText("Manage FieldWorker ");
+        titleManageDeliveryMan.setText("Manage Emergency Distress Org");
 
-        btnUpdateVol.setText("Update");
-        btnUpdateVol.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdateFW.setText("Update");
+        btnUpdateFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateVolActionPerformed(evt);
+                btnUpdateFWActionPerformed(evt);
             }
         });
 
-        btnRefreshVol.setText("Refresh Table");
-        btnRefreshVol.setMaximumSize(new java.awt.Dimension(147, 29));
-        btnRefreshVol.setMinimumSize(new java.awt.Dimension(147, 29));
-        btnRefreshVol.addActionListener(new java.awt.event.ActionListener() {
+        btnRefreshFW.setText("Refresh Table");
+        btnRefreshFW.setMaximumSize(new java.awt.Dimension(147, 29));
+        btnRefreshFW.setMinimumSize(new java.awt.Dimension(147, 29));
+        btnRefreshFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRefreshVolActionPerformed(evt);
+                btnRefreshFWActionPerformed(evt);
             }
         });
 
@@ -153,102 +153,96 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(btnVolBack, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblDelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)
-                                .addComponent(txtFieldWorkerUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblDelPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(txtFieldWorkerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnUpdateVol)
-                                .addGap(13, 13, 13)
-                                .addComponent(btnSubmitVol, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 649, Short.MAX_VALUE)
-                        .addComponent(lblVolunteerName)
-                        .addGap(31, 31, 31)
-                        .addComponent(txtVolunteer, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(442, 442, 442))
+            .addGap(0, 1360, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(titleManageDeliveryMan, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(650, 922, Short.MAX_VALUE)
-                            .addComponent(btnRefreshVol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(130, 130, 130)
+                            .addComponent(btnFWBack, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(250, 525, Short.MAX_VALUE)
+                            .addGap(650, 650, 650)
+                            .addComponent(btnRefreshFW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(250, 250, 250)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(580, 868, Short.MAX_VALUE)
-                            .addComponent(btnViewVol)
+                            .addGap(580, 580, 580)
+                            .addComponent(btnViewFW)
                             .addGap(35, 35, 35)
-                            .addComponent(btnDeleteVol)))
-                    .addGap(0, 339, Short.MAX_VALUE))
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(titleManageDeliveryMan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
+                            .addComponent(btnDeleteFW))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(333, 333, 333)
+                            .addComponent(lblFieldWorkerName)
+                            .addGap(32, 32, 32)
+                            .addComponent(txtFieldWorker, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(400, 400, 400)
+                            .addComponent(lblDelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(31, 31, 31)
+                            .addComponent(txtFieldWorkerUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(400, 400, 400)
+                            .addComponent(lblDelPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(32, 32, 32)
+                            .addComponent(txtFieldWorkerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(490, 490, 490)
+                            .addComponent(btnUpdateFW)
+                            .addGap(13, 13, 13)
+                            .addComponent(btnSubmitFW, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(btnVolBack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 389, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtVolunteer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblVolunteerName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblDelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFieldWorkerUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblDelPassword)
-                    .addComponent(txtFieldWorkerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnUpdateVol)
-                    .addComponent(btnSubmitVol))
-                .addGap(190, 190, 190))
+            .addGap(0, 780, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 82, Short.MAX_VALUE)
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(titleManageDeliveryMan)
-                    .addGap(78, 78, 78)
-                    .addComponent(btnRefreshVol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(48, 48, 48)
+                    .addComponent(btnFWBack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(7, 7, 7)
+                    .addComponent(btnRefreshFW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(27, 27, 27)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(19, 19, 19)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnViewVol)
-                        .addComponent(btnDeleteVol))
-                    .addGap(0, 415, Short.MAX_VALUE)))
+                        .addComponent(btnViewFW)
+                        .addComponent(btnDeleteFW))
+                    .addGap(37, 37, 37)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblFieldWorkerName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtFieldWorker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(10, 10, 10)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblDelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtFieldWorkerUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(20, 20, 20)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblDelPassword)
+                        .addComponent(txtFieldWorkerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(20, 20, 20)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnUpdateFW)
+                        .addComponent(btnSubmitFW))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnVolBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolBackActionPerformed
+    private void btnFWBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFWBackActionPerformed
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
         SystemAdminWorkAreaJPanel sysAdmin = (SystemAdminWorkAreaJPanel) component;
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnVolBackActionPerformed
+    }//GEN-LAST:event_btnFWBackActionPerformed
 
-    private void btnSubmitVolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitVolActionPerformed
-        String name = txtVolunteer.getText();
+    private void btnSubmitFWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitFWActionPerformed
+        String name = txtFieldWorker.getText();
         String username = txtFieldWorkerUsername.getText();
         String password = txtFieldWorkerPassword.getText();
 
@@ -293,20 +287,20 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Username Already Exists ! Please enter a different Username !!!");
         }else{
 
-            UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, password, null, new DeliveryVolunteerRole());
-            DeliveryVolunteer volunteer= system.getDeliveryVolunteerDirectory().createVolunteer(name, username);
+            UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, password, null, new EmergencyDistressOrgRole());
+            EmergencyDistressOrg emg= system.getEmergencyDistressOrgDirectory().createEmergencyDistressOrgInfo(username);
 
-            populateVolunteerTable();
+            populateEmergencyOrgTable();
 
-            txtVolunteer.setText("");
+            txtFieldWorker.setText("");
             txtFieldWorkerUsername.setText("");
             txtFieldWorkerPassword.setText("");
         }
-    }//GEN-LAST:event_btnSubmitVolActionPerformed
+    }//GEN-LAST:event_btnSubmitFWActionPerformed
 
-    private void btnViewVolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewVolActionPerformed
+    private void btnViewFWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewFWActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblVolunteer.getSelectedRow();
+        int selectedRow = tblFieldWorker.getSelectedRow();
 
         if(selectedRow < 0) {
             JOptionPane.showMessageDialog(this, "Please select a Field Worker Detail to View !!!");
@@ -314,25 +308,25 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         }
 
         else{
-            String username = (String) tblVolunteer.getValueAt(selectedRow, 1);
-            String pwd = (String) tblVolunteer.getValueAt(selectedRow, 2);
+            String username = (String) tblFieldWorker.getValueAt(selectedRow, 1);
+            String pwd = (String) tblFieldWorker.getValueAt(selectedRow, 2);
             user = system.getUserAccountDirectory().authenticateUser(username, pwd);
 
-            txtVolunteer.setText(user.getName()+"");
+            txtFieldWorker.setText(user.getName()+"");
             txtFieldWorkerUsername.setText(user.getUsername()+"");
             txtFieldWorkerPassword.setText(user.getPassword()+"");
 
         }
 
-        btnSubmitVol.setEnabled(false);
-        btnDeleteVol.setEnabled(false);
-        btnViewVol.setEnabled(false);
-        btnUpdateVol.setEnabled(true);
-    }//GEN-LAST:event_btnViewVolActionPerformed
+        btnSubmitFW.setEnabled(false);
+        btnDeleteFW.setEnabled(false);
+        btnViewFW.setEnabled(false);
+        btnUpdateFW.setEnabled(true);
+    }//GEN-LAST:event_btnViewFWActionPerformed
 
-    private void btnDeleteVolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteVolActionPerformed
+    private void btnDeleteFWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteFWActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblVolunteer.getSelectedRow();
+        int selectedRow = tblFieldWorker.getSelectedRow();
 
         if(selectedRow < 0) {
             JOptionPane.showMessageDialog(this, "Please select a Delivery Person Detail to Delete !!!");
@@ -342,21 +336,21 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
             int selectionButton = JOptionPane.YES_NO_OPTION;
             int selectionResult = JOptionPane.showConfirmDialog(null, "Are You Sure ???", "Warning", selectionButton);
             if(selectionResult == JOptionPane.YES_OPTION){
-                String username = (String) tblVolunteer.getValueAt(selectedRow, 1);
-                String pwd = (String) tblVolunteer.getValueAt(selectedRow, 2);
+                String username = (String) tblFieldWorker.getValueAt(selectedRow, 1);
+                String pwd = (String) tblFieldWorker.getValueAt(selectedRow, 2);
 
                 UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
                 system.getUserAccountDirectory().deleteUserAccount(user);
                 //system.getDeliveryManDirectory().deleteDeliveryMan(user.getUsername());
                 system.getFieldWorkerDirectory();
-                populateVolunteerTable();
+                populateEmergencyOrgTable();
             }
         }
-    }//GEN-LAST:event_btnDeleteVolActionPerformed
+    }//GEN-LAST:event_btnDeleteFWActionPerformed
 
-    private void btnUpdateVolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateVolActionPerformed
+    private void btnUpdateFWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateFWActionPerformed
         // TODO add your handling code here:
-        String name = txtVolunteer.getText();
+        String name = txtFieldWorker.getText();
         String username = txtFieldWorkerUsername.getText();
         String password = txtFieldWorkerPassword.getText();
 
@@ -398,47 +392,47 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         }
 
         system.getUserAccountDirectory().updateUserAccount(user, name, username, password);
-        populateVolunteerTable();
-        btnSubmitVol.setEnabled(true);
-        btnDeleteVol.setEnabled(true);
-        btnViewVol.setEnabled(true);
-        btnUpdateVol.setEnabled(false);
-        txtVolunteer.setText("");
+        populateEmergencyOrgTable();
+        btnSubmitFW.setEnabled(true);
+        btnDeleteFW.setEnabled(true);
+        btnViewFW.setEnabled(true);
+        btnUpdateFW.setEnabled(false);
+        txtFieldWorker.setText("");
         txtFieldWorkerUsername.setText("");
         txtFieldWorkerPassword.setText("");
-    }//GEN-LAST:event_btnUpdateVolActionPerformed
+    }//GEN-LAST:event_btnUpdateFWActionPerformed
 
-    private void btnRefreshVolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshVolActionPerformed
+    private void btnRefreshFWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshFWActionPerformed
         // TODO add your handling code here:
-        populateVolunteerTable();
-    }//GEN-LAST:event_btnRefreshVolActionPerformed
+        populateEmergencyOrgTable();
+    }//GEN-LAST:event_btnRefreshFWActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnDeleteVol;
-    private javax.swing.JButton btnRefreshVol;
-    private javax.swing.JButton btnSubmitVol;
-    private javax.swing.JButton btnUpdateVol;
-    private javax.swing.JButton btnViewVol;
-    private javax.swing.JButton btnVolBack;
+    private javax.swing.JButton btnDeleteFW;
+    private javax.swing.JButton btnFWBack;
+    private javax.swing.JButton btnRefreshFW;
+    private javax.swing.JButton btnSubmitFW;
+    private javax.swing.JButton btnUpdateFW;
+    private javax.swing.JButton btnViewFW;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblDelPassword;
     private javax.swing.JLabel lblDelUsername;
-    private javax.swing.JLabel lblVolunteerName;
-    private javax.swing.JTable tblVolunteer;
+    private javax.swing.JLabel lblFieldWorkerName;
+    private javax.swing.JTable tblFieldWorker;
     private javax.swing.JLabel titleManageDeliveryMan;
+    private javax.swing.JTextField txtFieldWorker;
     private javax.swing.JPasswordField txtFieldWorkerPassword;
     private javax.swing.JTextField txtFieldWorkerUsername;
-    private javax.swing.JTextField txtVolunteer;
     // End of variables declaration//GEN-END:variables
 
-    private void populateVolunteerTable() {
-        DefaultTableModel model = (DefaultTableModel) tblVolunteer.getModel();
+    private void populateEmergencyOrgTable() {
+        DefaultTableModel model = (DefaultTableModel) tblFieldWorker.getModel();
         model.setRowCount(0);
         
         for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
            
-            if ("Business.Role.DeliveryVolunteerRole".equals(user.getRole().getClass().getName())) {
+            if ("Business.Role.EmergencyDistressOrgRole".equals(user.getRole().getClass().getName())) {
                 Object[] row = new Object[3]; 
                 row[0] = user.getName();
                 row[1] = user.getUsername();
@@ -447,5 +441,6 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
                 model.addRow(row);
             }
             
-        }    }
+        }
+    }
 }

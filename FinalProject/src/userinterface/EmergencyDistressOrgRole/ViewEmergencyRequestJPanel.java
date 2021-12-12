@@ -8,7 +8,7 @@ import Business.Member.Member;
 import Business.EcoSystem;
 import Business.EmergencyDistressOrg.EmergencyService;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
+import Business.WorkQueue.EmergencyWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -20,12 +20,12 @@ import javax.swing.table.DefaultTableModel;
 public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private UserAccount account;
-    WorkRequest request;
+    EmergencyWorkRequest request;
     EcoSystem system;
     /**
      * Creates new form ViewEmergencyRequestJPanel
      */
-    public ViewEmergencyRequestJPanel(JPanel userProcessContainer, UserAccount account, WorkRequest request, EcoSystem system) {
+    public ViewEmergencyRequestJPanel(JPanel userProcessContainer, UserAccount account, EmergencyWorkRequest request, EcoSystem system) {
         initComponents();
                 this.userProcessContainer = userProcessContainer;
         this.account = account;
@@ -165,13 +165,13 @@ public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
 
         Object[] row = new Object[3];
-                for(EmergencyService serv:request.getEmergencyRequest()){
+                for(EmergencyService serv:request.getService()){
                      row[0] = serv;
                      row[1] = serv.getServiceDescription();
                      row[2] = serv.getServiceType();
                      model.addRow(row);
                 }
-        txtIns.setText(request.getMessage());
+        txtIns.setText(request.getIssue());
     }
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
@@ -179,7 +179,7 @@ public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
             request.setStatus("Request Cancelled");
             for(Member mem:system.getMemberDirectory().getMemberList()){
                 if(request.getMemName().equals(mem.getMemUsername())){
-                    for(WorkRequest req : mem.getRequestList()){
+                    for(EmergencyWorkRequest req : mem.getEmgRequestList()){
                         if(req.getStatus().equals("New Request")) {
                             req.setStatus("Request Cancelled");
                         }
@@ -213,7 +213,7 @@ public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
             request.setStatus("In Progress");
             for(Member mem:system.getMemberDirectory().getMemberList()){
                 if(request.getMemName().equals(mem.getMemUsername())){
-                    for(WorkRequest request : mem.getRequestList()){
+                    for(EmergencyWorkRequest request : mem.getEmgRequestList()){
                         if(request.getStatus().equals("Assigned Field Worker")) {
                             request.setStatus("In Progress");
                         }

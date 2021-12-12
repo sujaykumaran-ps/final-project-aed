@@ -11,7 +11,7 @@ import Business.Member.Member;
 import Business.FieldWorker.FieldWorker;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
+import Business.WorkQueue.EmergencyWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -23,12 +23,12 @@ import javax.swing.table.DefaultTableModel;
 public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private UserAccount account;
-    WorkRequest request;
+    EmergencyWorkRequest request;
     EcoSystem system;
     /**
      * Creates new form EmergencyFieldWorkRequestJPanel
      */
-    public EmergencyFieldWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, WorkRequest request, EcoSystem system) {
+    public EmergencyFieldWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, EmergencyWorkRequest request, EcoSystem system) {
         this.userProcessContainer = userProcessContainer;
         this.account = account;
         this.request = request;
@@ -154,13 +154,13 @@ public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
         else
         {
 
-            FieldWorker fieldWorker  = (FieldWorker)FieldWorkerJTable.getValueAt(selectedRow, 0);
-            fieldWorker.getRequestList().add(request);
-            request.setStatus("Assigned Field Worker");
+//            AmbulanceDriver fieldWorker  = (FieldWorker)FieldWorkerJTable.getValueAt(selectedRow, 0);
+//            fieldWorker.getRequestList().add(request);
+//            request.setStatus("Assigned Field Worker");
 
             for(Member member:system.getMemberDirectory().getMemberList()){
                 if(request.getMemName().equals(member.getMemUsername())){
-                    for(WorkRequest request : member.getRequestList()){
+                    for(EmergencyWorkRequest request : member.getEmgRequestList()){
                         if(request.getStatus().equals("New Request")){
                             request.setStatus("Assigned Field Worker");
                         }

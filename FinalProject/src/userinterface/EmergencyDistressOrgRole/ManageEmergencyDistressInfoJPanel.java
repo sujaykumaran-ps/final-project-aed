@@ -24,7 +24,7 @@ public class ManageEmergencyDistressInfoJPanel extends javax.swing.JPanel {
      */
     public ManageEmergencyDistressInfoJPanel(JPanel userProcessContainer,UserAccount account, EcoSystem system) {
         initComponents();
-                this.account=account;
+        this.account=account;
         this.system=system;
         this.userProcessContainer=userProcessContainer;
         

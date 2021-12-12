@@ -99,7 +99,7 @@ public class ManageSoupKitchenOrgJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblSoupKitchenOrg);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, -1, 117));
-        add(txtSoupOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 450, 144, -1));
+        add(txtSoupOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 450, 144, -1));
 
         btnManageSoupOrgBack.setBackground(new java.awt.Color(133, 211, 255));
         btnManageSoupOrgBack.setText("<< Back");
@@ -121,13 +121,13 @@ public class ManageSoupKitchenOrgJPanel extends javax.swing.JPanel {
 
         lblSoupKitchen.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblSoupKitchen.setText("Soup Kitchen Name:");
-        add(lblSoupKitchen, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 460, -1, -1));
-        add(txtSoupOrgUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 490, 144, -1));
-        add(txtSoupOrgPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 520, 144, -1));
+        add(lblSoupKitchen, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 460, -1, -1));
+        add(txtSoupOrgUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 490, 144, -1));
+        add(txtSoupOrgPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 520, 144, -1));
 
         lblSoupPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblSoupPassword.setText("Password:");
-        add(lblSoupPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, -1, -1));
+        add(lblSoupPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 530, -1, -1));
 
         btnUpdateSoupOrg.setBackground(new java.awt.Color(133, 211, 255));
         btnUpdateSoupOrg.setText("Update");
@@ -149,7 +149,7 @@ public class ManageSoupKitchenOrgJPanel extends javax.swing.JPanel {
 
         lblSoupUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblSoupUsername.setText("Username:");
-        add(lblSoupUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 490, -1, 20));
+        add(lblSoupUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, -1, 20));
 
         titleManageRestaurants.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

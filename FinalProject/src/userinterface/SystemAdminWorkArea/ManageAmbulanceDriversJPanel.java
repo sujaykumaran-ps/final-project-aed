@@ -61,6 +61,7 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
         btnRefreshFW = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblFieldWorker.setModel(new javax.swing.table.DefaultTableModel(
@@ -173,7 +174,7 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Ambulance-Loop-1.gif"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 640));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 780));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFWBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFWBackActionPerformed

@@ -182,7 +182,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/FoodDelivery.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 530));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 660));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVolBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolBackActionPerformed

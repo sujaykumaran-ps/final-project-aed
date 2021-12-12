@@ -59,16 +59,18 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
         txtServiceDesc = new javax.swing.JTextField();
         btnAddService = new javax.swing.JButton();
         titleManageService = new javax.swing.JLabel();
-        lblImageIcon3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblServiceDesc.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
         lblServiceDesc.setText("Description :");
+        add(lblServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 514, -1, -1));
 
         txtServiceType.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(txtServiceType, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 558, 194, 31));
 
         tblServices.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -100,13 +102,18 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblServices);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 339, 638, 107));
+
         lblServiceName.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
         lblServiceName.setText("Service Name :");
+        add(lblServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 473, -1, -1));
 
         txtServiceName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(txtServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 464, 194, 31));
 
         lblType.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
         lblType.setText("Type :");
+        add(lblType, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 564, -1, -1));
 
         btnBack.setBackground(new java.awt.Color(255, 204, 102));
         btnBack.setText("<< Back");
@@ -115,8 +122,10 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 35, -1, 43));
 
         txtServiceDesc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(txtServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 507, 194, 32));
 
         btnAddService.setBackground(new java.awt.Color(255, 204, 102));
         btnAddService.setText("Add Service");
@@ -125,103 +134,18 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
                 btnAddServiceActionPerformed(evt);
             }
         });
+        add(btnAddService, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 601, -1, 40));
 
         titleManageService.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         titleManageService.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageService.setText("Manage Services");
+        add(titleManageService, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 118, 526, -1));
 
-        lblImageIcon3.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/leafClearing_icon_adobespark.jpeg")); // NOI18N
-        lblImageIcon3.setText("jLabel2");
-
-        jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/fall_leaves.jpeg")); // NOI18N
-        jLabel2.setText("jLabel2");
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/nagashreeseshadri/NetBeansProjects/final-project-aed/FinalProject/src/Images/fall_leaves.jpeg")); // NOI18N
-        jLabel1.setText("jLabel1");
         jLabel1.setPreferredSize(new java.awt.Dimension(1360, 780));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 647, 1354, 134));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 99, Short.MAX_VALUE)
-                                .addComponent(titleManageService, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(407, 407, 407))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(42, 42, 42)
-                                        .addComponent(btnBack))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(60, 60, 60)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(127, 127, 127)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(lblType)
-                                                    .addComponent(lblServiceDesc)
-                                                    .addComponent(lblServiceName))
-                                                .addGap(32, 32, 32)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(txtServiceName, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                                                    .addComponent(txtServiceDesc)
-                                                    .addComponent(txtServiceType)))))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(188, 188, 188)
-                                        .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(260, 260, 260)
-                                        .addComponent(btnAddService)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(titleManageService)
-                        .addGap(28, 28, 28)
-                        .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(lblServiceName))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(txtServiceName, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtServiceDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblServiceDesc))
-                        .addGap(19, 19, 19)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtServiceType, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblType))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnAddService, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LeafClearingOrg.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, -2, 1390, 790));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -304,7 +228,6 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblImageIcon3;
     private javax.swing.JLabel lblServiceDesc;
     private javax.swing.JLabel lblServiceName;
     private javax.swing.JLabel lblType;

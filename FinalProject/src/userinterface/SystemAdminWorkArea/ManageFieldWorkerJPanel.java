@@ -63,10 +63,13 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         titleManageDeliveryMan = new javax.swing.JLabel();
         btnUpdateFW = new javax.swing.JButton();
         btnRefreshFW = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblFieldWorker.setAutoCreateRowSorter(true);
+        tblFieldWorker.setBackground(new java.awt.Color(133, 211, 255));
         tblFieldWorker.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -95,8 +98,8 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblFieldWorker);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 496, 91));
-        add(txtFieldWorker, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, 144, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 496, 91));
+        add(txtFieldWorker, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 380, 144, -1));
 
         btnFWBack.setBackground(new java.awt.Color(133, 211, 255));
         btnFWBack.setText("<< Back");
@@ -109,57 +112,62 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         });
         add(btnFWBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, -1, -1));
 
+        btnSubmitFW.setBackground(new java.awt.Color(133, 211, 255));
         btnSubmitFW.setText("Submit");
         btnSubmitFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitFWActionPerformed(evt);
             }
         });
-        add(btnSubmitFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, -1, -1));
+        add(btnSubmitFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 490, -1, -1));
 
         lblFieldWorkerName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblFieldWorkerName.setText("Field Worker Name:");
-        add(lblFieldWorkerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, -1, 20));
-        add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, 144, -1));
+        add(lblFieldWorkerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, -1, 20));
+        add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 410, 144, -1));
 
         lblDelPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblDelPassword.setText("Password:");
-        add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, -1, -1));
-        add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, 144, -1));
+        add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 450, -1, -1));
+        add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 450, 144, -1));
 
+        btnViewFW.setBackground(new java.awt.Color(133, 211, 255));
         btnViewFW.setText("View");
         btnViewFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewFWActionPerformed(evt);
             }
         });
-        add(btnViewFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 320, -1, -1));
+        add(btnViewFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 320, -1, -1));
 
+        btnDeleteFW.setBackground(new java.awt.Color(133, 211, 255));
         btnDeleteFW.setText("Delete");
         btnDeleteFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteFWActionPerformed(evt);
             }
         });
-        add(btnDeleteFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, -1, -1));
+        add(btnDeleteFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 320, -1, -1));
 
         lblDelUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblDelUsername.setText("Username:");
-        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, -1, 20));
+        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, -1, 20));
 
         titleManageDeliveryMan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageDeliveryMan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageDeliveryMan.setText("Manage FieldWorker ");
+        titleManageDeliveryMan.setText("                  Manage FieldWorker ");
         add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 816, -1));
 
+        btnUpdateFW.setBackground(new java.awt.Color(133, 211, 255));
         btnUpdateFW.setText("Update");
         btnUpdateFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateFWActionPerformed(evt);
             }
         });
-        add(btnUpdateFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 490, -1, -1));
+        add(btnUpdateFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 490, -1, -1));
 
+        btnRefreshFW.setBackground(new java.awt.Color(133, 211, 255));
         btnRefreshFW.setText("Refresh Table");
         btnRefreshFW.setMaximumSize(new java.awt.Dimension(147, 29));
         btnRefreshFW.setMinimumSize(new java.awt.Dimension(147, 29));
@@ -168,7 +176,10 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
                 btnRefreshFWActionPerformed(evt);
             }
         });
-        add(btnRefreshFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, -1, -1));
+        add(btnRefreshFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 160, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SnowClearing_fieldworker.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -120, 1360, 900));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFWBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFWBackActionPerformed
@@ -372,6 +383,7 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmitFW;
     private javax.swing.JButton btnUpdateFW;
     private javax.swing.JButton btnViewFW;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblDelPassword;
     private javax.swing.JLabel lblDelUsername;

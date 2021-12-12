@@ -39,50 +39,99 @@ public class SoupKitchenAdminWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titleResAdmin = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         btnOrgInfo = new javax.swing.JButton();
         btnManageServices = new javax.swing.JButton();
         btnManageRequests = new javax.swing.JButton();
-        lblResNameTitle = new javax.swing.JLabel();
         lblSoupName = new javax.swing.JLabel();
+        titleLeafClearingAdmin = new javax.swing.JLabel();
+        titleLeafClearingAdmin1 = new javax.swing.JLabel();
+        lblImageIcon = new javax.swing.JLabel();
+        lblImageIcon1 = new javax.swing.JLabel();
+        lblImageIcon2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/soup-assortment-set-various-seasonal-260nw-1499877983.jpeg"))); // NOI18N
+        jLabel2.setText("jLabel1");
+        jLabel2.setPreferredSize(new java.awt.Dimension(1360, 780));
 
         setBackground(new java.awt.Color(252, 156, 52));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        titleResAdmin.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        titleResAdmin.setText("Soup Kitchen Org Admin");
-        add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, -1, -1));
-
-        btnOrgInfo.setText("Manage SnowClearingOrg Info");
+        btnOrgInfo.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        btnOrgInfo.setText("Manage SoupOrg Info");
         btnOrgInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrgInfoActionPerformed(evt);
             }
         });
-        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 220, -1));
+        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 480, 220, 50));
 
+        btnManageServices.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         btnManageServices.setText("Manage Services");
         btnManageServices.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageServicesActionPerformed(evt);
             }
         });
-        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 160, -1));
+        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 480, 200, 50));
 
+        btnManageRequests.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         btnManageRequests.setText("Manage Requests");
         btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageRequestsActionPerformed(evt);
             }
         });
-        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, 160, -1));
-
-        lblResNameTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblResNameTitle.setText("Soup Kitchen Name :");
-        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 190, 30));
+        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, 200, 50));
 
         lblSoupName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        add(lblSoupName, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 170, 30));
+        add(lblSoupName, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 200, 30));
+
+        titleLeafClearingAdmin.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleLeafClearingAdmin.setText("SOUP KITCHEN ORG ADMIN");
+        add(titleLeafClearingAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, -1, -1));
+
+        titleLeafClearingAdmin1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        titleLeafClearingAdmin1.setText("SOUP KITCHEN ENTERPRISE");
+        add(titleLeafClearingAdmin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, -1, -1));
+
+        lblImageIcon.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        lblImageIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Kitchen-icon-by-Zafreeloicon-542-580x386_adobespark.jpeg"))); // NOI18N
+        lblImageIcon.setText("jLabel2");
+        add(lblImageIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 300, 180));
+
+        lblImageIcon1.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        lblImageIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Requests_adobespark.jpeg"))); // NOI18N
+        lblImageIcon1.setText("jLabel2");
+        add(lblImageIcon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 280, 290, 180));
+
+        lblImageIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage_services_adobespark.png"))); // NOI18N
+        lblImageIcon2.setText("jLabel2");
+        add(lblImageIcon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 270, 230, 190));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/soup-assortment-set-various-seasonal-260nw-1499877983.jpeg"))); // NOI18N
+        jLabel3.setText("jLabel1");
+        jLabel3.setPreferredSize(new java.awt.Dimension(1360, 780));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 680, 220));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/soup-assortment-set-various-seasonal-260nw-1499877983.jpeg"))); // NOI18N
+        jLabel4.setText("jLabel1");
+        jLabel4.setPreferredSize(new java.awt.Dimension(1360, 780));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 220));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/soup-assortment-set-various-seasonal-260nw-1499877983.jpeg"))); // NOI18N
+        jLabel5.setText("jLabel1");
+        jLabel5.setPreferredSize(new java.awt.Dimension(1360, 780));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 560, 680, 220));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/soup-assortment-set-various-seasonal-260nw-1499877983.jpeg"))); // NOI18N
+        jLabel6.setText("jLabel1");
+        jLabel6.setPreferredSize(new java.awt.Dimension(1360, 780));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 680, 220));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgInfoActionPerformed
@@ -112,9 +161,17 @@ public class SoupKitchenAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageRequests;
     private javax.swing.JButton btnManageServices;
     private javax.swing.JButton btnOrgInfo;
-    private javax.swing.JLabel lblResNameTitle;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel lblImageIcon;
+    private javax.swing.JLabel lblImageIcon1;
+    private javax.swing.JLabel lblImageIcon2;
     private javax.swing.JLabel lblSoupName;
-    private javax.swing.JLabel titleResAdmin;
+    private javax.swing.JLabel titleLeafClearingAdmin;
+    private javax.swing.JLabel titleLeafClearingAdmin1;
     // End of variables declaration//GEN-END:variables
     
 }

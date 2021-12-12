@@ -64,26 +64,27 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         titleManageCustomers = new javax.swing.JLabel();
         btnUpdateMember = new javax.swing.JButton();
         btnRefreshMem = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblMembers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Member Name", "Username", "Password"
+                "Member Name", "Username"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -96,81 +97,95 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblMembers);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, 496, 91));
-        add(txtMemName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 400, 144, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 560, 91));
+        add(txtMemName, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 360, 144, -1));
 
+        btnCusBack.setBackground(new java.awt.Color(133, 211, 255));
         btnCusBack.setText("<< ");
         btnCusBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCusBackActionPerformed(evt);
             }
         });
-        add(btnCusBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
+        add(btnCusBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
+        btnSubmitMember.setBackground(new java.awt.Color(133, 211, 255));
+        btnSubmitMember.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnSubmitMember.setText("Submit");
         btnSubmitMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitMemberActionPerformed(evt);
             }
         });
-        add(btnSubmitMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 520, -1, -1));
+        add(btnSubmitMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 480, -1, -1));
 
-        lblCusName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblCusName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblCusName.setText("Member Name:");
-        add(lblCusName, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 400, -1, -1));
-        add(txtMemUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, 144, -1));
+        add(lblCusName, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 360, -1, -1));
+        add(txtMemUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 390, 144, -1));
 
-        lblCusPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblCusPassword.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblCusPassword.setText("Password:");
-        add(lblCusPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 470, -1, -1));
+        add(lblCusPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 430, -1, -1));
 
         txtMemPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMemPasswordActionPerformed(evt);
             }
         });
-        add(txtMemPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 470, 144, -1));
+        add(txtMemPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, 144, -1));
 
+        btnViewMember.setBackground(new java.awt.Color(133, 211, 255));
+        btnViewMember.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnViewMember.setText("View");
         btnViewMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewMemberActionPerformed(evt);
             }
         });
-        add(btnViewMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, -1, -1));
+        add(btnViewMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, -1, -1));
 
+        btnDeleteMember.setBackground(new java.awt.Color(133, 211, 255));
+        btnDeleteMember.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnDeleteMember.setText("Delete");
         btnDeleteMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteMemberActionPerformed(evt);
             }
         });
-        add(btnDeleteMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 340, -1, -1));
+        add(btnDeleteMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 300, -1, -1));
 
-        lblCusUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblCusUsername.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblCusUsername.setText("Username:");
-        add(lblCusUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, -1, 20));
+        add(lblCusUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, -1, 20));
 
-        titleManageCustomers.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleManageCustomers.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleManageCustomers.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageCustomers.setText("Member SignUp");
-        add(titleManageCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 1260, -1));
+        add(titleManageCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 1100, 40));
 
+        btnUpdateMember.setBackground(new java.awt.Color(133, 211, 255));
+        btnUpdateMember.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnUpdateMember.setText("Update");
         btnUpdateMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateMemberActionPerformed(evt);
             }
         });
-        add(btnUpdateMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 520, -1, -1));
+        add(btnUpdateMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 480, -1, -1));
 
+        btnRefreshMem.setBackground(new java.awt.Color(133, 211, 255));
+        btnRefreshMem.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnRefreshMem.setText("Refresh Table");
         btnRefreshMem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshMemActionPerformed(evt);
             }
         });
-        add(btnRefreshMem, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 200, -1, -1));
+        add(btnRefreshMem, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 150, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/member.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 420, 210));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCusBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCusBackActionPerformed
@@ -358,10 +373,9 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
            
             if ("Business.Role.MemberRole".equals(user.getRole().getClass().getName())) {
-                Object[] row = new Object[3]; 
+                Object[] row = new Object[2]; 
                 row[0] = user.getName();
                 row[1] = user.getUsername();
-                row[2] = user.getPassword();
                 
                 model.addRow(row);
             }
@@ -378,6 +392,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmitMember;
     private javax.swing.JButton btnUpdateMember;
     private javax.swing.JButton btnViewMember;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCusName;
     private javax.swing.JLabel lblCusPassword;

@@ -5,9 +5,9 @@
  */
 package userinterface.SystemAdminWorkArea;
 
+import Business.Ambulance.Ambulance;
 import Business.EcoSystem;
-import Business.EmergencyDistressOrg.EmergencyDistressOrg;
-import Business.Role.EmergencyDistressOrgRole;
+import Business.Role.AmbulanceRole;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -20,20 +20,19 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sujay
  */
-public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
+public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageEmergencyDistressJPanel
+     * Creates new form ManageAmbulanceDriversJPanel
      */
-    private JPanel userProcessContainer;
+     private JPanel userProcessContainer;
     private EcoSystem system;
     private UserAccount user;
-    public ManageEmergencyDistressJPanel(JPanel userProcessContainer,EcoSystem system) {
+    public ManageAmbulanceDriversJPanel(JPanel userProcessContainer,EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-        populateEmergencyOrgTable();
-        btnUpdateFW.setEnabled(false);
+        populateAmbulanceTable();
     }
 
     /**
@@ -60,12 +59,7 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
         titleManageDeliveryMan = new javax.swing.JLabel();
         btnUpdateFW = new javax.swing.JButton();
         btnRefreshFW = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        tblFieldWorker.setBackground(new java.awt.Color(133, 211, 255));
         tblFieldWorker.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -74,7 +68,7 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Emergency Org Name", "Username", "Password"
+                "Ambulance Driver Name", "Username", "Password"
             }
         ) {
             Class[] types = new Class [] {
@@ -94,12 +88,8 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblFieldWorker);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 470, 91));
-        add(txtFieldWorker, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 430, 144, -1));
-
         btnFWBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnFWBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
-        btnFWBack.setText("<< ");
+        btnFWBack.setText("<< Back");
         btnFWBack.setMaximumSize(new java.awt.Dimension(147, 29));
         btnFWBack.setMinimumSize(new java.awt.Dimension(147, 29));
         btnFWBack.addActionListener(new java.awt.event.ActionListener() {
@@ -107,69 +97,48 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
                 btnFWBackActionPerformed(evt);
             }
         });
-        add(btnFWBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
 
-        btnSubmitFW.setBackground(new java.awt.Color(133, 211, 255));
-        btnSubmitFW.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnSubmitFW.setText("Submit");
         btnSubmitFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitFWActionPerformed(evt);
             }
         });
-        add(btnSubmitFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 540, -1, -1));
 
-        lblFieldWorkerName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
-        lblFieldWorkerName.setText("Emergency Org Name:");
-        add(lblFieldWorkerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 430, -1, 20));
-        add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 470, 144, -1));
+        lblFieldWorkerName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblFieldWorkerName.setText("Ambulance Driver Name:");
 
-        lblDelPassword.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
+        lblDelPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblDelPassword.setText("Password:");
-        add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 510, -1, -1));
-        add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 510, 144, -1));
 
-        btnViewFW.setBackground(new java.awt.Color(133, 211, 255));
-        btnViewFW.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnViewFW.setText("View");
         btnViewFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewFWActionPerformed(evt);
             }
         });
-        add(btnViewFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 360, -1, -1));
 
-        btnDeleteFW.setBackground(new java.awt.Color(133, 211, 255));
-        btnDeleteFW.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnDeleteFW.setText("Delete");
         btnDeleteFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteFWActionPerformed(evt);
             }
         });
-        add(btnDeleteFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 360, -1, -1));
 
-        lblDelUsername.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
+        lblDelUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblDelUsername.setText("Username:");
-        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 470, -1, 20));
 
-        titleManageDeliveryMan.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
+        titleManageDeliveryMan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageDeliveryMan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageDeliveryMan.setText("Emergency Distress Org SignUp");
-        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 816, -1));
+        titleManageDeliveryMan.setText("Ambulance Drivers SignUp");
 
-        btnUpdateFW.setBackground(new java.awt.Color(133, 211, 255));
-        btnUpdateFW.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnUpdateFW.setText("Update");
         btnUpdateFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateFWActionPerformed(evt);
             }
         });
-        add(btnUpdateFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 540, -1, -1));
 
-        btnRefreshFW.setBackground(new java.awt.Color(133, 211, 255));
-        btnRefreshFW.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnRefreshFW.setText("Refresh Table");
         btnRefreshFW.setMaximumSize(new java.awt.Dimension(147, 29));
         btnRefreshFW.setMinimumSize(new java.awt.Dimension(147, 29));
@@ -178,10 +147,89 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
                 btnRefreshFWActionPerformed(evt);
             }
         });
-        add(btnRefreshFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 200, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Ambulance-Loop-1.gif"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 90, 1070, 770));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(86, 86, 86)
+                .addComponent(btnFWBack, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1199, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(titleManageDeliveryMan, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(650, 650, 650)
+                            .addComponent(btnRefreshFW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(250, 250, 250)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(580, 580, 580)
+                            .addComponent(btnViewFW)
+                            .addGap(35, 35, 35)
+                            .addComponent(btnDeleteFW))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(322, 322, 322)
+                            .addComponent(lblFieldWorkerName)
+                            .addGap(32, 32, 32)
+                            .addComponent(txtFieldWorker, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(400, 400, 400)
+                            .addComponent(lblDelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(31, 31, 31)
+                            .addComponent(txtFieldWorkerUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(400, 400, 400)
+                            .addComponent(lblDelPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(32, 32, 32)
+                            .addComponent(txtFieldWorkerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(490, 490, 490)
+                            .addComponent(btnUpdateFW)
+                            .addGap(13, 13, 13)
+                            .addComponent(btnSubmitFW, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(btnFWBack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(694, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(titleManageDeliveryMan)
+                    .addGap(78, 78, 78)
+                    .addComponent(btnRefreshFW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(27, 27, 27)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(19, 19, 19)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnViewFW)
+                        .addComponent(btnDeleteFW))
+                    .addGap(37, 37, 37)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblFieldWorkerName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtFieldWorker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(10, 10, 10)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblDelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtFieldWorkerUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(20, 20, 20)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblDelPassword)
+                        .addComponent(txtFieldWorkerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(20, 20, 20)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnUpdateFW)
+                        .addComponent(btnSubmitFW))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFWBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFWBackActionPerformed
@@ -239,10 +287,10 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Username Already Exists ! Please enter a different Username !!!");
         }else{
 
-            UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, password, null, new EmergencyDistressOrgRole());
-            EmergencyDistressOrg emg= system.getEmergencyDistressOrgDirectory().createEmergencyDistressOrgInfo(username);
+            UserAccount ua = system.getUserAccountDirectory().createUserAccount(name, username, password, null, new AmbulanceRole());
+            Ambulance ambulance= system.getAmbulanceDirectory().createAmbulance(name, username);
 
-            populateEmergencyOrgTable();
+            populateAmbulanceTable();
 
             txtFieldWorker.setText("");
             txtFieldWorkerUsername.setText("");
@@ -295,7 +343,7 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
                 system.getUserAccountDirectory().deleteUserAccount(user);
                 //system.getDeliveryManDirectory().deleteDeliveryMan(user.getUsername());
                 system.getFieldWorkerDirectory();
-                populateEmergencyOrgTable();
+                populateAmbulanceTable();
             }
         }
     }//GEN-LAST:event_btnDeleteFWActionPerformed
@@ -344,7 +392,7 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
         }
 
         system.getUserAccountDirectory().updateUserAccount(user, name, username, password);
-        populateEmergencyOrgTable();
+        populateAmbulanceTable();
         btnSubmitFW.setEnabled(true);
         btnDeleteFW.setEnabled(true);
         btnViewFW.setEnabled(true);
@@ -356,7 +404,7 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
 
     private void btnRefreshFWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshFWActionPerformed
         // TODO add your handling code here:
-        populateEmergencyOrgTable();
+        populateAmbulanceTable();
     }//GEN-LAST:event_btnRefreshFWActionPerformed
 
 
@@ -367,7 +415,6 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmitFW;
     private javax.swing.JButton btnUpdateFW;
     private javax.swing.JButton btnViewFW;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblDelPassword;
     private javax.swing.JLabel lblDelUsername;
@@ -379,13 +426,13 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtFieldWorkerUsername;
     // End of variables declaration//GEN-END:variables
 
-    private void populateEmergencyOrgTable() {
+    private void populateAmbulanceTable() {
         DefaultTableModel model = (DefaultTableModel) tblFieldWorker.getModel();
         model.setRowCount(0);
         
         for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
            
-            if ("Business.Role.EmergencyDistressOrgRole".equals(user.getRole().getClass().getName())) {
+            if ("Business.Role.AmbulanceRole".equals(user.getRole().getClass().getName())) {
                 Object[] row = new Object[3]; 
                 row[0] = user.getName();
                 row[1] = user.getUsername();
@@ -394,6 +441,6 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
                 model.addRow(row);
             }
             
-        }
+        } 
     }
 }

@@ -54,7 +54,12 @@ public class EmergencyMemberAreaJPanel extends javax.swing.JPanel {
         titleOrders = new javax.swing.JLabel();
         btnRefresh = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblSoupKitchenOrg.setBackground(new java.awt.Color(133, 211, 255));
         tblSoupKitchenOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -63,7 +68,7 @@ public class EmergencyMemberAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Soup Kitchen Org Name", "Address", "Phone Number", "Email"
+                "Emergency Org Name", "Address", "Phone Number", "Email"
             }
         ) {
             Class[] types = new Class [] {
@@ -83,16 +88,23 @@ public class EmergencyMemberAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblSoupKitchenOrg);
 
-        btnReqService.setText("Order Soup Meal ");
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 214, 546, 93));
+
+        btnReqService.setBackground(new java.awt.Color(133, 211, 255));
+        btnReqService.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnReqService.setText("Request Emergency Service");
         btnReqService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReqServiceActionPerformed(evt);
             }
         });
+        add(btnReqService, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 320, -1, -1));
 
-        titleChoose.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleChoose.setText("Choose Soup Kitchens Aroung You:");
+        titleChoose.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        titleChoose.setText("Choose Emergency Org Aroung You:");
+        add(titleChoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 171, -1, -1));
 
+        tblOrders.setBackground(new java.awt.Color(133, 211, 255));
         tblOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -121,68 +133,34 @@ public class EmergencyMemberAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblOrders);
 
-        titleOrders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleOrders.setText("Your Orders with us :");
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 719, 90));
 
+        titleOrders.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        titleOrders.setText("Your Requests with us :");
+        add(titleOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 364, -1, -1));
+
+        btnRefresh.setBackground(new java.awt.Color(133, 211, 255));
+        btnRefresh.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnRefresh.setText("Refresh Requests");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshActionPerformed(evt);
             }
         });
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 516, -1, -1));
 
-        btnBack.setText("<< Back");
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(317, 317, 317)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(titleChoose)
-                            .addComponent(titleOrders)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(201, 201, 201)
-                                .addComponent(btnReqService))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(539, 539, 539)
-                        .addComponent(btnRefresh))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(253, 253, 253)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 719, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(btnBack)
-                .addGap(98, 98, 98)
-                .addComponent(titleChoose)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnReqService)
-                .addGap(21, 21, 21)
-                .addComponent(titleOrders)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(btnRefresh)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulancegif.gif"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 380, 630, 450));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReqServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqServiceActionPerformed
@@ -217,6 +195,7 @@ public class EmergencyMemberAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnReqService;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblOrders;
@@ -229,7 +208,7 @@ public class EmergencyMemberAreaJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblSoupKitchenOrg.getModel();
         model.setRowCount(0);
         
-            Object[] row = new Object[3];    
+            Object[] row = new Object[4];    
             for(EmergencyDistressOrg org:system.getEmergencyDistressOrgDirectory().getEmergencyDistressOrgList()){
                  row[0] = org;
                  row[1] = org.getEmergencyOrgAddress();

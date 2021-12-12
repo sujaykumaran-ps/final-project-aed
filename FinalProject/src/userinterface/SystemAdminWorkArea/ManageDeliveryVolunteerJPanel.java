@@ -61,6 +61,10 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         btnUpdateVol = new javax.swing.JButton();
         btnRefreshVol = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblVolunteer.setBackground(new java.awt.Color(133, 211, 255));
         tblVolunteer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -89,7 +93,11 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblVolunteer);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 230, 496, 91));
+        add(txtVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 429, 144, -1));
+
         btnVolBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnVolBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnVolBack.setText("<< ");
         btnVolBack.setMaximumSize(new java.awt.Dimension(147, 29));
         btnVolBack.setMinimumSize(new java.awt.Dimension(147, 29));
@@ -98,48 +106,64 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
                 btnVolBackActionPerformed(evt);
             }
         });
+        add(btnVolBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 45, 75, -1));
 
+        btnSubmitVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnSubmitVol.setText("Submit");
         btnSubmitVol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitVolActionPerformed(evt);
             }
         });
+        add(btnSubmitVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(789, 539, -1, -1));
 
-        lblVolunteerName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblVolunteerName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblVolunteerName.setText("Volunteer Name:");
+        add(lblVolunteerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(587, 428, -1, 20));
+        add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 459, 144, -1));
 
-        lblDelPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblDelPassword.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblDelPassword.setText("Password:");
+        add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 499, 58, -1));
+        add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 499, 144, -1));
 
+        btnViewVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnViewVol.setText("View");
         btnViewVol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewVolActionPerformed(evt);
             }
         });
+        add(btnViewVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(812, 340, -1, -1));
 
+        btnDeleteVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnDeleteVol.setText("Delete");
         btnDeleteVol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteVolActionPerformed(evt);
             }
         });
+        add(btnDeleteVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(904, 340, -1, -1));
 
-        lblDelUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblDelUsername.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblDelUsername.setText("Username:");
+        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 459, 59, 20));
 
-        titleManageDeliveryMan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleManageDeliveryMan.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleManageDeliveryMan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageDeliveryMan.setText("Manage FieldWorker ");
+        titleManageDeliveryMan.setText("Volunteers SignUp");
+        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 77, 1340, -1));
 
+        btnUpdateVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnUpdateVol.setText("Update");
         btnUpdateVol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateVolActionPerformed(evt);
             }
         });
+        add(btnUpdateVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 539, -1, -1));
 
+        btnRefreshVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnRefreshVol.setText("Refresh Table");
         btnRefreshVol.setMaximumSize(new java.awt.Dimension(147, 29));
         btnRefreshVol.setMinimumSize(new java.awt.Dimension(147, 29));
@@ -148,94 +172,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
                 btnRefreshVolActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(btnVolBack, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblDelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)
-                                .addComponent(txtFieldWorkerUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblDelPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(txtFieldWorkerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnUpdateVol)
-                                .addGap(13, 13, 13)
-                                .addComponent(btnSubmitVol, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 649, Short.MAX_VALUE)
-                        .addComponent(lblVolunteerName)
-                        .addGap(31, 31, 31)
-                        .addComponent(txtVolunteer, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(442, 442, 442))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(650, 922, Short.MAX_VALUE)
-                            .addComponent(btnRefreshVol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(250, 525, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(580, 868, Short.MAX_VALUE)
-                            .addComponent(btnViewVol)
-                            .addGap(35, 35, 35)
-                            .addComponent(btnDeleteVol)))
-                    .addGap(0, 339, Short.MAX_VALUE))
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(titleManageDeliveryMan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(btnVolBack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 389, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtVolunteer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblVolunteerName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblDelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFieldWorkerUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblDelPassword)
-                    .addComponent(txtFieldWorkerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnUpdateVol)
-                    .addComponent(btnSubmitVol))
-                .addGap(190, 190, 190))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 82, Short.MAX_VALUE)
-                    .addComponent(titleManageDeliveryMan)
-                    .addGap(78, 78, 78)
-                    .addComponent(btnRefreshVol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(27, 27, 27)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(19, 19, 19)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnViewVol)
-                        .addComponent(btnDeleteVol))
-                    .addGap(0, 415, Short.MAX_VALUE)))
-        );
+        add(btnRefreshVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(868, 178, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVolBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolBackActionPerformed
@@ -447,5 +384,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
                 model.addRow(row);
             }
             
-        }    }
+        }    
+    }
+    
 }

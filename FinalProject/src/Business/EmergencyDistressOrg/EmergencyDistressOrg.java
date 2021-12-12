@@ -81,7 +81,7 @@ public class EmergencyDistressOrg {
         return emergencyOrgPhNum;
     }
 
-    public void setEmergencyOrgPhNum(String leafOrgPhNum) {
+    public void setEmergencyOrgPhNum(String emergencyOrgPhNum) {
         this.emergencyOrgPhNum = emergencyOrgPhNum;
     }
 

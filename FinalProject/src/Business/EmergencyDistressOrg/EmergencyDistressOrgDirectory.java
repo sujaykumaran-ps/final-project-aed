@@ -44,11 +44,11 @@ public class EmergencyDistressOrgDirectory {
         }
     }
     
-    public void updateEmergencyDistressOrgInfo(EmergencyDistressOrg org, String name, String number, String address, String cuisine){
+    public void updateEmergencyDistressOrgInfo(EmergencyDistressOrg org, String name, String number, String address, String email){
         org.setEmergencyOrgName(name);
         org.setEmergencyOrgAddress(address);
         org.setEmergencyOrgPhNum(number);
-        org.setEmergencyOrgEmail(cuisine);
+        org.setEmergencyOrgEmail(email);
     }
     
     public EmergencyService addServiceTypes(EmergencyDistressOrg org, String name, String desc, String type){

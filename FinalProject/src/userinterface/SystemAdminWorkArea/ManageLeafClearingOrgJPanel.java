@@ -60,6 +60,10 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         titleManageRestaurants = new javax.swing.JLabel();
         btnViewOrg = new javax.swing.JButton();
         btnRefreshOrg = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblLeafClearingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -89,141 +93,90 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblLeafClearingOrg);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 310, 496, 91));
+        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 464, 144, -1));
+
+        btnManageOrgBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageOrgBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnManageOrgBack.setText("<< Back");
         btnManageOrgBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageOrgBackActionPerformed(evt);
             }
         });
+        add(btnManageOrgBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
 
+        btnSubmitOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnSubmitOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnSubmitOrg.setText("Submit");
         btnSubmitOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitOrgActionPerformed(evt);
             }
         });
+        add(btnSubmitOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(756, 566, -1, -1));
 
-        lblResName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblResName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblResName.setText("Leaf Clearing Org Name:");
+        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 467, -1, -1));
+        add(txtOrgUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 488, 144, -1));
+        add(txtOrgPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(675, 522, 144, -1));
 
-        lblResPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblResPassword.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblResPassword.setText("Password:");
+        add(lblResPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 522, -1, -1));
 
+        btnUpdateOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnUpdateOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnUpdateOrg.setText("Update");
         btnUpdateOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateOrgActionPerformed(evt);
             }
         });
+        add(btnUpdateOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 566, -1, -1));
 
+        btnDeleteOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnDeleteOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnDeleteOrg.setText("Delete");
         btnDeleteOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteOrgActionPerformed(evt);
             }
         });
+        add(btnDeleteOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(816, 420, -1, -1));
 
-        lblResUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblResUsername.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblResUsername.setText("Username:");
+        add(lblResUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 488, -1, 20));
 
-        titleManageRestaurants.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleManageRestaurants.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageRestaurants.setText("Manage LeafClearingOrg");
+        add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 105, 816, -1));
 
+        btnViewOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnViewOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnViewOrg.setText("View");
         btnViewOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewOrgActionPerformed(evt);
             }
         });
+        add(btnViewOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(756, 420, -1, -1));
 
+        btnRefreshOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnRefreshOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnRefreshOrg.setText("Refresh Table");
         btnRefreshOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshOrgActionPerformed(evt);
             }
         });
+        add(btnRefreshOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(833, 276, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(titleManageRestaurants, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(130, 130, 130)
-                                .addComponent(btnManageOrgBack))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(192, 192, 192)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(320, 320, 320)
-                                .addComponent(btnViewOrg)
-                                .addGap(5, 5, 5)
-                                .addComponent(btnDeleteOrg))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(140, 140, 140)
-                                .addComponent(lblResPassword)
-                                .addGap(41, 41, 41)
-                                .addComponent(txtOrgPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(240, 240, 240)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(80, 80, 80)
-                                        .addComponent(btnSubmitOrg))
-                                    .addComponent(btnUpdateOrg)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(btnRefreshOrg)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(65, 65, 65)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblResName)
-                                    .addComponent(lblResUsername))
-                                .addGap(39, 39, 39)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtOrgUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(534, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addComponent(titleManageRestaurants)
-                .addGap(68, 68, 68)
-                .addComponent(btnManageOrgBack)
-                .addGap(58, 58, 58)
-                .addComponent(btnRefreshOrg)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnViewOrg)
-                    .addComponent(btnDeleteOrg))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblResName))
-                .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblResUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtOrgUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblResPassword)
-                    .addComponent(txtOrgPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSubmitOrg)
-                    .addComponent(btnUpdateOrg))
-                .addContainerGap(210, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/leaf.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 240, 780, 540));
     }// </editor-fold>//GEN-END:initComponents
  private void populateLeafClearingOrgTable() {
         DefaultTableModel model = (DefaultTableModel) tblLeafClearingOrg.getModel();
@@ -433,6 +386,7 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmitOrg;
     private javax.swing.JButton btnUpdateOrg;
     private javax.swing.JButton btnViewOrg;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblResName;
     private javax.swing.JLabel lblResPassword;

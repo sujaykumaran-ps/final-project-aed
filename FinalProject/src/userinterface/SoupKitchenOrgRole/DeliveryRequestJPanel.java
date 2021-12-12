@@ -151,13 +151,13 @@ public class DeliveryRequestJPanel extends javax.swing.JPanel {
             DeliveryVolunteer volunteer  = (DeliveryVolunteer)VolunteerJTable.getValueAt(selectedRow, 0);
             volunteer.getSoupRequestList().add(request);
             volunteer.setAvailability(false);
-            request.setStatus("Assigned Field Worker");
+            request.setStatus("Assigned Volunteer");
 
             for(Member member:system.getMemberDirectory().getMemberList()){
                 if(request.getMemName().equals(member.getMemUsername())){
                     for(SoupWorkRequest request : member.getSoupRequestList()){
                         if(request.getStatus().equals("In Progress")){
-                            request.setStatus("Assigned Field Worker");
+                            request.setStatus("Assigned Volunteer");
                         }
                     }
                 }

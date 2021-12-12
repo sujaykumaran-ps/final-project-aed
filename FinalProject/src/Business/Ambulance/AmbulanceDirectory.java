@@ -11,39 +11,40 @@ import java.util.ArrayList;
  * @author mohitdaswani
  */
 public class AmbulanceDirectory {
-    private ArrayList<Ambulance> volunteerList;
-    private Ambulance volunteer;
+    private ArrayList<Ambulance> ambulanceList;
+    private Ambulance ambulance;
     
     public AmbulanceDirectory() {
-        volunteerList = new ArrayList<Ambulance>();
+        ambulanceList = new ArrayList<Ambulance>();
     }
 
-    public ArrayList<Ambulance> getVolunteerList() {
-        return volunteerList;
+    public ArrayList<Ambulance> getAmbulanceList() {
+        return ambulanceList;
     }
 
-    public void setVolunteerList(ArrayList<Ambulance> volunteerList) {
-        this.volunteerList = volunteerList;
+    public void setAmbulanceList(ArrayList<Ambulance> ambulanceList) {
+        this.ambulanceList = ambulanceList;
     }
 
-    public Ambulance getVolunteer() {
-        return volunteer;
+    public Ambulance getAmbulance() {
+        return ambulance;
     }
 
-    public void setVolunteer(Ambulance volunteer) {
-        this.volunteer = volunteer;
+    public void setAmbulance(Ambulance ambulance) {
+        this.ambulance = ambulance;
+    }
+
+   
+    public Ambulance createAmbulance(String name, String username){
+        ambulance = new Ambulance(name, username);
+        ambulanceList.add(ambulance);
+        return ambulance;
     }
     
-    public Ambulance createVolunteer(String name, String username){
-        volunteer = new Ambulance(name, username);
-        volunteerList.add(volunteer);
-        return volunteer;
-    }
-    
-    public void deleteVolunteer(String username){
-         for(int i=0; i < volunteerList.size(); i++){
-            if(volunteerList.get(i).getVolunteerName().equals(username)){
-                volunteerList.remove(i);
+    public void deleteAmbulance(String username){
+         for(int i=0; i < ambulanceList.size(); i++){
+            if(ambulanceList.get(i).getAmbulanceName().equals(username)){
+                ambulanceList.remove(i);
             }
         }
     }

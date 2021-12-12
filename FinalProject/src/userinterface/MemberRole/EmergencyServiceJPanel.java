@@ -6,9 +6,9 @@
 package userinterface.MemberRole;
 
 import Business.EcoSystem;
+import Business.EmergencyDistressOrg.EmergencyDistressOrg;
+import Business.EmergencyDistressOrg.EmergencyService;
 import Business.Member.Member;
-import Business.SoupKitchenOrg.Meal;
-import Business.SoupKitchenOrg.SoupKitchenOrg;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -20,26 +20,25 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sujay
  */
-public class SoupServiceJPanel extends javax.swing.JPanel {
+public class EmergencyServiceJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form SoupServiceJPanel
+     * Creates new form EmergencyServiceJPanel
      */
-    
     private JPanel userProcessContainer;
     private UserAccount account;
-    SoupKitchenOrg org;
+    EmergencyDistressOrg org;
     EcoSystem system;
-    ArrayList<Meal> meals = new ArrayList<Meal>();
+    ArrayList<EmergencyService> services = new ArrayList<EmergencyService>();
     
-    public SoupServiceJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem system, SoupKitchenOrg org) {
+    public EmergencyServiceJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem system, EmergencyDistressOrg org) {
         initComponents();
-         this.userProcessContainer = userProcessContainer;
+        this.userProcessContainer = userProcessContainer;
         this.org = org;
         this.system = system;
         this.account = account;
         populateServicesTable();
-        titleOrgName.setText(org.getSoupName());
+        titleOrgName.setText(org.getEmergencyOrgName());
     }
 
     /**
@@ -51,24 +50,56 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        lblServices = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
+        btnRemove = new javax.swing.JButton();
+        btnCallAmbulance = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblCart = new javax.swing.JTable();
-        btnAdd = new javax.swing.JButton();
-        lblServices = new javax.swing.JLabel();
-        txtInstructions = new javax.swing.JTextField();
-        lblInstructions = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tblMeals = new javax.swing.JTable();
-        txtAddress = new javax.swing.JTextField();
-        titleOrgName = new javax.swing.JLabel();
-        lblAddress = new javax.swing.JLabel();
         titleOrder = new javax.swing.JLabel();
-        btnPlaceRequest = new javax.swing.JButton();
-        btnRemove = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lblAddress = new javax.swing.JLabel();
+        titleOrgName = new javax.swing.JLabel();
+        txtAddress = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblServices = new javax.swing.JTable();
+        txtIssue = new javax.swing.JTextField();
         lblPer = new javax.swing.JLabel();
-        txtPer = new javax.swing.JTextField();
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Service Summary");
+
+        lblServices.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblServices.setText("Meal Details");
+
+        btnBack.setText("<< ");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
+        btnAdd.setText("Add Service");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+
+        btnRemove.setText("Remove Service");
+        btnRemove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveActionPerformed(evt);
+            }
+        });
+
+        btnCallAmbulance.setText("Call Ambulance");
+        btnCallAmbulance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCallAmbulanceActionPerformed(evt);
+            }
+        });
 
         tblCart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -78,7 +109,7 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Meal Name", "Description", "Beverage"
+                "Meal Name", "Description", "Type"
             }
         ) {
             Class[] types = new Class [] {
@@ -98,20 +129,15 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(tblCart);
 
-        btnAdd.setText("Add Meal");
-        btnAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddActionPerformed(evt);
-            }
-        });
+        titleOrder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleOrder.setText("Request from");
 
-        lblServices.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblServices.setText("Meal Details");
+        lblAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblAddress.setText("Pick Up Address :");
 
-        lblInstructions.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblInstructions.setText("Special Instructions :");
+        titleOrgName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
-        tblMeals.setModel(new javax.swing.table.DefaultTableModel(
+        tblServices.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -119,7 +145,7 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Meal Name", "Descripion", "Beverage"
+                "Meal Name", "Descripion", "Type"
             }
         ) {
             Class[] types = new Class [] {
@@ -137,42 +163,10 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(tblMeals);
-
-        titleOrgName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-
-        lblAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblAddress.setText("Address :");
-
-        titleOrder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleOrder.setText("Order from");
-
-        btnPlaceRequest.setText("Place Order");
-        btnPlaceRequest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlaceRequestActionPerformed(evt);
-            }
-        });
-
-        btnRemove.setText("Remove Meal");
-        btnRemove.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemoveActionPerformed(evt);
-            }
-        });
-
-        btnBack.setText("<< ");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Service Summary");
+        jScrollPane2.setViewportView(tblServices);
 
         lblPer.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblPer.setText("Person's Name :");
+        lblPer.setText("Issue :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -194,32 +188,31 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(titleOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(91, 91, 91)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(255, 255, 255)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jLabel1))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(335, 335, 335)
+                        .addGap(338, 338, 338)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblInstructions)
                             .addComponent(lblAddress)
                             .addComponent(lblPer))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnRemove)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtAddress)
-                                .addComponent(txtInstructions, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
-                                .addComponent(txtPer, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addComponent(btnPlaceRequest)))
+                                .addComponent(txtAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
+                                .addComponent(txtIssue, javax.swing.GroupLayout.Alignment.TRAILING))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(458, 458, 458)
-                        .addComponent(lblServices)))
-                .addContainerGap(614, Short.MAX_VALUE))
+                        .addComponent(lblServices))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(233, 233, 233)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(459, 459, 459)
+                        .addComponent(btnCallAmbulance)))
+                .addContainerGap(575, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,79 +241,16 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPer)
-                    .addComponent(txtPer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIssue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAddress)
                     .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblInstructions)
-                    .addComponent(txtInstructions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addComponent(btnPlaceRequest)
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(btnCallAmbulance)
+                .addContainerGap(168, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        // TODO add your handling code here:
-        int selectedRow = tblMeals.getSelectedRow();
-        if(selectedRow < 0){
-            JOptionPane.showMessageDialog(null, "Please Select a Meal to Add !!!", "Warning", JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            Meal meal = (Meal)tblMeals.getValueAt(selectedRow, 0);
-            populateCartTable(meal);
-        }
-    }//GEN-LAST:event_btnAddActionPerformed
-
-    private void btnPlaceRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceRequestActionPerformed
-        // TODO add your handling code here:
-        String address = txtAddress.getText();
-        String ins = txtInstructions.getText();
-        String personName = txtPer.getText();
-
-        try {
-            if(address==null || address.isEmpty()){
-                throw new NullPointerException("Please Enter Service Address !!!");
-            }
-        } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "Please Enter Service Address !!!");
-            return;
-        }
-
-        org.newOrder(org.getSoupName(), account.getUsername(), null, meals , address, personName, ins);
-        for(Member mem:system.getMemberDirectory().getMemberList()){
-            if(account.getUsername().equals(mem.getMemUsername())){
-                mem.newOrder(org.getSoupName(), account.getUsername(), null, meals , address, personName, ins);
-            }
-        }
-
-        JOptionPane.showMessageDialog(null,"Your Order is placed Successfully !!!", "Thank You", JOptionPane.PLAIN_MESSAGE);
-
-    }//GEN-LAST:event_btnPlaceRequestActionPerformed
-
-    private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
-        // TODO add your handling code here:
-        int selectedRow = tblCart.getSelectedRow();
-        if(selectedRow < 0){
-            JOptionPane.showMessageDialog(null, "Please select a Meal to Remove from Cart !!!", "Warning", JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            Meal meal = (Meal)tblCart.getValueAt(selectedRow, 0);
-            meals.remove(meal);
-            DefaultTableModel model = (DefaultTableModel) tblCart.getModel();
-            model.setRowCount(0);
-            Object[] row = new Object[3];
-            for(Meal req:meals){
-                row[0] = req;
-                row[1] = req.getMealDescription();
-                row[2] = req.getBeverage();
-                model.addRow(row);
-            }
-        }
-    }//GEN-LAST:event_btnRemoveActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -329,50 +259,106 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = tblServices.getSelectedRow();
+        if(selectedRow < 0){
+            JOptionPane.showMessageDialog(null, "Please Select a Meal to Add !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            EmergencyService service = (EmergencyService)tblServices.getValueAt(selectedRow, 0);
+            populateCartTable(service);
+        }
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = tblCart.getSelectedRow();
+        if(selectedRow < 0){
+            JOptionPane.showMessageDialog(null, "Please select a Meal to Remove from Cart !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            EmergencyService service = (EmergencyService)tblCart.getValueAt(selectedRow, 0);
+            services.remove(service);
+            DefaultTableModel model = (DefaultTableModel) tblCart.getModel();
+            model.setRowCount(0);
+            Object[] row = new Object[3];
+            for(EmergencyService req:services){
+                row[0] = req;
+                row[1] = req.getServiceDescription();
+                row[2] = req.getServiceType();
+                model.addRow(row);
+            }
+        }
+    }//GEN-LAST:event_btnRemoveActionPerformed
+
+    private void btnCallAmbulanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCallAmbulanceActionPerformed
+        // TODO add your handling code here:
+        String address = txtAddress.getText();
+        String issue = txtIssue.getText();
+
+        try {
+            if(address==null || address.isEmpty()){
+                throw new NullPointerException("Please Enter Pickup Address !!!");
+            }
+        } catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "Please Enter Pickup Address !!!");
+            return;
+        }
+
+        org.newEmgRequest(org.getEmergencyOrgName(), account.getUsername(), null, services , address, issue);
+        for(Member mem:system.getMemberDirectory().getMemberList()){
+            if(account.getUsername().equals(mem.getMemUsername())){
+                mem.newEmgRequest(org.getEmergencyOrgName(), account.getUsername(), null, services , address, issue);
+            }
+        }
+
+        JOptionPane.showMessageDialog(null,"Your Request is placed Successfully !!!", "Thank You", JOptionPane.PLAIN_MESSAGE);
+    }//GEN-LAST:event_btnCallAmbulanceActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnPlaceRequest;
+    private javax.swing.JButton btnCallAmbulance;
     private javax.swing.JButton btnRemove;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblAddress;
-    private javax.swing.JLabel lblInstructions;
     private javax.swing.JLabel lblPer;
     private javax.swing.JLabel lblServices;
     private javax.swing.JTable tblCart;
-    private javax.swing.JTable tblMeals;
+    private javax.swing.JTable tblServices;
     private javax.swing.JLabel titleOrder;
     private javax.swing.JLabel titleOrgName;
     private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtInstructions;
-    private javax.swing.JTextField txtPer;
+    private javax.swing.JTextField txtIssue;
     // End of variables declaration//GEN-END:variables
 
     private void populateServicesTable() {
-        DefaultTableModel model = (DefaultTableModel) tblMeals.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblServices.getModel();
         model.setRowCount(0);
             Object[] row = new Object[3];
-            for(Meal req:org.getMealList()){
+            for(EmergencyService req:org.getServiceList()){
                  row[0] = req;
-                 row[1] = req.getMealDescription();
-                 row[2] = req.getBeverage();
+                 row[1] = req.getServiceDescription();
+                 row[2] = req.getServiceType();
                  model.addRow(row);
             }  
     }
-     private void populateCartTable(Meal meal) {
+
+    private void populateCartTable(EmergencyService service) {
         DefaultTableModel model = (DefaultTableModel) tblCart.getModel();
         model.setRowCount(0);
 
-        meals.add(meal);
+        services.add(service);
         
         Object[] row = new Object[3];
-        for(Meal req:meals){
+        for(EmergencyService req:services){
             row[0] = req;
-            row[1] = req.getMealDescription();
-            row[2] = req.getBeverage();
+            row[1] = req.getServiceDescription();
+            row[2] = req.getServiceType();
             
             model.addRow(row);
         }  

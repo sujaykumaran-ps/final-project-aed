@@ -19,7 +19,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="538" max="-2" attributes="0"/>
               <Component id="btnComplete" min="-2" pref="273" max="-2" attributes="0"/>
-              <EmptySpace pref="549" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -28,7 +28,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="362" max="-2" attributes="0"/>
               <Component id="btnComplete" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="395" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -36,7 +36,7 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnComplete">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Delivered Soup Order"/>
+        <Property name="text" type="java.lang.String" value="Pickup Completed"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCompleteActionPerformed"/>

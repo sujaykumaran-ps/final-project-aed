@@ -24,6 +24,7 @@ public abstract class Role {
         EmergencyDistressOrg("EmergencyDistressOrg"),
         Member("Member"),
         FieldWorker("FieldWorker"),
+        Ambulance("Ambulance"),
         DeliveryVolunteer("DeliveryVolunteer"),
         SysAdmin("Sysadmin");
         

@@ -49,7 +49,6 @@ public class AmbulanceAreaJPanel extends javax.swing.JPanel {
         titleAssignedRequests = new javax.swing.JLabel();
         btnRefresh = new javax.swing.JButton();
         btnProcess = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -112,16 +111,6 @@ public class AmbulanceAreaJPanel extends javax.swing.JPanel {
         });
         add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, -1, -1));
 
-        btnBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
-        btnBack.setText("<< ");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 35, -1, -1));
-
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance.jpg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 160, 930, 620));
@@ -153,16 +142,8 @@ public class AmbulanceAreaJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnProcessActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnProcess;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JLabel jLabel1;

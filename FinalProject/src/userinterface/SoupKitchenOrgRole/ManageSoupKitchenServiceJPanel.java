@@ -54,7 +54,13 @@ public class ManageSoupKitchenServiceJPanel extends javax.swing.JPanel {
         lblMealDesc = new javax.swing.JLabel();
         btnAddMeal = new javax.swing.JButton();
         txtMealDesc = new javax.swing.JTextField();
+        titleManageService = new javax.swing.JLabel();
+        lblImageIcon3 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        btnBack.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,10 +68,13 @@ public class ManageSoupKitchenServiceJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblBeverage.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblBeverage.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         lblBeverage.setText("Beverage :");
 
-        lblMealName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtMealName.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        txtMealName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblMealName.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         lblMealName.setText("Meal Name :");
 
         tblMeal.setModel(new javax.swing.table.DefaultTableModel(
@@ -98,9 +107,13 @@ public class ManageSoupKitchenServiceJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblMeal);
 
-        lblMealDesc.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtBeverage.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        txtBeverage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblMealDesc.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         lblMealDesc.setText("Description :");
 
+        btnAddMeal.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
         btnAddMeal.setText("Add Meal");
         btnAddMeal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,58 +121,95 @@ public class ManageSoupKitchenServiceJPanel extends javax.swing.JPanel {
             }
         });
 
+        txtMealDesc.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        txtMealDesc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        titleManageService.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleManageService.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleManageService.setText("Manage Soup Kitchen Menu");
+
+        lblImageIcon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menuSoup_adobespark.jpeg"))); // NOI18N
+        lblImageIcon3.setText("jLabel2");
+
+        jLabel3.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/vegSoup.jpg"))); // NOI18N
+        jLabel3.setText("jLabel2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 651, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(271, 271, 271)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(183, 183, 183)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblBeverage)
+                                .addComponent(btnBack)
+                                .addGap(60, 60, 60)
+                                .addComponent(titleManageService, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(8, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(225, 225, 225))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 607, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(72, 72, 72))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(106, 106, 106)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblMealDesc)
-                                    .addComponent(lblMealName))
-                                .addGap(32, 32, 32)
+                                    .addComponent(lblBeverage, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblMealName, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(26, 26, 26)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtMealName)
                                     .addComponent(txtMealDesc)
-                                    .addComponent(txtBeverage, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtMealName)
+                                    .addComponent(txtBeverage, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(256, 256, 256)
-                                .addComponent(btnAddMeal)
-                                .addGap(291, 291, 291)))))
-                .addContainerGap(451, Short.MAX_VALUE))
+                                .addGap(279, 279, 279)
+                                .addComponent(btnAddMeal)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(btnBack)
-                .addGap(121, 121, 121)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtMealName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblMealName))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtMealDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblMealDesc))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblBeverage)
-                    .addComponent(txtBeverage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(titleManageService))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnAddMeal)
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMealName, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(lblMealName))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMealDesc, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(lblMealDesc))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtBeverage, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBeverage))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnAddMeal, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(9, 9, 9))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -222,11 +272,14 @@ public class ManageSoupKitchenServiceJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddMeal;
     private javax.swing.JButton btnBack;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblBeverage;
+    private javax.swing.JLabel lblImageIcon3;
     private javax.swing.JLabel lblMealDesc;
     private javax.swing.JLabel lblMealName;
     private javax.swing.JTable tblMeal;
+    private javax.swing.JLabel titleManageService;
     private javax.swing.JTextField txtBeverage;
     private javax.swing.JTextField txtMealDesc;
     private javax.swing.JTextField txtMealName;

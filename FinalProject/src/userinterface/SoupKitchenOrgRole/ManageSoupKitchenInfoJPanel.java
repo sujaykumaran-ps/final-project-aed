@@ -49,7 +49,6 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titleSoupKitchenOrg = new javax.swing.JLabel();
         btnUpdate = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
         txtOrgPhNum = new javax.swing.JTextField();
@@ -59,10 +58,11 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
         lblSoupKitchenAddress = new javax.swing.JLabel();
         lblSoupKitchenName = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
+        lblImageIcon2 = new javax.swing.JLabel();
+        titleSnowClearingOrg = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        titleSoupKitchenOrg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleSoupKitchenOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleSoupKitchenOrg.setText("Manage Soup Kitchen Org Info");
+        setBackground(new java.awt.Color(255, 255, 255));
 
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -78,20 +78,25 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
             }
         });
 
+        txtOrgPhNum.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtOrgPhNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgPhNumActionPerformed(evt);
             }
         });
 
-        lblSoupKitchenPhone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSoupKitchenPhone.setText("SnowClearing Phone Number :");
+        txtOrgAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lblSoupKitchenAddress.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSoupKitchenAddress.setText("SnowClearning Address :");
+        txtOrgName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lblSoupKitchenName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSoupKitchenName.setText("SnowClearing Name :");
+        lblSoupKitchenPhone.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblSoupKitchenPhone.setText("Soup Kitchen Phone Number :");
+
+        lblSoupKitchenAddress.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblSoupKitchenAddress.setText("Soup Kitchen Address :");
+
+        lblSoupKitchenName.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblSoupKitchenName.setText("Soup Kitchen Name :");
 
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -100,6 +105,18 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblImageIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage_services_adobespark.png"))); // NOI18N
+        lblImageIcon2.setText("jLabel2");
+
+        titleSnowClearingOrg.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        titleSnowClearingOrg.setForeground(new java.awt.Color(0, 0, 153));
+        titleSnowClearingOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleSnowClearingOrg.setText("Manage Soup Kitchen Org Information");
+
+        jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ManageSoupKitchen.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -107,58 +124,72 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
+                        .addGap(26, 26, 26)
                         .addComponent(btnBack)
-                        .addGap(0, 1223, Short.MAX_VALUE))
-                    .addComponent(titleSoupKitchenOrg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(180, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lblSoupKitchenPhone)
+                                        .addComponent(lblSoupKitchenAddress)
+                                        .addComponent(lblSoupKitchenName))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtOrgName)
+                                        .addComponent(txtOrgAddress)
+                                        .addComponent(txtOrgPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGap(258, 258, 258)
+                                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(154, 154, 154)
+                                .addComponent(lblImageIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(68, 68, 68)
+                                .addComponent(titleSnowClearingOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(495, 495, 495)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(btnUpdate)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSave)
-                        .addContainerGap(598, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblSoupKitchenPhone)
-                            .addComponent(lblSoupKitchenAddress)
-                            .addComponent(lblSoupKitchenName))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtOrgName, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                            .addComponent(txtOrgAddress)
-                            .addComponent(txtOrgPhNum))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(btnBack)
-                .addGap(43, 43, 43)
-                .addComponent(titleSoupKitchenOrg)
-                .addGap(106, 106, 106)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtOrgPhNum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSoupKitchenName)
-                            .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSoupKitchenAddress)
-                            .addComponent(txtOrgAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(lblSoupKitchenPhone)))
-                .addGap(61, 61, 61)
+                .addGap(41, 41, 41)
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(titleSnowClearingOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblImageIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSave)
-                    .addComponent(btnUpdate))
-                .addContainerGap(364, Short.MAX_VALUE))
+                    .addComponent(lblSoupKitchenName)
+                    .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblSoupKitchenAddress)
+                    .addComponent(txtOrgAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtOrgPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSoupKitchenPhone))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(228, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 776, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtOrgAddress, txtOrgName, txtOrgPhNum});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnSave, btnUpdate});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
@@ -241,10 +272,12 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblImageIcon2;
     private javax.swing.JLabel lblSoupKitchenAddress;
     private javax.swing.JLabel lblSoupKitchenName;
     private javax.swing.JLabel lblSoupKitchenPhone;
-    private javax.swing.JLabel titleSoupKitchenOrg;
+    private javax.swing.JLabel titleSnowClearingOrg;
     private javax.swing.JTextField txtOrgAddress;
     private javax.swing.JTextField txtOrgName;
     private javax.swing.JTextField txtOrgPhNum;

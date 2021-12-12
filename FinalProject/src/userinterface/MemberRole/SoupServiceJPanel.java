@@ -69,7 +69,12 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         lblPer = new javax.swing.JLabel();
         txtPer = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblCart.setBackground(new java.awt.Color(133, 211, 255));
         tblCart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -98,19 +103,27 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(tblCart);
 
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 347, -1, 91));
+
+        btnAdd.setBackground(new java.awt.Color(133, 211, 255));
         btnAdd.setText("Add Meal");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(479, 260, -1, -1));
 
         lblServices.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblServices.setText("Meal Details");
+        add(lblServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 111, -1, -1));
+        add(txtInstructions, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 596, 201, -1));
 
         lblInstructions.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblInstructions.setText("Special Instructions :");
+        add(lblInstructions, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 602, -1, -1));
 
+        tblMeals.setBackground(new java.awt.Color(133, 211, 255));
         tblMeals.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -139,13 +152,19 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblMeals);
 
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 151, -1, 91));
+        add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 552, 201, -1));
+
         titleOrgName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        add(titleOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 73, 331, 20));
 
         lblAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblAddress.setText("Address :");
+        add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 556, -1, -1));
 
         titleOrder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleOrder.setText("Order from");
+        add(titleOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 73, -1, 20));
 
         btnPlaceRequest.setText("Place Order");
         btnPlaceRequest.addActionListener(new java.awt.event.ActionListener() {
@@ -153,114 +172,37 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
                 btnPlaceRequestActionPerformed(evt);
             }
         });
+        add(btnPlaceRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 664, -1, -1));
 
+        btnRemove.setBackground(new java.awt.Color(133, 211, 255));
         btnRemove.setText("Remove Meal");
         btnRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemoveActionPerformed(evt);
             }
         });
+        add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 456, -1, -1));
 
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
         btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 33, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Service Summary");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 307, -1, -1));
 
         lblPer.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblPer.setText("Person's Name :");
+        add(lblPer, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 512, -1, -1));
+        add(txtPer, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 508, 201, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(203, 203, 203)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(276, 276, 276)
-                                .addComponent(btnAdd))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(titleOrder)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(titleOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(91, 91, 91)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(255, 255, 255)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(335, 335, 335)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblInstructions)
-                            .addComponent(lblAddress)
-                            .addComponent(lblPer))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRemove)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtAddress)
-                                .addComponent(txtInstructions, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
-                                .addComponent(txtPer, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addComponent(btnPlaceRequest)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(458, 458, 458)
-                        .addComponent(lblServices)))
-                .addContainerGap(614, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack)
-                        .addGap(423, 423, 423))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(titleOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(lblServices)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAdd)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRemove)))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPer)
-                    .addComponent(txtPer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAddress)
-                    .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblInstructions)
-                    .addComponent(txtInstructions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addComponent(btnPlaceRequest)
-                .addContainerGap(117, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ManageSoupKitchen.jpg"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, -220, 2360, 1290));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
@@ -336,6 +278,7 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnPlaceRequest;
     private javax.swing.JButton btnRemove;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblAddress;

@@ -46,7 +46,7 @@ public class ProcessOrderJPanel extends javax.swing.JPanel {
 
         btnComplete = new javax.swing.JButton();
 
-        btnComplete.setText("Complete Request");
+        btnComplete.setText("Delivered Soup Order");
         btnComplete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCompleteActionPerformed(evt);
@@ -73,12 +73,12 @@ public class ProcessOrderJPanel extends javax.swing.JPanel {
 
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
         // TODO add your handling code here:
-        request.setStatus("Completed");
+        request.setStatus("Delivered");
         for(Member mem:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(mem.getMemUsername())){
                 for(SoupWorkRequest request : mem.getSoupRequestList()){
-                    if(request.getStatus().equals("Assigned Field Worker")) {
-                        request.setStatus("Completed");
+                    if(request.getStatus().equals("Assigned Volunteer")) {
+                        request.setStatus("Delivered");
                     }
                 }
             }

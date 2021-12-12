@@ -62,8 +62,9 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         titleManageRestaurants = new javax.swing.JLabel();
         btnViewOrg = new javax.swing.JButton();
         btnRefreshOrg = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblSnowClearingOrg.setModel(new javax.swing.table.DefaultTableModel(
@@ -94,75 +95,90 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblSnowClearingOrg);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 496, 91));
-        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 144, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 496, 91));
+        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 420, 144, -1));
 
+        btnManageOrgBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageOrgBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnManageOrgBack.setText("<< Back");
         btnManageOrgBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageOrgBackActionPerformed(evt);
             }
         });
-        add(btnManageOrgBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, -1, -1));
+        add(btnManageOrgBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, -1, -1));
 
+        btnSubmitOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnSubmitOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnSubmitOrg.setText("Submit");
         btnSubmitOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitOrgActionPerformed(evt);
             }
         });
-        add(btnSubmitOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 470, -1, -1));
+        add(btnSubmitOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 540, -1, -1));
 
-        lblResName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblResName.setFont(new java.awt.Font("Segoe UI Light", 1, 11)); // NOI18N
         lblResName.setText("Snow ClearingOrg Name:");
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, -1, -1));
-        add(txtOrgUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 144, -1));
-        add(txtOrgPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 144, -1));
+        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, -1, -1));
+        add(txtOrgUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, 144, -1));
+        add(txtOrgPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 490, 144, -1));
 
-        lblResPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblResPassword.setFont(new java.awt.Font("Segoe UI Light", 1, 11)); // NOI18N
         lblResPassword.setText("Password:");
-        add(lblResPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 420, -1, -1));
+        add(lblResPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 490, -1, -1));
 
+        btnUpdateOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnUpdateOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnUpdateOrg.setText("Update");
         btnUpdateOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateOrgActionPerformed(evt);
             }
         });
-        add(btnUpdateOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 470, -1, -1));
+        add(btnUpdateOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 540, -1, -1));
 
+        btnDeleteOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnDeleteOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnDeleteOrg.setText("Delete");
         btnDeleteOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteOrgActionPerformed(evt);
             }
         });
-        add(btnDeleteOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, -1, -1));
+        add(btnDeleteOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 370, -1, -1));
 
-        lblResUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblResUsername.setFont(new java.awt.Font("Segoe UI Light", 1, 11)); // NOI18N
         lblResUsername.setText("Username:");
-        add(lblResUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, -1, 20));
+        add(lblResUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 450, -1, 20));
 
-        titleManageRestaurants.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleManageRestaurants.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageRestaurants.setText("Manage Snow Clearing Org");
-        add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 816, -1));
+        add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 816, -1));
 
+        btnViewOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnViewOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnViewOrg.setText("View");
         btnViewOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewOrgActionPerformed(evt);
             }
         });
-        add(btnViewOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 300, -1, -1));
+        add(btnViewOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 370, -1, -1));
 
+        btnRefreshOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnRefreshOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnRefreshOrg.setText("Refresh Table");
         btnRefreshOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshOrgActionPerformed(evt);
             }
         });
-        add(btnRefreshOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 160, -1, -1));
+        add(btnRefreshOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 230, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/snow.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 890, 280));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageOrgBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrgBackActionPerformed
@@ -353,6 +369,7 @@ public class ManageSnowClearingOrgJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmitOrg;
     private javax.swing.JButton btnUpdateOrg;
     private javax.swing.JButton btnViewOrg;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblResName;
     private javax.swing.JLabel lblResPassword;

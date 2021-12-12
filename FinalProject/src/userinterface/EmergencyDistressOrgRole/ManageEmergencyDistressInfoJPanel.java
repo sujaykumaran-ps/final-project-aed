@@ -24,7 +24,7 @@ public class ManageEmergencyDistressInfoJPanel extends javax.swing.JPanel {
      */
     public ManageEmergencyDistressInfoJPanel(JPanel userProcessContainer,UserAccount account, EcoSystem system) {
         initComponents();
-                this.account=account;
+        this.account=account;
         this.system=system;
         this.userProcessContainer=userProcessContainer;
         
@@ -52,127 +52,87 @@ public class ManageEmergencyDistressInfoJPanel extends javax.swing.JPanel {
         txtOrgPhNum = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
-        titleSnowClearingOrg = new javax.swing.JLabel();
+        titleEmergencyOrg = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         txtOrgEmail = new javax.swing.JTextField();
         lblSnowClearningName = new javax.swing.JLabel();
-        lblSnowClearingAddress = new javax.swing.JLabel();
-        lblSnowClearingPhone = new javax.swing.JLabel();
+        lblAddress = new javax.swing.JLabel();
+        lblPhone = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 234, 130, -1));
+        add(txtOrgAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 272, 130, -1));
 
         txtOrgPhNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgPhNumActionPerformed(evt);
             }
         });
+        add(txtOrgPhNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 306, 130, -1));
 
+        btnSave.setBackground(new java.awt.Color(133, 211, 255));
+        btnSave.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(709, 387, -1, -1));
 
+        btnUpdate.setBackground(new java.awt.Color(133, 211, 255));
+        btnUpdate.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 387, -1, -1));
 
-        titleSnowClearingOrg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleSnowClearingOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleSnowClearingOrg.setText("Manage LeafClearningOrg Info");
+        titleEmergencyOrg.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
+        titleEmergencyOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleEmergencyOrg.setText("Manage Emergency Distress Org Info");
+        add(titleEmergencyOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 115, 1350, 36));
 
-        lblEmail.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblEmail.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblEmail.setText("Email:");
+        add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(591, 338, -1, -1));
 
-        btnBack.setText("<< Back");
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 47, -1, -1));
 
         txtOrgEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgEmailActionPerformed(evt);
             }
         });
+        add(txtOrgEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 337, 130, -1));
 
-        lblSnowClearningName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearningName.setText("LeafClearing Org Name :");
+        lblSnowClearningName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
+        lblSnowClearningName.setText("Emergency Org Name :");
+        add(lblSnowClearningName, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 235, -1, -1));
 
-        lblSnowClearingAddress.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearingAddress.setText("LeafClearning Org Address :");
+        lblAddress.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
+        lblAddress.setText("Location:");
+        add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 273, -1, -1));
 
-        lblSnowClearingPhone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearingPhone.setText("LeafClearing Phone Number :");
+        lblPhone.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
+        lblPhone.setText("Phone Number :");
+        add(lblPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 310, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(280, 280, 280)
-                .addComponent(btnUpdate)
-                .addGap(18, 18, 18)
-                .addComponent(btnSave)
-                .addContainerGap(240, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(btnBack))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(155, 155, 155)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblSnowClearingPhone)
-                                    .addComponent(lblSnowClearingAddress)
-                                    .addComponent(lblSnowClearningName)
-                                    .addComponent(lblEmail))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtOrgName)
-                                    .addComponent(txtOrgAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(txtOrgPhNum, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(txtOrgEmail))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(titleSnowClearingOrg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(btnBack)
-                .addGap(43, 43, 43)
-                .addComponent(titleSnowClearingOrg)
-                .addGap(70, 70, 70)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtOrgPhNum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSnowClearningName)
-                            .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSnowClearingAddress)
-                            .addComponent(txtOrgAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(lblSnowClearingPhone)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEmail)
-                    .addComponent(txtOrgEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSave)
-                    .addComponent(btnUpdate))
-                .addContainerGap(104, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 210, 850, 570));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtOrgPhNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgPhNumActionPerformed
@@ -188,20 +148,20 @@ public class ManageEmergencyDistressInfoJPanel extends javax.swing.JPanel {
 
         try {
             if(name==null || name.isEmpty()){
-                throw new NullPointerException("LeafClearingOrg Name Field cannot be Empty !!!");
+                throw new NullPointerException("Emergency Name Field cannot be Empty !!!");
 
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearing Organizations Name Field cannot be Empty !!!");
+            JOptionPane.showMessageDialog(null, "Emergency Organizations Name Field cannot be Empty !!!");
             return;
         }
 
         try {
             if(address==null || address.isEmpty()){
-                throw new NullPointerException("LeafClearing Organization Field cannot be Empty !!!");
+                throw new NullPointerException("Emergency Organization Field cannot be Empty !!!");
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearing Organization Field cannot be Empty !!!");
+            JOptionPane.showMessageDialog(null, "Emergency Organization Field cannot be Empty !!!");
             return;
         }
 
@@ -213,7 +173,7 @@ public class ManageEmergencyDistressInfoJPanel extends javax.swing.JPanel {
                 throw new Exception("Enter a Valid Phone number !!!");
             }
         }  catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearingOrg Phone Number Field cannot be Empty !!!");
+            JOptionPane.showMessageDialog(null, "Emergency Org Phone Number Field cannot be Empty !!!");
             return;
         }catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Enter a Valid Phone number !!!");
@@ -222,11 +182,11 @@ public class ManageEmergencyDistressInfoJPanel extends javax.swing.JPanel {
 
         try {
             if(email==null || email.isEmpty()){
-                throw new NullPointerException("LeafClearing Org Email Field cannot be Empty !!!");
+                throw new NullPointerException("Emergency Org Email Field cannot be Empty !!!");
 
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearing Org Email Field cannot be Empty !!!");
+            JOptionPane.showMessageDialog(null, "Emergency Org Email Field cannot be Empty !!!");
             return;
         }
 
@@ -281,11 +241,12 @@ public class ManageEmergencyDistressInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblEmail;
-    private javax.swing.JLabel lblSnowClearingAddress;
-    private javax.swing.JLabel lblSnowClearingPhone;
+    private javax.swing.JLabel lblPhone;
     private javax.swing.JLabel lblSnowClearningName;
-    private javax.swing.JLabel titleSnowClearingOrg;
+    private javax.swing.JLabel titleEmergencyOrg;
     private javax.swing.JTextField txtOrgAddress;
     private javax.swing.JTextField txtOrgEmail;
     private javax.swing.JTextField txtOrgName;

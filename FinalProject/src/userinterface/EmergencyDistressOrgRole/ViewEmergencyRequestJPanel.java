@@ -8,7 +8,7 @@ import Business.Member.Member;
 import Business.EcoSystem;
 import Business.EmergencyDistressOrg.EmergencyService;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
+import Business.WorkQueue.EmergencyWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -20,19 +20,20 @@ import javax.swing.table.DefaultTableModel;
 public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private UserAccount account;
-    WorkRequest request;
+    EmergencyWorkRequest request;
     EcoSystem system;
     /**
      * Creates new form ViewEmergencyRequestJPanel
      */
-    public ViewEmergencyRequestJPanel(JPanel userProcessContainer, UserAccount account, WorkRequest request, EcoSystem system) {
+    public ViewEmergencyRequestJPanel(JPanel userProcessContainer, UserAccount account, EmergencyWorkRequest request, EcoSystem system) {
         initComponents();
                 this.userProcessContainer = userProcessContainer;
         this.account = account;
         this.request = request;
         this.system = system;
         populateTable();
-        txtIns.setEnabled(false);
+        txtIssue.setEnabled(false);
+        txtAddress.setEnabled(false);
     }
 
     /**
@@ -44,33 +45,48 @@ public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtIns = new javax.swing.JTextField();
+        txtIssue = new javax.swing.JTextField();
         btnCancel = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         titleOrderDetails = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRequestDetails = new javax.swing.JTable();
-        btnReady = new javax.swing.JButton();
-        lblIns = new javax.swing.JLabel();
+        btnAccept = new javax.swing.JButton();
+        lblIssue = new javax.swing.JLabel();
+        txtAddress = new javax.swing.JTextField();
+        lblAddress = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(txtIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 320, 355, -1));
+
+        btnCancel.setBackground(new java.awt.Color(133, 211, 255));
+        btnCancel.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnCancel.setText("Cancel Request");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
             }
         });
+        add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 440, 111, -1));
 
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 24, -1, -1));
 
-        titleOrderDetails.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleOrderDetails.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleOrderDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleOrderDetails.setText("Request Details");
+        titleOrderDetails.setText("Emergency Request Details");
+        add(titleOrderDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 1340, -1));
 
+        tblRequestDetails.setBackground(new java.awt.Color(133, 211, 255));
         tblRequestDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -99,79 +115,44 @@ public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRequestDetails);
 
-        btnReady.setText("Request Ready ");
-        btnReady.addActionListener(new java.awt.event.ActionListener() {
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 497, 89));
+
+        btnAccept.setBackground(new java.awt.Color(133, 211, 255));
+        btnAccept.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnAccept.setText("Accept Request");
+        btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReadyActionPerformed(evt);
+                btnAcceptActionPerformed(evt);
             }
         });
+        add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, -1, -1));
 
-        lblIns.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblIns.setText("Special Instructions");
+        lblIssue.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
+        lblIssue.setText("Emergency");
+        add(lblIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, -1, -1));
+        add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 355, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(titleOrderDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(btnBack))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(189, 189, 189)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblIns)
-                                        .addGap(31, 31, 31)
-                                        .addComponent(txtIns))
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 109, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(366, 366, 366)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnReady, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(btnBack)
-                .addGap(28, 28, 28)
-                .addComponent(titleOrderDetails)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblIns)
-                    .addComponent(txtIns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addComponent(btnReady)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnCancel)
-                .addContainerGap(100, Short.MAX_VALUE))
-        );
+        lblAddress.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
+        lblAddress.setText("Ambulance Pickup Address");
+        add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 190, 800, 590));
     }// </editor-fold>//GEN-END:initComponents
    private void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tblRequestDetails.getModel();
         model.setRowCount(0);
 
         Object[] row = new Object[3];
-                for(EmergencyService serv:request.getEmergencyRequest()){
+                for(EmergencyService serv:request.getService()){
                      row[0] = serv;
                      row[1] = serv.getServiceDescription();
                      row[2] = serv.getServiceType();
                      model.addRow(row);
                 }
-        txtIns.setText(request.getMessage());
+        txtIssue.setText(request.getIssue());
+        txtAddress.setText(request.getPickupAddress());
     }
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
@@ -179,7 +160,7 @@ public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
             request.setStatus("Request Cancelled");
             for(Member mem:system.getMemberDirectory().getMemberList()){
                 if(request.getMemName().equals(mem.getMemUsername())){
-                    for(WorkRequest req : mem.getRequestList()){
+                    for(EmergencyWorkRequest req : mem.getEmgRequestList()){
                         if(req.getStatus().equals("New Request")) {
                             req.setStatus("Request Cancelled");
                         }
@@ -204,17 +185,23 @@ public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnReadyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadyActionPerformed
+    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
         // TODO add your handling code here:
-        if(request.getStatus().equals("New Request")) {
-            JOptionPane.showMessageDialog(null, "Please Assign a Field Worker at first !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+        if(request.getStatus().equals("In Progress")) {
+            JOptionPane.showMessageDialog(null, "Already Accepted !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else if(request.getStatus().equals("Assigned Ambulance")) {
+            JOptionPane.showMessageDialog(null, "Already Accepted", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else if(request.getStatus().equals("Request Cancelled")) {
+            JOptionPane.showMessageDialog(null, "Reqeust Cancelled Already", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
             request.setStatus("In Progress");
             for(Member mem:system.getMemberDirectory().getMemberList()){
                 if(request.getMemName().equals(mem.getMemUsername())){
-                    for(WorkRequest request : mem.getRequestList()){
-                        if(request.getStatus().equals("Assigned Field Worker")) {
+                    for(EmergencyWorkRequest request : mem.getEmgRequestList()){
+                        if(request.getStatus().equals("New Request")) {
                             request.setStatus("In Progress");
                         }
 
@@ -225,17 +212,20 @@ public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.previous(userProcessContainer);
         }
-    }//GEN-LAST:event_btnReadyActionPerformed
+    }//GEN-LAST:event_btnAcceptActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAccept;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnReady;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblIns;
+    private javax.swing.JLabel lblAddress;
+    private javax.swing.JLabel lblIssue;
     private javax.swing.JTable tblRequestDetails;
     private javax.swing.JLabel titleOrderDetails;
-    private javax.swing.JTextField txtIns;
+    private javax.swing.JTextField txtAddress;
+    private javax.swing.JTextField txtIssue;
     // End of variables declaration//GEN-END:variables
 }

@@ -55,13 +55,17 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageLCOrg3 = new javax.swing.JButton();
         btnManageFRENT = new javax.swing.JButton();
         btnManageDeliveryVolunteer = new javax.swing.JButton();
+        btnManageDeliveryVolunteer1 = new javax.swing.JButton();
+        btnManageEm = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         setLayout(new java.awt.BorderLayout());
 
-        jPanel4.setBackground(new java.awt.Color(252, 156, 52));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         jPanel4.setPreferredSize(new java.awt.Dimension(1360, 780));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnManageMembers2.setBackground(new java.awt.Color(133, 211, 255));
         btnManageMembers2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
@@ -71,15 +75,17 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageMembersActionPerformed(evt);
             }
         });
+        jPanel4.add(btnManageMembers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, 46));
 
         btnManageSCOrg2.setBackground(new java.awt.Color(133, 211, 255));
         btnManageSCOrg2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        btnManageSCOrg2.setText("Manage SnowClearing Enterprise");
+        btnManageSCOrg2.setText("Manage Snow Clearing Enterprise");
         btnManageSCOrg2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageSCOrgActionPerformed(evt);
             }
         });
+        jPanel4.add(btnManageSCOrg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 350, 287, 46));
 
         btnManageFieldWorkers2.setBackground(new java.awt.Color(133, 211, 255));
         btnManageFieldWorkers2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
@@ -89,37 +95,42 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageFieldWorkersActionPerformed(evt);
             }
         });
+        jPanel4.add(btnManageFieldWorkers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 209, 46));
 
         btnManageSKENT4.setBackground(new java.awt.Color(133, 211, 255));
         btnManageSKENT4.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        btnManageSKENT4.setText("Manage Soup Kitchen Enterprize");
+        btnManageSKENT4.setText("Manage Soup Kitchen Enterprise");
         btnManageSKENT4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageSKENT4ActionPerformed(evt);
             }
         });
+        jPanel4.add(btnManageSKENT4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, 287, 48));
 
-        titleManageUser2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleManageUser2.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleManageUser2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageUser2.setText("Manage User Accounts and Credentials");
+        jPanel4.add(titleManageUser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 1378, -1));
 
         btnManageLCOrg3.setBackground(new java.awt.Color(133, 211, 255));
         btnManageLCOrg3.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        btnManageLCOrg3.setText("Manage LeafClearing Enterprise");
+        btnManageLCOrg3.setText("Manage Leaf Clearing Enterprise");
         btnManageLCOrg3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageLCOrg1ActionPerformed(evt);
             }
         });
+        jPanel4.add(btnManageLCOrg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 410, 287, 48));
 
         btnManageFRENT.setBackground(new java.awt.Color(133, 211, 255));
         btnManageFRENT.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        btnManageFRENT.setText("Manage FundRaising Enterprises");
+        btnManageFRENT.setText("Manage Fund Raising Enterprise");
         btnManageFRENT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageFRENTbtnManageFRENTActionPerformed(evt);
             }
         });
+        jPanel4.add(btnManageFRENT, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 480, 287, 48));
 
         btnManageDeliveryVolunteer.setBackground(new java.awt.Color(133, 211, 255));
         btnManageDeliveryVolunteer.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
@@ -129,50 +140,30 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageDeliveryVolunteerbtnManageFieldWorkersActionPerformed(evt);
             }
         });
+        jPanel4.add(btnManageDeliveryVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, -1, 50));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(342, 342, 342)
-                .addComponent(btnManageMembers2)
-                .addGap(93, 93, 93)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnManageSKENT4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageLCOrg3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageSCOrg2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageFRENT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(59, 59, 59)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnManageDeliveryVolunteer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageFieldWorkers2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(301, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(titleManageUser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(119, 119, 119)
-                .addComponent(titleManageUser2)
-                .addGap(140, 140, 140)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnManageFieldWorkers2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageMembers2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageSCOrg2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnManageLCOrg3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnManageDeliveryVolunteer, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnManageFRENT, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(btnManageSKENT4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(215, Short.MAX_VALUE))
-        );
+        btnManageDeliveryVolunteer1.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageDeliveryVolunteer1.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnManageDeliveryVolunteer1.setText("Manage Ambulance Drivers");
+        btnManageDeliveryVolunteer1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageDeliveryVolunteer1btnManageFieldWorkersActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btnManageDeliveryVolunteer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 150, -1, 50));
+
+        btnManageEm.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageEm.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnManageEm.setText("Manage Emergency Distress Enterprise");
+        btnManageEm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageEmActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btnManageEm, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 620, -1, 48));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Admin.jpg"))); // NOI18N
+        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 1410, 630));
 
         add(jPanel4, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
@@ -231,15 +222,34 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageDeliveryVolunteerbtnManageFieldWorkersActionPerformed
 
+    private void btnManageEmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmActionPerformed
+        // TODO add your handling code here:
+        ManageEmergencyDistressJPanel manageEmgJPanel=new ManageEmergencyDistressJPanel(userProcessContainer, ecosystem);
+        userProcessContainer.add("Manage FieldWorker",manageEmgJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnManageEmActionPerformed
+
+    private void btnManageDeliveryVolunteer1btnManageFieldWorkersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageDeliveryVolunteer1btnManageFieldWorkersActionPerformed
+        // TODO add your handling code here:
+        ManageAmbulanceDriversJPanel manageAmbulanceJPanel=new ManageAmbulanceDriversJPanel(userProcessContainer, ecosystem);
+        userProcessContainer.add("Manage FieldWorker", manageAmbulanceJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnManageDeliveryVolunteer1btnManageFieldWorkersActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnManageDeliveryVolunteer;
+    private javax.swing.JButton btnManageDeliveryVolunteer1;
+    private javax.swing.JButton btnManageEm;
     private javax.swing.JButton btnManageFRENT;
     private javax.swing.JButton btnManageFieldWorkers2;
     private javax.swing.JButton btnManageLCOrg3;
     private javax.swing.JButton btnManageMembers2;
     private javax.swing.JButton btnManageSCOrg2;
     private javax.swing.JButton btnManageSKENT4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel titleManageUser2;
     // End of variables declaration//GEN-END:variables

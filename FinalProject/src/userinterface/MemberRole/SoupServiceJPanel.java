@@ -31,6 +31,7 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
     SoupKitchenOrg org;
     EcoSystem system;
     ArrayList<Meal> meals = new ArrayList<Meal>();
+    
     public SoupServiceJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem system, SoupKitchenOrg org) {
         initComponents();
          this.userProcessContainer = userProcessContainer;

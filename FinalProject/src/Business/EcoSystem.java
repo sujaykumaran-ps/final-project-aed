@@ -6,6 +6,7 @@
 package Business;
 
 
+import Business.Ambulance.AmbulanceDirectory;
 import Business.DeliveryVolunteer.DeliveryVolunteerDirectory;
 import Business.Member.MemberDirectory;
 import Business.FieldWorker.FieldWorkerDirectory;
@@ -33,19 +34,19 @@ public class EcoSystem extends Organization{
     private EmergencyDistressOrgDirectory emergencyDistressOrgDirectory;
     private DeliveryVolunteerDirectory deliveryVolunteerDirectory;
     private SoupKitchenOrgDirectory soupKitchenOrgDirectory;
-
+    private AmbulanceDirectory ambulanceDirectory;
     private FieldWorkerDirectory fieldWorkerDirectory;
     private FundRaisingDirectory fundRaisingDirectory;
 
-    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory,LeafClearingOrgDirectory leafClearingOrgDirectory, SoupKitchenOrgDirectory soupKitchenOrgDirectory, DeliveryVolunteerDirectory deliveryVolunteerDirectory,EmergencyDistressOrgDirectory emergencyDistressOrgDirectory) {
+    public EcoSystem(SnowClearingOrgDirectory snowClearingOrgDirectory, MemberDirectory memberDirectory, FieldWorkerDirectory fieldWorkerDirectory, FundRaisingDirectory fundRaisingDirectory,LeafClearingOrgDirectory leafClearingOrgDirectory, SoupKitchenOrgDirectory soupKitchenOrgDirectory, DeliveryVolunteerDirectory deliveryVolunteerDirectory,EmergencyDistressOrgDirectory emergencyDistressOrgDirectory, AmbulanceDirectory ambulanceDirectory) {
         this.fundRaisingDirectory = fundRaisingDirectory;
         this.leafClearingOrgDirectory = leafClearingOrgDirectory;
         this.soupKitchenOrgDirectory = soupKitchenOrgDirectory;
         this.snowClearingOrgDirectory = snowClearingOrgDirectory;
         this.memberDirectory = memberDirectory;
         this.fieldWorkerDirectory = fieldWorkerDirectory;
-                this.emergencyDistressOrgDirectory = emergencyDistressOrgDirectory;
-
+        this.emergencyDistressOrgDirectory = emergencyDistressOrgDirectory;
+        this.ambulanceDirectory = ambulanceDirectory;
         this.deliveryVolunteerDirectory = deliveryVolunteerDirectory;
     }
     
@@ -79,17 +80,33 @@ public class EcoSystem extends Organization{
     public void setLeafClearingOrgDirectory(LeafClearingOrgDirectory leafClearingOrgDirectory) {
         this.leafClearingOrgDirectory = leafClearingOrgDirectory;
     }
+    
 
     public EmergencyDistressOrgDirectory getEmergencyDistressOrgDirectory() {
         if(emergencyDistressOrgDirectory == null)
         {
             emergencyDistressOrgDirectory = new EmergencyDistressOrgDirectory();
         }
-        return emergencyDistressOrgDirectory;    }
+        return emergencyDistressOrgDirectory;    
+    }
 
     public void setEmergencyDistressOrgDirectory(EmergencyDistressOrgDirectory emergencyDistressOrgDirectory) {
         this.emergencyDistressOrgDirectory = emergencyDistressOrgDirectory;
     }
+
+    public AmbulanceDirectory getAmbulanceDirectory() {
+        if(ambulanceDirectory == null)
+        {
+            ambulanceDirectory = new AmbulanceDirectory();
+        }
+        return ambulanceDirectory;
+    }
+
+    public void setAmbulanceDirectory(AmbulanceDirectory ambulanceDirectory) {
+        this.ambulanceDirectory = ambulanceDirectory;
+    }
+    
+    
 
     public MemberDirectory getMemberDirectory() {
         if(memberDirectory == null)

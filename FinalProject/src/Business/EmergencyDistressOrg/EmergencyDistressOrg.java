@@ -5,7 +5,7 @@
  */
 package Business.EmergencyDistressOrg;
 
-import Business.WorkQueue.WorkRequest;
+import Business.WorkQueue.EmergencyWorkRequest;
 import java.util.ArrayList;
 
 /**
@@ -16,7 +16,7 @@ public class EmergencyDistressOrg {
     private String userName;
     int id = 1;
     private ArrayList<EmergencyService> serviceList;
-    private ArrayList<WorkRequest> requestList;
+    private ArrayList<EmergencyWorkRequest> requestList;
     private String emergencyOrgName;
     private String emergencyOrgAddress;
     private String emergencyOrgPhNum;
@@ -25,7 +25,7 @@ public class EmergencyDistressOrg {
     public EmergencyDistressOrg(String name) {
         this.userName = name;
         serviceList = new ArrayList<EmergencyService>();
-        requestList = new ArrayList<WorkRequest>();
+        requestList = new ArrayList<EmergencyWorkRequest>();
     }
 
     public String getUserName() {
@@ -52,14 +52,14 @@ public class EmergencyDistressOrg {
         this.serviceList = serviceList;
     }
 
-
-    public ArrayList<WorkRequest> getRequestList() {
+    public ArrayList<EmergencyWorkRequest> getRequestList() {
         return requestList;
     }
 
-    public void setRequestList(ArrayList<WorkRequest> requestList) {
+    public void setRequestList(ArrayList<EmergencyWorkRequest> requestList) {
         this.requestList = requestList;
     }
+
 
     public String getEmergencyOrgName() {
         return emergencyOrgName;
@@ -81,7 +81,7 @@ public class EmergencyDistressOrg {
         return emergencyOrgPhNum;
     }
 
-    public void setEmergencyOrgPhNum(String leafOrgPhNum) {
+    public void setEmergencyOrgPhNum(String emergencyOrgPhNum) {
         this.emergencyOrgPhNum = emergencyOrgPhNum;
     }
 
@@ -105,15 +105,15 @@ public class EmergencyDistressOrg {
         serviceList.remove(dish);
     }
     
-    public void newRequest(String emergencyOrgName, String memName, String fieldWorker, ArrayList<EmergencyService> request, String serviceAddress, String instructions) {
-        WorkRequest newWork = new WorkRequest();
+    public void newEmgRequest(String emergencyOrgName, String memName, String ambulanceDriver, ArrayList<EmergencyService> request, String serviceAddress, String problem) {
+        EmergencyWorkRequest newWork = new EmergencyWorkRequest();
         newWork.setRequestId(String.valueOf(id));
         newWork.setMemName(memName);
-        newWork.setEmergencyOrgName(emergencyOrgName);
-        newWork.setFieldWorkerName(fieldWorker);
-        newWork.setEmergencyRequest(request);
-        newWork.setServiceAddress(serviceAddress);
-        newWork.setMessage(instructions);
+        newWork.setEmgOrgName(emergencyOrgName);
+        newWork.setAmbulanceDriverName(ambulanceDriver);
+        newWork.setService(request);
+        newWork.setPickupAddress(serviceAddress);
+        newWork.setIssue(problem);
         newWork.setStatus("New Request");
         requestList.add(newWork);
         id++;

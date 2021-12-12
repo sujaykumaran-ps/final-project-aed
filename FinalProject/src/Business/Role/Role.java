@@ -21,8 +21,10 @@ public abstract class Role {
         LeafClearingOrg("LeafClearingOrg"),
         FundRaising("FundRaising"),
         SoupKitchenOrg("SoupKitchenOrg"),
+        EmergencyDistressOrg("EmergencyDistressOrg"),
         Member("Member"),
         FieldWorker("FieldWorker"),
+        Ambulance("Ambulance"),
         DeliveryVolunteer("DeliveryVolunteer"),
         SysAdmin("Sysadmin");
         

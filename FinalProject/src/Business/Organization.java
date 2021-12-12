@@ -8,6 +8,7 @@ import Business.Employee.EmployeeDirectory;
 import Business.Role.Role;
 import Business.UserAccount.UserAccountDirectory;
 import Business.WorkQueue.DonationQueue;
+import Business.WorkQueue.EmergencyWorkQueue;
 import Business.WorkQueue.LeafWorkQueue;
 import Business.WorkQueue.WorkQueue;
 import Business.WorkQueue.SoupWorkQueue;
@@ -24,6 +25,7 @@ public abstract class Organization {
     private SoupWorkQueue soupWorkQueue;
     private LeafWorkQueue leafWorkQueue;
     private DonationQueue donationQueue;
+    private EmergencyWorkQueue emergencyQueue;
     private EmployeeDirectory employeeDirectory;
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
@@ -34,8 +36,10 @@ public abstract class Organization {
         Member("Member"),
         FieldWorker("FieldWorker"),
         DeliveryVolunteer("DeliveryVolunteer"),
+        EmergencyDistressOrg("EmergencyDistressOrg"),
         FundRaising("FundRaising"),
         LeafClearingOrg("LeafClearingOrg"),
+        Ambulance("Ambulance"),
         SoupKitchenOrg("SoupKitchenOrg"),
         SysAdmin("Sysadmin");
         
@@ -54,6 +58,7 @@ public abstract class Organization {
         soupWorkQueue = new SoupWorkQueue();
         leafWorkQueue = new LeafWorkQueue();
         donationQueue = new DonationQueue();
+        emergencyQueue = new EmergencyWorkQueue();
         employeeDirectory = new EmployeeDirectory();
         userAccountDirectory = new UserAccountDirectory();
         organizationID = counter;

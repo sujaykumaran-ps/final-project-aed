@@ -163,9 +163,9 @@ public class VolunteerAreaJPanel extends javax.swing.JPanel {
         }
         SoupWorkRequest order = (SoupWorkRequest)tblOrderDetails.getValueAt(selectedRow, 0);
 
-        if(order.getStatus().equals("Completed")){
-            JOptionPane.showMessageDialog(null,"Request Already Completed", "Warning", JOptionPane.WARNING_MESSAGE);
-        }else if(order.getStatus().equals("New Request") || order.getStatus().equals("In Progress")){
+        if(order.getStatus().equals("Delivered")){
+            JOptionPane.showMessageDialog(null,"Order Already Delivered", "Warning", JOptionPane.WARNING_MESSAGE);
+        }else if(order.getStatus().equals("New Order") || order.getStatus().equals("In Progress")){
             JOptionPane.showMessageDialog(null,"Request is not yet Assigned", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{

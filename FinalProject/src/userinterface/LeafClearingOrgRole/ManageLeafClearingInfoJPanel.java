@@ -53,20 +53,24 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnBack = new javax.swing.JButton();
-        lblSnowClearningName = new javax.swing.JLabel();
-        lblSnowClearingAddress = new javax.swing.JLabel();
-        lblSnowClearingPhone = new javax.swing.JLabel();
+        lblLeafClearingName = new javax.swing.JLabel();
+        lblLeafClearingAddress = new javax.swing.JLabel();
+        lblLeafClearingPhone = new javax.swing.JLabel();
         txtOrgName = new javax.swing.JTextField();
         txtOrgAddress = new javax.swing.JTextField();
         txtOrgPhNum = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
-        titleSnowClearingOrg = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
         txtOrgEmail = new javax.swing.JTextField();
+        lblImageIcon2 = new javax.swing.JLabel();
+        titleSnowClearingOrg1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1350, 780));
 
+        btnBack.setBackground(new java.awt.Color(255, 204, 102));
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,21 +78,30 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblSnowClearningName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearningName.setText("LeafClearing Org Name :");
+        lblLeafClearingName.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblLeafClearingName.setText("LeafClearing Enterprize Name :");
 
-        lblSnowClearingAddress.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearingAddress.setText("LeafClearning Org Address :");
+        lblLeafClearingAddress.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblLeafClearingAddress.setText("LeafClearning Enterprize Address :");
 
-        lblSnowClearingPhone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearingPhone.setText("LeafClearing Phone Number :");
+        lblLeafClearingPhone.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblLeafClearingPhone.setText("LeafClearing Phone Number :");
 
+        txtOrgName.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtOrgName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        txtOrgAddress.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtOrgAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        txtOrgPhNum.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtOrgPhNum.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtOrgPhNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgPhNumActionPerformed(evt);
             }
         });
 
+        btnSave.setBackground(new java.awt.Color(255, 204, 102));
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +109,7 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnUpdate.setBackground(new java.awt.Color(255, 204, 102));
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,83 +117,109 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
             }
         });
 
-        titleSnowClearingOrg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleSnowClearingOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleSnowClearingOrg.setText("Manage LeafClearningOrg Info");
-
-        lblEmail.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblEmail.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
         lblEmail.setText("Email:");
 
+        txtOrgEmail.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtOrgEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtOrgEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgEmailActionPerformed(evt);
             }
         });
 
+        lblImageIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage_services_adobespark.png"))); // NOI18N
+        lblImageIcon2.setText("jLabel2");
+
+        titleSnowClearingOrg1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleSnowClearingOrg1.setForeground(new java.awt.Color(0, 0, 153));
+        titleSnowClearingOrg1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleSnowClearingOrg1.setText("Manage Leaf Clearing Org Information");
+
+        jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LeafClearingOrg.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(280, 280, 280)
-                .addComponent(btnUpdate)
-                .addGap(18, 18, 18)
-                .addComponent(btnSave)
-                .addContainerGap(295, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(btnBack))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(155, 155, 155)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblSnowClearingPhone)
-                                    .addComponent(lblSnowClearingAddress)
-                                    .addComponent(lblSnowClearningName)
-                                    .addComponent(lblEmail))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtOrgName)
-                                    .addComponent(txtOrgAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(txtOrgPhNum, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(txtOrgEmail))))
-                        .addGap(0, 268, Short.MAX_VALUE))
-                    .addComponent(titleSnowClearingOrg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addGap(52, 52, 52)
+                        .addComponent(btnBack))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addComponent(titleSnowClearingOrg1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(207, 207, 207)
+                        .addComponent(lblImageIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(35, 35, 35)
+                            .addComponent(btnSave))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblLeafClearingPhone)
+                                .addComponent(lblLeafClearingAddress)
+                                .addComponent(lblLeafClearingName)
+                                .addComponent(lblEmail))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtOrgEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtOrgPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtOrgAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1150, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtOrgAddress, txtOrgEmail, txtOrgName, txtOrgPhNum});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnSave, btnUpdate});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addComponent(btnBack)
-                .addGap(43, 43, 43)
-                .addComponent(titleSnowClearingOrg)
-                .addGap(70, 70, 70)
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(titleSnowClearingOrg1)
+                .addGap(32, 32, 32)
+                .addComponent(lblImageIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtOrgPhNum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSnowClearningName)
-                            .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSnowClearingAddress)
-                            .addComponent(txtOrgAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(lblSnowClearingPhone)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(lblLeafClearingName))
+                    .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblLeafClearingAddress)
+                    .addComponent(txtOrgAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtOrgPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblLeafClearingPhone))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEmail)
                     .addComponent(txtOrgEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSave)
-                    .addComponent(btnUpdate))
-                .addContainerGap(217, Short.MAX_VALUE))
+                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 866, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtOrgAddress, txtOrgEmail, txtOrgName, txtOrgPhNum});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -278,11 +318,13 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblEmail;
-    private javax.swing.JLabel lblSnowClearingAddress;
-    private javax.swing.JLabel lblSnowClearingPhone;
-    private javax.swing.JLabel lblSnowClearningName;
-    private javax.swing.JLabel titleSnowClearingOrg;
+    private javax.swing.JLabel lblImageIcon2;
+    private javax.swing.JLabel lblLeafClearingAddress;
+    private javax.swing.JLabel lblLeafClearingName;
+    private javax.swing.JLabel lblLeafClearingPhone;
+    private javax.swing.JLabel titleSnowClearingOrg1;
     private javax.swing.JTextField txtOrgAddress;
     private javax.swing.JTextField txtOrgEmail;
     private javax.swing.JTextField txtOrgName;

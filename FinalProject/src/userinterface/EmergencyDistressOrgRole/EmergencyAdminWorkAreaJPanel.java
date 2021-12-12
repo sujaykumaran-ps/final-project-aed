@@ -27,7 +27,7 @@ public class EmergencyAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.ua = ua;
         this.system = system;
       
-        lblResName.setText(ua.getName());
+        lblEmgName.setText(ua.getName());
     }
 
     /**
@@ -39,78 +39,66 @@ public class EmergencyAdminWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         titleResAdmin = new javax.swing.JLabel();
         btnOrgInfo = new javax.swing.JButton();
         btnManageServices = new javax.swing.JButton();
         btnManageRequests = new javax.swing.JButton();
         lblResNameTitle = new javax.swing.JLabel();
-        lblResName = new javax.swing.JLabel();
+        lblEmgName = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(252, 156, 52));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        titleResAdmin.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        titleResAdmin.setText("LeafClearingOrg Admin");
-        jPanel1.add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, -1, -1));
+        titleResAdmin.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
+        titleResAdmin.setText("Emergency Distress Org Admin");
+        add(titleResAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(587, 201, 440, -1));
 
-        btnOrgInfo.setText("Manage SnowClearingOrg Info");
+        btnOrgInfo.setBackground(new java.awt.Color(133, 211, 255));
+        btnOrgInfo.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnOrgInfo.setText("Manage Emergency Distress Org Info");
         btnOrgInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrgInfoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 220, -1));
+        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 530, 220, 39));
 
+        btnManageServices.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageServices.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnManageServices.setText("Manage Services");
         btnManageServices.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageServicesActionPerformed(evt);
             }
         });
-        jPanel1.add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 160, -1));
+        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 470, 220, 34));
 
+        btnManageRequests.setBackground(new java.awt.Color(133, 211, 255));
+        btnManageRequests.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnManageRequests.setText("Manage Requests");
         btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageRequestsActionPerformed(evt);
             }
         });
-        jPanel1.add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 160, -1));
+        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 420, 220, 34));
 
-        lblResNameTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblResNameTitle.setText("Leaf Clearing Org Name :");
-        jPanel1.add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 240, 30));
+        lblResNameTitle.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        lblResNameTitle.setText("Emergency Distress Org Name :");
+        add(lblResNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 317, -1, 30));
 
-        lblResName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        jPanel1.add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 170, 30));
+        lblEmgName.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        add(lblEmgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(737, 317, 205, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 582, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 503, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 200, 850, 580));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgInfoActionPerformed
         // TODO add your handling code here:
         ManageEmergencyDistressInfoJPanel manageInfo = new ManageEmergencyDistressInfoJPanel(userProcessContainer, ua, system);
-        userProcessContainer.add("Manage Leaf Clearning Organization Info",manageInfo);
+        userProcessContainer.add("Manage Soup kitchen Organization Info",manageInfo);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnOrgInfoActionPerformed
@@ -134,8 +122,8 @@ public class EmergencyAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageRequests;
     private javax.swing.JButton btnManageServices;
     private javax.swing.JButton btnOrgInfo;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblResName;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblEmgName;
     private javax.swing.JLabel lblResNameTitle;
     private javax.swing.JLabel titleResAdmin;
     // End of variables declaration//GEN-END:variables

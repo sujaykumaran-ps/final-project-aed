@@ -20,164 +20,120 @@ import java.util.Date;
 */
 public class WorkRequest {
 
-private String requestId;
-private String snowOrgName;
-private String memName;
-private String fieldWorkerName;
-private String serviceAddress;
-private ArrayList<Service> request;
-private String type;
-private String status;
-private String message;
-private Date requestDate;
-private Date resolveDate;
+    private String requestId;
+    private String snowOrgName;
+    private String memName;
+    private String fieldWorkerName;
+    private String serviceAddress;
+    private ArrayList<Service> request;
+    private String type;
+    private String status;
+    private String message;
+    private Date requestDate;
+    private Date resolveDate;
 
 
+    public WorkRequest(){
+        requestDate = new Date();
+    }
 
+    public String getRequestId() {
+        return requestId;
+    }
 
+    public void setRequestId(String requestId) {
+       this.requestId = requestId;
+    }
 
+    public String getSnowOrgName() {
+        return snowOrgName;
+    }
 
-public WorkRequest(){
-requestDate = new Date();
-}
+    public void setSnowOrgName(String snowOrgName) {
+        this.snowOrgName = snowOrgName;
+    }
 
 
 
-public String getRequestId() {
-return requestId;
-}
+    public String getMemName() {
+        return memName;
+    }
 
 
 
-public void setRequestId(String requestId) {
-this.requestId = requestId;
-}
+    public void setMemName(String memName) {
+        this.memName = memName;
+    }
 
 
 
-public String getSnowOrgName() {
-return snowOrgName;
-}
+    public String getFieldWorkerName() {
+    return fieldWorkerName;
+    }
 
+    public void setFieldWorkerName(String fieldWorkerName) {
+        this.fieldWorkerName = fieldWorkerName;
+    }
 
+    public String getServiceAddress() {
+        return serviceAddress;
+    }
 
-public void setSnowOrgName(String snowOrgName) {
-this.snowOrgName = snowOrgName;
-}
+    public void setServiceAddress(String serviceAddress) {
+        this.serviceAddress = serviceAddress;
+    }
 
 
+    public ArrayList<Service> getRequest() {
+        return request;
+    }
 
-public String getMemName() {
-return memName;
-}
+    public void setRequest(ArrayList<Service> request) {
+        this.request = request;
+    }
 
+    public String getType() {
+        return type;
+    }
 
+    public void setType(String type) {
+        this.type = type;
+    }
 
-public void setMemName(String memName) {
-this.memName = memName;
-}
+    public String getStatus() {
+        return status;
+    }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
+    public String getMessage() {
+        return message;
+    }
 
-public String getFieldWorkerName() {
-return fieldWorkerName;
-}
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
+    public Date getRequestDate() {
+        return requestDate;
+    }
 
-
-public void setFieldWorkerName(String fieldWorkerName) {
-this.fieldWorkerName = fieldWorkerName;
-}
-
-
-
-public String getServiceAddress() {
-return serviceAddress;
-}
-
-
-
-public void setServiceAddress(String serviceAddress) {
-this.serviceAddress = serviceAddress;
-}
-
-
-
-
-public ArrayList<Service> getRequest() {
-return request;
-}
-
-
-
-public void setRequest(ArrayList<Service> request) {
-this.request = request;
-}
-
-
-
-public String getType() {
-return type;
-}
-
-
-
-public void setType(String type) {
-this.type = type;
-}
-
-
-
-public String getStatus() {
-return status;
-}
-
-
-
-public void setStatus(String status) {
-this.status = status;
-}
-
-
-
-public String getMessage() {
-return message;
-}
-
-
-
-public void setMessage(String message) {
-this.message = message;
-}
-
-
-
-public Date getRequestDate() {
-return requestDate;
-}
-
-
-
-public void setRequestDate(Date requestDate) {
-this.requestDate = requestDate;
-}
-
-
-
-public Date getResolveDate() {
-return resolveDate;
-}
-
-
-
-public void setResolveDate(Date resolveDate) {
-this.resolveDate = resolveDate;
-}
-
-
-
-@Override
-public String toString() {
-return requestId;
-}
+    public void setRequestDate(Date requestDate) {
+        this.requestDate = requestDate;
+    }
+
+    public Date getResolveDate() {
+        return resolveDate;
+    }
+
+    public void setResolveDate(Date resolveDate) {
+        this.resolveDate = resolveDate;
+    }
+
+    @Override
+    public String toString() {
+        return requestId;
+    }
 }

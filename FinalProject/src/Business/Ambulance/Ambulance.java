@@ -1,7 +1,7 @@
 package Business.Ambulance;
 
-import Business.SoupKitchenOrg.Meal;
-import Business.WorkQueue.SoupWorkRequest;
+import Business.EmergencyDistressOrg.EmergencyService;
+import Business.WorkQueue.EmergencyWorkRequest;
 import java.util.ArrayList;
 
 /*
@@ -15,57 +15,57 @@ import java.util.ArrayList;
  * @author mohitdaswani
  */
 public class Ambulance {
-    private String volunteerName;
-    private String volunteerUsername;
-    private ArrayList<SoupWorkRequest> soupRequestList;
-    private String volunteerAddress;
-    private String volunteerPhNum;
+    private String ambulanceName;
+    private String ambulanceUsername;
+    private ArrayList<EmergencyWorkRequest> emgRequestList;
+    private String ambulanceAddress;
+    private String ambulancePhNum;
     private Boolean availability = true;
-    
-    public DeliveryVolunteer(String name, String userName){
-        this.volunteerName = name;
-        this.volunteerUsername = userName;
-        soupRequestList = new ArrayList<SoupWorkRequest>();
+            
+    public Ambulance(String name, String userName){
+        this.ambulanceName = name;
+        this.ambulanceUsername = userName;
+        emgRequestList = new ArrayList<EmergencyWorkRequest>();
     }
 
-    public String getVolunteerName() {
-        return volunteerName;
+    public String getAmbulanceName() {
+        return ambulanceName;
     }
 
-    public void setVolunteerName(String volunteerName) {
-        this.volunteerName = volunteerName;
+    public void setAmbulanceName(String ambulanceName) {
+        this.ambulanceName = ambulanceName;
     }
 
-    public String getVolunteerUsername() {
-        return volunteerUsername;
+    public String getAmbulanceUsername() {
+        return ambulanceUsername;
     }
 
-    public void setVolunteerUsername(String volunteerUsername) {
-        this.volunteerUsername = volunteerUsername;
+    public void setAmbulanceUsername(String ambulanceUsername) {
+        this.ambulanceUsername = ambulanceUsername;
     }
 
-    public ArrayList<SoupWorkRequest> getSoupRequestList() {
-        return soupRequestList;
+    public ArrayList<EmergencyWorkRequest> getEmgRequestList() {
+        return emgRequestList;
     }
 
-    public void setSoupRequestList(ArrayList<SoupWorkRequest> soupRequestList) {
-        this.soupRequestList = soupRequestList;
+    public void setEmgRequestList(ArrayList<EmergencyWorkRequest> emgRequestList) {
+        this.emgRequestList = emgRequestList;
     }
 
-    public String getVolunteerAddress() {
-        return volunteerAddress;
+    public String getAmbulanceAddress() {
+        return ambulanceAddress;
     }
 
-    public void setVolunteerAddress(String volunteerAddress) {
-        this.volunteerAddress = volunteerAddress;
+    public void setAmbulanceAddress(String ambulanceAddress) {
+        this.ambulanceAddress = ambulanceAddress;
     }
 
-    public String getVolunteerPhNum() {
-        return volunteerPhNum;
+    public String getAmbulancePhNum() {
+        return ambulancePhNum;
     }
 
-    public void setVolunteerPhNum(String volunteerPhNum) {
-        this.volunteerPhNum = volunteerPhNum;
+    public void setAmbulancePhNum(String ambulancePhNum) {
+        this.ambulancePhNum = ambulancePhNum;
     }
 
     public Boolean getAvailability() {
@@ -76,21 +76,20 @@ public class Ambulance {
         this.availability = availability;
     }
     
-    public void newOrder(String soupName, String memName, String delMan, ArrayList<Meal> order, String deliveryAddress, String personName, String instructions) {
-        SoupWorkRequest newReq = new SoupWorkRequest();
-        newReq.setMemName(memName);
-        newReq.setSoupKitchenName(soupName);
-        newReq.setDelManName(delMan);
-        newReq.setMealRequest(order);
-        newReq.setServiceAddress(deliveryAddress);
-        newReq.setPersonName(personName);
-        newReq.setMessage(instructions);
-        newReq.setStatus("New Order");
-        soupRequestList.add(newReq);
+    public void newEmgRequest(String emergencyOrgName, String memName, String ambulanceDriver, ArrayList<EmergencyService> request, String serviceAddress, String problem) {
+        EmergencyWorkRequest newWork = new EmergencyWorkRequest();
+        newWork.setMemName(memName);
+        newWork.setEmgOrgName(emergencyOrgName);
+        newWork.setAmbulanceDriverName(ambulanceDriver);
+        newWork.setService(request);
+        newWork.setPickupAddress(serviceAddress);
+        newWork.setIssue(problem);
+        newWork.setStatus("New Request");
+        emgRequestList.add(newWork);
     }
     
     @Override
     public String toString() {
-        return volunteerName;
+        return ambulanceName;
     }
 }

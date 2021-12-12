@@ -5,11 +5,13 @@
  */
 package Business.Member;
 
+import Business.EmergencyDistressOrg.EmergencyService;
 import Business.FundRaising.Funds;
 import Business.SnowClearingOrg.Service;
 import Business.LeafClearingOrg.LeafService;
 import Business.SoupKitchenOrg.Meal;
 import Business.WorkQueue.DonationRequest;
+import Business.WorkQueue.EmergencyWorkRequest;
 import Business.WorkQueue.LeafWorkRequest;
 import Business.WorkQueue.SoupWorkRequest;
 import Business.WorkQueue.WorkRequest;
@@ -26,12 +28,14 @@ public class Member {
     private ArrayList<LeafWorkRequest> leafRequestList;
     private ArrayList<DonationRequest> donationList;
     private ArrayList<SoupWorkRequest> soupRequestList;
+    private ArrayList<EmergencyWorkRequest> emgRequestList;
     private String memAddress;
     private String memPhNum;
     int id = 1;
     int leafid = 1;
     int donationid = 1;
     int orderid = 1;
+    int emgid = 1;
 
     public Member(String memUsername) {
         this.memUsername = memUsername;
@@ -39,6 +43,7 @@ public class Member {
         donationList = new ArrayList<DonationRequest>();
         leafRequestList = new ArrayList<LeafWorkRequest>();
         soupRequestList = new ArrayList<SoupWorkRequest>();
+        emgRequestList = new ArrayList<EmergencyWorkRequest>();
     }
     
     
@@ -142,6 +147,24 @@ public class Member {
     public void setOrderid(int orderid) {
         this.orderid = orderid;
     }
+
+    public ArrayList<EmergencyWorkRequest> getEmgRequestList() {
+        return emgRequestList;
+    }
+
+    public void setEmgRequestList(ArrayList<EmergencyWorkRequest> emgRequestList) {
+        this.emgRequestList = emgRequestList;
+    }
+
+    public int getEmgid() {
+        return emgid;
+    }
+
+    public void setEmgid(int emgid) {
+        this.emgid = emgid;
+    }
+    
+    
     
     
     public void newRequest(String snowOrgName, String memName, String fieldWorker, ArrayList<Service> request, String serviceAddress, String instructions) {
@@ -197,6 +220,20 @@ public class Member {
         newReq.setStatus("New Order");
         soupRequestList.add(newReq);
         orderid++;
+    }
+    
+    public void newEmgRequest(String emergencyOrgName, String memName, String ambulanceDriver, ArrayList<EmergencyService> request, String serviceAddress, String problem) {
+        EmergencyWorkRequest newWork = new EmergencyWorkRequest();
+        newWork.setRequestId(String.valueOf(id));
+        newWork.setMemName(memName);
+        newWork.setEmgOrgName(emergencyOrgName);
+        newWork.setAmbulanceDriverName(ambulanceDriver);
+        newWork.setService(request);
+        newWork.setPickupAddress(serviceAddress);
+        newWork.setIssue(problem);
+        newWork.setStatus("New Request");
+        emgRequestList.add(newWork);
+        id++;
     }
     
     

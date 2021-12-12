@@ -5,6 +5,7 @@
  */
 package userinterface.EmergencyDistressOrgRole;
 
+import Business.Ambulance.Ambulance;
 import javax.swing.JOptionPane;
 
 import Business.Member.Member;
@@ -51,7 +52,7 @@ public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         FieldWorkerJTable = new javax.swing.JTable();
 
-        btnAssignRequest.setText("Assign Request to the Selected FieldWorker");
+        btnAssignRequest.setText("Assign Request to the Selected Ambulance");
         btnAssignRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAssignRequestActionPerformed(evt);
@@ -77,7 +78,7 @@ public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
                 {null}
             },
             new String [] {
-                "Field Worker Name"
+                "Ambulance Driver Name"
             }
         ) {
             Class[] types = new Class [] {
@@ -111,14 +112,15 @@ public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
                         .addComponent(btnBack)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(280, 280, 280)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(627, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(64, 64, 64))
-                    .addComponent(btnAssignRequest, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap(155, Short.MAX_VALUE))
+                        .addGap(547, 547, 547))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnAssignRequest)
+                        .addGap(494, 494, 494))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,9 +131,9 @@ public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(46, 46, 46)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(55, 55, 55)
                 .addComponent(btnAssignRequest)
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(431, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -154,15 +156,15 @@ public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
         else
         {
 
-//            AmbulanceDriver fieldWorker  = (FieldWorker)FieldWorkerJTable.getValueAt(selectedRow, 0);
-//            fieldWorker.getRequestList().add(request);
-//            request.setStatus("Assigned Field Worker");
+            Ambulance ambulance  = (Ambulance)FieldWorkerJTable.getValueAt(selectedRow, 0);
+            ambulance.getEmgRequestList().add(request);
+            request.setStatus("Assigned Ambulance");
 
             for(Member member:system.getMemberDirectory().getMemberList()){
                 if(request.getMemName().equals(member.getMemUsername())){
                     for(EmergencyWorkRequest request : member.getEmgRequestList()){
-                        if(request.getStatus().equals("New Request")){
-                            request.setStatus("Assigned Field Worker");
+                        if(request.getStatus().equals("In Progress")){
+                            request.setStatus("Assigned Ambulance");
                         }
                     }
                 }

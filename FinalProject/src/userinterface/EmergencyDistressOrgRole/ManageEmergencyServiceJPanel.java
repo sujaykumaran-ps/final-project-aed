@@ -7,7 +7,6 @@ package userinterface.EmergencyDistressOrgRole;
 import Business.EcoSystem;
 import Business.EmergencyDistressOrg.EmergencyService;
 import Business.EmergencyDistressOrg.EmergencyDistressOrg;
-import Business.LeafClearingOrg.LeafService;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.regex.Pattern;
@@ -20,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ManageEmergencyServiceJPanel extends javax.swing.JPanel {
 
-        EcoSystem system;
+    EcoSystem system;
     EmergencyService service;
     JPanel userProcessContainer;
     UserAccount ua;
@@ -29,7 +28,7 @@ public class ManageEmergencyServiceJPanel extends javax.swing.JPanel {
      */
     public ManageEmergencyServiceJPanel(JPanel userProcessContainer, UserAccount ua, EcoSystem system) {
         initComponents();
-                this.ua = ua;
+        this.ua = ua;
         this.system = system;
         this.userProcessContainer = userProcessContainer;
         populateTable();
@@ -44,22 +43,23 @@ public class ManageEmergencyServiceJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        lblServiceDesc = new javax.swing.JLabel();
-        txtServiceType = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        btnBack1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
         tblServices = new javax.swing.JTable();
-        lblServiceName = new javax.swing.JLabel();
         txtServiceName = new javax.swing.JTextField();
-        lblType = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
+        lblServiceName1 = new javax.swing.JLabel();
+        lblServiceDesc1 = new javax.swing.JLabel();
         txtServiceDesc = new javax.swing.JTextField();
-        btnAddService = new javax.swing.JButton();
+        lblType1 = new javax.swing.JLabel();
+        txtServiceType = new javax.swing.JTextField();
+        btnAddService1 = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(252, 156, 52));
-
-        lblServiceDesc.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblServiceDesc.setText("Description :");
+        btnBack1.setText("<< Back");
+        btnBack1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBack1ActionPerformed(evt);
+            }
+        });
 
         tblServices.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -89,110 +89,85 @@ public class ManageEmergencyServiceJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblServices);
+        jScrollPane2.setViewportView(tblServices);
 
-        lblServiceName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblServiceName.setText("Service Name :");
+        lblServiceName1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblServiceName1.setText("Service Name :");
 
-        lblType.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblType.setText("Type :");
+        lblServiceDesc1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblServiceDesc1.setText("Description :");
 
-        btnBack.setText("<< Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        lblType1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblType1.setText("Type :");
+
+        btnAddService1.setText("Add Service");
+        btnAddService1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btnAddService1ActionPerformed(evt);
             }
         });
-
-        btnAddService.setText("Add Service");
-        btnAddService.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddServiceActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBack)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(262, 262, 262)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblType)
-                            .addComponent(lblServiceDesc)
-                            .addComponent(lblServiceName))
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtServiceName)
-                            .addComponent(txtServiceDesc)
-                            .addComponent(txtServiceType, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(71, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(377, 377, 377)
-                .addComponent(btnAddService)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(btnBack)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtServiceName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblServiceName))
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtServiceDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblServiceDesc))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblType)
-                    .addComponent(txtServiceType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnAddService)
-                .addContainerGap(88, Short.MAX_VALUE))
-        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 830, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBack1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(262, 262, 262)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblType1)
+                            .addComponent(lblServiceDesc1)
+                            .addComponent(lblServiceName1))
+                        .addGap(32, 32, 32)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtServiceName)
+                            .addComponent(txtServiceDesc)
+                            .addComponent(txtServiceType, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(91, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(377, 377, 377)
+                .addComponent(btnAddService1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 533, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(btnBack1)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtServiceName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblServiceName1))
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtServiceDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblServiceDesc1))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblType1)
+                    .addComponent(txtServiceType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnAddService1)
+                .addContainerGap(118, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btnBack1ActionPerformed
 
-    private void btnAddServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddServiceActionPerformed
+    private void btnAddService1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddService1ActionPerformed
         // TODO add your handling code here:
         String name = txtServiceName.getText();
         String desc = txtServiceDesc.getText();
@@ -218,13 +193,13 @@ public class ManageEmergencyServiceJPanel extends javax.swing.JPanel {
 
         try {
             if(type==null || type.isEmpty()){
-                throw new NullPointerException("Type Field cannot be empty !!!");
+                throw new NullPointerException("Beverage Field cannot be empty !!!");
             }
         }  catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "Type Field cannot be empty !!!");
+            JOptionPane.showMessageDialog(null, "Beverage Field cannot be empty !!!");
             return;
         }catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Invalid Type !!!");
+            JOptionPane.showMessageDialog(null, "Invalid Beverage !!!");
             return;
         }
 
@@ -238,7 +213,7 @@ public class ManageEmergencyServiceJPanel extends javax.swing.JPanel {
         txtServiceDesc.setText("");
         txtServiceType.setText("");
         populateTable();
-    }//GEN-LAST:event_btnAddServiceActionPerformed
+    }//GEN-LAST:event_btnAddService1ActionPerformed
 
    private void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tblServices.getModel();
@@ -257,13 +232,12 @@ public class ManageEmergencyServiceJPanel extends javax.swing.JPanel {
         }
    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddService;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblServiceDesc;
-    private javax.swing.JLabel lblServiceName;
-    private javax.swing.JLabel lblType;
+    private javax.swing.JButton btnAddService1;
+    private javax.swing.JButton btnBack1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblServiceDesc1;
+    private javax.swing.JLabel lblServiceName1;
+    private javax.swing.JLabel lblType1;
     private javax.swing.JTable tblServices;
     private javax.swing.JTextField txtServiceDesc;
     private javax.swing.JTextField txtServiceName;

@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.DeliveryVolunteerRole;
+package userinterface.AmbulanceRole;
 
-import Business.DeliveryVolunteer.DeliveryVolunteer;
+import Business.Ambulance.Ambulance;
 import Business.EcoSystem;
 import Business.Member.Member;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.SoupWorkRequest;
+import Business.WorkQueue.EmergencyWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -17,17 +17,17 @@ import javax.swing.JPanel;
  *
  * @author sujay
  */
-public class ProcessOrderJPanel extends javax.swing.JPanel {
+public class ProcessAmbulanceRequestJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ProcessOrderJPanel
+     * Creates new form ProcessAmbulanceRequestJPanel
      */
-    
     JPanel userProcessContainer;
-    SoupWorkRequest request;
+    EmergencyWorkRequest request;
     EcoSystem system;
     UserAccount account;
-    public ProcessOrderJPanel(JPanel userProcessContainer, SoupWorkRequest request, EcoSystem system,UserAccount account) {
+    
+    public ProcessAmbulanceRequestJPanel(JPanel userProcessContainer, EmergencyWorkRequest request, EcoSystem system,UserAccount account) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.request = request;
@@ -46,7 +46,7 @@ public class ProcessOrderJPanel extends javax.swing.JPanel {
 
         btnComplete = new javax.swing.JButton();
 
-        btnComplete.setText("Delivered Soup Order");
+        btnComplete.setText("Pickup Completed");
         btnComplete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCompleteActionPerformed(evt);
@@ -60,32 +60,32 @@ public class ProcessOrderJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(538, 538, 538)
                 .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(549, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(362, 362, 362)
                 .addComponent(btnComplete)
-                .addContainerGap(395, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
         // TODO add your handling code here:
-        request.setStatus("Delivered");
+        request.setStatus("Pickup Completed");
         for(Member mem:system.getMemberDirectory().getMemberList()){
             if(request.getMemName().equals(mem.getMemUsername())){
-                for(SoupWorkRequest request : mem.getSoupRequestList()){
-                    if(request.getStatus().equals("Assigned Volunteer")) {
-                        request.setStatus("Delivered");
+                for(EmergencyWorkRequest request : mem.getEmgRequestList()){
+                    if(request.getStatus().equals("Assigned Ambulance")) {
+                        request.setStatus("Pickup Completed");
                     }
                 }
             }
         }
-        for(DeliveryVolunteer volunteer : system.getDeliveryVolunteerDirectory().getVolunteerList()){
-            if(volunteer.getVolunteerUsername().equals(account.getUsername())){
-                volunteer.setAvailability(true);
+        for(Ambulance ambulance : system.getAmbulanceDirectory().getAmbulanceList()){
+            if(ambulance.getAmbulanceUsername().equals(account.getUsername())){
+                ambulance.setAvailability(true);
             }
         }
         userProcessContainer.remove(this);

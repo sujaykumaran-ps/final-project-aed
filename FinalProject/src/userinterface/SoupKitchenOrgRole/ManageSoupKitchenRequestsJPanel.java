@@ -166,11 +166,14 @@ public class ManageSoupKitchenRequestsJPanel extends javax.swing.JPanel {
         }
         else{
             SoupWorkRequest request  = (SoupWorkRequest)tblRequests.getValueAt(selectedRow, 0);
-            if(request.getStatus().equals("Request Cancelled")){
-                JOptionPane.showMessageDialog(null,"Request Cancelled !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            if(request.getStatus().equals("In Progress")){
+                JOptionPane.showMessageDialog(null, "Order Accepted Already !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }
-            else if(request.getStatus().equals("Completed")){
-                JOptionPane.showMessageDialog(null,"Request Completed Already !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            else if(request.getStatus().equals("Order Cancelled")){
+                JOptionPane.showMessageDialog(null,"Order Cancelled !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Delivered")){
+                JOptionPane.showMessageDialog(null,"Order Completed Already !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
             }
             else{
                 ViewSoupRequestJPanel viewRequest=new ViewSoupRequestJPanel(userProcessContainer, account, request, system);
@@ -189,16 +192,16 @@ public class ManageSoupKitchenRequestsJPanel extends javax.swing.JPanel {
         }
         else{
             SoupWorkRequest request  = (SoupWorkRequest)tblRequests.getValueAt(selectedRow, 0);
-            if(request.getStatus().equals("New Request")){
-                JOptionPane.showMessageDialog(null,"Accept the Request First", "Warning", JOptionPane.WARNING_MESSAGE);
+            if(request.getStatus().equals("New Order")){
+                JOptionPane.showMessageDialog(null,"Accept the Order First", "Warning", JOptionPane.WARNING_MESSAGE);
             }
-            else if(request.getStatus().equals("Request Cancelled")){
+            else if(request.getStatus().equals("Order Cancelled")){
                 JOptionPane.showMessageDialog(null,"Request Cancelled !!! Cannot Assign.", "Warning", JOptionPane.WARNING_MESSAGE);
             }
-            else if(request.getStatus().equals("Completed")){
-                JOptionPane.showMessageDialog(null,"Request Completed Already !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            else if(request.getStatus().equals("Delivered")){
+                JOptionPane.showMessageDialog(null,"Order Delivered Already !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
             }
-            else if(request.getStatus().equals("Assigned Field Worker")){
+            else if(request.getStatus().equals("Assigned Volunteer")){
                 JOptionPane.showMessageDialog(null,"Already Assigned Field Worker !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }
             else{

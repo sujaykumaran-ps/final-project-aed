@@ -178,14 +178,21 @@ public class ManageEmergencyRequestsJPanel extends javax.swing.JPanel {
         }
         else{
             EmergencyWorkRequest request  = (EmergencyWorkRequest)tblRequests.getValueAt(selectedRow, 0);
-            if(request.getStatus().equals("Assigned Field Worker") || request.getStatus().equals("Completed") || request.getStatus().equals("In Progress")){
-                JOptionPane.showMessageDialog(null,"Already Assigned for Request !!!", "Warning", JOptionPane.WARNING_MESSAGE);
-            }else if(request.getStatus().equals("Request Cancelled")){
+            if(request.getStatus().equals("New Request")){
+                JOptionPane.showMessageDialog(null,"Accept the Request First", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Request Cancelled")){
                 JOptionPane.showMessageDialog(null,"Request Cancelled !!! Cannot Assign.", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Pickup Completed")){
+                JOptionPane.showMessageDialog(null,"Request Completed Already !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Assigned Ambulance")){
+                JOptionPane.showMessageDialog(null,"Already Assigned Field Worker !!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }
             else{
                 EmergencyFieldWorkRequestJPanel assignDelivery = new EmergencyFieldWorkRequestJPanel(userProcessContainer, account, request, system);
-                userProcessContainer.add("Assign Field Worker", assignDelivery);
+                userProcessContainer.add("Assign Ambulance", assignDelivery);
                 CardLayout layout=(CardLayout)userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             }
@@ -200,8 +207,14 @@ public class ManageEmergencyRequestsJPanel extends javax.swing.JPanel {
         }
         else{
             EmergencyWorkRequest request  = (EmergencyWorkRequest)tblRequests.getValueAt(selectedRow, 0);
-            if(request.getStatus().equals("In Progress") || request.getStatus().equals("Completed")){
-                JOptionPane.showMessageDialog(null, "Request Completed or In Progress !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            if(request.getStatus().equals("In Progress")){
+                JOptionPane.showMessageDialog(null, "Request Accepted Already !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Request Cancelled")){
+                JOptionPane.showMessageDialog(null,"Request Cancelled !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(request.getStatus().equals("Pickup Completed")){
+                JOptionPane.showMessageDialog(null,"Request Completed Already !!! ", "Warning", JOptionPane.WARNING_MESSAGE);
             }else{
                 ViewEmergencyRequestJPanel viewRequest=new ViewEmergencyRequestJPanel(userProcessContainer, account, request, system);
                 userProcessContainer.add("View Request", viewRequest);

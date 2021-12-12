@@ -190,20 +190,20 @@ public class ViewSoupRequestJPanel extends javax.swing.JPanel {
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
-        if(request.getStatus().equals("New Request")) {
-            request.setStatus("Request Cancelled");
+        if(request.getStatus().equals("New Order")) {
+            request.setStatus("Order Cancelled");
             for(Member mem:system.getMemberDirectory().getMemberList()){
                 if(request.getMemName().equals(mem.getMemUsername())){
                     for(SoupWorkRequest req : mem.getSoupRequestList()){
-                        if(req.getStatus().equals("New Request")) {
-                            req.setStatus("Request Cancelled");
+                        if(req.getStatus().equals("New Order")) {
+                            req.setStatus("Order Cancelled");
                         }
                     }
                 }
             }
         }
         else{
-            JOptionPane.showMessageDialog(null, "Request is Accepted already. Cannot cancel Request !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Order is Accepted already. Cannot cancel Request !!!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
 
         userProcessContainer.remove(this);
@@ -217,18 +217,18 @@ public class ViewSoupRequestJPanel extends javax.swing.JPanel {
         if(request.getStatus().equals("In Progress")) {
             JOptionPane.showMessageDialog(null, "Already Accepted", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-        else if(request.getStatus().equals("Assigned Field Worker")) {
+        else if(request.getStatus().equals("Assigned Volunteer")) {
             JOptionPane.showMessageDialog(null, "Already Accepted", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-        else if(request.getStatus().equals("Request Cancelled")) {
-            JOptionPane.showMessageDialog(null, "Reqeust Cancelled Already", "Warning", JOptionPane.WARNING_MESSAGE);
+        else if(request.getStatus().equals("Order Cancelled")) {
+            JOptionPane.showMessageDialog(null, "Order Cancelled Already", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
             request.setStatus("In Progress");
             for(Member mem:system.getMemberDirectory().getMemberList()){
                 if(request.getMemName().equals(mem.getMemUsername())){
                     for(SoupWorkRequest request : mem.getSoupRequestList()){
-                        if(request.getStatus().equals("New Request")) {
+                        if(request.getStatus().equals("New Order")) {
                             request.setStatus("In Progress");
                         }
 

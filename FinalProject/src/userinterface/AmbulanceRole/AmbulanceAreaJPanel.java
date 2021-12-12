@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.DeliveryVolunteerRole;
+package userinterface.AmbulanceRole;
 
-import Business.DeliveryVolunteer.DeliveryVolunteer;
+import Business.Ambulance.Ambulance;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.SoupWorkRequest;
+import Business.WorkQueue.EmergencyWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -18,16 +18,15 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sujay
  */
-public class VolunteerAreaJPanel extends javax.swing.JPanel {
+public class AmbulanceAreaJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form VolunteerAreaJPanel
+     * Creates new form AmbulanceAreaJPanel
      */
-    
     private JPanel userProcessContainer;
     private EcoSystem business;
     private UserAccount userAccount;
-    public VolunteerAreaJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+    public AmbulanceAreaJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
@@ -45,55 +44,30 @@ public class VolunteerAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
-        btnProcess = new javax.swing.JButton();
-        btnRefresh = new javax.swing.JButton();
-        titleAssignedRequests = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblOrderDetails = new javax.swing.JTable();
+        tblRequestDetails = new javax.swing.JTable();
+        titleAssignedRequests = new javax.swing.JLabel();
+        btnRefresh = new javax.swing.JButton();
+        btnProcess = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
-        btnBack.setText("<< ");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-
-        btnProcess.setText("Process");
-        btnProcess.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProcessActionPerformed(evt);
-            }
-        });
-
-        btnRefresh.setText("Refresh");
-        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRefreshActionPerformed(evt);
-            }
-        });
-
-        titleAssignedRequests.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleAssignedRequests.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleAssignedRequests.setText("Soup Kitchen Orders");
-
-        tblOrderDetails.setModel(new javax.swing.table.DefaultTableModel(
+        tblRequestDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Order Id", "Kitchen Name", "Member Name", "Person Name", "Service Address", "Status", "Message"
+                "Order Id", "Emergency Org Name", "Member Name", "Pickup Address", "Status", "Problem"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -104,7 +78,32 @@ public class VolunteerAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblOrderDetails);
+        jScrollPane1.setViewportView(tblRequestDetails);
+
+        titleAssignedRequests.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleAssignedRequests.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleAssignedRequests.setText("Emergency Requests");
+
+        btnRefresh.setText("Refresh");
+        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRefreshActionPerformed(evt);
+            }
+        });
+
+        btnProcess.setText("Process");
+        btnProcess.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProcessActionPerformed(evt);
+            }
+        });
+
+        btnBack.setText("<< ");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -128,7 +127,7 @@ public class VolunteerAreaJPanel extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(307, 307, 307)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 906, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 137, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -148,6 +147,32 @@ public class VolunteerAreaJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
+        // TODO add your handling code here:
+        populateTable();
+    }//GEN-LAST:event_btnRefreshActionPerformed
+
+    private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = tblRequestDetails.getSelectedRow();
+        if (selectedRow < 0){
+            return;
+        }
+        EmergencyWorkRequest req = (EmergencyWorkRequest)tblRequestDetails.getValueAt(selectedRow, 0);
+
+        if(req.getStatus().equals("Pickup Completed")){
+            JOptionPane.showMessageDialog(null,"Request Already Completed", "Warning", JOptionPane.WARNING_MESSAGE);
+        }else if(req.getStatus().equals("New Request") || req.getStatus().equals("In Progress")){
+            JOptionPane.showMessageDialog(null,"Request is not yet Assigned", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            ProcessAmbulanceRequestJPanel processRequestJPanel = new ProcessAmbulanceRequestJPanel(userProcessContainer, req, business, userAccount);
+            userProcessContainer.add("Process WorkRequest JPanel", processRequestJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+        }
+    }//GEN-LAST:event_btnProcessActionPerformed
+
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
@@ -155,59 +180,32 @@ public class VolunteerAreaJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
-        // TODO add your handling code here:
-        int selectedRow = tblOrderDetails.getSelectedRow();
-        if (selectedRow < 0){
-            return;
-        }
-        SoupWorkRequest order = (SoupWorkRequest)tblOrderDetails.getValueAt(selectedRow, 0);
-
-        if(order.getStatus().equals("Delivered")){
-            JOptionPane.showMessageDialog(null,"Order Already Delivered", "Warning", JOptionPane.WARNING_MESSAGE);
-        }else if(order.getStatus().equals("New Order") || order.getStatus().equals("In Progress")){
-            JOptionPane.showMessageDialog(null,"Request is not yet Assigned", "Warning", JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            ProcessOrderJPanel processOrderJPanel = new ProcessOrderJPanel(userProcessContainer, order,business, userAccount);
-            userProcessContainer.add("processWorkRequestJPanel", processOrderJPanel);
-            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-            layout.next(userProcessContainer);
-        }
-    }//GEN-LAST:event_btnProcessActionPerformed
-
-    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
-        // TODO add your handling code here:
-        populateTable();
-    }//GEN-LAST:event_btnRefreshActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnProcess;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblOrderDetails;
+    private javax.swing.JTable tblRequestDetails;
     private javax.swing.JLabel titleAssignedRequests;
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) tblOrderDetails.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblRequestDetails.getModel();
         model.setRowCount(0);
         
-        for(DeliveryVolunteer volunteer : business.getDeliveryVolunteerDirectory().getVolunteerList()){
-            if(volunteer.getVolunteerUsername().equals(userAccount.getUsername())){
+        for(Ambulance ambulance : business.getAmbulanceDirectory().getAmbulanceList()){
+            if(ambulance.getAmbulanceUsername().equals(userAccount.getUsername())){
                 
-                for(SoupWorkRequest request : volunteer.getSoupRequestList()){
-                Object[] row = new Object[7];
+                for(EmergencyWorkRequest request : ambulance.getEmgRequestList()){
+                Object[] row = new Object[6];
                 
                 row[0] = request;
-                row[1] = request.getSoupKitchenName();
+                row[1] = request.getEmgOrgName();
                 row[2] = request.getMemName();
-                row[3] = request.getPersonName();
-                row[4] = request.getServiceAddress();
-                row[5] = request.getStatus();
-                row[6] = request.getMessage();
+                row[3] = request.getPickupAddress();
+                row[4] = request.getStatus();
+                row[5] = request.getIssue();
                 model.addRow(row);     
                 }
             } 

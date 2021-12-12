@@ -124,7 +124,7 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
                 btnRefreshActionPerformed(evt);
             }
         });
-        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 290, -1, 40));
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 300, -1, 30));
 
         btnProcess.setBackground(new java.awt.Color(133, 211, 255));
         btnProcess.setText("Process");
@@ -133,16 +133,16 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
                 btnProcessActionPerformed(evt);
             }
         });
-        add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 290, -1, 40));
+        add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 300, -1, 30));
 
         btnBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnBack.setText("<< Back");
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 35, -1, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 45, -1, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SnowClearing_fieldworker.png"))); // NOI18N
         jLabel1.setText("jLabel1");

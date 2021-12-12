@@ -54,9 +54,13 @@ public class FundDonationJPanel extends javax.swing.JPanel {
         btnDonateFunds = new javax.swing.JButton();
         btnRefresh = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(900, 900));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblFundRaisingOrg.setBackground(new java.awt.Color(133, 211, 255));
         tblFundRaisingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -85,25 +89,29 @@ public class FundDonationJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblFundRaisingOrg);
 
-        titleChoose.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleChoose.setText("Choose the Organization you want to donate for :");
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 737, 95));
 
+        titleChoose.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        titleChoose.setText("Choose the Organization you want to donate for :");
+        add(titleChoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, -1, -1));
+
+        tblRequests.setBackground(new java.awt.Color(133, 211, 255));
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Donation ID", "Fund RaisingOrg Name", "Address", "Amount Donated"
+                "Fund RaisingOrg Name", "Member Phone", "Amount Donated"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, true, false
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -116,73 +124,44 @@ public class FundDonationJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblRequests);
 
-        titleOrders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleOrders.setText("Your Donations to us :");
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 460, 737, 90));
 
+        titleOrders.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        titleOrders.setText("Your Donations to us :");
+        add(titleOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, -1, -1));
+
+        btnDonateFunds.setBackground(new java.awt.Color(133, 211, 255));
+        btnDonateFunds.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDonateFunds.setText("Donate Funds");
         btnDonateFunds.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDonateFundsActionPerformed(evt);
             }
         });
+        add(btnDonateFunds, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 380, -1, -1));
 
+        btnRefresh.setBackground(new java.awt.Color(133, 211, 255));
+        btnRefresh.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefresh.setText("Refresh Donations");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshActionPerformed(evt);
             }
         });
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 570, -1, -1));
 
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(titleOrders)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleChoose)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(346, 346, 346)
-                        .addComponent(btnDonateFunds))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(346, 346, 346)
-                        .addComponent(btnRefresh))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(btnBack)))
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(btnBack)
-                .addGap(33, 33, 33)
-                .addComponent(titleChoose)
-                .addGap(35, 35, 35)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnDonateFunds)
-                .addGap(18, 18, 18)
-                .addComponent(titleOrders)
-                .addGap(28, 28, 28)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnRefresh)
-                .addContainerGap(78, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/16147914.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, -10, 1070, 980));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDonateFundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonateFundsActionPerformed
@@ -217,6 +196,7 @@ public class FundDonationJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDonateFunds;
     private javax.swing.JButton btnRefresh;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblFundRaisingOrg;
@@ -246,11 +226,10 @@ public class FundDonationJPanel extends javax.swing.JPanel {
           for (Member mem:system.getMemberDirectory().getMemberList()) {   
             if (mem.getMemUsername().equals(account.getUsername())) {
                for(DonationRequest donation:mem.getDonationList()){
-                Object[] row = new Object[4];
-                row[0] = donation;
-                row[1] = donation.getFundOrgName();
-                row[2] = donation.getMemberPhNum();
-                row[3] = donation.getTotalDonation();
+                Object[] row = new Object[3];
+                row[0] = donation.getFundOrgName();
+                row[1] = donation.getMemberPhNum();
+                row[2] = donation.getTotalDonation();
                 model.addRow(row);
                }            
             }  

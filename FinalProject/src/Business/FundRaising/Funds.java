@@ -94,9 +94,14 @@ public class Funds {
     public int getFundPerCause() {
         return fundPerCause;
     }
+    
 
     public void setFundPerCause(int fundCollected) {
         this.fundPerCause = fundPerCause + fundCollected;
+        if(fundPerCause>=fundAmount){
+            setFundOpen(false);
+            setFundStatus("Closed");
+        }
     }
 
     

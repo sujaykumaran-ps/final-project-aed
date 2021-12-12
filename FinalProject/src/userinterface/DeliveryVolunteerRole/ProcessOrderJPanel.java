@@ -45,10 +45,13 @@ public class ProcessOrderJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnComplete = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnComplete.setBackground(new java.awt.Color(133, 211, 255));
         btnComplete.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         btnComplete.setText("Delivered Soup Order");
         btnComplete.addActionListener(new java.awt.event.ActionListener() {
@@ -56,7 +59,13 @@ public class ProcessOrderJPanel extends javax.swing.JPanel {
                 btnCompleteActionPerformed(evt);
             }
         });
-        add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(538, 362, 273, -1));
+        add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 373, 273, 50));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delivergif.gif"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, 560, 480));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delivery.png"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 690, 430));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
@@ -84,5 +93,7 @@ public class ProcessOrderJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnComplete;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

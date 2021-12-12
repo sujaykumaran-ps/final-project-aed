@@ -59,13 +59,12 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
         txtServiceDesc = new javax.swing.JTextField();
         btnAddService = new javax.swing.JButton();
         titleManageService = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblServiceDesc.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblServiceDesc.setFont(new java.awt.Font("Segoe UI Semibold", 1, 13)); // NOI18N
         lblServiceDesc.setText("Description :");
         add(lblServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 514, -1, -1));
 
@@ -104,25 +103,25 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 339, 638, 107));
 
-        lblServiceName.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblServiceName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 13)); // NOI18N
         lblServiceName.setText("Service Name :");
         add(lblServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 473, -1, -1));
 
         txtServiceName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         add(txtServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 464, 194, 31));
 
-        lblType.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblType.setFont(new java.awt.Font("Segoe UI Semibold", 1, 13)); // NOI18N
         lblType.setText("Type :");
         add(lblType, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 564, -1, -1));
 
         btnBack.setBackground(new java.awt.Color(255, 204, 102));
-        btnBack.setText("<< Back");
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 35, -1, 43));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 35, -1, 30));
 
         txtServiceDesc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         add(txtServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 507, 194, 32));
@@ -134,18 +133,15 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
                 btnAddServiceActionPerformed(evt);
             }
         });
-        add(btnAddService, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 601, -1, 40));
+        add(btnAddService, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 610, -1, 30));
 
-        titleManageService.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleManageService.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleManageService.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageService.setText("Manage Services");
-        add(titleManageService, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 118, 526, -1));
-
-        jLabel1.setPreferredSize(new java.awt.Dimension(1360, 780));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 647, 1354, 134));
+        titleManageService.setText("Manage Leaf Clearance Org");
+        add(titleManageService, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 526, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LeafClearingOrg.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, -2, 1390, 790));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, -10, 1390, 790));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -225,7 +221,6 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddService;
     private javax.swing.JButton btnBack;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblServiceDesc;

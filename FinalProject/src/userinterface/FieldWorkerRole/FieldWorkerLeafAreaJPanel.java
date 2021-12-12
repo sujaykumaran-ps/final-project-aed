@@ -143,7 +143,7 @@ public class FieldWorkerLeafAreaJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRefresh)
                     .addComponent(btnProcess))
-                .addContainerGap(492, Short.MAX_VALUE))
+                .addContainerGap(480, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

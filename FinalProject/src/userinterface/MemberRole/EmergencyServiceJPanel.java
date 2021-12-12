@@ -38,7 +38,6 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
         this.system = system;
         this.account = account;
         populateServicesTable();
-        titleOrgName.setText(org.getEmergencyOrgName());
     }
 
     /**
@@ -58,49 +57,66 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
         btnCallAmbulance = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblCart = new javax.swing.JTable();
-        titleOrder = new javax.swing.JLabel();
         lblAddress = new javax.swing.JLabel();
-        titleOrgName = new javax.swing.JLabel();
         txtAddress = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblServices = new javax.swing.JTable();
         txtIssue = new javax.swing.JTextField();
-        lblPer = new javax.swing.JLabel();
+        lblIssue = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
         jLabel1.setText("Service Summary");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 307, -1, -1));
 
-        lblServices.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblServices.setText("Meal Details");
+        lblServices.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        lblServices.setText("Emergency Service Details");
+        add(lblServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, -1, -1));
 
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 33, -1, -1));
 
+        btnAdd.setBackground(new java.awt.Color(133, 211, 255));
+        btnAdd.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnAdd.setText("Add Service");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(479, 266, -1, -1));
 
+        btnRemove.setBackground(new java.awt.Color(133, 211, 255));
+        btnRemove.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnRemove.setText("Remove Service");
         btnRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemoveActionPerformed(evt);
             }
         });
+        add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 450, -1, -1));
 
+        btnCallAmbulance.setBackground(new java.awt.Color(133, 211, 255));
+        btnCallAmbulance.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnCallAmbulance.setText("Call Ambulance");
         btnCallAmbulance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCallAmbulanceActionPerformed(evt);
             }
         });
+        add(btnCallAmbulance, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 590, -1, -1));
 
+        tblCart.setBackground(new java.awt.Color(133, 211, 255));
         tblCart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -109,7 +125,7 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Meal Name", "Description", "Type"
+                "Service", "Description", "Type"
             }
         ) {
             Class[] types = new Class [] {
@@ -129,14 +145,16 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(tblCart);
 
-        titleOrder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleOrder.setText("Request from");
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 347, 552, 91));
 
-        lblAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblAddress.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblAddress.setText("Pick Up Address :");
+        add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 540, -1, -1));
 
-        titleOrgName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtAddress.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 540, 201, -1));
 
+        tblServices.setBackground(new java.awt.Color(133, 211, 255));
         tblServices.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -145,7 +163,7 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Meal Name", "Descripion", "Type"
+                "Service ", "Descripion", "Type"
             }
         ) {
             Class[] types = new Class [] {
@@ -165,91 +183,17 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblServices);
 
-        lblPer.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblPer.setText("Issue :");
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 157, 552, 91));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(203, 203, 203)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(276, 276, 276)
-                                .addComponent(btnAdd))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(titleOrder)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(titleOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(255, 255, 255)
-                                .addComponent(jLabel1))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(338, 338, 338)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblAddress)
-                            .addComponent(lblPer))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRemove)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
-                                .addComponent(txtIssue, javax.swing.GroupLayout.Alignment.TRAILING))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(458, 458, 458)
-                        .addComponent(lblServices))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(233, 233, 233)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(459, 459, 459)
-                        .addComponent(btnCallAmbulance)))
-                .addContainerGap(575, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack)
-                        .addGap(423, 423, 423))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(titleOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titleOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(lblServices)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAdd)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRemove)))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPer)
-                    .addComponent(txtIssue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAddress)
-                    .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addComponent(btnCallAmbulance)
-                .addContainerGap(168, Short.MAX_VALUE))
-        );
+        txtIssue.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        add(txtIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 502, 201, -1));
+
+        lblIssue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblIssue.setText("Emergency :");
+        add(lblIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulancegif.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 350, 570, 500));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -263,7 +207,7 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblServices.getSelectedRow();
         if(selectedRow < 0){
-            JOptionPane.showMessageDialog(null, "Please Select a Meal to Add !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please Select a Service to Add !!!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
             EmergencyService service = (EmergencyService)tblServices.getValueAt(selectedRow, 0);
@@ -275,7 +219,7 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblCart.getSelectedRow();
         if(selectedRow < 0){
-            JOptionPane.showMessageDialog(null, "Please select a Meal to Remove from Cart !!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please select a Service to Remove!!!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
             EmergencyService service = (EmergencyService)tblCart.getValueAt(selectedRow, 0);
@@ -305,6 +249,15 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please Enter Pickup Address !!!");
             return;
         }
+        
+        try {
+            if(issue==null || issue.isEmpty()){
+                throw new NullPointerException("Please Enter the Emergency Reason !!!");
+            }
+        } catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "Please Enter the Emergency Reason !!!");
+            return;
+        }
 
         org.newEmgRequest(org.getEmergencyOrgName(), account.getUsername(), null, services , address, issue);
         for(Member mem:system.getMemberDirectory().getMemberList()){
@@ -323,15 +276,14 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCallAmbulance;
     private javax.swing.JButton btnRemove;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblAddress;
-    private javax.swing.JLabel lblPer;
+    private javax.swing.JLabel lblIssue;
     private javax.swing.JLabel lblServices;
     private javax.swing.JTable tblCart;
     private javax.swing.JTable tblServices;
-    private javax.swing.JLabel titleOrder;
-    private javax.swing.JLabel titleOrgName;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtIssue;
     // End of variables declaration//GEN-END:variables

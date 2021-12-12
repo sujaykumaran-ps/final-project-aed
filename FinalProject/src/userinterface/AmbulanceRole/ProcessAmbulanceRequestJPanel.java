@@ -45,30 +45,23 @@ public class ProcessAmbulanceRequestJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnComplete = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnComplete.setBackground(new java.awt.Color(133, 211, 255));
+        btnComplete.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         btnComplete.setText("Pickup Completed");
         btnComplete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCompleteActionPerformed(evt);
             }
         });
+        add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 380, 273, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(538, 538, 538)
-                .addComponent(btnComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(362, 362, 362)
-                .addComponent(btnComplete)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 960, 700));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed
@@ -96,5 +89,6 @@ public class ProcessAmbulanceRequestJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnComplete;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

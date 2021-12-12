@@ -50,6 +50,8 @@ public class MainJFrame extends javax.swing.JFrame {
         logoutJButton = new javax.swing.JButton();
         loginJLabel = new javax.swing.JLabel();
         container = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -132,8 +134,18 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(jPanel1);
 
-        container.setBackground(new java.awt.Color(252, 156, 52));
+        container.setBackground(new java.awt.Color(206, 255, 255));
         container.setLayout(new java.awt.CardLayout());
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/images 1.jpg"))); // NOI18N
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 1000, 720));
+
+        container.add(jPanel2, "card2");
+
         jSplitPane1.setRightComponent(container);
 
         getContentPane().add(jSplitPane1, java.awt.BorderLayout.CENTER);
@@ -174,7 +186,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         container.removeAll();
         JPanel blankJP = new JPanel();
-        blankJP.setBackground(new java.awt.Color(252, 156, 52));
+        blankJP.setBackground(new java.awt.Color(206,255,255));
         blankJP.setLayout(new java.awt.CardLayout());
         container.add("blank", blankJP);
         CardLayout crdLyt = (CardLayout) container.getLayout();
@@ -220,7 +232,9 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel container;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JButton loginJButton;
     private javax.swing.JLabel loginJLabel;

@@ -9,7 +9,6 @@ import Business.Ambulance.Ambulance;
 import javax.swing.JOptionPane;
 
 import Business.Member.Member;
-import Business.FieldWorker.FieldWorker;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.EmergencyWorkRequest;
@@ -35,7 +34,8 @@ public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
         this.request = request;
         this.system = system;
         initComponents();
-        populateFieldWorkers();    }
+        populateFieldWorkers();   
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -51,24 +51,35 @@ public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         FieldWorkerJTable = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnAssignRequest.setBackground(new java.awt.Color(133, 211, 255));
+        btnAssignRequest.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnAssignRequest.setText("Assign Request to the Selected Ambulance");
         btnAssignRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAssignRequestActionPerformed(evt);
             }
         });
+        add(btnAssignRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, -1, -1));
 
-        btnBack.setText("<< Back");
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 50, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Assign FieldWorker");
+        jLabel1.setText("Assign Ambulance Driver");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 1340, -1));
 
         FieldWorkerJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -98,53 +109,22 @@ public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(FieldWorkerJTable);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(btnBack)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(627, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(547, 547, 547))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnAssignRequest)
-                        .addGap(494, 494, 494))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(btnBack)
-                .addGap(39, 39, 39)
-                .addComponent(jLabel1)
-                .addGap(46, 46, 46)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(btnAssignRequest)
-                .addContainerGap(431, Short.MAX_VALUE))
-        );
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, 138, 91));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 110, 790, 800));
     }// </editor-fold>//GEN-END:initComponents
 
     private void populateFieldWorkers() {
         DefaultTableModel model = (DefaultTableModel) FieldWorkerJTable.getModel();
         model.setRowCount(0);
         
-        for(FieldWorker fieldWorker:system.getFieldWorkerDirectory().getFieldWorkerList()){
+        for(Ambulance ambulance:system.getAmbulanceDirectory().getAmbulanceList()){
+            if(ambulance.getAvailability()==true){
                Object[] row = new Object[1];           
-                row[0] = fieldWorker;
+                row[0] = ambulance;
                 model.addRow(row);
+            }
             }
     }
     private void btnAssignRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignRequestActionPerformed
@@ -189,6 +169,7 @@ public class EmergencyFieldWorkRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAssignRequest;
     private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

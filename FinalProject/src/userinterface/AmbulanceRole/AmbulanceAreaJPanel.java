@@ -50,7 +50,12 @@ public class AmbulanceAreaJPanel extends javax.swing.JPanel {
         btnRefresh = new javax.swing.JButton();
         btnProcess = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblRequestDetails.setBackground(new java.awt.Color(133, 211, 255));
         tblRequestDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -80,71 +85,46 @@ public class AmbulanceAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRequestDetails);
 
-        titleAssignedRequests.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        titleAssignedRequests.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleAssignedRequests.setText("Emergency Requests");
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 894, 101));
 
+        titleAssignedRequests.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
+        titleAssignedRequests.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleAssignedRequests.setText("Pickup Requests");
+        add(titleAssignedRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 118, 1340, -1));
+
+        btnRefresh.setBackground(new java.awt.Color(133, 211, 255));
+        btnRefresh.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshActionPerformed(evt);
             }
         });
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 240, -1, -1));
 
-        btnProcess.setText("Process");
+        btnProcess.setBackground(new java.awt.Color(133, 211, 255));
+        btnProcess.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnProcess.setText("Process Pickup");
         btnProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProcessActionPerformed(evt);
             }
         });
+        add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, -1, -1));
 
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 35, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(titleAssignedRequests, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(569, 569, 569)
-                                .addComponent(btnRefresh)
-                                .addGap(42, 42, 42)
-                                .addComponent(btnProcess))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(49, 49, 49)
-                                .addComponent(btnBack))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(307, 307, 307)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 906, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(btnBack)
-                .addGap(60, 60, 60)
-                .addComponent(titleAssignedRequests)
-                .addGap(132, 132, 132)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRefresh)
-                    .addComponent(btnProcess))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 160, 930, 620));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
@@ -185,6 +165,7 @@ public class AmbulanceAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnProcess;
     private javax.swing.JButton btnRefresh;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblRequestDetails;
     private javax.swing.JLabel titleAssignedRequests;

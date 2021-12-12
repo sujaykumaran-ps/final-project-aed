@@ -3,40 +3,39 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Business.DeliveryVolunteer;
-
+package Business.Ambulance;
 import java.util.ArrayList;
 
 /**
  *
- * @author sujay
+ * @author mohitdaswani
  */
-public class DeliveryVolunteerDirectory {
-    private ArrayList<DeliveryVolunteer> volunteerList;
-    private DeliveryVolunteer volunteer;
+public class AmbulanceDirectory {
+    private ArrayList<Ambulance> volunteerList;
+    private Ambulance volunteer;
     
-    public DeliveryVolunteerDirectory() {
-        volunteerList = new ArrayList<DeliveryVolunteer>();
+    public AmbulanceDirectory() {
+        volunteerList = new ArrayList<Ambulance>();
     }
 
-    public ArrayList<DeliveryVolunteer> getVolunteerList() {
+    public ArrayList<Ambulance> getVolunteerList() {
         return volunteerList;
     }
 
-    public void setVolunteerList(ArrayList<DeliveryVolunteer> volunteerList) {
+    public void setVolunteerList(ArrayList<Ambulance> volunteerList) {
         this.volunteerList = volunteerList;
     }
 
-    public DeliveryVolunteer getVolunteer() {
+    public Ambulance getVolunteer() {
         return volunteer;
     }
 
-    public void setVolunteer(DeliveryVolunteer volunteer) {
+    public void setVolunteer(Ambulance volunteer) {
         this.volunteer = volunteer;
     }
     
-    public DeliveryVolunteer createVolunteer(String name, String username){
-        volunteer = new DeliveryVolunteer(name, username);
+    public Ambulance createVolunteer(String name, String username){
+        volunteer = new Ambulance(name, username);
         volunteerList.add(volunteer);
         return volunteer;
     }

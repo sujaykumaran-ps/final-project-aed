@@ -3,32 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.LeafClearingOrgRole;
-
+package userinterface.EmergencyDistressOrgRole;
 import Business.EcoSystem;
-import Business.LeafClearingOrg.LeafClearingOrg;
+import Business.EmergencyDistressOrg.EmergencyDistressOrg;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
 /**
  *
- * @author sujay
+ * @author mohitdaswani
  */
-public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
-
-    /**
-     * Creates new form ManageSnowClearingInfoJPanel
-     */
+public class ManageEmergencyDistressInfoJPanel extends javax.swing.JPanel {
     EcoSystem system;
     JPanel userProcessContainer;
     UserAccount account;
-    
-    public ManageLeafClearingInfoJPanel(JPanel userProcessContainer,UserAccount account, EcoSystem system) {
+    /**
+     * Creates new form ManageEmergencyDistressInfoJPanel
+     */
+    public ManageEmergencyDistressInfoJPanel(JPanel userProcessContainer,UserAccount account, EcoSystem system) {
         initComponents();
-        this.account=account;
+                this.account=account;
         this.system=system;
         this.userProcessContainer=userProcessContainer;
         
@@ -42,7 +38,6 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
         populateFields();
     }
 
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,10 +47,6 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
-        lblSnowClearningName = new javax.swing.JLabel();
-        lblSnowClearingAddress = new javax.swing.JLabel();
-        lblSnowClearingPhone = new javax.swing.JLabel();
         txtOrgName = new javax.swing.JTextField();
         txtOrgAddress = new javax.swing.JTextField();
         txtOrgPhNum = new javax.swing.JTextField();
@@ -63,25 +54,11 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
         btnUpdate = new javax.swing.JButton();
         titleSnowClearingOrg = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
         txtOrgEmail = new javax.swing.JTextField();
-
-        setBackground(new java.awt.Color(252, 156, 52));
-
-        btnBack.setText("<< Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-
-        lblSnowClearningName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearningName.setText("LeafClearing Org Name :");
-
-        lblSnowClearingAddress.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearingAddress.setText("LeafClearning Org Address :");
-
-        lblSnowClearingPhone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblSnowClearingPhone.setText("LeafClearing Phone Number :");
+        lblSnowClearningName = new javax.swing.JLabel();
+        lblSnowClearingAddress = new javax.swing.JLabel();
+        lblSnowClearingPhone = new javax.swing.JLabel();
 
         txtOrgPhNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,11 +87,27 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
         lblEmail.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblEmail.setText("Email:");
 
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
         txtOrgEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgEmailActionPerformed(evt);
             }
         });
+
+        lblSnowClearningName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblSnowClearningName.setText("LeafClearing Org Name :");
+
+        lblSnowClearingAddress.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblSnowClearingAddress.setText("LeafClearning Org Address :");
+
+        lblSnowClearingPhone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblSnowClearingPhone.setText("LeafClearing Phone Number :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -125,7 +118,7 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
                 .addComponent(btnUpdate)
                 .addGap(18, 18, 18)
                 .addComponent(btnSave)
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addContainerGap(240, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -146,7 +139,7 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
                                     .addComponent(txtOrgAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                                     .addComponent(txtOrgPhNum, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                                     .addComponent(txtOrgEmail))))
-                        .addGap(0, 268, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(titleSnowClearingOrg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -178,17 +171,9 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
                     .addComponent(btnUpdate))
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
-        userProcessContainer.remove(this);
-
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
 
     private void txtOrgPhNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgPhNumActionPerformed
         // TODO add your handling code here:
@@ -199,34 +184,34 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
         String name = txtOrgName.getText();
         String address = txtOrgAddress.getText();
         String number = txtOrgPhNum.getText();
-       String email = txtOrgEmail.getText();
-        
+        String email = txtOrgEmail.getText();
+
         try {
-             if(name==null || name.isEmpty()){
+            if(name==null || name.isEmpty()){
                 throw new NullPointerException("LeafClearingOrg Name Field cannot be Empty !!!");
 
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearing Organizations Name Field cannot be Empty !!!");        
-            return;   
+            JOptionPane.showMessageDialog(null, "LeafClearing Organizations Name Field cannot be Empty !!!");
+            return;
         }
-        
+
         try {
-             if(address==null || address.isEmpty()){
-                throw new NullPointerException("LeafClearing Organization Field cannot be Empty !!!");    
+            if(address==null || address.isEmpty()){
+                throw new NullPointerException("LeafClearing Organization Field cannot be Empty !!!");
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearing Organization Field cannot be Empty !!!");          
-            return;   
+            JOptionPane.showMessageDialog(null, "LeafClearing Organization Field cannot be Empty !!!");
+            return;
         }
-        
-         try {
-             
+
+        try {
+
             if(number==null || number.isEmpty()){
                 throw new NullPointerException("LeafClearingOrg Phone Number Field cannot be Empty !!!");
             }else if(Pattern.matches("^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$", number) == false){
                 throw new Exception("Enter a Valid Phone number !!!");
-            }     
+            }
         }  catch(NullPointerException e){
             JOptionPane.showMessageDialog(null, "LeafClearingOrg Phone Number Field cannot be Empty !!!");
             return;
@@ -234,23 +219,23 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Enter a Valid Phone number !!!");
             return;
         }
-         
+
         try {
-             if(email==null || email.isEmpty()){
+            if(email==null || email.isEmpty()){
                 throw new NullPointerException("LeafClearing Org Email Field cannot be Empty !!!");
 
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "LeafClearing Org Email Field cannot be Empty !!!");        
-            return;   
+            JOptionPane.showMessageDialog(null, "LeafClearing Org Email Field cannot be Empty !!!");
+            return;
         }
-        
-        for(LeafClearingOrg org:system.getLeafClearingOrgDirectory().getLeafClearingOrgList()){
-           if(org.getUserName().equals(account.getUsername())){
-                system.getLeafClearingOrgDirectory().updateLeafClearingOrgInfo(org, name, number, address, email);
+
+        for(EmergencyDistressOrg org:system.getEmergencyDistressOrgDirectory().getEmergencyDistressOrgList()){
+            if(org.getUserName().equals(account.getUsername())){
+                system.getEmergencyDistressOrgDirectory().updateEmergencyDistressOrgInfo(org, name, number, address, email);
             }
         }
-        
+
         txtOrgName.setEnabled(false);
         txtOrgAddress.setEnabled(false);
         txtOrgPhNum.setEnabled(false);
@@ -269,10 +254,28 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
         btnUpdate.setEnabled(false);
     }//GEN-LAST:event_btnUpdateActionPerformed
 
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
+
     private void txtOrgEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOrgEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtOrgEmailActionPerformed
 
+    private void populateFields() {
+        for(EmergencyDistressOrg org:system.getEmergencyDistressOrgDirectory().getEmergencyDistressOrgList()){
+           if(org.getUserName().equals(account.getUsername())){
+               txtOrgName.setText(org.getEmergencyOrgName());
+               txtOrgAddress.setText(org.getEmergencyOrgAddress());
+               txtOrgPhNum.setText(org.getEmergencyOrgPhNum());
+               txtOrgEmail.setText(org.getEmergencyOrgEmail());
+            }
+    }
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
@@ -288,15 +291,4 @@ public class ManageLeafClearingInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtOrgName;
     private javax.swing.JTextField txtOrgPhNum;
     // End of variables declaration//GEN-END:variables
-
-    private void populateFields() {
-        for(LeafClearingOrg org:system.getLeafClearingOrgDirectory().getLeafClearingOrgList()){
-           if(org.getUserName().equals(account.getUsername())){
-               txtOrgName.setText(org.getLeafOrgName());
-               txtOrgAddress.setText(org.getLeafOrgAddress());
-               txtOrgPhNum.setText(org.getLeafOrgPhNum());
-               txtOrgEmail.setText(org.getLeafOrgEmail());
-            }
-    }
-}
 }

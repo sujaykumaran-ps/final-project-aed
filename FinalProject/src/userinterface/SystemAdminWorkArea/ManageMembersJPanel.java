@@ -66,9 +66,11 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         btnRefreshMem = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(243, 243, 243));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblMembers.setBackground(new java.awt.Color(133, 211, 255));
+        tblMembers.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         tblMembers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -98,9 +100,12 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblMembers);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 560, 91));
+
+        txtMemName.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtMemName, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 360, 144, -1));
 
         btnCusBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnCusBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnCusBack.setText("<< ");
         btnCusBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +115,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         add(btnCusBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         btnSubmitMember.setBackground(new java.awt.Color(133, 211, 255));
-        btnSubmitMember.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnSubmitMember.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSubmitMember.setText("Submit");
         btnSubmitMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,12 +127,15 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         lblCusName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblCusName.setText("Member Name:");
         add(lblCusName, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 360, -1, -1));
+
+        txtMemUsername.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtMemUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 390, 144, -1));
 
         lblCusPassword.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblCusPassword.setText("Password:");
         add(lblCusPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 430, -1, -1));
 
+        txtMemPassword.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         txtMemPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMemPasswordActionPerformed(evt);
@@ -136,7 +144,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         add(txtMemPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, 144, -1));
 
         btnViewMember.setBackground(new java.awt.Color(133, 211, 255));
-        btnViewMember.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnViewMember.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnViewMember.setText("View");
         btnViewMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +154,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         add(btnViewMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, -1, -1));
 
         btnDeleteMember.setBackground(new java.awt.Color(133, 211, 255));
-        btnDeleteMember.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnDeleteMember.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDeleteMember.setText("Delete");
         btnDeleteMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +173,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         add(titleManageCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 1100, 40));
 
         btnUpdateMember.setBackground(new java.awt.Color(133, 211, 255));
-        btnUpdateMember.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnUpdateMember.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateMember.setText("Update");
         btnUpdateMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,7 +183,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         add(btnUpdateMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 480, -1, -1));
 
         btnRefreshMem.setBackground(new java.awt.Color(133, 211, 255));
-        btnRefreshMem.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnRefreshMem.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefreshMem.setText("Refresh Table");
         btnRefreshMem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,7 +193,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         add(btnRefreshMem, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 150, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/member.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 420, 210));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 1010, 830));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCusBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCusBackActionPerformed

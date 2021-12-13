@@ -63,15 +63,20 @@ public class ManageEmergencyDistressInfoJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 234, 130, -1));
-        add(txtOrgAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 272, 130, -1));
 
+        txtOrgName.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 234, 230, -1));
+
+        txtOrgAddress.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtOrgAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 272, 230, -1));
+
+        txtOrgPhNum.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         txtOrgPhNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgPhNumActionPerformed(evt);
             }
         });
-        add(txtOrgPhNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 306, 130, -1));
+        add(txtOrgPhNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 306, 230, -1));
 
         btnSave.setBackground(new java.awt.Color(133, 211, 255));
         btnSave.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
@@ -112,12 +117,13 @@ public class ManageEmergencyDistressInfoJPanel extends javax.swing.JPanel {
         });
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 47, -1, -1));
 
+        txtOrgEmail.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         txtOrgEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgEmailActionPerformed(evt);
             }
         });
-        add(txtOrgEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 337, 130, -1));
+        add(txtOrgEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 337, 230, -1));
 
         lblSnowClearningName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblSnowClearningName.setText("Emergency Org Name :");

@@ -58,7 +58,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         btnRefresh = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(900, 900));
@@ -93,7 +93,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblSnowClearingOrg);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 142, 546, 93));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 546, 93));
 
         btnReqService.setBackground(new java.awt.Color(133, 211, 255));
         btnReqService.setText("Request Service");
@@ -102,11 +102,11 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                 btnReqServiceActionPerformed(evt);
             }
         });
-        add(btnReqService, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 247, -1, -1));
+        add(btnReqService, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, -1, -1));
 
         titleChoose.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         titleChoose.setText("Choose from your SnowClearing Organizations Nearby :");
-        add(titleChoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 107, -1, -1));
+        add(titleChoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, -1));
 
         tblRequests.setBackground(new java.awt.Color(133, 211, 255));
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
@@ -137,11 +137,11 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblRequests);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 326, 546, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 420, 546, 90));
 
         titleOrders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         titleOrders.setText("Your Requests with us :");
-        add(titleOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 297, -1, -1));
+        add(titleOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, -1, -1));
 
         btnRefresh.setBackground(new java.awt.Color(133, 211, 255));
         btnRefresh.setText("Refresh Requests");
@@ -150,7 +150,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
                 btnRefreshActionPerformed(evt);
             }
         });
-        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 442, -1, -1));
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 530, -1, -1));
 
         btnBack.setBackground(new java.awt.Color(133, 211, 255));
         btnBack.setText("<< Back");
@@ -162,10 +162,11 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 48, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/snow.jpg"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 580, 250));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 580, 250));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/snow.jpeg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 650, 490));
+        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        jLabel3.setText("Snow Clearing Organizations");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 70, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
@@ -200,7 +201,7 @@ public class MemberAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnReqService;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblRequests;

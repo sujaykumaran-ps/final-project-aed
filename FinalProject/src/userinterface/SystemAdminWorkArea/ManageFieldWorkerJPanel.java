@@ -99,10 +99,12 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblFieldWorker);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 496, 91));
+
+        txtFieldWorker.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtFieldWorker, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 380, 144, -1));
 
         btnFWBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnFWBack.setText("<< Back");
+        btnFWBack.setText("<< ");
         btnFWBack.setMaximumSize(new java.awt.Dimension(147, 29));
         btnFWBack.setMinimumSize(new java.awt.Dimension(147, 29));
         btnFWBack.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +112,7 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
                 btnFWBackActionPerformed(evt);
             }
         });
-        add(btnFWBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, -1, -1));
+        add(btnFWBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, -1));
 
         btnSubmitFW.setBackground(new java.awt.Color(133, 211, 255));
         btnSubmitFW.setText("Submit");
@@ -124,11 +126,15 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
         lblFieldWorkerName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblFieldWorkerName.setText("Field Worker Name:");
         add(lblFieldWorkerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, -1, 20));
+
+        txtFieldWorkerUsername.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 410, 144, -1));
 
         lblDelPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblDelPassword.setText("Password:");
         add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 450, -1, -1));
+
+        txtFieldWorkerPassword.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 450, 144, -1));
 
         btnViewFW.setBackground(new java.awt.Color(133, 211, 255));
@@ -155,8 +161,8 @@ public class ManageFieldWorkerJPanel extends javax.swing.JPanel {
 
         titleManageDeliveryMan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleManageDeliveryMan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageDeliveryMan.setText("                  Manage FieldWorker ");
-        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 816, -1));
+        titleManageDeliveryMan.setText("                  FieldWorker SignUp");
+        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 816, -1));
 
         btnUpdateFW.setBackground(new java.awt.Color(133, 211, 255));
         btnUpdateFW.setText("Update");

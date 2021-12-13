@@ -166,6 +166,7 @@ public class SoupServiceJPanel extends javax.swing.JPanel {
         titleOrder.setText("Order from");
         add(titleOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 73, -1, 20));
 
+        btnPlaceRequest.setBackground(new java.awt.Color(133, 211, 255));
         btnPlaceRequest.setText("Place Order");
         btnPlaceRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

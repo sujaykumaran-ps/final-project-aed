@@ -48,6 +48,7 @@ public class SoupKitchenMemberAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         btnRefresh = new javax.swing.JButton();
         titleOrders = new javax.swing.JLabel();
@@ -62,8 +63,12 @@ public class SoupKitchenMemberAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+        jLabel2.setText("Order From the Below Soup Kitchens");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, -1, -1));
+
         btnBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnBack.setText("<< Back");
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -196,6 +201,7 @@ public class SoupKitchenMemberAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnReqService;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblOrders;

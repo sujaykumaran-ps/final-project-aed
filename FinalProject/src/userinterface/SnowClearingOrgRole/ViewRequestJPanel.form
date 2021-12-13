@@ -24,107 +24,52 @@
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLabel3" min="-2" pref="508" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblIns" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="btnCancel" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="btnAccept" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txtIns" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="324" pref="324" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="titleRequestDetails" min="-2" pref="507" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="508" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jLabel1" min="-2" pref="148" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="titleRequestDetails" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnBack" min="-2" pref="39" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblIns" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtIns" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnAccept" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnCancel" min="-2" pref="42" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="357" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-      </Group>
-    </DimensionLayout>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="13" style="0"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="d3" red="85" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&lt;&lt; "/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="50" y="40" width="-1" height="30"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="titleRequestDetails">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="24" style="1"/>
+          <Font name="Segoe UI Semibold" size="24" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Request Details"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="390" y="170" width="507" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="410" y="280" width="-1" height="100"/>
+        </Constraint>
+      </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -168,35 +113,66 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnAccept">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="d3" red="85" type="rgb"/>
+        </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="13" style="0"/>
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Accept Request"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAcceptActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="590" y="450" width="-1" height="30"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblIns">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="13" style="1"/>
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Special Instructions"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="410" y="410" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="txtIns">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="580" y="400" width="284" height="34"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="btnCancel">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="d3" red="85" type="rgb"/>
+        </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="13" style="0"/>
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cancel Request"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="590" y="500" width="-1" height="30"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
@@ -208,6 +184,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="852" y="154" width="508" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -219,6 +200,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="852" y="499" width="508" height="357"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -230,6 +216,11 @@
           <Dimension value="[1360, 780]"/>
         </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="-1" height="148"/>
+        </Constraint>
+      </Constraints>
     </Component>
   </SubComponents>
 </Form>

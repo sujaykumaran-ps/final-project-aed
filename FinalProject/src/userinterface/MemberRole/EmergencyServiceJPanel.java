@@ -151,7 +151,7 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
         lblAddress.setText("Pick Up Address :");
         add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 540, -1, -1));
 
-        txtAddress.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        txtAddress.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 540, 201, -1));
 
         tblServices.setBackground(new java.awt.Color(133, 211, 255));
@@ -185,7 +185,7 @@ public class EmergencyServiceJPanel extends javax.swing.JPanel {
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 157, 552, 91));
 
-        txtIssue.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        txtIssue.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 502, 201, -1));
 
         lblIssue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

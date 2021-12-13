@@ -60,8 +60,8 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titleWelcome.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
-        titleWelcome.setText("Welcome ");
-        add(titleWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, 30));
+        titleWelcome.setText("Welcome  ");
+        add(titleWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, -1, 30));
 
         btnSnowClearing.setBackground(new java.awt.Color(133, 211, 255));
         btnSnowClearing.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
@@ -109,22 +109,22 @@ public class MemberHomeJPanel extends javax.swing.JPanel {
 
         titleWelcome2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         titleWelcome2.setText("Create Requests For");
-        add(titleWelcome2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 181, 30));
+        add(titleWelcome2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 210, 30));
 
         titleWelcome3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         titleWelcome3.setText("Order Meal for People in Need");
-        add(titleWelcome3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, -1, 30));
+        add(titleWelcome3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, 340, 30));
 
         titleWelcome4.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        titleWelcome4.setText("Pick your cause and donate funds");
-        add(titleWelcome4, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 372, 300, 30));
+        titleWelcome4.setText("Pick your cause and ");
+        add(titleWelcome4, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 372, 240, 30));
 
         lblName.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
-        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 290, 30));
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, 290, 30));
 
         titleWelcome5.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         titleWelcome5.setText("PickUp Request incase of Emergency");
-        add(titleWelcome5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, -1, 30));
+        add(titleWelcome5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, 350, 30));
 
         btnAmbulance.setBackground(new java.awt.Color(133, 211, 255));
         btnAmbulance.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N

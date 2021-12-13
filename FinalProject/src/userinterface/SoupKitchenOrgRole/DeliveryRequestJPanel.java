@@ -55,14 +55,19 @@ public class DeliveryRequestJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         lblImageIcon3 = new javax.swing.JLabel();
 
-        btnAssignOrder.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnAssignOrder.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnAssignOrder.setText("Assign Order to the Selected Volunteer");
         btnAssignOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAssignOrderActionPerformed(evt);
             }
         });
+        add(btnAssignOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 540, -1, 40));
 
+        VolunteerJTable.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         VolunteerJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
@@ -92,76 +97,30 @@ public class DeliveryRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(VolunteerJTable);
 
-        btnBack.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        btnBack.setText("<< Back");
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, 410, 110));
+
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 48, -1, 30));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Assign Delivery Volunteer");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, 333, -1));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ManageSoupKitchen.jpg"))); // NOI18N
         jLabel3.setText("jLabel2");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 0, 684, 776));
 
         lblImageIcon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/FoodDelivery.png"))); // NOI18N
         lblImageIcon3.setText("jLabel2");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnAssignOrder)
-                                .addGap(124, 124, 124))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(65, 65, 65))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(btnBack)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(53, 53, 53)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnAssignOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 776, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 87, Short.MAX_VALUE))
-        );
+        add(lblImageIcon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 64, 351, 302));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssignOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignOrderActionPerformed

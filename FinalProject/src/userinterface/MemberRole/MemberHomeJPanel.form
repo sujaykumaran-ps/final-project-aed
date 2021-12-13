@@ -19,6 +19,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,12,0,0,5,80"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -30,11 +31,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI Light" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Welcome "/>
+        <Property name="text" type="java.lang.String" value="Welcome  "/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="440" y="120" width="-1" height="30"/>
+          <AbsoluteConstraints x="430" y="70" width="-1" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -136,7 +137,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="320" y="230" width="181" height="30"/>
+          <AbsoluteConstraints x="310" y="230" width="210" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -149,7 +150,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="320" y="480" width="-1" height="30"/>
+          <AbsoluteConstraints x="320" y="480" width="340" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -158,11 +159,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI Semibold" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Pick your cause and donate funds"/>
+        <Property name="text" type="java.lang.String" value="Pick your cause and "/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="323" y="372" width="300" height="30"/>
+          <AbsoluteConstraints x="323" y="372" width="240" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -174,7 +175,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="550" y="120" width="290" height="30"/>
+          <AbsoluteConstraints x="540" y="70" width="290" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -187,7 +188,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="320" y="580" width="-1" height="30"/>
+          <AbsoluteConstraints x="320" y="580" width="350" height="30"/>
         </Constraint>
       </Constraints>
     </Component>

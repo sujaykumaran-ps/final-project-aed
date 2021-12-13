@@ -58,19 +58,24 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1360, 780));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnBack.setText("<< Back");
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnBack.setText("<<");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 17, -1, 40));
 
-        titleManageRequest.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleManageRequest.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleManageRequest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageRequest.setText("Manage Requests");
+        add(titleManageRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 85, 526, -1));
 
+        tblRequests.setBackground(new java.awt.Color(133, 211, 255));
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -99,118 +104,53 @@ public class ManageRequestsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRequests);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 296, 563, 87));
+
         btnRefresh.setBackground(new java.awt.Color(133, 211, 255));
-        btnRefresh.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnRefresh.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefresh.setText("Refresh Table");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshActionPerformed(evt);
             }
         });
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 394, -1, -1));
 
         btnAssign.setBackground(new java.awt.Color(133, 211, 255));
-        btnAssign.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnAssign.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnAssign.setText("Assign for Request");
         btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAssignActionPerformed(evt);
             }
         });
+        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 462, 163, 30));
 
         btnView.setBackground(new java.awt.Color(133, 211, 255));
-        btnView.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnView.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnView.setText("View Request");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewActionPerformed(evt);
             }
         });
+        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 526, 163, 30));
 
         lblImageIcon.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         lblImageIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Requests_adobespark.jpeg"))); // NOI18N
         lblImageIcon.setText("jLabel2");
+        add(lblImageIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 120, 285, 139));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/request_preview_9b9e-removebg-preview-removebg-preview.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
         jLabel2.setPreferredSize(new java.awt.Dimension(500, 500));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 11, -1, 497));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tuxpi.com.1639261320.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setPreferredSize(new java.awt.Dimension(1360, 780));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(btnBack)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 184, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(lblImageIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(283, 283, 283))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(titleManageRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(107, 107, 107))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(btnRefresh)
-                                        .addGap(120, 120, 120))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(btnAssign))
-                                        .addGap(282, 282, 282)))))
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAssign, btnView});
-
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(titleManageRequest)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblImageIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAssign, btnView});
-
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 601, 1340, 168));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

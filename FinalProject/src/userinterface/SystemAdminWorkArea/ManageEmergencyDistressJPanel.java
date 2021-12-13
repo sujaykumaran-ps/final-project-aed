@@ -94,11 +94,13 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblFieldWorker);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 470, 91));
-        add(txtFieldWorker, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 430, 144, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 220, 470, 91));
+
+        txtFieldWorker.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFieldWorker, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 400, 144, -1));
 
         btnFWBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnFWBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnFWBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnFWBack.setText("<< ");
         btnFWBack.setMaximumSize(new java.awt.Dimension(147, 29));
         btnFWBack.setMinimumSize(new java.awt.Dimension(147, 29));
@@ -110,66 +112,70 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
         add(btnFWBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
 
         btnSubmitFW.setBackground(new java.awt.Color(133, 211, 255));
-        btnSubmitFW.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnSubmitFW.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSubmitFW.setText("Submit");
         btnSubmitFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitFWActionPerformed(evt);
             }
         });
-        add(btnSubmitFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 540, -1, -1));
+        add(btnSubmitFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 510, -1, -1));
 
         lblFieldWorkerName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblFieldWorkerName.setText("Emergency Org Name:");
-        add(lblFieldWorkerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 430, -1, 20));
-        add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 470, 144, -1));
+        add(lblFieldWorkerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, -1, 20));
+
+        txtFieldWorkerUsername.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 440, 144, -1));
 
         lblDelPassword.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblDelPassword.setText("Password:");
-        add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 510, -1, -1));
-        add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 510, 144, -1));
+        add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 480, -1, -1));
+
+        txtFieldWorkerPassword.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, 144, -1));
 
         btnViewFW.setBackground(new java.awt.Color(133, 211, 255));
-        btnViewFW.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnViewFW.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnViewFW.setText("View");
         btnViewFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewFWActionPerformed(evt);
             }
         });
-        add(btnViewFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 360, -1, -1));
+        add(btnViewFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 330, -1, -1));
 
         btnDeleteFW.setBackground(new java.awt.Color(133, 211, 255));
-        btnDeleteFW.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnDeleteFW.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDeleteFW.setText("Delete");
         btnDeleteFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteFWActionPerformed(evt);
             }
         });
-        add(btnDeleteFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 360, -1, -1));
+        add(btnDeleteFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 330, -1, -1));
 
         lblDelUsername.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblDelUsername.setText("Username:");
-        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 470, -1, 20));
+        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 440, -1, 20));
 
         titleManageDeliveryMan.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleManageDeliveryMan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageDeliveryMan.setText("Emergency Distress Org SignUp");
-        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 816, -1));
+        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 816, -1));
 
         btnUpdateFW.setBackground(new java.awt.Color(133, 211, 255));
-        btnUpdateFW.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnUpdateFW.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateFW.setText("Update");
         btnUpdateFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateFWActionPerformed(evt);
             }
         });
-        add(btnUpdateFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 540, -1, -1));
+        add(btnUpdateFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 510, -1, -1));
 
         btnRefreshFW.setBackground(new java.awt.Color(133, 211, 255));
-        btnRefreshFW.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnRefreshFW.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefreshFW.setText("Refresh Table");
         btnRefreshFW.setMaximumSize(new java.awt.Dimension(147, 29));
         btnRefreshFW.setMinimumSize(new java.awt.Dimension(147, 29));
@@ -178,7 +184,7 @@ public class ManageEmergencyDistressJPanel extends javax.swing.JPanel {
                 btnRefreshFWActionPerformed(evt);
             }
         });
-        add(btnRefreshFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 200, -1, -1));
+        add(btnRefreshFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 170, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Ambulance-Loop-1.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 90, 1070, 770));

@@ -70,6 +70,7 @@ public class ManageSoupKitchenOrgJPanel extends javax.swing.JPanel {
 
         tblSoupKitchenOrg.setAutoCreateRowSorter(true);
         tblSoupKitchenOrg.setBackground(new java.awt.Color(133, 211, 255));
+        tblSoupKitchenOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         tblSoupKitchenOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -98,26 +99,28 @@ public class ManageSoupKitchenOrgJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblSoupKitchenOrg);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, -1, 117));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, -1, 90));
         add(txtSoupOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 450, 144, -1));
 
         btnManageSoupOrgBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnManageSoupOrgBack.setText("<< Back");
+        btnManageSoupOrgBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnManageSoupOrgBack.setText("<< ");
         btnManageSoupOrgBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageSoupOrgBackActionPerformed(evt);
             }
         });
-        add(btnManageSoupOrgBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, 38));
+        add(btnManageSoupOrgBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, 30));
 
         btnSubmitSoupOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnSubmitSoupOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSubmitSoupOrg.setText("Submit");
         btnSubmitSoupOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitSoupOrgActionPerformed(evt);
             }
         });
-        add(btnSubmitSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 570, -1, 39));
+        add(btnSubmitSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 570, -1, 30));
 
         lblSoupKitchen.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblSoupKitchen.setText("Soup Kitchen Name:");
@@ -130,52 +133,56 @@ public class ManageSoupKitchenOrgJPanel extends javax.swing.JPanel {
         add(lblSoupPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 530, -1, -1));
 
         btnUpdateSoupOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnUpdateSoupOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateSoupOrg.setText("Update");
         btnUpdateSoupOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateSoupOrgActionPerformed(evt);
             }
         });
-        add(btnUpdateSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 570, -1, 39));
+        add(btnUpdateSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 570, -1, 30));
 
         btnDeleteSoupOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnDeleteSoupOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDeleteSoupOrg.setText("Delete");
         btnDeleteSoupOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteSoupOrgActionPerformed(evt);
             }
         });
-        add(btnDeleteSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 370, 92, 39));
+        add(btnDeleteSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 370, 92, 30));
 
         lblSoupUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblSoupUsername.setText("Username:");
         add(lblSoupUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, -1, 20));
 
-        titleManageRestaurants.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleManageRestaurants.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageRestaurants.setText("Manage Soup Kitchen Org");
-        add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 57, 816, -1));
+        titleManageRestaurants.setText("Soup Kitchen Org SignUp");
+        add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 816, -1));
 
         btnViewSoupOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnViewSoupOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnViewSoupOrg.setText("View");
         btnViewSoupOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewSoupOrgActionPerformed(evt);
             }
         });
-        add(btnViewSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 370, -1, 39));
+        add(btnViewSoupOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 370, -1, -1));
 
         btnRefreshOrg.setBackground(new java.awt.Color(133, 211, 255));
+        btnRefreshOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefreshOrg.setText("Refresh Table");
         btnRefreshOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshOrgActionPerformed(evt);
             }
         });
-        add(btnRefreshOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, -1, 38));
+        add(btnRefreshOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 200, -1, 20));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/istockphoto-487582458-170667a.jpeg"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 490, 770));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/soup.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 620, 770));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageSoupOrgBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageSoupOrgBackActionPerformed

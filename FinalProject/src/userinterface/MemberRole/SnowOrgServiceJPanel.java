@@ -74,11 +74,11 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        titleOrder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleOrder.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         titleOrder.setText("Request from");
         add(titleOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 88, -1, 20));
 
-        titleOrgName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleOrgName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         add(titleOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 88, 331, 20));
 
         tblServices.setBackground(new java.awt.Color(133, 211, 255));
@@ -112,18 +112,19 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 166, -1, 91));
 
-        lblServices.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblServices.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         lblServices.setText("Service");
         add(lblServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(388, 126, -1, -1));
 
         btnAdd.setBackground(new java.awt.Color(133, 211, 255));
+        btnAdd.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnAdd.setText("Add Request");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
-        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 275, -1, -1));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, -1, -1));
 
         tblCart.setBackground(new java.awt.Color(133, 211, 255));
         tblCart.setModel(new javax.swing.table.DefaultTableModel(
@@ -156,35 +157,38 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
 
         add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 362, -1, 91));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jLabel1.setText("Service Summary");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 322, -1, -1));
 
         btnBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnBack.setText("<< Back");
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnBack.setText("<<");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 33, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
         btnRemove.setBackground(new java.awt.Color(133, 211, 255));
+        btnRemove.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRemove.setText("Remove Request");
         btnRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemoveActionPerformed(evt);
             }
         });
-        add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 471, -1, -1));
+        add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, -1, -1));
 
+        btnPlaceRequest.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPlaceRequest.setText("Place Request");
         btnPlaceRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPlaceRequestActionPerformed(evt);
             }
         });
-        add(btnPlaceRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 562, -1, -1));
+        add(btnPlaceRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, -1, -1));
 
         lblAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblAddress.setText("Service Address :");

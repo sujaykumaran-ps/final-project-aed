@@ -64,12 +64,13 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblServiceDesc.setFont(new java.awt.Font("Segoe UI Semibold", 1, 13)); // NOI18N
+        lblServiceDesc.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblServiceDesc.setText("Description :");
-        add(lblServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 514, -1, -1));
+        add(lblServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, -1, -1));
 
+        txtServiceType.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         txtServiceType.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(txtServiceType, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 558, 194, 31));
+        add(txtServiceType, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 440, 194, 31));
 
         tblServices.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -101,20 +102,22 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblServices);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 339, 638, 107));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 638, 107));
 
-        lblServiceName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 13)); // NOI18N
+        lblServiceName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblServiceName.setText("Service Name :");
-        add(lblServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 473, -1, -1));
+        add(lblServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, -1, -1));
 
+        txtServiceName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         txtServiceName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(txtServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 464, 194, 31));
+        add(txtServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 350, 194, 31));
 
-        lblType.setFont(new java.awt.Font("Segoe UI Semibold", 1, 13)); // NOI18N
+        lblType.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblType.setText("Type :");
-        add(lblType, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 564, -1, -1));
+        add(lblType, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 450, -1, -1));
 
         btnBack.setBackground(new java.awt.Color(255, 204, 102));
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,22 +126,24 @@ public class ManageLeafServiceJPanel extends javax.swing.JPanel {
         });
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 35, -1, 30));
 
+        txtServiceDesc.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         txtServiceDesc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(txtServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 507, 194, 32));
+        add(txtServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, 194, 32));
 
         btnAddService.setBackground(new java.awt.Color(255, 204, 102));
+        btnAddService.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnAddService.setText("Add Service");
         btnAddService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddServiceActionPerformed(evt);
             }
         });
-        add(btnAddService, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 610, -1, 30));
+        add(btnAddService, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 500, -1, 30));
 
         titleManageService.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleManageService.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageService.setText("Manage Leaf Clearance Org");
-        add(titleManageService, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 526, -1));
+        add(titleManageService, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 526, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LeafClearingOrg.jpg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, -10, 1390, 790));

@@ -61,7 +61,7 @@ public class ManageEmergencyServiceJPanel extends javax.swing.JPanel {
 
         btnBack1.setBackground(new java.awt.Color(133, 211, 255));
         btnBack1.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
-        btnBack1.setText("<< Back");
+        btnBack1.setText("<< ");
         btnBack1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBack1ActionPerformed(evt);
@@ -101,6 +101,8 @@ public class ManageEmergencyServiceJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblServices);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 638, 107));
+
+        txtServiceName.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 360, 150, -1));
 
         lblServiceName1.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
@@ -110,11 +112,15 @@ public class ManageEmergencyServiceJPanel extends javax.swing.JPanel {
         lblServiceDesc1.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblServiceDesc1.setText("Description :");
         add(lblServiceDesc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, -1, -1));
+
+        txtServiceDesc.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 400, 150, -1));
 
         lblType1.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblType1.setText("Type :");
         add(lblType1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, -1, -1));
+
+        txtServiceType.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtServiceType, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 440, 150, -1));
 
         btnAddService1.setBackground(new java.awt.Color(133, 211, 255));

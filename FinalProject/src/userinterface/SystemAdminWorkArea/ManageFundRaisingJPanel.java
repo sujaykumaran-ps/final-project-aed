@@ -123,7 +123,7 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
 
         lblResName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblResName.setText("FundRaising Enterprise Name:");
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, -1, -1));
+        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 480, -1, -1));
 
         txtFundRaisingUsername.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtFundRaisingUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, 144, -1));
@@ -133,7 +133,7 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
 
         lblResPassword.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblResPassword.setText("Password:");
-        add(lblResPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 550, -1, -1));
+        add(lblResPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 540, -1, -1));
 
         btnUpdateFund.setBackground(new java.awt.Color(133, 211, 255));
         btnUpdateFund.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
@@ -157,7 +157,7 @@ public class ManageFundRaisingJPanel extends javax.swing.JPanel {
 
         lblResUsername.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblResUsername.setText("Username:");
-        add(lblResUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 510, -1, 20));
+        add(lblResUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 510, -1, 20));
 
         titleManageRestaurants.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

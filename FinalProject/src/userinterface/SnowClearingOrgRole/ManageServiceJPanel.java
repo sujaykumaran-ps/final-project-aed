@@ -63,13 +63,18 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1350, 780));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblServiceDesc.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblServiceDesc.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblServiceDesc.setText("Description :");
+        add(lblServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 580, -1, -1));
 
-        txtServiceType.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtServiceType.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         txtServiceType.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(txtServiceType, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 620, 245, 30));
 
+        tblServices.setBackground(new java.awt.Color(133, 211, 255));
+        tblServices.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         tblServices.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -100,118 +105,57 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblServices);
 
-        lblServiceName.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 638, 107));
+
+        lblServiceName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblServiceName.setText("Service Name :");
+        add(lblServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 520, 118, -1));
 
-        txtServiceName.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtServiceName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         txtServiceName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(txtServiceName, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 517, 245, 30));
 
-        lblType.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblType.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblType.setText("Type :");
+        add(lblType, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 630, -1, -1));
 
         btnBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnBack.setText("<< Back");
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, 30));
 
-        txtServiceDesc.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtServiceDesc.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         txtServiceDesc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(txtServiceDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 570, 245, 30));
 
         btnAddService.setBackground(new java.awt.Color(133, 211, 255));
+        btnAddService.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnAddService.setText("Add Service");
         btnAddService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddServiceActionPerformed(evt);
             }
         });
+        add(btnAddService, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 670, -1, 30));
 
-        titleManageService.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleManageService.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleManageService.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageService.setText("Manage Services");
+        add(titleManageService, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 526, -1));
 
         lblImageIcon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/snowShovel.png"))); // NOI18N
         lblImageIcon3.setText("jLabel2");
+        add(lblImageIcon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 230, 180));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/plow_ice.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(titleManageService, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblServiceName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblType)
-                                    .addComponent(lblServiceDesc))
-                                .addGap(47, 47, 47)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtServiceName)
-                            .addComponent(txtServiceType)
-                            .addComponent(txtServiceDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(195, 195, 195)
-                        .addComponent(btnAddService))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(btnBack)
-                        .addGap(83, 83, 83)
-                        .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 907, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addComponent(titleManageService)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblImageIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtServiceName, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblServiceName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblServiceDesc)
-                    .addComponent(txtServiceDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblType)
-                    .addComponent(txtServiceType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addComponent(btnAddService, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtServiceDesc, txtServiceName, txtServiceType});
-
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(703, 11, 907, 767));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

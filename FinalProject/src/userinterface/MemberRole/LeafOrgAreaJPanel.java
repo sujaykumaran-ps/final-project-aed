@@ -46,6 +46,7 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         btnRefresh = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblLeafClearingOrg = new javax.swing.JTable();
@@ -61,14 +62,22 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(900, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+        jLabel2.setText("Leaf Clearance Request");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, -1, -1));
+
+        btnRefresh.setBackground(new java.awt.Color(133, 211, 255));
+        btnRefresh.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefresh.setText("Refresh Requests");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshActionPerformed(evt);
             }
         });
-        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 442, -1, -1));
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 510, -1, -1));
 
+        tblLeafClearingOrg.setBackground(new java.awt.Color(133, 211, 255));
+        tblLeafClearingOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         tblLeafClearingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -97,20 +106,24 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblLeafClearingOrg);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 142, 546, 93));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 546, 93));
 
+        btnRequest.setBackground(new java.awt.Color(133, 211, 255));
+        btnRequest.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRequest.setText("Request Service");
         btnRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRequestActionPerformed(evt);
             }
         });
-        add(btnRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 247, -1, -1));
+        add(btnRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, -1, -1));
 
-        titleChoose.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        titleChoose.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         titleChoose.setText("Choose from your LeafClearing Organizations Nearby :");
-        add(titleChoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 107, -1, -1));
+        add(titleChoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, -1, -1));
 
+        tblRequests.setBackground(new java.awt.Color(133, 211, 255));
+        tblRequests.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -139,19 +152,21 @@ public class LeafOrgAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblRequests);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 326, 546, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 400, 546, 90));
 
-        titleOrders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        titleOrders.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         titleOrders.setText("Your Requests with us :");
-        add(titleOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 297, -1, -1));
+        add(titleOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, -1, -1));
 
-        btnBack.setText("<< Back");
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 34, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LeafClearingOrg.jpg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1390, 780));
@@ -223,6 +238,7 @@ private void populateLeafOrgTable() {
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnRequest;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblLeafClearingOrg;

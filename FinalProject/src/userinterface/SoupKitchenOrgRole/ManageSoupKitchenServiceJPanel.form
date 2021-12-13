@@ -18,131 +18,43 @@
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" pref="651" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="titleManageService" min="-2" pref="526" max="-2" attributes="0"/>
-                              <EmptySpace pref="8" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="lblImageIcon3" min="-2" pref="301" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jScrollPane1" min="-2" pref="607" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblMealDesc" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblBeverage" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblMealName" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtMealDesc" max="32767" attributes="0"/>
-                                  <Component id="txtMealName" max="32767" attributes="0"/>
-                                  <Component id="txtBeverage" min="-2" pref="297" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="279" max="-2" attributes="0"/>
-                              <Component id="btnAddMeal" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-          </Group>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="titleManageService" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      <Component id="btnBack" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="lblImageIcon3" min="-2" pref="258" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="195" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtMealName" alignment="3" pref="34" max="32767" attributes="0"/>
-                  <Component id="lblMealName" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtMealDesc" alignment="3" pref="38" max="32767" attributes="0"/>
-                  <Component id="lblMealDesc" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtBeverage" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="lblBeverage" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnAddMeal" min="-2" pref="42" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jLabel3" pref="0" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-      </Group>
-    </DimensionLayout>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="13" style="0"/>
+          <Font name="Segoe UI Semibold" size="13" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
+        <Property name="text" type="java.lang.String" value="&lt;&lt; "/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="100" y="80" width="60" height="40"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblBeverage">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="14" style="1"/>
+          <Font name="Segoe UI Semibold" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Beverage :"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="780" y="630" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMealName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="14" style="1"/>
+          <Font name="Segoe UI Semibold" size="14" style="1"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -150,19 +62,34 @@
           </Border>
         </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="900" y="520" width="297" height="34"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblMealName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="14" style="1"/>
+          <Font name="Segoe UI Semibold" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Meal Name :"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="770" y="530" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="665" y="368" width="607" height="122"/>
+        </Constraint>
+      </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -204,7 +131,7 @@
     <Component class="javax.swing.JTextField" name="txtBeverage">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="14" style="1"/>
+          <Font name="Segoe UI Semibold" size="14" style="1"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -212,30 +139,45 @@
           </Border>
         </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="900" y="620" width="297" height="37"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblMealDesc">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="14" style="1"/>
+          <Font name="Segoe UI Semibold" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Description :"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="770" y="570" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="btnAddMeal">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="13" style="1"/>
+          <Font name="Segoe UI Semibold" size="13" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Add Meal"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddMealActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="930" y="680" width="-1" height="40"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMealDesc">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="14" style="1"/>
+          <Font name="Segoe UI Semibold" size="14" style="1"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -243,6 +185,11 @@
           </Border>
         </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="900" y="560" width="297" height="38"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="titleManageService">
       <Properties>
@@ -252,6 +199,11 @@
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Manage Soup Kitchen Menu"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="814" y="33" width="526" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImageIcon3">
       <Properties>
@@ -260,6 +212,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="818" y="92" width="301" height="258"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -271,6 +228,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="10" y="0" width="651" height="779"/>
+        </Constraint>
+      </Constraints>
     </Component>
   </SubComponents>
 </Form>

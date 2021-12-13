@@ -31,7 +31,10 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="d3" red="85" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&lt;&lt; "/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
@@ -47,6 +50,9 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="d3" red="85" type="rgb"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Remove Request"/>
       </Properties>
       <Events>
@@ -54,14 +60,14 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="349" y="471" width="-1" height="-1"/>
+          <AbsoluteConstraints x="500" y="470" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="titleOrder">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="18" style="1"/>
+          <Font name="Segoe UI Semibold" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Request from"/>
       </Properties>
@@ -76,6 +82,9 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="d3" red="85" type="rgb"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Place Request"/>
       </Properties>
       <Events>
@@ -83,14 +92,14 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="360" y="562" width="-1" height="-1"/>
+          <AbsoluteConstraints x="500" y="600" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="titleResName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="18" style="1"/>
+          <Font name="Segoe UI Semibold" size="18" style="1"/>
         </Property>
       </Properties>
       <Constraints>
@@ -102,13 +111,13 @@
     <Component class="javax.swing.JLabel" name="lblAddress">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="1"/>
+          <Font name="Segoe UI Semibold" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Service Address :"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="236" y="522" width="-1" height="-1"/>
+          <AbsoluteConstraints x="370" y="510" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -118,7 +127,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="184" y="166" width="-1" height="91"/>
+          <AbsoluteConstraints x="330" y="160" width="-1" height="91"/>
         </Constraint>
       </Constraints>
 
@@ -146,40 +155,43 @@
     <Component class="javax.swing.JTextField" name="txtAddress">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="373" y="518" width="201" height="-1"/>
+          <AbsoluteConstraints x="530" y="510" width="390" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblInstructions">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="1"/>
+          <Font name="Segoe UI Semibold" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Special Instructions :"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="601" y="488" width="-1" height="-1"/>
+          <AbsoluteConstraints x="370" y="550" width="130" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblMenu">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="18" style="1"/>
+          <Font name="Segoe UI Semibold" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Service"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="388" y="126" width="-1" height="-1"/>
+          <AbsoluteConstraints x="540" y="120" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="txtInstructions">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtInstructionsActionPerformed"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="601" y="513" width="238" height="31"/>
+          <AbsoluteConstraints x="530" y="550" width="390" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -188,6 +200,9 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="d3" red="85" type="rgb"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Semibold" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add Request"/>
       </Properties>
       <Events>
@@ -195,7 +210,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="369" y="275" width="-1" height="-1"/>
+          <AbsoluteConstraints x="520" y="270" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -205,7 +220,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="184" y="362" width="-1" height="91"/>
+          <AbsoluteConstraints x="330" y="360" width="-1" height="91"/>
         </Constraint>
       </Constraints>
 
@@ -233,13 +248,13 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="18" style="1"/>
+          <Font name="Segoe UI Semibold" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Service Summary"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="348" y="322" width="-1" height="-1"/>
+          <AbsoluteConstraints x="500" y="320" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

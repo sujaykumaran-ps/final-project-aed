@@ -59,7 +59,7 @@ public class FieldWorkerHomeJPanel extends javax.swing.JPanel {
         add(titleWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 60, 30));
 
         btnSnowClearance.setBackground(new java.awt.Color(133, 211, 255));
-        btnSnowClearance.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        btnSnowClearance.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnSnowClearance.setText("Snow Clearance Requests");
         btnSnowClearance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,8 +68,8 @@ public class FieldWorkerHomeJPanel extends javax.swing.JPanel {
         });
         add(btnSnowClearance, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 342, 40));
 
-        btnLeafClearance.setBackground(new java.awt.Color(133, 211, 255));
-        btnLeafClearance.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        btnLeafClearance.setBackground(new java.awt.Color(255, 204, 102));
+        btnLeafClearance.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnLeafClearance.setText("Leaf Clearance Requests");
         btnLeafClearance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

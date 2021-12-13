@@ -129,12 +129,12 @@ public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
 
         lblIssue.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblIssue.setText("Emergency");
-        add(lblIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, -1, -1));
+        add(lblIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, -1, -1));
         add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 355, -1));
 
         lblAddress.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblAddress.setText("Ambulance Pickup Address");
-        add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, -1, -1));
+        add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, 150, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");

@@ -63,133 +63,77 @@ public class ManageSoupKitchenInfoJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnUpdate.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 580, 111, -1));
 
+        btnSave.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 580, 102, -1));
 
+        txtOrgPhNum.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         txtOrgPhNum.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtOrgPhNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgPhNumActionPerformed(evt);
             }
         });
+        add(txtOrgPhNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 243, 34));
 
+        txtOrgAddress.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         txtOrgAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(txtOrgAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, 243, 34));
 
+        txtOrgName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         txtOrgName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, 243, 34));
 
-        lblSoupKitchenPhone.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblSoupKitchenPhone.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         lblSoupKitchenPhone.setText("Soup Kitchen Phone Number :");
+        add(lblSoupKitchenPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 530, -1, -1));
 
-        lblSoupKitchenAddress.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblSoupKitchenAddress.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         lblSoupKitchenAddress.setText("Soup Kitchen Address :");
+        add(lblSoupKitchenAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 470, -1, -1));
 
-        lblSoupKitchenName.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblSoupKitchenName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         lblSoupKitchenName.setText("Soup Kitchen Name :");
+        add(lblSoupKitchenName, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, -1, -1));
 
-        btnBack.setText("<< Back");
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 41, -1, 30));
 
         lblImageIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage_services_adobespark.png"))); // NOI18N
         lblImageIcon2.setText("jLabel2");
+        add(lblImageIcon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, 230, 190));
 
-        titleSnowClearingOrg.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        titleSnowClearingOrg.setForeground(new java.awt.Color(0, 0, 153));
+        titleSnowClearingOrg.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         titleSnowClearingOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleSnowClearingOrg.setText("Manage Soup Kitchen Org Information");
+        add(titleSnowClearingOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 422, 29));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ManageSoupKitchen.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(btnBack)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(180, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(lblSoupKitchenPhone)
-                                        .addComponent(lblSoupKitchenAddress)
-                                        .addComponent(lblSoupKitchenName))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtOrgName)
-                                        .addComponent(txtOrgAddress)
-                                        .addComponent(txtOrgPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGap(258, 258, 258)
-                                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(154, 154, 154)
-                                .addComponent(lblImageIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(68, 68, 68)
-                                .addComponent(titleSnowClearingOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(titleSnowClearingOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblImageIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblSoupKitchenName)
-                    .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblSoupKitchenAddress)
-                    .addComponent(txtOrgAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtOrgPhNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSoupKitchenPhone))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(228, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 776, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtOrgAddress, txtOrgName, txtOrgPhNum});
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnSave, btnUpdate});
-
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 0, 684, 776));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed

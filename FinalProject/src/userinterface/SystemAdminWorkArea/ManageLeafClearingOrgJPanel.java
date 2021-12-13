@@ -65,6 +65,8 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblLeafClearingOrg.setBackground(new java.awt.Color(133, 211, 255));
+        tblLeafClearingOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         tblLeafClearingOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -94,10 +96,12 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblLeafClearingOrg);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 310, 496, 91));
-        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 464, 144, -1));
+
+        txtOrgName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 470, 144, -1));
 
         btnManageOrgBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnManageOrgBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnManageOrgBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnManageOrgBack.setText("<< Back");
         btnManageOrgBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,37 +111,41 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         add(btnManageOrgBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
 
         btnSubmitOrg.setBackground(new java.awt.Color(133, 211, 255));
-        btnSubmitOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnSubmitOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSubmitOrg.setText("Submit");
         btnSubmitOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitOrgActionPerformed(evt);
             }
         });
-        add(btnSubmitOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(756, 566, -1, -1));
+        add(btnSubmitOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 570, -1, -1));
 
-        lblResName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
+        lblResName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblResName.setText("Leaf Clearing Org Name:");
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 467, -1, -1));
-        add(txtOrgUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 488, 144, -1));
-        add(txtOrgPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(675, 522, 144, -1));
+        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, -1, -1));
 
-        lblResPassword.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
+        txtOrgUsername.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        add(txtOrgUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 500, 144, -1));
+
+        txtOrgPassword.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        add(txtOrgPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, 144, -1));
+
+        lblResPassword.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblResPassword.setText("Password:");
-        add(lblResPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 522, -1, -1));
+        add(lblResPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 530, -1, -1));
 
         btnUpdateOrg.setBackground(new java.awt.Color(133, 211, 255));
-        btnUpdateOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnUpdateOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateOrg.setText("Update");
         btnUpdateOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateOrgActionPerformed(evt);
             }
         });
-        add(btnUpdateOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 566, -1, -1));
+        add(btnUpdateOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 570, -1, -1));
 
         btnDeleteOrg.setBackground(new java.awt.Color(133, 211, 255));
-        btnDeleteOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnDeleteOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDeleteOrg.setText("Delete");
         btnDeleteOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,17 +154,17 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         });
         add(btnDeleteOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(816, 420, -1, -1));
 
-        lblResUsername.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
+        lblResUsername.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblResUsername.setText("Username:");
-        add(lblResUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 488, -1, 20));
+        add(lblResUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 500, -1, 20));
 
         titleManageRestaurants.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleManageRestaurants.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleManageRestaurants.setText("Manage LeafClearingOrg");
+        titleManageRestaurants.setText("LeafClearing Org SignUp");
         add(titleManageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 105, 816, -1));
 
         btnViewOrg.setBackground(new java.awt.Color(133, 211, 255));
-        btnViewOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnViewOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnViewOrg.setText("View");
         btnViewOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,7 +174,7 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         add(btnViewOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(756, 420, -1, -1));
 
         btnRefreshOrg.setBackground(new java.awt.Color(133, 211, 255));
-        btnRefreshOrg.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnRefreshOrg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefreshOrg.setText("Refresh Table");
         btnRefreshOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,7 +184,7 @@ public class ManageLeafClearingOrgJPanel extends javax.swing.JPanel {
         add(btnRefreshOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(833, 276, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/leaf.jpg"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 240, 780, 540));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, 240, 780, 540));
     }// </editor-fold>//GEN-END:initComponents
  private void populateLeafClearingOrgTable() {
         DefaultTableModel model = (DefaultTableModel) tblLeafClearingOrg.getModel();

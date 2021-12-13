@@ -68,7 +68,7 @@ public class VolunteerAreaJPanel extends javax.swing.JPanel {
 
         btnProcess.setBackground(new java.awt.Color(133, 211, 255));
         btnProcess.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        btnProcess.setText("Process");
+        btnProcess.setText("Process Order");
         btnProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProcessActionPerformed(evt);

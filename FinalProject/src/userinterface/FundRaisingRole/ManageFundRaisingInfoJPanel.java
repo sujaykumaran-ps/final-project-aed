@@ -68,10 +68,10 @@ public class ManageFundRaisingInfoJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtFundRaisingName.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        add(txtFundRaisingName, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 228, 130, -1));
+        add(txtFundRaisingName, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 228, 200, -1));
 
         txtFundRaisingAddress.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        add(txtFundRaisingAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 268, 130, -1));
+        add(txtFundRaisingAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 268, 200, -1));
 
         txtFundRaisingPhNum.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         txtFundRaisingPhNum.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +79,7 @@ public class ManageFundRaisingInfoJPanel extends javax.swing.JPanel {
                 txtFundRaisingPhNumActionPerformed(evt);
             }
         });
-        add(txtFundRaisingPhNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 302, 130, -1));
+        add(txtFundRaisingPhNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 302, 200, -1));
 
         btnSave.setBackground(new java.awt.Color(133, 211, 255));
         btnSave.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
@@ -126,7 +126,7 @@ public class ManageFundRaisingInfoJPanel extends javax.swing.JPanel {
                 txtFundRaisingEmailActionPerformed(evt);
             }
         });
-        add(txtFundRaisingEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 335, 130, -1));
+        add(txtFundRaisingEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 335, 200, -1));
 
         lblFundRaisingName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblFundRaisingName.setText("Fund Raising Org Name :");

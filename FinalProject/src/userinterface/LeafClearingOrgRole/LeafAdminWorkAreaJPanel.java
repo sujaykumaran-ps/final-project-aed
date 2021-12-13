@@ -53,31 +53,32 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        titleLeafClearingAdmin.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleLeafClearingAdmin.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleLeafClearingAdmin.setText("LEAF CLEARING ORG ADMIN");
-        add(titleLeafClearingAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, -1, -1));
+        add(titleLeafClearingAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, -1, -1));
 
         btnOrgInfo.setBackground(new java.awt.Color(255, 204, 102));
+        btnOrgInfo.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnOrgInfo.setText("Manage LeafClearingOrg Info");
         btnOrgInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrgInfoActionPerformed(evt);
             }
         });
-        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 490, 220, 50));
+        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 500, 220, 40));
 
         btnManageRequests.setBackground(new java.awt.Color(255, 204, 102));
-        btnManageRequests.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnManageRequests.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnManageRequests.setText("Manage Requests");
         btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageRequestsActionPerformed(evt);
             }
         });
-        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 220, 50));
+        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 500, 220, 40));
 
         btnManageServices.setBackground(new java.awt.Color(255, 204, 102));
-        btnManageServices.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnManageServices.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnManageServices.setText("Manage Services");
         btnManageServices.setPreferredSize(new java.awt.Dimension(160, 29));
         btnManageServices.addActionListener(new java.awt.event.ActionListener() {
@@ -87,12 +88,12 @@ public class LeafAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 500, 230, 40));
 
-        lblLeafClearingNameTitle.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblLeafClearingNameTitle.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         lblLeafClearingNameTitle.setText("LEAF CLEARING ENTERPRIZE");
         add(lblLeafClearingNameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 280, 30));
 
-        lblResName.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
-        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 250, 190, 30));
+        lblResName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        add(lblResName, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 250, 190, 30));
 
         lblImageIcon.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         lblImageIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Requests_adobespark.jpeg"))); // NOI18N

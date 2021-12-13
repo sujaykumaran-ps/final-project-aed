@@ -62,8 +62,12 @@ public class ViewSoupRequestJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblOrderDetails.setBackground(new java.awt.Color(133, 211, 255));
+        tblOrderDetails.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         tblOrderDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -92,127 +96,68 @@ public class ViewSoupRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblOrderDetails);
 
-        btnBack.setText("<< Back");
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 561, 100));
+
+        btnBack.setBackground(new java.awt.Color(133, 211, 255));
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 30, -1, 30));
 
-        btnCancel.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        btnCancel.setBackground(new java.awt.Color(133, 211, 255));
+        btnCancel.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnCancel.setText("Cancel Order");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
             }
         });
+        add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 480, 140, 40));
 
-        lblPer.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        txtPer.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtPer, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 312, 395, 30));
+
+        lblPer.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         lblPer.setText("Person of Contact");
+        add(lblPer, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, -1, -1));
 
-        btnAccept.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        btnAccept.setBackground(new java.awt.Color(133, 211, 255));
+        btnAccept.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnAccept.setText("Accept Soup Order");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcceptActionPerformed(evt);
             }
         });
+        add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 430, -1, 40));
 
-        lblIns.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        txtIns.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        add(txtIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 362, 395, 30));
+
+        lblIns.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         lblIns.setText("Special Instructions");
+        add(lblIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, -1, -1));
 
-        titleRequestDetails1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleRequestDetails1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleRequestDetails1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleRequestDetails1.setText("Request Details");
+        titleRequestDetails1.setText("Order Details");
+        add(titleRequestDetails1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 507, -1));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/istockphoto-1178182853-612x612.jpeg"))); // NOI18N
         jLabel2.setText("jLabel2");
         jLabel2.setPreferredSize(new java.awt.Dimension(500, 500));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 140, 312, 611));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/istockphoto-1178182853-612x612.jpeg"))); // NOI18N
         jLabel3.setText("jLabel2");
         jLabel3.setPreferredSize(new java.awt.Dimension(500, 500));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblPer)
-                                    .addComponent(lblIns))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtPer)
-                                    .addComponent(txtIns, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(111, 111, 111)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAccept))
-                        .addGap(237, 237, 237)))
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(477, 477, 477)
-                        .addComponent(titleRequestDetails1, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAccept, btnCancel});
-
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21)
-                        .addComponent(titleRequestDetails1)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(17, 17, 17)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lblPer)
-                                    .addComponent(txtPer, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(19, 19, 19)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lblIns)
-                                    .addComponent(txtIns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(32, 32, 32)
-                                .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnCancel))
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtIns, txtPer});
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAccept, btnCancel});
-
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1015, 148, 294, 603));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

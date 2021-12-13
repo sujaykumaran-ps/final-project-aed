@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -13,95 +18,43 @@
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="btnAssignOrder" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jScrollPane1" min="-2" pref="425" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" pref="333" max="-2" attributes="0"/>
-                              <EmptySpace pref="122" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="lblImageIcon3" min="-2" pref="351" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-              </Group>
-              <Component id="jLabel3" min="-2" pref="684" max="-2" attributes="0"/>
-          </Group>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                              <Component id="btnBack" min="-2" pref="41" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="lblImageIcon3" min="-2" pref="302" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="288" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnAssignOrder" min="-2" pref="58" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jLabel3" min="-2" pref="776" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="0" pref="87" max="32767" attributes="0"/>
-          </Group>
-      </Group>
-    </DimensionLayout>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnAssignOrder">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="14" style="0"/>
+          <Font name="Segoe UI Semibold" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Assign Order to the Selected Volunteer"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAssignOrderActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="520" y="540" width="-1" height="40"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="450" y="410" width="410" height="110"/>
+        </Constraint>
+      </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
         <Component class="javax.swing.JTable" name="VolunteerJTable">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Semibold" size="11" style="0"/>
+            </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="1" rowCount="5">
                 <Column editable="false" title="Delivery Volunteer Name" type="java.lang.String"/>
@@ -126,25 +79,32 @@
     <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Verdana" size="14" style="0"/>
+          <Font name="Segoe UI Semibold" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
+        <Property name="text" type="java.lang.String" value="&lt;&lt; "/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="34" y="48" width="-1" height="30"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="24" style="1"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="0" red="0" type="rgb"/>
+          <Font name="Segoe UI Semibold" size="24" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Assign Delivery Volunteer"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="520" y="30" width="333" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -156,6 +116,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="674" y="0" width="684" height="776"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImageIcon3">
       <Properties>
@@ -164,6 +129,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="225" y="64" width="351" height="302"/>
+        </Constraint>
+      </Constraints>
     </Component>
   </SubComponents>
 </Form>

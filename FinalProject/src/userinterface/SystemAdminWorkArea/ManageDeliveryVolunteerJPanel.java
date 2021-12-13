@@ -66,6 +66,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblVolunteer.setBackground(new java.awt.Color(133, 211, 255));
+        tblVolunteer.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         tblVolunteer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -95,10 +96,12 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblVolunteer);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 496, 91));
+
+        txtVolunteer.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 144, -1));
 
         btnVolBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnVolBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnVolBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnVolBack.setText("<< ");
         btnVolBack.setMaximumSize(new java.awt.Dimension(147, 29));
         btnVolBack.setMinimumSize(new java.awt.Dimension(147, 29));
@@ -110,7 +113,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         add(btnVolBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 45, 75, -1));
 
         btnSubmitVol.setBackground(new java.awt.Color(133, 211, 255));
-        btnSubmitVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnSubmitVol.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSubmitVol.setText("Submit");
         btnSubmitVol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,15 +125,19 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         lblVolunteerName.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblVolunteerName.setText("Volunteer Name:");
         add(lblVolunteerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, -1, 20));
+
+        txtFieldWorkerUsername.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 144, -1));
 
         lblDelPassword.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         lblDelPassword.setText("Password:");
         add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 470, 70, -1));
+
+        txtFieldWorkerPassword.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 470, 144, -1));
 
         btnViewVol.setBackground(new java.awt.Color(133, 211, 255));
-        btnViewVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnViewVol.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnViewVol.setText("View");
         btnViewVol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +147,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         add(btnViewVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 310, -1, -1));
 
         btnDeleteVol.setBackground(new java.awt.Color(133, 211, 255));
-        btnDeleteVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnDeleteVol.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDeleteVol.setText("Delete");
         btnDeleteVol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,10 +163,10 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         titleManageDeliveryMan.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleManageDeliveryMan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageDeliveryMan.setText("Volunteers SignUp");
-        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 90, 990, -1));
+        add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 990, -1));
 
         btnUpdateVol.setBackground(new java.awt.Color(133, 211, 255));
-        btnUpdateVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnUpdateVol.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateVol.setText("Update");
         btnUpdateVol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,7 +176,7 @@ public class ManageDeliveryVolunteerJPanel extends javax.swing.JPanel {
         add(btnUpdateVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 539, -1, -1));
 
         btnRefreshVol.setBackground(new java.awt.Color(133, 211, 255));
-        btnRefreshVol.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        btnRefreshVol.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefreshVol.setText("Refresh Table");
         btnRefreshVol.setMaximumSize(new java.awt.Dimension(147, 29));
         btnRefreshVol.setMinimumSize(new java.awt.Dimension(147, 29));

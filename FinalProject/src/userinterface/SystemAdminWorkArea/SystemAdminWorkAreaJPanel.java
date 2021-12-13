@@ -75,7 +75,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageMembersActionPerformed(evt);
             }
         });
-        jPanel4.add(btnManageMembers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, 46));
+        jPanel4.add(btnManageMembers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, -1, 46));
 
         btnManageSCOrg2.setBackground(new java.awt.Color(133, 211, 255));
         btnManageSCOrg2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
@@ -95,7 +95,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageFieldWorkersActionPerformed(evt);
             }
         });
-        jPanel4.add(btnManageFieldWorkers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 209, 46));
+        jPanel4.add(btnManageFieldWorkers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 209, 46));
 
         btnManageSKENT4.setBackground(new java.awt.Color(133, 211, 255));
         btnManageSKENT4.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N

@@ -57,7 +57,7 @@
           <Color blue="ff" green="d3" red="85" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Lucida Grande" size="14" style="0"/>
+          <Font name="Segoe UI Semibold" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Snow Clearance Requests"/>
       </Properties>
@@ -73,10 +73,10 @@
     <Component class="javax.swing.JButton" name="btnLeafClearance">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="d3" red="85" type="rgb"/>
+          <Color blue="66" green="cc" red="ff" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Lucida Grande" size="14" style="0"/>
+          <Font name="Segoe UI Semibold" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Leaf Clearance Requests"/>
       </Properties>

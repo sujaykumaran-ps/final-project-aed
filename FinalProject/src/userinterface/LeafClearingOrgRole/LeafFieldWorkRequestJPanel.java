@@ -57,14 +57,17 @@ public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1350, 780));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setBackground(new java.awt.Color(255, 204, 102));
-        btnBack.setText("<< Back");
+        btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 238, -1, 30));
 
         FieldWorkerJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -94,77 +97,32 @@ public class LeafFieldWorkRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(FieldWorkerJTable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, 419, 94));
+
         btnAssignRequest.setBackground(new java.awt.Color(255, 204, 102));
+        btnAssignRequest.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnAssignRequest.setText("Assign Request to the Selected FieldWorker");
         btnAssignRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAssignRequestActionPerformed(evt);
             }
         });
+        add(btnAssignRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, -1, 35));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Assign FieldWorker");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 333, -1));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LeafClearingFieldWorker.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 425, 610, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fall_leaves.jpeg"))); // NOI18N
         jLabel3.setText("jLabel1");
         jLabel3.setPreferredSize(new java.awt.Dimension(1360, 780));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(194, 194, 194)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(239, 239, 239)
-                        .addComponent(btnAssignRequest)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1420, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(98, 98, 98)
-                                .addComponent(btnBack))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(248, 248, 248)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(btnAssignRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 214, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addContainerGap())))
-        );
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1420, 220));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

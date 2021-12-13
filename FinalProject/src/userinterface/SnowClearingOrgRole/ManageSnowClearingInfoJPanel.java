@@ -69,38 +69,47 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setBackground(new java.awt.Color(133, 211, 255));
         btnBack.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        btnBack.setText("<< Back");
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 53, -1, 30));
 
-        lblSnowClearningName.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblSnowClearningName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblSnowClearningName.setText("SnowClearing Enterprize Name :");
+        add(lblSnowClearningName, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, -1, -1));
 
-        lblSnowClearingAddress.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblSnowClearingAddress.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblSnowClearingAddress.setText("SnowClearning Address :");
+        add(lblSnowClearingAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, -1, -1));
 
-        lblSnowClearingPhone.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblSnowClearingPhone.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblSnowClearingPhone.setText("SnowClearing Phone Number :");
+        add(lblSnowClearingPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 430, -1, -1));
 
+        txtOrgName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         txtOrgName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtOrgName.setPreferredSize(new java.awt.Dimension(3, 19));
+        add(txtOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 340, 203, 27));
 
-        txtOrgAddress.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtOrgAddress.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         txtOrgAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(txtOrgAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 380, 203, 27));
 
-        txtOrgPhNum.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtOrgPhNum.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         txtOrgPhNum.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtOrgPhNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgPhNumActionPerformed(evt);
             }
         });
+        add(txtOrgPhNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 420, 203, 27));
 
         btnSave.setBackground(new java.awt.Color(133, 211, 255));
         btnSave.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
@@ -110,6 +119,7 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
                 btnSaveActionPerformed(evt);
             }
         });
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 520, -1, 30));
 
         btnUpdate.setBackground(new java.awt.Color(133, 211, 255));
         btnUpdate.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
@@ -119,107 +129,34 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
                 btnUpdateActionPerformed(evt);
             }
         });
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 520, -1, 30));
 
-        titleSnowClearingOrg.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        titleSnowClearingOrg.setForeground(new java.awt.Color(0, 0, 153));
+        titleSnowClearingOrg.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleSnowClearingOrg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleSnowClearingOrg.setText("Manage SnowClearingOrg Information");
+        add(titleSnowClearingOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 460, -1));
 
-        lblEmail.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        lblEmail.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblEmail.setText("Email:");
+        add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 460, -1, -1));
 
-        txtOrgEmail.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        txtOrgEmail.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         txtOrgEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtOrgEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOrgEmailActionPerformed(evt);
             }
         });
+        add(txtOrgEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 450, 203, 27));
 
         lblImageIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage_services_adobespark.png"))); // NOI18N
         lblImageIcon2.setText("jLabel2");
+        add(lblImageIcon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 120, 230, 190));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ManageSnowClearingOrg.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(btnBack)
-                        .addGap(63, 63, 63)
-                        .addComponent(titleSnowClearingOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblSnowClearingPhone)
-                                    .addComponent(lblSnowClearingAddress)
-                                    .addComponent(lblSnowClearningName)
-                                    .addComponent(lblEmail))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtOrgAddress)
-                                    .addComponent(txtOrgPhNum)
-                                    .addComponent(txtOrgEmail)
-                                    .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnUpdate)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnSave)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 880, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(290, 290, 290)
-                        .addComponent(lblImageIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(titleSnowClearingOrg)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(lblImageIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtOrgPhNum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSnowClearningName)
-                            .addComponent(txtOrgName, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSnowClearingAddress)
-                            .addComponent(txtOrgAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(lblSnowClearingPhone)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEmail)
-                    .addComponent(txtOrgEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(15, 15, 15))
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtOrgAddress, txtOrgEmail, txtOrgName, txtOrgPhNum});
-
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 11, 880, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

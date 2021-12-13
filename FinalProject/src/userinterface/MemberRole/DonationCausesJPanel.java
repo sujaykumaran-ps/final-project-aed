@@ -189,9 +189,11 @@ public class DonationCausesJPanel extends javax.swing.JPanel {
         });
         add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 530, -1, -1));
 
-        lblAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblAddress.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         lblAddress.setText("Member Phone Number :");
         add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 570, -1, -1));
+
+        txtPhNum.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtPhNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 570, 201, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Donation.png"))); // NOI18N

@@ -64,6 +64,8 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblFieldWorker.setBackground(new java.awt.Color(133, 211, 255));
+        tblFieldWorker.setFont(new java.awt.Font("Segoe UI Semibold", 0, 11)); // NOI18N
         tblFieldWorker.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -93,10 +95,13 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblFieldWorker);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 496, 91));
+
+        txtFieldWorker.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtFieldWorker, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, 144, -1));
 
         btnFWBack.setBackground(new java.awt.Color(133, 211, 255));
-        btnFWBack.setText("<< Back");
+        btnFWBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnFWBack.setText("<< ");
         btnFWBack.setMaximumSize(new java.awt.Dimension(147, 29));
         btnFWBack.setMinimumSize(new java.awt.Dimension(147, 29));
         btnFWBack.addActionListener(new java.awt.event.ActionListener() {
@@ -104,28 +109,34 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
                 btnFWBackActionPerformed(evt);
             }
         });
-        add(btnFWBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 63, 120, -1));
+        add(btnFWBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 63, 90, -1));
 
         btnSubmitFW.setBackground(new java.awt.Color(133, 211, 255));
+        btnSubmitFW.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSubmitFW.setText("Submit");
         btnSubmitFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitFWActionPerformed(evt);
             }
         });
-        add(btnSubmitFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 530, 67, -1));
+        add(btnSubmitFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 530, 70, -1));
 
-        lblFieldWorkerName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblFieldWorkerName.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         lblFieldWorkerName.setText("Ambulance Driver Name:");
         add(lblFieldWorkerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 410, -1, 20));
+
+        txtFieldWorkerUsername.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtFieldWorkerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 440, 144, -1));
 
-        lblDelPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblDelPassword.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         lblDelPassword.setText("Password:");
         add(lblDelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, 60, -1));
+
+        txtFieldWorkerPassword.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         add(txtFieldWorkerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 144, -1));
 
         btnViewFW.setBackground(new java.awt.Color(133, 211, 255));
+        btnViewFW.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnViewFW.setText("View");
         btnViewFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +146,7 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
         add(btnViewFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 340, -1, -1));
 
         btnDeleteFW.setBackground(new java.awt.Color(133, 211, 255));
+        btnDeleteFW.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDeleteFW.setText("Delete");
         btnDeleteFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,16 +155,17 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
         });
         add(btnDeleteFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 340, -1, -1));
 
-        lblDelUsername.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblDelUsername.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         lblDelUsername.setText("Username:");
-        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, 70, 20));
+        add(lblDelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, 60, 20));
 
-        titleManageDeliveryMan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleManageDeliveryMan.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleManageDeliveryMan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleManageDeliveryMan.setText("Ambulance Drivers SignUp");
         add(titleManageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 83, 816, -1));
 
         btnUpdateFW.setBackground(new java.awt.Color(133, 211, 255));
+        btnUpdateFW.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateFW.setText("Update");
         btnUpdateFW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,6 +175,7 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
         add(btnUpdateFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, -1, -1));
 
         btnRefreshFW.setBackground(new java.awt.Color(133, 211, 255));
+        btnRefreshFW.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefreshFW.setText("Refresh Table");
         btnRefreshFW.setMaximumSize(new java.awt.Dimension(147, 29));
         btnRefreshFW.setMinimumSize(new java.awt.Dimension(147, 29));
@@ -170,7 +184,7 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
                 btnRefreshFWActionPerformed(evt);
             }
         });
-        add(btnRefreshFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 180, -1, -1));
+        add(btnRefreshFW, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 190, -1, -1));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Ambulance-Loop-1.gif"))); // NOI18N

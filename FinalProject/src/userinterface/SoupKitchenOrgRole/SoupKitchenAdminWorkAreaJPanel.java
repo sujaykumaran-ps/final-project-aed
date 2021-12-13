@@ -58,44 +58,44 @@ public class SoupKitchenAdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel2.setText("jLabel1");
         jLabel2.setPreferredSize(new java.awt.Dimension(1360, 780));
 
-        setBackground(new java.awt.Color(252, 156, 52));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnOrgInfo.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        btnOrgInfo.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnOrgInfo.setText("Manage SoupOrg Info");
         btnOrgInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrgInfoActionPerformed(evt);
             }
         });
-        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 480, 220, 50));
+        add(btnOrgInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, 220, 40));
 
-        btnManageServices.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        btnManageServices.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnManageServices.setText("Manage Services");
         btnManageServices.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageServicesActionPerformed(evt);
             }
         });
-        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 480, 200, 50));
+        add(btnManageServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 480, 200, 40));
 
-        btnManageRequests.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        btnManageRequests.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnManageRequests.setText("Manage Requests");
         btnManageRequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageRequestsActionPerformed(evt);
             }
         });
-        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, 200, 50));
+        add(btnManageRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, 200, 40));
 
-        lblSoupName.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        add(lblSoupName, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 200, 30));
+        lblSoupName.setFont(new java.awt.Font("Segoe UI Semibold", 2, 14)); // NOI18N
+        add(lblSoupName, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 200, 30));
 
-        titleLeafClearingAdmin.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleLeafClearingAdmin.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleLeafClearingAdmin.setText("SOUP KITCHEN ORG ADMIN");
-        add(titleLeafClearingAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, -1, -1));
+        add(titleLeafClearingAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, -1, -1));
 
-        titleLeafClearingAdmin1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        titleLeafClearingAdmin1.setFont(new java.awt.Font("Segoe UI Semibold", 2, 14)); // NOI18N
         titleLeafClearingAdmin1.setText("SOUP KITCHEN ENTERPRISE");
         add(titleLeafClearingAdmin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, -1, -1));
 
@@ -107,7 +107,7 @@ public class SoupKitchenAdminWorkAreaJPanel extends javax.swing.JPanel {
         lblImageIcon1.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         lblImageIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Requests_adobespark.jpeg"))); // NOI18N
         lblImageIcon1.setText("jLabel2");
-        add(lblImageIcon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 280, 290, 180));
+        add(lblImageIcon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 290, 290, 180));
 
         lblImageIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manage_services_adobespark.png"))); // NOI18N
         lblImageIcon2.setText("jLabel2");

@@ -55,6 +55,7 @@ public class EmergencyMemberAreaJPanel extends javax.swing.JPanel {
         btnRefresh = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -161,6 +162,10 @@ public class EmergencyMemberAreaJPanel extends javax.swing.JPanel {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulancegif.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 380, 630, 450));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        jLabel2.setText("Emergency Distress Organizations");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReqServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqServiceActionPerformed
@@ -196,6 +201,7 @@ public class EmergencyMemberAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnReqService;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblOrders;

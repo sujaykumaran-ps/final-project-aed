@@ -1,6 +1,6 @@
-# final-project-aed
+# Project Helpoholics
 
-# Helpoholics
+An Application designed to Help people.
 
 ## Team Members :
 

@@ -144,7 +144,7 @@ public class LeafOrgServiceJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblMenu);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, -1, 91));
-        add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, 390, 20));
+        add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, 390, 30));
 
         lblInstructions.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblInstructions.setText("Special Instructions :");
@@ -159,7 +159,7 @@ public class LeafOrgServiceJPanel extends javax.swing.JPanel {
                 txtInstructionsActionPerformed(evt);
             }
         });
-        add(txtInstructions, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 550, 390, 20));
+        add(txtInstructions, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 550, 390, 30));
 
         btnAdd.setBackground(new java.awt.Color(133, 211, 255));
         btnAdd.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N

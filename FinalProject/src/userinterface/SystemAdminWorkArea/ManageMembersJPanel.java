@@ -236,14 +236,14 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         try { 
             if(password == null || password.isEmpty()){
                 throw new NullPointerException("Password Field Cannot be Empty !!!");
-            }else if(Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$", password) == false){
+            }else if(Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$", password) == false){
                 throw new Exception("Password is too weak !!!");
             }
         } catch(NullPointerException e){
             JOptionPane.showMessageDialog(null, "Password Field Cannot be Empty !!!");
             return;
         }catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Password is too weak !!! Your Password should contain 2 numbers, 1 Uppercase Letter, and the length should be 8 !!");
+            JOptionPane.showMessageDialog(null, "Password is too weak !!! Your Password should contain 2 numbers, 1 Uppercase Letter, and the length should be atleast 8 !!");
             return;
         }
          
@@ -347,7 +347,7 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         try { 
             if(password == null || password.isEmpty()){
                 throw new NullPointerException("Password Field Cannot be Empty !!!");
-            }else if(Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$", password) == false){
+            }else if(Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$", password) == false){
                 throw new Exception("Password is too weak !!! ");
             }
         } catch(NullPointerException e){

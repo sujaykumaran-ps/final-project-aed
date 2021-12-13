@@ -181,6 +181,7 @@ public class SnowOrgServiceJPanel extends javax.swing.JPanel {
         });
         add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, -1, -1));
 
+        btnPlaceRequest.setBackground(new java.awt.Color(133, 211, 255));
         btnPlaceRequest.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPlaceRequest.setText("Place Request");
         btnPlaceRequest.addActionListener(new java.awt.event.ActionListener() {

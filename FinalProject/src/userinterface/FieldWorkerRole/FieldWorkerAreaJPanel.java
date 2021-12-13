@@ -109,15 +109,15 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRequestDetails);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, 719, 101));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 719, 101));
 
-        titleAssignedRequests.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        titleAssignedRequests.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         titleAssignedRequests.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleAssignedRequests.setText("Snow Clearance Requests");
-        add(titleAssignedRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 1340, -1));
+        add(titleAssignedRequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 1340, -1));
 
         btnRefresh.setBackground(new java.awt.Color(133, 211, 255));
-        btnRefresh.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        btnRefresh.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,6 +127,7 @@ public class FieldWorkerAreaJPanel extends javax.swing.JPanel {
         add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 300, -1, 30));
 
         btnProcess.setBackground(new java.awt.Color(133, 211, 255));
+        btnProcess.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnProcess.setText("Process");
         btnProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

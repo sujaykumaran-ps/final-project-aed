@@ -82,12 +82,12 @@ public class ManageSnowClearingInfoJPanel extends javax.swing.JPanel {
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 53, -1, 30));
 
         lblSnowClearningName.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
-        lblSnowClearningName.setText("SnowClearing Enterprize Name :");
+        lblSnowClearningName.setText("SnowClearing Enterprise Name :");
         add(lblSnowClearningName, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, -1, -1));
 
         lblSnowClearingAddress.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
-        lblSnowClearingAddress.setText("SnowClearning Address :");
-        add(lblSnowClearingAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, -1, -1));
+        lblSnowClearingAddress.setText("Location :");
+        add(lblSnowClearingAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, -1, -1));
 
         lblSnowClearingPhone.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblSnowClearingPhone.setText("SnowClearing Phone Number :");

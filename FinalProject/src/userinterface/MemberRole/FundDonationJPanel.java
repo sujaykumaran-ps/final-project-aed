@@ -152,7 +152,7 @@ public class FundDonationJPanel extends javax.swing.JPanel {
 
         btnBack.setBackground(new java.awt.Color(133, 211, 255));
         btnBack.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        btnBack.setText("<< Back");
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);

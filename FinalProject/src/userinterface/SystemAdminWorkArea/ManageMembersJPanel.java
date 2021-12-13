@@ -212,15 +212,15 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
               
         try {
             if(name == null || name.isEmpty()){
-                throw new NullPointerException("Customer Name Field Cannot be Empty !!!");   
+                throw new NullPointerException("Member Name Field Cannot be Empty !!!");   
             }else if(Pattern.matches("^[A-Za-z ]+$", name) == false){
                 throw new Exception("Please Enter a valid Customer Name !!!");    
             }
         } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "Customer Name Field Cannot be Empty !!!");
+            JOptionPane.showMessageDialog(null, "Member Name Field Cannot be Empty !!!");
             return;
         } catch (Exception e){
-            JOptionPane.showMessageDialog(null, "Please Enter a valid Customer Name !!!");
+            JOptionPane.showMessageDialog(null, "Please Enter a valid Member Name !!!");
             return;
         }
         
@@ -236,14 +236,14 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         try { 
             if(password == null || password.isEmpty()){
                 throw new NullPointerException("Password Field Cannot be Empty !!!");
-            }else if(password.length() < 5){
+            }else if(Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$", password) == false){
                 throw new Exception("Password is too weak !!!");
             }
         } catch(NullPointerException e){
             JOptionPane.showMessageDialog(null, "Password Field Cannot be Empty !!!");
             return;
         }catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Password is too weak !!!");
+            JOptionPane.showMessageDialog(null, "Password is too weak !!! Your Password should contain 2 numbers, 1 Uppercase Letter, and the length should be 8 !!");
             return;
         }
          
@@ -347,14 +347,14 @@ public class ManageMembersJPanel extends javax.swing.JPanel {
         try { 
             if(password == null || password.isEmpty()){
                 throw new NullPointerException("Password Field Cannot be Empty !!!");
-            }else if(password.length() < 5){
-                throw new Exception("Password is too weak !!!");
+            }else if(Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$", password) == false){
+                throw new Exception("Password is too weak !!! ");
             }
         } catch(NullPointerException e){
             JOptionPane.showMessageDialog(null, "Password Field Cannot be Empty !!!");
             return;
         }catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Password is too weak !!!");
+            JOptionPane.showMessageDialog(null, "Password is too weak !!! Your Password should contain 2 numbers, 1 Uppercase Letter, and the length should be 8 !!");
             return;
         }
         

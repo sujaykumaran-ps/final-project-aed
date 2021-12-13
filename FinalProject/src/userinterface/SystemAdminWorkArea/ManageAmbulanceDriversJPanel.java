@@ -231,7 +231,7 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
         try {
             if(password == null || password.isEmpty()){
                 throw new NullPointerException("Password Field Cannot be Empty !!!");
-            }else if(password.length() < 5){
+            }else if(Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$", password) == false){
                 throw new Exception("Password is too weak !!!");
             }
         } catch(NullPointerException e){
@@ -339,7 +339,7 @@ public class ManageAmbulanceDriversJPanel extends javax.swing.JPanel {
         try {
             if(password == null || password.isEmpty()){
                 throw new NullPointerException("Password Field Cannot be Empty !!!");
-            }else if(password.length() < 5){
+            }else if(Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$", password) == false){
                 throw new Exception("Password is too weak !!!");
             }
         } catch(NullPointerException e){

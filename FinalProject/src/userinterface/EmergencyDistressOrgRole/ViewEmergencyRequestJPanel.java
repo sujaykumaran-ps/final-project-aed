@@ -73,13 +73,13 @@ public class ViewEmergencyRequestJPanel extends javax.swing.JPanel {
 
         btnBack.setBackground(new java.awt.Color(133, 211, 255));
         btnBack.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
-        btnBack.setText("<< Back");
+        btnBack.setText("<< ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 24, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
 
         titleOrderDetails.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         titleOrderDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
